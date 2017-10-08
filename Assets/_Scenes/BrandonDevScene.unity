@@ -460,6 +460,21 @@ Prefab:
       propertyPath: playerNumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: turningSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: acceleration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
   m_IsPrefabParent: 0
