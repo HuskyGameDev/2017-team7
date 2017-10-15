@@ -6,15 +6,20 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D playerRB;
-    public float acceleration = 0;
-	public float turningSpeed = 0.5f;
-	public float maxSpeed = 5.0f;
+    private CapsuleCollider2D collider;
+    public float acceleration;
+	public float turningSpeed;
+	public float maxSpeed;
 	public string playerNumber;
+
+    public PhysicsMaterial2D wallMaterial, playerMaterial;
 
     // Use this for initialization
     void Start()
-    {
+    { 
         playerRB = GetComponent<Rigidbody2D>();
+        playerRB.freezeRotation = true;
+        collider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -24,8 +29,9 @@ public class Player : MonoBehaviour {
         float moveVertical = Input.GetAxis("RightTrigger-" + playerNumber);
 
 
-		//Add torque to turn
-		playerRB.AddTorque (moveHorizontal*turningSpeed);
+        //Add torque to turn
+        //playerRB.AddTorque (moveHorizontal*turningSpeed);
+        playerRB.rotation -= moveHorizontal * turningSpeed;
 		Vector2 newVel = new Vector2();
 		Vector2 accel = new Vector2 ();
 		// We get the rotation, convert to radians, and also add 90 degrees (PI/2 radians) to get our direction angle.
@@ -43,5 +49,19 @@ public class Player : MonoBehaviour {
     void FixedUpdate()
     {
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            //collider.sharedMaterial.bounciness = 10;
+            Debug.Log("Hit player");
+        }
+        else if (collision.gameObject.tag == "wall")
+        {
+            
+            Debug.Log("Hit wall");     
+        }
     }
 }
