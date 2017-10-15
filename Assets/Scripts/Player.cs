@@ -21,11 +21,9 @@ public class Player : MonoBehaviour {
     void Update()
     {
         float moveHorizontal = Input.GetAxis("LeftStickX-" + playerNumber);
-        float moveVertical = Input.GetAxis("RightTrigger-" + playerNumber);
+        float moveVertical = Input.GetAxis("RightTrigger-" + playerNumber) - Input.GetAxis("LeftTrigger-" + playerNumber);
 
-        //Vector2 movement = new Vector2(moveHorizontal * acceleration, moveVertical * acceleration);
 
-        //playerRB.AddForce(movement);
 		//Add torque to turn
 		playerRB.AddTorque (moveHorizontal*turningSpeed);
 		Vector2 newVel = new Vector2();
