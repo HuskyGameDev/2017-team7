@@ -27,7 +27,7 @@ public class Player : MonoBehaviour {
 
         //playerRB.AddForce(movement);
 		//Add torque to turn
-		playerRB.AddTorque (moveHorizontal*turningSpeed);
+		playerRB.MoveRotation(playerRB.rotation + moveHorizontal*turningSpeed);
 		Vector2 newVel = new Vector2();
 		Vector2 accel = new Vector2 ();
 		// We get the rotation, convert to radians, and also add 90 degrees (PI/2 radians) to get our direction angle.
