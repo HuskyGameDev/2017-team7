@@ -6,39 +6,54 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     private Rigidbody2D playerRB;
-    public float acceleration = 0;
-	public float turningSpeed = 0.5f;
-	public float maxSpeed = 5.0f;
+    private Controller ctrls;
+
+    public float turnIncr;
+    public float turningSpeed;
+    private float maxTS;
+    private float turnSp = 0;
+
+    public float acceleration;
+	public float maxSpeed;
+    Vector2 prevVel;
 	public string playerNumber;
 
     // Use this for initialization
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        ctrls = Inputs.GetController(Convert.ToInt32(playerNumber));
     }
 
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("LeftStickX-" + playerNumber);
-        float moveVertical = Input.GetAxis("RightTrigger-" + playerNumber);
+        //Add rotation
+        turnSp += ctrls.GetTurn() * turnIncr;
+        maxTS = Math.Abs(ctrls.GetTurn() * turningSpeed);
+        turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
+        playerRB.rotation += turnSp;
 
+        if(ctrls.GetTurn() != 0 && turnSp != maxTS) Debug.Log("Turn: " + ctrls.GetTurn() + " turnSp: " + turnSp + " maxTS: " + maxTS );
 
-		//Add torque to turn
-		playerRB.AddTorque (moveHorizontal*turningSpeed);
-		Vector2 newVel = new Vector2();
+        /*// Add rotation
+        playerRB.rotation += ctrls.GetTurn() * turningSpeed;*/
+
+        Vector2 newVel = new Vector2();
 		Vector2 accel = new Vector2 ();
 		// We get the rotation, convert to radians, and also add 90 degrees (PI/2 radians) to get our direction angle.
 		float rotation = (float)(Math.PI/180.0) * playerRB.rotation + (float)(Math.PI/2.0);
 		//new vel should be in the direction of rotation
 		newVel.Set ((float)Math.Cos (rotation), (float)Math.Sin (rotation));
+        
+		accel = newVel * acceleration * ctrls.GetSpeed();
 
-		accel = newVel * acceleration * moveVertical;
 		//Clamp to max speed
 		newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
 
+        prevVel = newVel;
 		playerRB.velocity = newVel;
-	}
+    }
 
     void FixedUpdate()
     {
