@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Add rotation
         turnSp += ctrls.GetTurn() * turnIncr;
@@ -60,10 +60,6 @@ public class Player : MonoBehaviour {
 		playerRB.velocity = newVel;
     }
 
-    void FixedUpdate()
-    {
-
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
