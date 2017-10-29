@@ -2,25 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BezierPointType {
-	CHECKPOINT = 0,
-	ADVANCE_CHECKPOINT,
-	NONE
-}
-
-public struct CubicBezierCurvePoint {
-	public Vector2 point;
-	public bool controlPoint;
-	public BezierPointType type;
-
-	public CubicBezierCurvePoint(Vector2 p, bool cp, BezierPointType t){
-		point = p;
-		controlPoint = cp;
-		type = t;
-	}
-}
-
-
 public class CircularPath : MonoBehaviour {
-	public List<CubicBezierCurvePoint> points;
+	private List<CubicBezierCurve> curves = new List<CubicBezierCurve>();
+
+	//This is probably not how to do getters in C#, but this will work.
+	public List<CubicBezierCurve> GetCurves(){
+		return curves;
+	}
 }
