@@ -40,8 +40,27 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     void FixedUpdate()
     {
+        if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+        {
+            draftTime++;
+            if (draftTime > 125) drafting = false;
+        }
+        else if (!drafting && draftTime > 0)
+        {
+            draftBoost = 3;
+            draftTime--;
+        }
+        else
+        {
+            draftBoost = 1;
+        }
         //Add rotation
         turnSp += ctrls.GetTurn() * turnIncr;
         maxTS = Math.Abs(ctrls.GetTurn() * turningSpeed);
@@ -67,32 +86,13 @@ public class Player : MonoBehaviour
         playerRB.velocity = newVel;
     }
 
-<<<<<<< HEAD
-    void FixedUpdate()
-    {
-        if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
-        {
-            draftTime++;
-            if (draftTime > 125) drafting = false;
-        }
-        else if (!drafting && draftTime > 0)
-        {
-            draftBoost = 3;
-            draftTime--;
-        }
-        else
-        {
-            draftBoost = 1;
-        }
-        Debug.Log("Player: " + playerNumber + "DraftTime: " + draftTime);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         //if (collision.gameObject.tag == "Player")
         {
             drafting = true;
+            Debug.Log("Entered Drafting");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -101,22 +101,7 @@ public class Player : MonoBehaviour
         // if (collision.gameObject.tag == "Player")
         {
             drafting = false;
-        }
-    }
-=======
->>>>>>> 55a831e0166bae7a169df85cdc67833494c90cd9
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "player")
-        {
-            //collider.sharedMaterial.bounciness = 10;
-            // Debug.Log("Hit player");
-        }
-        else if (collision.gameObject.tag == "wall")
-        {
-
-            // Debug.Log("Hit wall");     
+            Debug.Log("Exited Drafting");
         }
     }
 }

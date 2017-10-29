@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50345123989040290}
   - component: {fileID: 114600300475931796}
   - component: {fileID: 70908277318643714}
+  - component: {fileID: 61741095427818152}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -132,6 +133,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61741095427818152
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1016655889260490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1063385, y: 12.0716095}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.87, y: 6.37}
+    newSize: {x: 7, y: 7}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6687927, y: 5.1000767}
+  m_EdgeRadius: 0
 --- !u!70 &70908277318643714
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -172,9 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnIncr: 0.1
+  turnIncr: 0.03
   turningSpeed: 1
-  acceleration: 1
+  acceleration: 0.5
   maxSpeed: 70
   playerNumber: 
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
