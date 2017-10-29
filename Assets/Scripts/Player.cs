@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     public float acceleration;
     public float maxSpeed;
-    Vector2 prevVel;
+    private float maxReverse = 15;
 
     private CapsuleCollider2D collider;
     private BoxCollider2D draftingHitbox;
@@ -28,6 +28,9 @@ public class Player : MonoBehaviour
     public string playerNumber;
 
     public PhysicsMaterial2D wallMaterial, playerMaterial;
+
+    private int reverseWait = 10;
+    private int wait;
 
     // Use this for initialization
     void Start()
@@ -78,11 +81,36 @@ public class Player : MonoBehaviour
 
         accel = newVel * acceleration * draftBoost * ctrls.GetSpeed();
 
+        // Not moving, want to reverse
+        if (playerRB.velocity.magnitude == 0 && ctrls.GetSpeed() < 0)
+        {
+            if (wait > 0)
+            {
+                wait--;
+                newVel.Set(0, 0);
+            }
+            else
+            {
+                newVel = accel;
+                wait = reverseWait;
+            }
+        }
+        // Moving backward
+        else if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
+        {
+            newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
+        }
+        // Move forward
+        else
+        {
+            newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
+            // Check for direction switch
+            if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
+            {
+                newVel.Set(0, 0);
+            }
+        }
 
-        //Clamp to max speed
-        newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
-
-        prevVel = newVel;
         playerRB.velocity = newVel;
     }
 

@@ -6,7 +6,7 @@ public class Inputs : MonoBehaviour
 {
 
     private static Controller[] controllers;
-    public int numPlayers;
+    private int numPlayers = 4;
 
     // Use this for initialization
     void Awake()
