@@ -64,18 +64,38 @@ public class Player : MonoBehaviour
         {
             draftBoost = 1;
         }
+
+        // Pre check of direction to determine rotation direction
+        Vector2 newVel = new Vector2();
+        // We get the rotation, convert to radians, and also add 90 degrees (PI/2 radians) to get our direction angle.
+        float rotation = (float)(Math.PI / 180.0) * playerRB.rotation + (float)(Math.PI / 2.0);
+        //new vel should be in the direction of rotation
+        newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+        float turn;
+
+        // Forward
+        if (Vector2.Angle(playerRB.velocity, newVel) < 90)
+        {
+            turn = ctrls.GetTurn();
+        }
+        // Backward
+        else
+        {
+            turn = -ctrls.GetTurn();
+        }
+
         //Add rotation
-        turnSp += ctrls.GetTurn() * turnIncr;
-        maxTS = Math.Abs(ctrls.GetTurn() * turningSpeed);
+        turnSp += turn * turnIncr;// * (playerRB.velocity.magnitude/(maxSpeed/2));
+        maxTS = Math.Abs(turn * turningSpeed * Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1));
         turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
         playerRB.rotation += turnSp;
 
         // if(ctrls.GetTurn() != 0 && turnSp != maxTS) Debug.Log("Turn: " + ctrls.GetTurn() + " turnSp: " + turnSp + " maxTS: " + maxTS );
 
-        Vector2 newVel = new Vector2();
+        //Vector2 newVel = new Vector2();
         Vector2 accel = new Vector2();
         // We get the rotation, convert to radians, and also add 90 degrees (PI/2 radians) to get our direction angle.
-        float rotation = (float)(Math.PI / 180.0) * playerRB.rotation + (float)(Math.PI / 2.0);
+        rotation = (float)(Math.PI / 180.0) * playerRB.rotation + (float)(Math.PI / 2.0);
         //new vel should be in the direction of rotation
         newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
 
