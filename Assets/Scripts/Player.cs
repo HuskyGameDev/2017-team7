@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Add rotation
         turnSp += ctrls.GetTurn() * turnIncr;
@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
         playerRB.velocity = newVel;
     }
 
+<<<<<<< HEAD
     void FixedUpdate()
     {
         if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
@@ -102,6 +103,8 @@ public class Player : MonoBehaviour
             drafting = false;
         }
     }
+=======
+>>>>>>> 55a831e0166bae7a169df85cdc67833494c90cd9
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
