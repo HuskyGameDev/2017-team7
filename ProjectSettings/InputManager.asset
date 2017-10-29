@@ -388,7 +388,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: Submit
     descriptiveName: 
