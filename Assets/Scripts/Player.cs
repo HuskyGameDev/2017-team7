@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     private int reverseWait = 10;
     private int wait;
 
+    public float terrainSpeed = 1;
+    public float terrainTurning = 1;
+
     // Use this for initialization
     void Start()
     {
@@ -86,7 +89,7 @@ public class Player : MonoBehaviour
 
         //Add rotation
         turnSp += turn * turnIncr;// * (playerRB.velocity.magnitude/(maxSpeed/2));
-        maxTS = Math.Abs(turn * turningSpeed * Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1));
+        maxTS = Math.Abs(turn * turningSpeed * terrainTurning * Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1));
         turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
         playerRB.rotation += turnSp;
 
@@ -99,7 +102,7 @@ public class Player : MonoBehaviour
         //new vel should be in the direction of rotation
         newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
 
-        accel = newVel * acceleration * draftBoost * ctrls.GetSpeed();
+        accel = newVel * acceleration * draftBoost * terrainSpeed * ctrls.GetSpeed();
 
         // Not moving, want to reverse
         if (playerRB.velocity.magnitude == 0 && ctrls.GetSpeed() < 0)
