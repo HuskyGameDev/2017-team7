@@ -14,21 +14,38 @@ public class CircularPathInspector : Editor {
 	private List<CubicBezierCurve> curves;
 	private int selected = -1;
 
+	void OnEnable()
+	{
+		Tools.hidden = true;
+	}
+	
+	void OnDisable()
+	{
+		Tools.hidden = false;
+	}
 
 	public override void OnInspectorGUI () {
 		path = target as CircularPath;
 		curves = path.GetCurves();
+		path.transform.hideFlags = HideFlags.HideInInspector | HideFlags.NotEditable;
 		handleTransform = path.transform;
 		handleRotation = handleTransform.rotation;
 
 		if(GUILayout.Button("Add Curve")){
 			Undo.RecordObject(path, "Add Curve");
 			EditorUtility.SetDirty(path);
+			
+			if(curves == null){
+				path.SetCurves(new List<CubicBezierCurve>());
+				curves = path.GetCurves();
+			}
+
+			selected = curves.Count;
 			if(curves.Count > 0){
 				curves.Add(new CubicBezierCurve());
 				//TODO init control handles
-				curves[curves.Count - 1].p0 = curves[curves.Count - 2 < 0 ? 0 : curves.Count - 2].p3;
-				curves[curves.Count - 1].p3 = curves[0].p0;
+				curves[curves.Count - 1].p0 = path.GetPreviousCurve(curves.Count - 1).p3;
+				curves[curves.Count - 1].p3 = path.GetNextCurve(curves.Count - 1).p0;
 			}else{
 				curves.Add(new CubicBezierCurve());
 			}
@@ -42,11 +59,13 @@ public class CircularPathInspector : Editor {
 		handleTransform = path.transform;
 		handleRotation = handleTransform.rotation;
 		
+		if(curves == null) return;
+		
 		//For now, we'll show all points on the path
 		for(int i = 0; i < curves.Count ; i++){
 			if(i != selected){
 				//Display one curve
-				DisplayCurve(i);
+				DisplayCurvePoints(i);
 			}else{
 				//Draw selected curve
 				Vector3 point;
@@ -56,11 +75,14 @@ public class CircularPathInspector : Editor {
 				EditorGUI.BeginChangeCheck();
 
 				point = Handles.DoPositionHandle(point, handleRotation);
+				
+				Handles.DrawWireDisc(point, Vector3.forward, curves[i].p0Checkpoint.radius);
 
 				if(EditorGUI.EndChangeCheck()){
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
-					curves[i].p0 = point;
+					curves[i].p0 = handleTransform.InverseTransformPoint(point);
+					path.GetPreviousCurve(selected).p3 = handleTransform.InverseTransformPoint(point);
 				}
 
 				//p1
@@ -72,7 +94,7 @@ public class CircularPathInspector : Editor {
 				if(EditorGUI.EndChangeCheck()){
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
-					curves[i].p1 = point;
+					curves[i].p1 = handleTransform.InverseTransformPoint(point);
 				}
 
 				//p2
@@ -84,7 +106,7 @@ public class CircularPathInspector : Editor {
 				if(EditorGUI.EndChangeCheck()){
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
-					curves[i].p2 = point;
+					curves[i].p2 = handleTransform.InverseTransformPoint(point);
 				}
 
 				//p3
@@ -96,14 +118,22 @@ public class CircularPathInspector : Editor {
 				if(EditorGUI.EndChangeCheck()){
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
-					curves[i].p3 = point;
+					curves[i].p3 = handleTransform.InverseTransformPoint(point);
+					path.GetNextCurve(selected).p0 = handleTransform.InverseTransformPoint(point);
 				}
 			}
-
+			if(i == selected){
+				Handles.color = Color.yellow;
+			}else{
+				Handles.color = Color.white;
+			}
 			float dt = 1.0f/curveSteps;
+			Vector3 startPoint, endPoint;
 			//Draw the actual curve
 			for(int j = 0;j<curveSteps;j++){
-				Handles.DrawLine(curves[i].getPoint(dt*j), curves[i].getPoint(dt*(j+1)));
+				startPoint = handleTransform.TransformPoint(curves[i].getPoint(dt*j));
+				endPoint = handleTransform.TransformPoint(curves[i].getPoint(dt*(j+1)));
+				Handles.DrawLine(startPoint, endPoint);
 			}
 
 		}
@@ -111,13 +141,16 @@ public class CircularPathInspector : Editor {
 	}
 
 	//Displays a point, then returns the transformed point
-	private void DisplayCurve(int cIn){
+	private void DisplayCurvePoints(int cIn){
 		CubicBezierCurve c = curves[cIn];
 		Vector3 point, point2;
 		//Don't redraw selected handles
 		Handles.color = Color.cyan;
 		point = handleTransform.TransformPoint(c.p0);
-		if(selected != cIn - 1 || (cIn - 1 == -1 && selected != curves.Count)){
+
+		Handles.DrawWireDisc(point, Vector3.forward, c.p0Checkpoint.radius);
+
+		if(selected != cIn - 1 && (cIn - 1 == -1 && selected != curves.Count - 1)){
 			if(Handles.Button(point, handleRotation, handleSize, pickSize, Handles.DotHandleCap)){
 				selected = cIn;
 			}
@@ -136,25 +169,25 @@ public class CircularPathInspector : Editor {
 		if(Handles.Button(point, handleRotation, handleSize, pickSize, Handles.DotHandleCap)){
 			selected = cIn;
 		}
-
+		Handles.color = Color.cyan;
 		point2 = handleTransform.TransformPoint(c.p3);
 		Handles.DrawLine(point, point2);
 
 		//Don't redraw selected handles
-		Handles.color = Color.cyan;
 		point = point2;
-		if( (cIn + 1) % curves.Count == selected){
-			
+		if( (cIn + 1) % curves.Count != selected){
+
 			if(Handles.Button(point, handleRotation, handleSize, pickSize, Handles.DotHandleCap)){
 				selected = cIn;
 			}
+
 		}
 	}
 
 	private void ShowCurveOptions(){
 		
 		if(selected >= 0){
-			CubicBezierCurve c = curves[selected];
+			CubicBezierCurve c = path.GetCurve(selected);
 			Vector2 point;
 			BezierPointType type;
 			
@@ -165,23 +198,27 @@ public class CircularPathInspector : Editor {
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
-				c.p0.x = point.x;
-				c.p0.y = point.y;
+				c.p0 = point;
+				c.p0Checkpoint.position = point;
+				path.GetPreviousCurve(selected).p3 = point;
 			}
-
+			/*
 			EditorGUI.BeginChangeCheck();
 			EditorGUILayout.BeginHorizontal();
 			{
 				type = (BezierPointType)EditorGUILayout.EnumPopup("Point 1 type:", c.p0Type);
 			}
 			EditorGUILayout.EndHorizontal();
-
+			
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
 				c.p0Type = type;
+				if(type == BezierPointType.CHECKPOINT || type == BezierPointType.ADVANCE_CHECKPOINT){
+					//c.checkpoint = new Checkpoint();
+				}
 			}
-
+			*/
 			EditorGUI.BeginChangeCheck();
 			//p1
 			point = EditorGUILayout.Vector2Field("P1", c.p1);
@@ -189,8 +226,7 @@ public class CircularPathInspector : Editor {
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
-				c.p1.x = point.x;
-				c.p1.y = point.y;
+				c.p1 = point;
 			}
 
 			EditorGUI.BeginChangeCheck();
@@ -200,8 +236,7 @@ public class CircularPathInspector : Editor {
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
-				c.p2.x = point.x;
-				c.p2.y = point.y;
+				c.p2 = point;
 			}
 
 			EditorGUI.BeginChangeCheck();
@@ -211,23 +246,69 @@ public class CircularPathInspector : Editor {
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
-				c.p3.x = point.x;
-				c.p3.y = point.y;
+				c.p3 = point;
+				path.GetNextCurve(selected).p0 = point;
+				path.GetNextCurve(selected).p0Checkpoint.position = point;
 			}
-
+			/*
 			EditorGUI.BeginChangeCheck();
 			EditorGUILayout.BeginHorizontal();
 			{
-				CubicBezierCurve cNext = curves[(selected + 1) % curves.Count];
+				CubicBezierCurve cNext = path.GetNextCurve(selected);
 				type = (BezierPointType)EditorGUILayout.EnumPopup("Point 3 type:", cNext.p0Type);
 			}
 			EditorGUILayout.EndHorizontal();
-
+			
 			if(EditorGUI.EndChangeCheck()){
 				Undo.RecordObject(path, "Edited Curve");
 				EditorUtility.SetDirty(path);
-				curves[(selected + 1) % curves.Count].p0Type = type;
+				path.GetNextCurve(selected).p0Type = type;
+				if(type == BezierPointType.CHECKPOINT || type == BezierPointType.ADVANCE_CHECKPOINT){
+					//path.GetNextCurve(selected).checkpoint = new Checkpoint();
+				}
+
 			}
+			/* */
+			float newRadius;
+			Vector2 newPosition;
+			//if(c.p0Type == BezierPointType.CHECKPOINT || c.p0Type == BezierPointType.ADVANCE_CHECKPOINT){
+				EditorGUI.BeginChangeCheck();
+				newRadius = EditorGUILayout.FloatField("Trigger p0 radius", c.p0Checkpoint.radius);
+				if(EditorGUI.EndChangeCheck()){
+					Undo.RecordObject(path, "Changed Collider");
+					EditorUtility.SetDirty(path);
+					c.p0Checkpoint.radius = newRadius;
+				}
+				/*
+				EditorGUI.BeginChangeCheck();
+				newPosition = EditorGUILayout.Vector2Field("Trigger position", c.p0Checkpoint.position);
+				if(EditorGUI.EndChangeCheck()){
+					Undo.RecordObject(path, "Changed Collider");
+					EditorUtility.SetDirty(path);
+					c.p0Checkpoint.position = newPosition;
+				}
+				*/
+			//}
+			//If this is a checkpoint type, we oughtta show checkpoint options.
+			//if(path.GetNextCurve(selected).p0Type == BezierPointType.CHECKPOINT || path.GetNextCurve(selected).p0Type == BezierPointType.ADVANCE_CHECKPOINT){
+				EditorGUI.BeginChangeCheck();
+				newRadius = EditorGUILayout.FloatField("Trigger p3 radius", path.GetNextCurve(selected).p0Checkpoint.radius);
+				if(EditorGUI.EndChangeCheck()){
+					Undo.RecordObject(path, "Changed Collider");
+					EditorUtility.SetDirty(path);
+					path.GetNextCurve(selected).p0Checkpoint.radius = newRadius;
+				}
+				/*
+				EditorGUI.BeginChangeCheck();
+				newPosition = EditorGUILayout.Vector2Field("Trigger position", path.GetNextCurve(selected).p0Checkpoint.position);
+				if(EditorGUI.EndChangeCheck()){
+					Undo.RecordObject(path, "Changed Collider");
+					EditorUtility.SetDirty(path);
+					path.GetNextCurve(selected).p0Checkpoint.position = newPosition;
+				}
+				*/
+			//}
+
 		}
 	}
 
