@@ -6,6 +6,9 @@ TagManager:
   tags:
   - player
   - wall
+  - Boost
+  - Grass
+  - Oil
   layers:
   - Default
   - TransparentFX

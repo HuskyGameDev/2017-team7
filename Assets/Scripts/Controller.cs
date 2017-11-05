@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour {
+public class Controller {
 
     private float turn;                         // Turning rotation
     private float forward;                      // Forward movement
