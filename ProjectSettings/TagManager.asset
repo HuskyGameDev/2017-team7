@@ -43,3 +43,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Terrain
+    uniqueID: 400779165
+    locked: 0
+  - name: Terrain-Detail
+    uniqueID: 3080712477
+    locked: 0
+  - name: Terrain-Borders
+    uniqueID: 2876109685
+    locked: 0
+  - name: Fences
+    uniqueID: 3406071605
+    locked: 0
+  - name: Player
+    uniqueID: 1759010191
+    locked: 0
