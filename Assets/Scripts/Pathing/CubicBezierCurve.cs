@@ -21,4 +21,7 @@ public class CubicBezierCurve{
 	public Vector2 getPoint(float t){
 		return ((1.0f-t)*(1.0f-t)*(1.0f-t)*p0) + (3.0f*(1.0f-t)*(1.0f-t)*t*p1) + (3.0f*(1.0f-t)*t*t*p2) + (t*t*t*p3);
 	}
+	public Vector2 getDerivative(float t){
+		return 3.0f*(1-t)*(1-t)*(p1-p0) + 6.0f*(1-t)*t*(p2-p1) + 3.0f*t*t*(p3-p2);
+	}
 }

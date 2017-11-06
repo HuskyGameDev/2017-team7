@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     private int draftTime = 0;
     private float draftBoost = 1;
 
-    public string playerNumber;
+    public int playerNumber;
 
     public PhysicsMaterial2D wallMaterial, playerMaterial;
 
@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
-        ctrls = Inputs.GetController(Convert.ToInt32(playerNumber));
+        ctrls = Inputs.GetController(playerNumber);
         playerRB.freezeRotation = true;
         collider = GetComponent<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();

@@ -6,8 +6,9 @@ using UnityEditor;
 [CustomEditor(typeof(CircularPath))]
 public class CircularPathInspector : Editor {
 	private const int curveSteps = 50;
-	private const float handleSize = 0.5f;
+	private const float handleSize = 3.0f;
 	private const float pickSize = 0.6f;
+	private const float arrowLength = 40.0f;
 	private CircularPath path;
 	private Transform handleTransform;
 	private Quaternion handleRotation;
@@ -82,6 +83,7 @@ public class CircularPathInspector : Editor {
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
 					curves[i].p0 = handleTransform.InverseTransformPoint(point);
+					curves[i].p0Checkpoint.position = point;
 					path.GetPreviousCurve(selected).p3 = handleTransform.InverseTransformPoint(point);
 				}
 
@@ -120,6 +122,7 @@ public class CircularPathInspector : Editor {
 					EditorUtility.SetDirty(path);
 					curves[i].p3 = handleTransform.InverseTransformPoint(point);
 					path.GetNextCurve(selected).p0 = handleTransform.InverseTransformPoint(point);
+					path.GetNextCurve(selected).p0Checkpoint.position = handleTransform.InverseTransformPoint(point);
 				}
 			}
 			if(i == selected){
@@ -136,6 +139,25 @@ public class CircularPathInspector : Editor {
 				Handles.DrawLine(startPoint, endPoint);
 			}
 
+			//Draw an arrow midway through, indicating direction of the path
+			Vector2 dir = curves[i].getDerivative(0.5f);
+			dir *= 1.0f/dir.magnitude;
+			Vector2 halfPoint = handleTransform.TransformPoint(curves[i].getPoint(0.5f));
+			Handles.DrawLine(halfPoint, halfPoint + arrowLength*dir);
+			//Vector2 arrowHalf;
+			/* 
+			float angle = (Mathf.PI/180.0f)*(Vector2.SignedAngle(Vector2.right, dir) - 45);
+			
+			arrowHalf = handleTransform.TransformPoint(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)));
+
+			Handles.DrawLine(halfPoint, halfPoint + arrowLength*arrowHalf);
+
+			angle = (Mathf.PI/180.0f)*(Vector2.SignedAngle(Vector2.right, dir) + 45);
+
+			arrowHalf = handleTransform.TransformPoint(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)));
+
+			Handles.DrawLine(halfPoint, halfPoint + arrowLength*arrowHalf);
+			*/
 		}
 
 	}
@@ -189,7 +211,7 @@ public class CircularPathInspector : Editor {
 		if(selected >= 0){
 			CubicBezierCurve c = path.GetCurve(selected);
 			Vector2 point;
-			BezierPointType type;
+			//BezierPointType type;
 			
 			EditorGUI.BeginChangeCheck();
 			//p0
@@ -268,9 +290,9 @@ public class CircularPathInspector : Editor {
 				}
 
 			}
-			/* */
+			*/
 			float newRadius;
-			Vector2 newPosition;
+			//Vector2 newPosition;
 			//if(c.p0Type == BezierPointType.CHECKPOINT || c.p0Type == BezierPointType.ADVANCE_CHECKPOINT){
 				EditorGUI.BeginChangeCheck();
 				newRadius = EditorGUILayout.FloatField("Trigger p0 radius", c.p0Checkpoint.radius);

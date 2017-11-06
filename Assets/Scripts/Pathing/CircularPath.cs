@@ -8,12 +8,12 @@ public class CircularPath : MonoBehaviour {
 	private List<CubicBezierCurve> curves;
 	private List<CheckpointBehaviour> createdCheckpoints;
 	//This is probably not how to do getters in C#, but this will work.
-	public void Start(){
-		defaultCheckpoint = GetComponent(typeof(CheckpointBehaviour)) as CheckpointBehaviour;
+	void Start(){
+		defaultCheckpoint = gameObject.GetComponentInChildren<CheckpointBehaviour>();
 		int currentCheckpointNumber = 0;
 		CheckpointBehaviour createdCheckpoint;
 		createdCheckpoints = new List<CheckpointBehaviour>();
-
+		
 		if(curves == null || curves.Count == 0) return;
 		//Use the default checkpoint as the first one.
 		defaultCheckpoint.checkpointNumber = currentCheckpointNumber;
@@ -23,13 +23,16 @@ public class CircularPath : MonoBehaviour {
 		//Instantiate all checkpoint colliders
 		currentCheckpointNumber++;
 		for(;currentCheckpointNumber < curves.Count; currentCheckpointNumber++){
-			createdCheckpoint = Instantiate(defaultCheckpoint);
+			createdCheckpoint = Instantiate(defaultCheckpoint, this.transform);
+
 			createdCheckpoint.checkpointNumber = currentCheckpointNumber;
 			createdCheckpoint.trigger.offset = curves[currentCheckpointNumber].p0Checkpoint.position;
 			createdCheckpoint.trigger.radius = curves[currentCheckpointNumber].p0Checkpoint.radius;
+
 			createdCheckpoints.Add(createdCheckpoint);
 		}
-		
+
+		GetComponent<LapTracker>().SetTotalCheckpoints(curves.Count);
 	}
 	public void SetCurves(List<CubicBezierCurve> curves_new){
 		curves = curves_new;
