@@ -8,7 +8,7 @@ public class CircularPathInspector : Editor {
 	private const int curveSteps = 50;
 	private const float handleSize = 3.0f;
 	private const float pickSize = 0.6f;
-	private const float arrowLength = 40.0f;
+	private const float arrowLength = 15.0f;
 	private CircularPath path;
 	private Transform handleTransform;
 	private Quaternion handleRotation;
@@ -35,18 +35,36 @@ public class CircularPathInspector : Editor {
 		if(GUILayout.Button("Add Curve")){
 			Undo.RecordObject(path, "Add Curve");
 			EditorUtility.SetDirty(path);
+
 			
+
 			if(curves == null){
 				path.SetCurves(new List<CubicBezierCurve>());
 				curves = path.GetCurves();
 			}
-
-			selected = curves.Count;
+			
+			int curveIndex = selected == -1 ? curves.Count - 1 : selected;
+			selected = curveIndex;
 			if(curves.Count > 0){
-				curves.Add(new CubicBezierCurve());
-				//TODO init control handles
-				curves[curves.Count - 1].p0 = path.GetPreviousCurve(curves.Count - 1).p3;
-				curves[curves.Count - 1].p3 = path.GetNextCurve(curves.Count - 1).p0;
+				Vector2 midPoint, midDerivative, startDerivative, endDerivative;
+				
+				midPoint = curves[curveIndex].getPoint(0.5f);
+				midDerivative = curves[curveIndex].getDerivative(0.5f);
+				startDerivative = curves[curveIndex].getDerivative(0f);
+				endDerivative = curves[curveIndex].getDerivative(1f);
+
+				curves.Insert(curveIndex + 1, new CubicBezierCurve());
+
+				curves[curveIndex + 1].p3 = curves[curveIndex].p3;
+				curves[curveIndex + 1].p0 = midPoint;
+				curves[curveIndex].p3 = midPoint;
+
+
+				curves[curveIndex].p2 = (1.0f/3.0f) * (3.0f*curves[curveIndex].p3 - midDerivative);
+				curves[curveIndex].p1 = (1.0f/3.0f) * (3.0f*curves[curveIndex].p0 + startDerivative);
+
+				curves[curveIndex + 1].p1 = (1.0f/3.0f) * (3.0f*curves[curveIndex + 1].p0 + midDerivative);
+				curves[curveIndex + 1].p2 = (1.0f/3.0f) * (3.0f*curves[curveIndex + 1].p3 - endDerivative);
 			}else{
 				curves.Add(new CubicBezierCurve());
 			}
@@ -125,11 +143,13 @@ public class CircularPathInspector : Editor {
 					path.GetNextCurve(selected).p0Checkpoint.position = handleTransform.InverseTransformPoint(point);
 				}
 			}
+
 			if(i == selected){
 				Handles.color = Color.yellow;
 			}else{
 				Handles.color = Color.white;
 			}
+
 			float dt = 1.0f/curveSteps;
 			Vector3 startPoint, endPoint;
 			//Draw the actual curve
@@ -140,24 +160,24 @@ public class CircularPathInspector : Editor {
 			}
 
 			//Draw an arrow midway through, indicating direction of the path
-			Vector2 dir = curves[i].getDerivative(0.5f);
+			Vector2 dir = -1*curves[i].getDerivative(0.5f);
 			dir *= 1.0f/dir.magnitude;
 			Vector2 halfPoint = handleTransform.TransformPoint(curves[i].getPoint(0.5f));
-			Handles.DrawLine(halfPoint, halfPoint + arrowLength*dir);
-			//Vector2 arrowHalf;
-			/* 
-			float angle = (Mathf.PI/180.0f)*(Vector2.SignedAngle(Vector2.right, dir) - 45);
+			//Handles.DrawLine(halfPoint, halfPoint + arrowLength*dir);
+			Vector2 arrowHalf;
+			 
+			float angle = Mathf.Deg2Rad*(Vector2.SignedAngle(Vector2.right, dir) - 45);
 			
-			arrowHalf = handleTransform.TransformPoint(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)));
+			arrowHalf = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
 			Handles.DrawLine(halfPoint, halfPoint + arrowLength*arrowHalf);
 
-			angle = (Mathf.PI/180.0f)*(Vector2.SignedAngle(Vector2.right, dir) + 45);
+			angle = Mathf.Deg2Rad*(Vector2.SignedAngle(Vector2.right, dir) + 45);
 
-			arrowHalf = handleTransform.TransformPoint(new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)));
+			arrowHalf = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
 			Handles.DrawLine(halfPoint, halfPoint + arrowLength*arrowHalf);
-			*/
+			
 		}
 
 	}

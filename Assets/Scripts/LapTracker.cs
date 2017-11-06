@@ -18,6 +18,7 @@ public class LapTracker : MonoBehaviour {
 	
 	public void SetTotalCheckpoints(int total) {
 		totalCheckpoints = total;
+		Debug.Log("Total checkpoints: " + total);
 	}
 
 	public void PlayerCrossed(int player, int checkpointNum) {
@@ -31,7 +32,7 @@ public class LapTracker : MonoBehaviour {
 		}
 		if(checkpointNum - 1 == curCounts[player-1]){
 			curCounts[player-1] = checkpointNum;
-			//Debug.Log("Player " + player + " hit a checkpoint.");
+			Debug.Log("Player " + player + " hit checkpoint" + checkpointNum + ".");
 		}
 	}
 }
