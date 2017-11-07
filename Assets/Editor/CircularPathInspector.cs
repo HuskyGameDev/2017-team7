@@ -42,7 +42,7 @@ public class CircularPathInspector : Editor {
 				path.SetCurves(new List<CubicBezierCurve>());
 				curves = path.GetCurves();
 			}
-			
+
 			int curveIndex = selected == -1 ? curves.Count - 1 : selected;
 			selected = curveIndex;
 			if(curves.Count > 0){
@@ -101,7 +101,7 @@ public class CircularPathInspector : Editor {
 					Undo.RecordObject(path, "Move point");
 					EditorUtility.SetDirty(path);
 					curves[i].p0 = handleTransform.InverseTransformPoint(point);
-					curves[i].p0Checkpoint.position = point;
+					curves[i].p0Checkpoint.position = handleTransform.InverseTransformPoint(point);
 					path.GetPreviousCurve(selected).p3 = handleTransform.InverseTransformPoint(point);
 				}
 
