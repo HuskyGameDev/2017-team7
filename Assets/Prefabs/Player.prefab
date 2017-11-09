@@ -125,7 +125,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 1
+  m_LinearDrag: 0
   m_AngularDrag: 0.3
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 8fb25603c3953354e85dafb38c0490ef, type: 2}
@@ -202,7 +202,7 @@ MonoBehaviour:
   turningSpeed: 0.72
   acceleration: 3
   maxSpeed: 125
-  maxReverse: 50
+  maxReverse: 60
   playerNumber: 0
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
   playerMaterial: {fileID: 6200000, guid: 8fb25603c3953354e85dafb38c0490ef, type: 2}
