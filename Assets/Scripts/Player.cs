@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
+    private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST };
     private STATES state = STATES.IDLE;
 
     private Rigidbody2D playerRB;
@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
 
         Vector2 newVel = new Vector2();
 
-
+        Vector2 accel = new Vector2();
 
 
         switch (state)
@@ -124,14 +124,9 @@ public class Player : MonoBehaviour
             //Idle state
             case STATES.IDLE:
 
-                //setting newvel direction at unit length
-                setNewVelRotation(newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(newVel);
-                //setting player speed to slightly smaller ratio of current velocity
-                newVel *= playerRB.velocity.magnitude * 0.95f;
+                newVel.Set(0, 0);
+
+                Debug.Log("Idle " + playerNumber + " " + ctrls.GetLT());
 
                 //checking change states
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
@@ -141,7 +136,7 @@ public class Player : MonoBehaviour
 
             //Moving forward state
             case STATES.MOVE_F:
-             
+
                 //setting newvel direction at unit length
                 setNewVelRotation(newVel);
                 //change player turning
@@ -149,15 +144,13 @@ public class Player : MonoBehaviour
                 //setting newvel direction to turning direction
                 setNewVelRotation(newVel);
 
-                Vector2 accel = newVel * acceleration * ctrls.GetSpeed();
+                accel = newVel * acceleration * ctrls.GetSpeed();
 
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
-                
-                //check states
-                if (ctrls.GetSpeed() == 0) state = STATES.IDLE;
-                if (ctrls.GetSpeed() < 0) state = STATES.DECEL_B;
-              
+
+                if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
+
                 break;
 
 
@@ -170,19 +163,16 @@ public class Player : MonoBehaviour
                 //setting newvel direction to turning direction
                 setNewVelRotation(newVel);
 
-                Vector2 accel = newVel * acceleration * ctrls.GetSpeed();
+                accel = newVel * acceleration * ctrls.GetSpeed();
 
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
-                
-         
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90)) state = STATES.IDLE;
+
+                if (ctrls.GetSpeed() >= 0) state = STATES.ACCEL;
 
                 break;
-                
 
-            case STATES.DECEL_B:
-
+            case STATES.ACCEL:
 
                 //setting newvel direction at unit length
                 setNewVelRotation(newVel);
@@ -191,21 +181,63 @@ public class Player : MonoBehaviour
                 //setting newvel direction to turning direction
                 setNewVelRotation(newVel);
 
-                Vector2 accel = newVel * acceleration * ctrls.GetSpeed();
+                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.95f;
+                else
+                {
+                    accel = newVel * acceleration * ctrls.GetSpeed();
+                    //set new velocity             
+                    newVel = (newVel * (-1) * playerRB.velocity.magnitude) + accel;
+                }
 
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
+                if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.IDLE;
+                break;
+            case STATES.DECEL:
+                //setting newvel direction at unit length
+                setNewVelRotation(newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(newVel);
+                
+                //setting player speed to slightly smaller ratio of current velocity
+                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.95f;
+                else
+                {
+                    accel = newVel * acceleration * ctrls.GetSpeed();
+                    //set new velocity             
+                    newVel = (newVel * playerRB.velocity.magnitude) + accel;
+                }
 
-
+                if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.STOP_B;
 
                 break;
-            case STATES.STOP_B: break;
+            case STATES.STOP_B:
+
+                newVel.Set(0, 0);
+
+                if (wait > 0)
+                {
+                    wait--;
+                }
+                else
+                {
+                    //newVel = accel;
+                    wait = reverseWait;
+                    state = STATES.IDLE;
+                }
+
+                if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
+
+                break;
             case STATES.DRIFT: break;
             case STATES.DRAFT: break;
             case STATES.BOOST: break;
         }
 
         playerRB.velocity = newVel;
+
 
         //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
@@ -230,37 +262,21 @@ public class Player : MonoBehaviour
 
         //accel = newVel * acceleration * draftBoost * terrainSpeed * ctrls.GetSpeed();
 
-        // Not moving, want to reverse
-        if (playerRB.velocity.magnitude == 0 && ctrls.GetSpeed() < 0)
-        {
-            if (wait > 0)
-            {
-                wait--;
-                newVel.Set(0, 0);
-            }
-            else
-            {
-                newVel = accel;
-                wait = reverseWait;
-            }
-        }
         // Moving backward
-        else if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
-        {
-            newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
-        }
+        //else if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
+        //{
+        //    newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
+        //}
         // Move forward
-        else
-        {
-            newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
-            // Check for direction switch
-            if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
-            {
-                newVel.Set(0, 0);
-            }
-        }
-
-        playerRB.velocity = newVel;
+        //else
+        //{
+        //    newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
+        //    // Check for direction switch
+        //    if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
+        //    {
+        //        newVel.Set(0, 0);
+        //    }
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
