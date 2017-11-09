@@ -806,6 +806,157 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &32390963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 32390965}
+  - component: {fileID: 32390964}
+  - component: {fileID: 32390966}
+  m_Layer: 0
+  m_Name: Path
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &32390964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32390963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e391bd09320590e40aaecd5db3ff9336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultCheckpoint: {fileID: 0}
+  curves:
+  - p0: {x: 7.9076853, y: 79.70401}
+    p1: {x: -1.6522853, y: 264.9856}
+    p2: {x: 8.870469, y: 353.184}
+    p3: {x: 22.735481, y: 556.73065}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 7.9076853, y: 79.70401}
+      radius: 50
+  - p0: {x: 22.735481, y: 556.73065}
+    p1: {x: 132.19652, y: 598.7746}
+    p2: {x: 137.65938, y: 628.1878}
+    p3: {x: 246.2601, y: 465.2944}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 22.735481, y: 556.73065}
+      radius: 50
+  - p0: {x: 246.2601, y: 465.2944}
+    p1: {x: 329.9425, y: 461.11288}
+    p2: {x: 244.47421, y: 638.52844}
+    p3: {x: 545.969, y: 580.15594}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 246.2601, y: 465.2944}
+      radius: 60
+  - p0: {x: 545.969, y: 580.15594}
+    p1: {x: 557.3548, y: 498.5686}
+    p2: {x: 584.0978, y: 266.50647}
+    p3: {x: 446.51968, y: 277.33188}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 545.969, y: 580.15594}
+      radius: 60
+  - p0: {x: 446.51968, y: 277.33188}
+    p1: {x: 335.74704, y: 335.92093}
+    p2: {x: 387.4616, y: 325.20718}
+    p3: {x: 296.48605, y: 303.3092}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 446.51968, y: 277.33188}
+      radius: 66
+  - p0: {x: 296.48605, y: 303.3092}
+    p1: {x: 216.69447, y: 254.4465}
+    p2: {x: 245.51387, y: 305.12674}
+    p3: {x: 186.64568, y: 183.37057}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 296.48605, y: 303.3092}
+      radius: 40
+  - p0: {x: 186.64568, y: 183.37057}
+    p1: {x: 237.51628, y: 87.61987}
+    p2: {x: 212.55441, y: 133.86505}
+    p3: {x: 221.08849, y: 111.78456}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 186.64568, y: 183.37057}
+      radius: 40
+  - p0: {x: 221.08849, y: 111.78456}
+    p1: {x: 230.08093, y: 91.237816}
+    p2: {x: 203.79753, y: 138.23386}
+    p3: {x: 272.2421, y: 50.428806}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 221.08849, y: 111.78456}
+      radius: 40
+  - p0: {x: 272.2421, y: 50.428806}
+    p1: {x: 285.70685, y: 50.106274}
+    p2: {x: 367.2566, y: 46.80826}
+    p3: {x: 477.49615, y: 48.757893}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 272.2421, y: 50.428806}
+      radius: 40
+  - p0: {x: 477.49615, y: 48.757893}
+    p1: {x: 569.5089, y: -71.37636}
+    p2: {x: 540.1514, y: -89.28932}
+    p3: {x: 473.34073, y: -182.66219}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 477.49615, y: 48.757893}
+      radius: 40
+  - p0: {x: 473.34073, y: -182.66219}
+    p1: {x: 256.02066, y: -186.40065}
+    p2: {x: 154.12405, y: -191.209}
+    p3: {x: 11.241048, y: -184.26825}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 473.34073, y: -182.66219}
+      radius: 50
+  - p0: {x: 11.241048, y: -184.26825}
+    p1: {x: 4.434575, y: 42.387413}
+    p2: {x: 10.543754, y: -25.62041}
+    p3: {x: 7.9076853, y: 79.70401}
+    p0Type: 2
+    p0Checkpoint:
+      position: {x: 11.241048, y: -184.26825}
+      radius: 50
+--- !u!4 &32390965
+Transform:
+  m_ObjectHideFlags: 10
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32390963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.749139, y: -50.286144, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1591337502}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32390966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32390963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3046d28edcfc44a61c68303706162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &36631969
 GameObject:
   m_ObjectHideFlags: 0
@@ -50330,6 +50481,64 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1591337501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1591337502}
+  - component: {fileID: 1591337504}
+  - component: {fileID: 1591337503}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591337502
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591337501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 32390965}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1591337503
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591337501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &1591337504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1591337501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1db76951785d8b4388c1ba20e21a519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 1591337503}
+  lapTracker: {fileID: 32390966}
 --- !u!1 &1592861446
 GameObject:
   m_ObjectHideFlags: 0
@@ -60827,7 +61036,7 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1936907664}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
   m_IsTrigger: 0
