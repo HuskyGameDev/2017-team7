@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     public float acceleration;
     public float maxSpeed;
-    public float maxReverse = 50;
+    public float maxReverse;
 
     private CapsuleCollider2D collider;
     private BoxCollider2D draftingHitbox;
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
     }
 
 
-    private void setNewVelRotation(Vector2 newVel)
+    private void setNewVelRotation(ref Vector2 newVel)
     {
         float rotation = Mathf.Deg2Rad * (playerRB.rotation + 90);
         newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
@@ -117,6 +117,7 @@ public class Player : MonoBehaviour
 
         Vector2 accel = new Vector2();
 
+        //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
 
         switch (state)
         {
@@ -124,9 +125,10 @@ public class Player : MonoBehaviour
             //Idle state
             case STATES.IDLE:
 
+                //if (playerNumber == 2) Debug.Log("In Idle.");
                 newVel.Set(0, 0);
 
-                Debug.Log("Idle " + playerNumber + " " + ctrls.GetLT());
+                
 
                 //checking change states
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
@@ -137,12 +139,15 @@ public class Player : MonoBehaviour
             //Moving forward state
             case STATES.MOVE_F:
 
+                //if (playerNumber == 2) Debug.Log("In Move Forward.");
+
+
                 //setting newvel direction at unit length
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
                 //change player turning
                 setRotation(newVel);
                 //setting newvel direction to turning direction
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
 
                 accel = newVel * acceleration * ctrls.GetSpeed();
 
@@ -156,12 +161,14 @@ public class Player : MonoBehaviour
 
             case STATES.MOVE_B:
 
+                //if (playerNumber == 2) Debug.Log("In Move Backward.");
+
                 //setting newvel direction at unit length
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
                 //change player turning
                 setRotation(newVel);
                 //setting newvel direction to turning direction
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
 
                 accel = newVel * acceleration * ctrls.GetSpeed();
 
@@ -174,34 +181,44 @@ public class Player : MonoBehaviour
 
             case STATES.ACCEL:
 
+                //if (playerNumber == 2) Debug.Log("In Accel.");
+
                 //setting newvel direction at unit length
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
                 //change player turning
                 setRotation(newVel);
                 //setting newvel direction to turning direction
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
 
-                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.95f;
+                Debug.Log("Before newVel " + newVel);
+                Debug.Log("Velocity " + playerRB.velocity);
+
+                if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.99f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
+                    Debug.Log("Accel " + accel);
                     //set new velocity             
                     newVel = (newVel * (-1) * playerRB.velocity.magnitude) + accel;
                 }
+                Debug.Log("After newVel " + newVel);
 
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.IDLE;
                 break;
             case STATES.DECEL:
+
+                //if (playerNumber == 2) Debug.Log("In Decel");
+
                 //setting newvel direction at unit length
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
                 //change player turning
                 setRotation(newVel);
                 //setting newvel direction to turning direction
-                setNewVelRotation(newVel);
+                setNewVelRotation(ref newVel);
                 
                 //setting player speed to slightly smaller ratio of current velocity
-                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.95f;
+                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.99f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
@@ -214,6 +231,8 @@ public class Player : MonoBehaviour
 
                 break;
             case STATES.STOP_B:
+
+                //if (playerNumber == 2) Debug.Log("In Stopped");
 
                 newVel.Set(0, 0);
 
