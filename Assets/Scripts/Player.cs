@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST };
     private STATES state = STATES.IDLE;
 
-    private Rigidbody2D playerRB;
+    public Rigidbody2D playerRB;
 
     private Controller ctrls;
 
