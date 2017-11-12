@@ -316,4 +316,10 @@ public class Player : MonoBehaviour
             Debug.Log("Exited Drafting");
         }
     }
+
+    
+    public float GetSpeedPercent()
+    {
+        return playerRB.velocity.magnitude / maxSpeed;
+    }
 }
