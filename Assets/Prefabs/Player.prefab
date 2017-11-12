@@ -198,6 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  playerRB: {fileID: 0}
   turnIncr: 0.03
   turningSpeed: 0.72
   acceleration: 3
