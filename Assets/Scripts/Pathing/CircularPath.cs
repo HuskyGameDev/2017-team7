@@ -31,8 +31,6 @@ public class CircularPath : MonoBehaviour {
 
 			createdCheckpoints.Add(createdCheckpoint);
 		}
-
-		GetComponent<LapTracker>().SetTotalCheckpoints(curves.Count);
 	}
 	public void SetCurves(List<CubicBezierCurve> curves_new){
 		curves = curves_new;
