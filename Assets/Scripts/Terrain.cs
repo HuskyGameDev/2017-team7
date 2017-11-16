@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class Terrain : MonoBehaviour {
 
-    private float oldMaxSpeed = 125;
-    private float newMaxSpeed = 175;
+    public Transform t;
+    public float tRotation;
+    public float currentRotation;
+
+  
     
 	// Use this for initialization
 	void Start () {
-
-	}
+        tRotation = t.rotation.z;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
-    IEnumerator waitOneSecond(Collider2D collision)
-    {
-        yield return new WaitForSeconds(1);
-        collision.gameObject.GetComponent<Player>().maxSpeed = oldMaxSpeed;
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
@@ -31,15 +29,35 @@ public class Terrain : MonoBehaviour {
             }
             else if (this.tag == "Oil")
             {
-
                 collision.gameObject.GetComponent<Player>().terrainTurning = 0.25f;
             }
             else if (this.tag == "Boost") 
             {
-                //oldMaxSpeed = collision.gameObject.GetComponent<Player>().maxSpeed;
-                collision.gameObject.GetComponent<Player>().maxSpeed = newMaxSpeed;
-                collision.gameObject.GetComponent<Player>().terrainSpeed = 50f;
+                currentRotation = collision.gameObject.GetComponent<Player>().playerRB.rotation;
+                while (currentRotation < -360)
+                    currentRotation += 360;
+                if (currentRotation >= 360)
+                    currentRotation = currentRotation % 360;
 
+                tRotation = t.rotation.eulerAngles.z;
+
+
+               /* while (tRotation < -360)
+                    tRotation += 360;
+                if (tRotation >= 360)
+                    tRotation = tRotation % 360;*/
+                Debug.Log(currentRotation);
+                Debug.Log(tRotation);
+
+                //collision.gameObject.GetComponent<Player>().maxSpeed = newMaxSpeed;
+                if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
+                    (currentRotation >= tRotation - 450  && currentRotation <= tRotation - 270))
+                    collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST;
+                else
+                    collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST_B;
+
+               // collision.gameObject.GetComponent<Player>().terrainSpeed = 50f;
+               //collision.gameObject.GetComponent<Player>().playerRB.rotation = 
             }
         }
     }
@@ -58,15 +76,7 @@ public class Terrain : MonoBehaviour {
             }
             else if (this.tag == "Boost") 
             {
-                //float diff = newMaxSpeed - oldMaxSpeed;
-                //float ratio = diff / oldMaxSpeed;
-                StartCoroutine(waitOneSecond(collision));
-                collision.gameObject.GetComponent<Player>().terrainSpeed = 1;
 
-
-               // while (collision.gameObject.GetComponent<Player>().maxSpeed > oldMaxSpeed) {
-                   // collision.gameObject.GetComponent<Player>().maxSpeed -= ratio;
-               // }
             }
         }
         
