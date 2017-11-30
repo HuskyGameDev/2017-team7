@@ -5,7 +5,7 @@ using UnityEngine;
 public class LapTracker : MonoBehaviour {
 	private const int numPlayers = 4;
 	private const int POINTS_PER_TABLE = 25;
-	private const float MIN_PRECISION = 0.001f;
+	private const float MIN_PRECISION = 0.0001f;
 	private int[] curCounts;
 	private int[] curPositionalCounts;
 	private int[] positionalLaps;
@@ -29,7 +29,7 @@ public class LapTracker : MonoBehaviour {
 			positionalLaps[i] = 0;
 		}
 
-		//Generate lookup tables.
+		//Generate lookup tables. Just speeds up the process of projecting onto a line (at the cost of space)
 		int table = 0;
 		foreach(CubicBezierCurve curve in curves){
 			for(int i = 0;i<POINTS_PER_TABLE;i++){
@@ -39,8 +39,7 @@ public class LapTracker : MonoBehaviour {
 		}
 	}
 	public void PlayerCrossed(int player, int checkpointNum) {
-		//Debug.Log("Player " + player + " Hit checkpoint " + checkpointNum);
-		//Debug.Log("Count: " + curCounts[player-1]);
+		//Check if the last checkpoint was the last checkpoint, meaning the player has crossed the finish line
 		if(checkpointNum == 0 && curCounts[player-1] == totalCheckpoints - 1){
 			laps[player-1]++;
 			curCounts[player-1] = 0;
@@ -53,51 +52,58 @@ public class LapTracker : MonoBehaviour {
 		}
 	}
 
+	//Calculate the projection onto the curve for each player.
+	//I use the approach from https://pomax.github.io/bezierinfo/#projections
+	private float getProjectionOnCurve(Player p, int curveIndex){
+		
+		float tVal = 0f;
+		float minDist = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], 0]).magnitude;
+		float deltaT = 1f/(2f * (float)(POINTS_PER_TABLE));
+		//Calculate closest in the lookup table
+		for(int i = 1;i<POINTS_PER_TABLE;i++){
+			float mag = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], i]).magnitude;
+			if(mag < minDist){
+				minDist = mag;
+				tVal = (float)i/(float)(POINTS_PER_TABLE-1);
+			}
+		}
+		//Do fine adjustments to find curve position
+		//Possible TODO: Analyze and see if we can cut out early at any point.
+		while(deltaT > MIN_PRECISION){
+			float tempT = tVal + deltaT > 1f ? 1f : tVal + deltaT;
+			float mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
+			if(mag < minDist){
+				minDist = mag;
+				tVal = tempT;
+			}
+
+			tempT = tVal - deltaT < 0f ? 0f : tVal - deltaT;
+			mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
+			if(mag < minDist){
+				minDist = mag;
+				tVal = tempT;
+			}
+
+			deltaT/=2;
+		}
+
+		return tVal;
+	}
+
 	public int[] GetPositions(Player[] players){
 		int[] places = new int[players.Length];
 		float[] tVals = new float[numPlayers];
 		int curPlayer = 0;
-		bool increasePositional;
-		bool decreasePositional;
+		bool increasePositional = false;
+		bool decreasePositional = false;
 		bool continueLoop;
-		//Calculate the projection onto the curve for each player.
-		//I use the approach from https://pomax.github.io/bezierinfo/#projections
+		
 		foreach(Player p in players){
 			continueLoop = true;
-			increasePositional = false;
-			decreasePositional = false;
 			while(continueLoop){
-				//Debug.Log("Count: " + curPositionalCounts[p.playerNumber - 1] + "\n");
 				continueLoop = false;
-				float minDist = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], 0]).magnitude;
-				float deltaT = 1f/(float)(POINTS_PER_TABLE - 1);
-				//Calculate closest in the lookup table
-				for(int i = 1;i<POINTS_PER_TABLE;i++){
-					float mag = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], i]).magnitude;
-					if(mag < minDist){
-						minDist = mag;
-						tVals[p.playerNumber - 1] = (float)i/(float)(POINTS_PER_TABLE-1);
-					}
-				}
-				//Do fine adjustments to find curve position
-				while(deltaT > MIN_PRECISION){
-					deltaT /= 2f;
-					float tempT = tVals[p.playerNumber - 1] + deltaT > 1f ? 0 : tVals[p.playerNumber - 1] + deltaT;
-					float mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
-					if(mag < minDist){
-						minDist = mag;
-						tVals[p.playerNumber - 1] = tempT;
-						continue;
-					}
+				tVals[p.playerNumber - 1] = getProjectionOnCurve(p, curPositionalCounts[p.playerNumber - 1]);
 
-					tempT = tVals[p.playerNumber - 1] - deltaT < 0f ? 0f: tVals[p.playerNumber - 1] - deltaT;
-					mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
-					if(mag < minDist){
-						minDist = mag;
-						tVals[p.playerNumber - 1] = tempT;
-						continue;
-					}
-				}
 				//If the projection is 0 or 1, it's pretty possible that they're on the previous or next checkpoint
 				//So we should treat them as if they are on the last checkpoint, and try again
 				if(tVals[p.playerNumber - 1] == 1.0f){
@@ -116,7 +122,7 @@ public class LapTracker : MonoBehaviour {
 					
 					continueLoop = true;
 				}
-
+			
 				if(tVals[p.playerNumber - 1] == 0.0f){
 					Debug.Log("Decreasing position");
 					if(increasePositional) break;
@@ -126,14 +132,23 @@ public class LapTracker : MonoBehaviour {
 						curPositionalCounts[p.playerNumber - 1] = totalCheckpoints - 1;
 						positionalLaps[p.playerNumber - 1]-=1;
 					}else{
-					 curPositionalCounts[p.playerNumber - 1]  = curPositionalCounts[p.playerNumber - 1] - 1;
+						curPositionalCounts[p.playerNumber - 1]  = curPositionalCounts[p.playerNumber - 1] - 1;
 					}
 					continueLoop = true;
 				}
-
 			}
-			curPlayer++;
 		}
+
+		//Debug statements
+		Debug.DrawLine(players[0].playerRB.position, curves[curPositionalCounts[0]].getPoint(tVals[0]), Color.blue, 0, false);
+		Debug.DrawLine(players[1].playerRB.position, curves[curPositionalCounts[1]].getPoint(tVals[1]), Color.cyan, 0, false);
+		Debug.DrawLine(players[2].playerRB.position, curves[curPositionalCounts[2]].getPoint(tVals[2]), Color.green, 0, false);
+		Debug.DrawLine(players[3].playerRB.position, curves[curPositionalCounts[3]].getPoint(tVals[3]), Color.grey, 0, false);
+
+		foreach(CubicBezierCurve curve in curves){
+			curve.DebugDraw();
+		}
+
 		Debug.Log(curPositionalCounts[0] + ", " + curPositionalCounts[1] + ", " + curPositionalCounts[2] + ", " + curPositionalCounts[3]);
 		Debug.Log(positionalLaps[0] + ", " + positionalLaps[1] + ", " + positionalLaps[2] + ", " + positionalLaps[3]);
 		Debug.Log(tVals[0] + ", " + tVals[1] + ", " + tVals[2] + ", " + tVals[3]);

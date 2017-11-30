@@ -836,101 +836,101 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultCheckpoint: {fileID: 0}
   curves:
-  - p0: {x: 7.9076853, y: 79.70401}
+  - p0: {x: 7.9076853, y: 81.0889}
     p1: {x: -1.6522853, y: 264.9856}
     p2: {x: 8.870469, y: 353.184}
-    p3: {x: 22.735481, y: 556.73065}
+    p3: {x: 23.748665, y: 497.96674}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 7.9076853, y: 79.70401}
+      position: {x: 7.9076853, y: 81.0889}
       radius: 50
-  - p0: {x: 22.735481, y: 556.73065}
-    p1: {x: 132.19652, y: 598.7746}
-    p2: {x: 137.65938, y: 628.1878}
-    p3: {x: 246.2601, y: 465.2944}
+  - p0: {x: 23.748665, y: 497.96674}
+    p1: {x: 54.182358, y: 520.76044}
+    p2: {x: 155.89647, y: 550.1737}
+    p3: {x: 243.22061, y: 414.63583}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 22.735481, y: 556.73065}
+      position: {x: 23.748665, y: 497.96674}
       radius: 50
-  - p0: {x: 246.2601, y: 465.2944}
-    p1: {x: 329.9425, y: 461.11288}
-    p2: {x: 244.47421, y: 638.52844}
-    p3: {x: 545.969, y: 580.15594}
+  - p0: {x: 243.22061, y: 414.63583}
+    p1: {x: 363.37714, y: 441.86264}
+    p2: {x: 320.46207, y: 580.7777}
+    p3: {x: 541.9163, y: 526.4579}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 246.2601, y: 465.2944}
+      position: {x: 243.22061, y: 414.63583}
       radius: 60
-  - p0: {x: 545.969, y: 580.15594}
+  - p0: {x: 541.9163, y: 526.4579}
     p1: {x: 557.3548, y: 498.5686}
-    p2: {x: 584.0978, y: 266.50647}
-    p3: {x: 446.51968, y: 277.33188}
+    p2: {x: 553.70264, y: 266.50647}
+    p3: {x: 455.6382, y: 223.6338}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 545.969, y: 580.15594}
+      position: {x: 541.9163, y: 526.4579}
       radius: 60
-  - p0: {x: 446.51968, y: 277.33188}
-    p1: {x: 335.74704, y: 335.92093}
-    p2: {x: 387.4616, y: 325.20718}
-    p3: {x: 296.48605, y: 303.3092}
+  - p0: {x: 455.6382, y: 223.6338}
+    p1: {x: 324.60217, y: 267.0253}
+    p2: {x: 360.106, y: 244.15347}
+    p3: {x: 256.97235, y: 241.50572}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 446.51968, y: 277.33188}
+      position: {x: 455.6382, y: 223.6338}
       radius: 66
-  - p0: {x: 296.48605, y: 303.3092}
-    p1: {x: 216.69447, y: 254.4465}
-    p2: {x: 245.51387, y: 305.12674}
-    p3: {x: 186.64568, y: 183.37057}
+  - p0: {x: 256.97235, y: 241.50572}
+    p1: {x: 207.57593, y: 175.41916}
+    p2: {x: 238.42165, y: 214.95454}
+    p3: {x: 187.65884, y: 147.90959}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 296.48605, y: 303.3092}
+      position: {x: 256.97235, y: 241.50572}
       radius: 40
-  - p0: {x: 186.64568, y: 183.37057}
-    p1: {x: 237.51628, y: 87.61987}
-    p2: {x: 212.55441, y: 133.86505}
-    p3: {x: 221.08849, y: 111.78456}
+  - p0: {x: 187.65884, y: 147.90959}
+    p1: {x: 200.78265, y: 101.030556}
+    p2: {x: 193.89606, y: 126.285126}
+    p3: {x: 220.81136, y: 57.90468}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 186.64568, y: 183.37057}
+      position: {x: 187.65884, y: 147.90959}
       radius: 40
-  - p0: {x: 221.08849, y: 111.78456}
-    p1: {x: 230.08093, y: 91.237816}
-    p2: {x: 203.79753, y: 138.23386}
-    p3: {x: 272.2421, y: 50.428806}
+  - p0: {x: 220.81136, y: 57.90468}
+    p1: {x: 238.24396, y: 22.435143}
+    p2: {x: 261.5218, y: 15.205353}
+    p3: {x: 287.89856, y: 3.8229408}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 221.08849, y: 111.78456}
+      position: {x: 220.81136, y: 57.90468}
       radius: 40
-  - p0: {x: 272.2421, y: 50.428806}
-    p1: {x: 285.70685, y: 50.106274}
-    p2: {x: 367.2566, y: 46.80826}
-    p3: {x: 477.49615, y: 48.757893}
+  - p0: {x: 287.89856, y: 3.8229408}
+    p1: {x: 335.26807, y: -1.7872581}
+    p2: {x: 395.82724, y: -1.586834}
+    p3: {x: 473.9922, y: -3.9093895}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 272.2421, y: 50.428806}
+      position: {x: 287.89856, y: 3.8229408}
       radius: 40
-  - p0: {x: 477.49615, y: 48.757893}
-    p1: {x: 569.5089, y: -71.37636}
-    p2: {x: 540.1514, y: -89.28932}
-    p3: {x: 473.34073, y: -182.66219}
+  - p0: {x: 473.9922, y: -3.9093895}
+    p1: {x: 543.0137, y: -85.40323}
+    p2: {x: 547.1649, y: -135.26631}
+    p3: {x: 467.10654, y: -232.5355}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 477.49615, y: 48.757893}
+      position: {x: 473.9922, y: -3.9093895}
       radius: 40
-  - p0: {x: 473.34073, y: -182.66219}
-    p1: {x: 256.02066, y: -186.40065}
-    p2: {x: 154.12405, y: -191.209}
-    p3: {x: 11.241048, y: -184.26825}
+  - p0: {x: 467.10654, y: -232.5355}
+    p1: {x: 247.4487, y: -234.71545}
+    p2: {x: 154.12408, y: -237.18597}
+    p3: {x: 10.461774, y: -234.14157}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 473.34073, y: -182.66219}
+      position: {x: 467.10654, y: -232.5355}
       radius: 50
-  - p0: {x: 11.241048, y: -184.26825}
+  - p0: {x: 10.461774, y: -234.14157}
     p1: {x: 4.434575, y: 42.387413}
     p2: {x: 10.543754, y: -25.62041}
-    p3: {x: 7.9076853, y: 79.70401}
+    p3: {x: 7.9076853, y: 81.0889}
     p0Type: 2
     p0Checkpoint:
-      position: {x: 11.241048, y: -184.26825}
+      position: {x: 10.461774, y: -234.14157}
       radius: 50
 --- !u!4 &32390965
 Transform:
@@ -939,7 +939,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 32390963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.749139, y: -50.286144, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1591337502}
@@ -3022,6 +3022,99 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &94968128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 94968129}
+  - component: {fileID: 94968131}
+  - component: {fileID: 94968130}
+  - component: {fileID: 94968132}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &94968129
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94968128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 807300946}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -50, y: 120.8085}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &94968130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94968128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Places: []'
+--- !u!222 &94968131
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94968128}
+--- !u!114 &94968132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94968128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c4a5ca994060345a6ece18454df04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tracker: {fileID: 32390966}
+  players:
+  - {fileID: 1249677015}
+  - {fileID: 1873761511}
+  - {fileID: 551308360}
+  - {fileID: 1597260588}
+  text: {fileID: 94968130}
 --- !u!1 &96283856
 GameObject:
   m_ObjectHideFlags: 0
@@ -17840,6 +17933,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &551308360 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 487595901}
+  m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
 --- !u!1 &554606396
 GameObject:
   m_ObjectHideFlags: 0
@@ -27542,6 +27641,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 628164860}
+  - {fileID: 94968129}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40516,6 +40616,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1249677015 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 73819804}
+  m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
 --- !u!1 &1252897812
 GameObject:
   m_ObjectHideFlags: 0
@@ -50681,6 +50787,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1597260588 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 212906882}
+  m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
 --- !u!1 &1598755740
 GameObject:
   m_ObjectHideFlags: 0
@@ -58740,6 +58852,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1873761511 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
+    type: 2}
+  m_PrefabInternal: {fileID: 249783101}
+  m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
 --- !u!1 &1873874846
 GameObject:
   m_ObjectHideFlags: 0

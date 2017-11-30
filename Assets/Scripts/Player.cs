@@ -190,18 +190,13 @@ public class Player : MonoBehaviour
                 //setting newvel direction to turning direction
                 setNewVelRotation(ref newVel);
 
-                Debug.Log("Before newVel " + newVel);
-                Debug.Log("Velocity " + playerRB.velocity);
-
                 if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.99f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
-                    Debug.Log("Accel " + accel);
                     //set new velocity             
                     newVel = (newVel * (-1) * playerRB.velocity.magnitude) + accel;
                 }
-                Debug.Log("After newVel " + newVel);
 
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.IDLE;
@@ -304,7 +299,6 @@ public class Player : MonoBehaviour
         //if (collision.gameObject.tag == "Player")
         {
             drafting = true;
-            Debug.Log("Entered Drafting");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -313,7 +307,6 @@ public class Player : MonoBehaviour
         // if (collision.gameObject.tag == "Player")
         {
             drafting = false;
-            Debug.Log("Exited Drafting");
         }
     }
 }

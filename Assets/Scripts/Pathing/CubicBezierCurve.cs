@@ -12,6 +12,7 @@ public class CubicBezierCurve{
 	public Vector2 p0, p1, p2, p3;
 	public BezierPointType p0Type = BezierPointType.NONE;
 	public Checkpoint p0Checkpoint;
+	const int DRAW_LINES = 50;
 	public CubicBezierCurve(){
 		p0 = new Vector2(0.0f, 0.0f);
 		p1 = new Vector2(0.0f, 0.0f);
@@ -23,5 +24,11 @@ public class CubicBezierCurve{
 	}
 	public Vector2 getDerivative(float t){
 		return 3.0f*(1-t)*(1-t)*(p1-p0) + 6.0f*(1-t)*t*(p2-p1) + 3.0f*t*t*(p3-p2);
+	}
+
+	public void DebugDraw(){
+		for(int i = 0;i<DRAW_LINES;i++){
+			Debug.DrawLine(getPoint((float)i/(float)DRAW_LINES), getPoint((float)(i+1)/(float)DRAW_LINES), Color.yellow, 0, false);
+		}
 	}
 }
