@@ -94,9 +94,6 @@ public class LapTracker : MonoBehaviour {
 		int[] places = new int[players.Length];
 		float[] tVals = new float[numPlayers];
 		int curPlayer = 0;
-		bool increasePositional = false;
-		bool decreasePositional = false;
-		bool continueLoop;
 		
 		foreach(Player p in players){
 			float curT, prevT, nextT;
