@@ -57,11 +57,11 @@ public class LapTracker : MonoBehaviour {
 	private float getProjectionOnCurve(Player p, int curveIndex){
 		
 		float tVal = 0f;
-		float minDist = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], 0]).magnitude;
+		float minDist = (p.playerRB.position - curveLookupTables[curveIndex, 0]).magnitude;
 		float deltaT = 1f/(2f * (float)(POINTS_PER_TABLE));
 		//Calculate closest in the lookup table
 		for(int i = 1;i<POINTS_PER_TABLE;i++){
-			float mag = (p.playerRB.position - curveLookupTables[curPositionalCounts[p.playerNumber - 1], i]).magnitude;
+			float mag = (p.playerRB.position - curveLookupTables[curveIndex, i]).magnitude;
 			if(mag < minDist){
 				minDist = mag;
 				tVal = (float)i/(float)(POINTS_PER_TABLE-1);
@@ -71,14 +71,14 @@ public class LapTracker : MonoBehaviour {
 		//Possible TODO: Analyze and see if we can cut out early at any point.
 		while(deltaT > MIN_PRECISION){
 			float tempT = tVal + deltaT > 1f ? 1f : tVal + deltaT;
-			float mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
+			float mag = (p.playerRB.position - curves[curveIndex].getPoint(tempT)).magnitude;
 			if(mag < minDist){
 				minDist = mag;
 				tVal = tempT;
 			}
 
 			tempT = tVal - deltaT < 0f ? 0f : tVal - deltaT;
-			mag = (p.playerRB.position - curves[curPositionalCounts[p.playerNumber - 1]].getPoint(tempT)).magnitude;
+			mag = (p.playerRB.position - curves[curveIndex].getPoint(tempT)).magnitude;
 			if(mag < minDist){
 				minDist = mag;
 				tVal = tempT;
@@ -99,6 +99,7 @@ public class LapTracker : MonoBehaviour {
 		bool continueLoop;
 		
 		foreach(Player p in players){
+			/*
 			continueLoop = true;
 			while(continueLoop){
 				continueLoop = false;
@@ -137,6 +138,32 @@ public class LapTracker : MonoBehaviour {
 					continueLoop = true;
 				}
 			}
+			*/
+			float curT, prevT, nextT;
+			float distToCur, distToPrev, distToNext;
+			int prevCount, curCount, nextCount;
+			
+			prevCount = curPositionalCounts[p.playerNumber - 1] - 1 < 0 ? totalCheckpoints - 1 : curPositionalCounts[p.playerNumber - 1] - 1;
+			curCount = curPositionalCounts[p.playerNumber - 1];
+			nextCount = curPositionalCounts[p.playerNumber - 1] + 1 >= totalCheckpoints ? 0 : curPositionalCounts[p.playerNumber - 1] + 1;
+
+			prevT = getProjectionOnCurve(p, prevCount);
+			curT = getProjectionOnCurve(p, curCount);
+			nextT = getProjectionOnCurve(p, nextCount);
+
+			distToPrev = (curves[prevCount].getPoint(prevT) - p.playerRB.position).magnitude;
+			distToCur = (curves[curCount].getPoint(curT) - p.playerRB.position).magnitude;
+			distToNext = (curves[nextCount].getPoint(nextT) - p.playerRB.position).magnitude;
+			Debug.Log("Player " + p.playerNumber + "Distances: " + distToPrev + ", " + distToCur + ", " + distToNext);
+			if(distToPrev < distToCur && distToPrev < distToNext){
+				tVals[p.playerNumber - 1] = prevT;
+				curPositionalCounts[p.playerNumber - 1] = prevCount;
+			}else if(distToNext < distToPrev && distToNext < distToCur){
+				tVals[p.playerNumber - 1] = nextT;
+				curPositionalCounts[p.playerNumber - 1] = nextCount;
+			}else{
+				tVals[p.playerNumber - 1] = curT;
+			}
 		}
 
 		//Debug statements
@@ -149,10 +176,10 @@ public class LapTracker : MonoBehaviour {
 			curve.DebugDraw();
 		}
 
-		Debug.Log(curPositionalCounts[0] + ", " + curPositionalCounts[1] + ", " + curPositionalCounts[2] + ", " + curPositionalCounts[3]);
+		/*Debug.Log(curPositionalCounts[0] + ", " + curPositionalCounts[1] + ", " + curPositionalCounts[2] + ", " + curPositionalCounts[3]);
 		Debug.Log(positionalLaps[0] + ", " + positionalLaps[1] + ", " + positionalLaps[2] + ", " + positionalLaps[3]);
 		Debug.Log(tVals[0] + ", " + tVals[1] + ", " + tVals[2] + ", " + tVals[3]);
-		Debug.Log("Determining Positions...");
+		Debug.Log("Determining Positions...");*/
 		//I guarantee this is a dumb way to find positions.
 		//There is almost certainly an O(nlgn) (or even O(n)) way to do this, but since 
 		// 4 is the max for n, it's not a big deal, and this will work fine as O(n^2).
