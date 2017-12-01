@@ -99,46 +99,6 @@ public class LapTracker : MonoBehaviour {
 		bool continueLoop;
 		
 		foreach(Player p in players){
-			/*
-			continueLoop = true;
-			while(continueLoop){
-				continueLoop = false;
-				tVals[p.playerNumber - 1] = getProjectionOnCurve(p, curPositionalCounts[p.playerNumber - 1]);
-
-				//If the projection is 0 or 1, it's pretty possible that they're on the previous or next checkpoint
-				//So we should treat them as if they are on the last checkpoint, and try again
-				if(tVals[p.playerNumber - 1] == 1.0f){
-					Debug.Log("Increasing position, current count: " + curPositionalCounts[p.playerNumber - 1] + ", tVal: " + tVals[p.playerNumber - 1] + ", Lap: " + positionalLaps[p.playerNumber - 1]);
-					//We've been decreasing, now we want to increase. This means we are on the boundry, so we exit the loop.
-					if(decreasePositional) break;
-
-					increasePositional = true;
-					
-					if(curPositionalCounts[p.playerNumber - 1] + 1 == totalCheckpoints){
-						curPositionalCounts[p.playerNumber - 1] = 0;
-						positionalLaps[p.playerNumber - 1] += 1;
-					}else{
-						curPositionalCounts[p.playerNumber - 1] = curPositionalCounts[p.playerNumber - 1] + 1;
-					}
-					
-					continueLoop = true;
-				}
-			
-				if(tVals[p.playerNumber - 1] == 0.0f){
-					Debug.Log("Decreasing position");
-					if(increasePositional) break;
-
-					decreasePositional = true;
-					if(curPositionalCounts[p.playerNumber - 1] - 1 == -1){
-						curPositionalCounts[p.playerNumber - 1] = totalCheckpoints - 1;
-						positionalLaps[p.playerNumber - 1]-=1;
-					}else{
-						curPositionalCounts[p.playerNumber - 1]  = curPositionalCounts[p.playerNumber - 1] - 1;
-					}
-					continueLoop = true;
-				}
-			}
-			*/
 			float curT, prevT, nextT;
 			float distToCur, distToPrev, distToNext;
 			int prevCount, curCount, nextCount;
@@ -154,7 +114,7 @@ public class LapTracker : MonoBehaviour {
 			distToPrev = (curves[prevCount].getPoint(prevT) - p.playerRB.position).magnitude;
 			distToCur = (curves[curCount].getPoint(curT) - p.playerRB.position).magnitude;
 			distToNext = (curves[nextCount].getPoint(nextT) - p.playerRB.position).magnitude;
-			Debug.Log("Player " + p.playerNumber + "Distances: " + distToPrev + ", " + distToCur + ", " + distToNext);
+
 			if(distToPrev < distToCur && distToPrev < distToNext){
 				tVals[p.playerNumber - 1] = prevT;
 				curPositionalCounts[p.playerNumber - 1] = prevCount;
