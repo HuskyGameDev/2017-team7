@@ -115,9 +115,18 @@ public class LapTracker : MonoBehaviour {
 			if(distToPrev < distToCur && distToPrev < distToNext){
 				tVals[p.playerNumber - 1] = prevT;
 				curPositionalCounts[p.playerNumber - 1] = prevCount;
+				
+				if(prevCount == totalCheckpoints - 1){
+					positionalLaps[p.playerNumber - 1] -= 1;
+				}
+
 			}else if(distToNext < distToPrev && distToNext < distToCur){
 				tVals[p.playerNumber - 1] = nextT;
 				curPositionalCounts[p.playerNumber - 1] = nextCount;
+
+				if(nextCount == 0){
+					positionalLaps[p.playerNumber - 1] += 1;
+				}
 			}else{
 				tVals[p.playerNumber - 1] = curT;
 			}
