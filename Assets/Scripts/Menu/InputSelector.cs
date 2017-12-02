@@ -15,7 +15,7 @@ public class InputSelector : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         mouseControl = true;
     }
 
