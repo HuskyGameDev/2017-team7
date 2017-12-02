@@ -1218,7 +1218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 1970414811}
-  selectedObject: {fileID: 1512093832}
+  firstObject: {fileID: 1512093832}
 --- !u!1 &1771354552
 GameObject:
   m_ObjectHideFlags: 0
