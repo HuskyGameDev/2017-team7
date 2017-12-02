@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 124273175699937474}
   - component: {fileID: 92191229882680198}
   - component: {fileID: 81427144543320022}
+  - component: {fileID: 114846998728240572}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -198,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRB: {fileID: 0}
   turnIncr: 0.03
   turningSpeed: 0.72
   acceleration: 3
@@ -208,6 +210,20 @@ MonoBehaviour:
   playerMaterial: {fileID: 6200000, guid: 8fb25603c3953354e85dafb38c0490ef, type: 2}
   terrainSpeed: 1
   terrainTurning: 1
+--- !u!114 &114846998728240572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537395655367276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a875036e9b410e4db30dcf7f2d75ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114600300475931796}
+  maxZoom: 100
+  minZoom: 60
 --- !u!124 &124273175699937474
 Behaviour:
   m_ObjectHideFlags: 1

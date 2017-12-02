@@ -32,3 +32,5 @@ sysinfo.txt
 
 /Temp/UnityLockFile
 *.ide
+*.lock
+*.ide

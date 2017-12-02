@@ -6,10 +6,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST };
-    private STATES state = STATES.IDLE;
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B };
+    public STATES state = STATES.IDLE;
 
     public Rigidbody2D playerRB;
+    public Coroutine boostingCoR;
 
     private Controller ctrls;
 
@@ -27,12 +28,9 @@ public class Player : MonoBehaviour
     private bool drafting = false;
     private int draftTime = 0;
     private float draftBoost = 1;
-     
 
     private bool drifting;
     private float tempRotation;
-
-
 
     public int playerNumber;
 
@@ -44,7 +42,20 @@ public class Player : MonoBehaviour
     public float terrainSpeed = 1;
     public float terrainTurning = 1;
 
+    IEnumerator endBoost()
+    {
+        yield return new WaitForSeconds(1);
+        maxSpeed = 125;
+        Debug.Log("RESET MAX SPEED");
+        
+    }
+    IEnumerator endBoostB()
+    {
+        yield return new WaitForSeconds(1);
+        maxReverse = 60;
+        Debug.Log("RESET MAX SPEED");
 
+    }
 
     private void checkDrafting()
     {
@@ -138,7 +149,7 @@ public class Player : MonoBehaviour
 
             //Moving forward state
             case STATES.MOVE_F:
-
+                //Debug.Log("MOVING F");
                 //if (playerNumber == 2) Debug.Log("In Move Forward.");
 
 
@@ -190,13 +201,18 @@ public class Player : MonoBehaviour
                 //setting newvel direction to turning direction
                 setNewVelRotation(ref newVel);
 
+                //Debug.Log("Before newVel " + newVel);
+               // Debug.Log("Velocity " + playerRB.velocity);
+
                 if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.99f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
+                   // Debug.Log("Accel " + accel);
                     //set new velocity             
                     newVel = (newVel * (-1) * playerRB.velocity.magnitude) + accel;
                 }
+                //Debug.Log("After newVel " + newVel);
 
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.IDLE;
@@ -247,7 +263,55 @@ public class Player : MonoBehaviour
                 break;
             case STATES.DRIFT: break;
             case STATES.DRAFT: break;
-            case STATES.BOOST: break;
+
+            case STATES.BOOST:
+                
+                //Debug.Log("BOOSTING");
+                maxSpeed = 187;
+                maxReverse = 60;
+
+                //setting newvel direction at unit length
+                setNewVelRotation(ref newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(ref newVel);
+
+                accel = newVel * acceleration;
+
+                //set new velocity             
+                newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
+                
+                //if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
+                StopAllCoroutines();
+                StartCoroutine(endBoost());
+                state = STATES.MOVE_F;
+
+                break;
+            case STATES.BOOST_B:
+
+                //Debug.Log("BOOSTING");
+                maxSpeed = 125;
+                maxReverse = 120;
+
+                //setting newvel direction at unit length
+                setNewVelRotation(ref newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(ref newVel);
+
+                accel = newVel * acceleration;
+
+                //set new velocity             
+                newVel = Vector2.ClampMagnitude((newVel * -100000) + accel, maxSpeed);
+
+                //if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
+                StopAllCoroutines();
+                StartCoroutine(endBoostB());
+                state = STATES.MOVE_B;
+
+                break;
         }
 
         playerRB.velocity = newVel;
@@ -308,5 +372,11 @@ public class Player : MonoBehaviour
         {
             drafting = false;
         }
+    }
+
+    
+    public float GetSpeedPercent()
+    {
+        return playerRB.velocity.magnitude / maxSpeed;
     }
 }
