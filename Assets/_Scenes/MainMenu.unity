@@ -284,8 +284,8 @@ GameObject:
   - component: {fileID: 475740744}
   - component: {fileID: 475740743}
   - component: {fileID: 475740742}
-  - component: {fileID: 475740741}
   - component: {fileID: 475740745}
+  - component: {fileID: 475740741}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -317,13 +317,12 @@ RectTransform:
 --- !u!114 &475740741
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114707591259278576, guid: fcfaa1294d7a6ab4a9b2e5c795620e2c,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475740739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e303c89071c85740ab205e465a07ebc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bca411be068e4a469ae3407553fe93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &475740742
@@ -367,8 +366,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 475740741}
-        m_MethodName: onClickStart
-        m_Mode: 3
+        m_MethodName: Quit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -892,7 +891,7 @@ GameObject:
   - component: {fileID: 1397378168}
   - component: {fileID: 1397378167}
   m_Layer: 5
-  m_Name: red-side
+  m_Name: side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
