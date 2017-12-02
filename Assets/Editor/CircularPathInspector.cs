@@ -17,7 +17,7 @@ public class CircularPathInspector : Editor {
 
 	void OnEnable()
 	{
-		Tools.hidden = true;
+		//Tools.hidden = true;
 	}
 	
 	void OnDisable()

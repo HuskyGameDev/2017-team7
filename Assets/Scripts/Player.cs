@@ -363,7 +363,6 @@ public class Player : MonoBehaviour
         //if (collision.gameObject.tag == "Player")
         {
             drafting = true;
-            Debug.Log("Entered Drafting");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -372,7 +371,6 @@ public class Player : MonoBehaviour
         // if (collision.gameObject.tag == "Player")
         {
             drafting = false;
-            Debug.Log("Exited Drafting");
         }
     }
 
