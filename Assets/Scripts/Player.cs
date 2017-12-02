@@ -268,6 +268,7 @@ public class Player : MonoBehaviour
                 
                 //Debug.Log("BOOSTING");
                 maxSpeed = 187;
+                maxReverse = 60;
 
                 //setting newvel direction at unit length
                 setNewVelRotation(ref newVel);
@@ -290,6 +291,7 @@ public class Player : MonoBehaviour
             case STATES.BOOST_B:
 
                 //Debug.Log("BOOSTING");
+                maxSpeed = 125;
                 maxReverse = 120;
 
                 //setting newvel direction at unit length
