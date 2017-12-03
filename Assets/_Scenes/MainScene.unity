@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5712765}
   - component: {fileID: 5712766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9637537}
   - component: {fileID: 9637538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11666320}
   - component: {fileID: 11666321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17112990}
   - component: {fileID: 17112991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,7 +400,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 20759078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 32334861}
   - component: {fileID: 32334862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 36313991}
   - component: {fileID: 36313992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39016463}
   - component: {fileID: 39016464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53488357}
   - component: {fileID: 53488358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69516076}
   - component: {fileID: 69516077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,11 +786,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.3
+      value: -16.1
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -23.4
+      value: -32.6
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -798,7 +798,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -861,7 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 76827738}
   - component: {fileID: 76827739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78152720}
   - component: {fileID: 78152721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78353520}
   - component: {fileID: 78353521}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1074,7 +1074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88942254}
   - component: {fileID: 88942255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,7 +1144,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 94113229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,7 +1175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 94736738}
   - component: {fileID: 94736739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95665378}
   - component: {fileID: 95665379}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1316,7 +1316,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 96882286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98561427}
   - component: {fileID: 98561428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102692935}
   - component: {fileID: 102692936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102904854}
   - component: {fileID: 102904855}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1575,7 +1575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 109298066}
   - component: {fileID: 109298067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111001043}
   - component: {fileID: 111001044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1717,7 +1717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115842153}
   - component: {fileID: 115842154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,7 +1788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120920422}
   - component: {fileID: 120920423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,7 +1859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 124209359}
   - component: {fileID: 124209360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1930,7 +1930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 133893280}
   - component: {fileID: 133893281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2001,7 +2001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 140395936}
   - component: {fileID: 140395937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141775010}
   - component: {fileID: 141775011}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2143,7 +2143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154135819}
   - component: {fileID: 154135820}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 164700727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2256,7 +2256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165676038}
   - component: {fileID: 165676039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2327,7 +2327,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171042195}
   - component: {fileID: 171042196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,7 +2398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187919970}
   - component: {fileID: 187919971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2469,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188704028}
   - component: {fileID: 188704029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,7 +2540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192539926}
   - component: {fileID: 192539927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2611,7 +2611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192685653}
   - component: {fileID: 192685654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2682,7 +2682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 200318862}
   - component: {fileID: 200318863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2753,7 +2753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 206144654}
   - component: {fileID: 206144655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2824,7 +2824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 207450580}
   - component: {fileID: 207450581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2895,7 +2895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208643656}
   - component: {fileID: 208643657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2989,7 +2989,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 218119588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,7 +3031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220724577}
   - component: {fileID: 220724578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3102,7 +3102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221134422}
   - component: {fileID: 221134423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3172,7 +3172,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 231916488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,6 +3199,30 @@ Transform:
   m_Father: {fileID: 1904519223}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &237045363 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1688446487032206, guid: 1bb6214b8d8da8f49b09d355e945379c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1467615715}
+--- !u!131 &237045366
+GUITexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 237045363}
+  m_Enabled: 0
+  m_Texture: {fileID: 8400000, guid: 156011df201b98241bcef5d5462ee870, type: 2}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+  m_PixelInset:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_LeftBorder: 0
+  m_RightBorder: 0
+  m_TopBorder: 0
+  m_BottomBorder: 0
 --- !u!1 &240401141
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,7 +3231,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 240401142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3243,7 +3267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240438993}
   - component: {fileID: 240438994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3314,7 +3338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242442706}
   - component: {fileID: 242442707}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3385,11 +3409,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.6443996
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.8062916
+      value: -51.5
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3397,7 +3421,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -3481,7 +3505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 251966095}
   - component: {fileID: 251966096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3552,7 +3576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252946178}
   - component: {fileID: 252946179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3623,7 +3647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253546536}
   - component: {fileID: 253546537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3694,7 +3718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 258589510}
   - component: {fileID: 258589511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3764,7 +3788,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 268853015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map-top (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3795,7 +3819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286616028}
   - component: {fileID: 286616029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3866,7 +3890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291959349}
   - component: {fileID: 291959350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3937,7 +3961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 295021308}
   - component: {fileID: 295021309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4008,7 +4032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 298455689}
   - component: {fileID: 298455690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4079,7 +4103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 317421203}
   - component: {fileID: 317421204}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4150,7 +4174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320202675}
   - component: {fileID: 320202676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4221,7 +4245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326833272}
   - component: {fileID: 326833273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4292,7 +4316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332722336}
   - component: {fileID: 332722337}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4363,7 +4387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342117719}
   - component: {fileID: 342117720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4434,7 +4458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 344318629}
   - component: {fileID: 344318630}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4505,7 +4529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346094652}
   - component: {fileID: 346094653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4569,7 +4593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347065226}
   - component: {fileID: 347065227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4640,7 +4664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 347922394}
   - component: {fileID: 347922395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4717,7 +4741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355730090}
   - component: {fileID: 355730091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4788,7 +4812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 356849592}
   - component: {fileID: 356849593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4858,7 +4882,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 357505849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4900,7 +4924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 363940671}
   - component: {fileID: 363940672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5051,8 +5075,9 @@ RectTransform:
   - {fileID: 1046217849}
   - {fileID: 1516816215}
   - {fileID: 1455201673}
+  - {fileID: 505086115}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5068,7 +5093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372420813}
   - component: {fileID: 372420814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5139,7 +5164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376829044}
   - component: {fileID: 376829045}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5210,7 +5235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 387123486}
   - component: {fileID: 387123487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5281,7 +5306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391078740}
   - component: {fileID: 391078741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5352,7 +5377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414811568}
   - component: {fileID: 414811569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5423,7 +5448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 416010006}
   - component: {fileID: 416010007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5494,7 +5519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419834380}
   - component: {fileID: 419834381}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5565,7 +5590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432765799}
   - component: {fileID: 432765800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5636,7 +5661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 435790424}
   - component: {fileID: 435790425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5707,7 +5732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 447558942}
   - component: {fileID: 447558943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5778,7 +5803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 449691997}
   - component: {fileID: 449691998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +5874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 452466917}
   - component: {fileID: 452466918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5920,7 +5945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455248103}
   - component: {fileID: 455248104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6100,7 +6125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 465371495}
   - component: {fileID: 465371496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6170,7 +6195,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 465413704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6216,7 +6241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467436236}
   - component: {fileID: 467436237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6287,7 +6312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468003595}
   - component: {fileID: 468003596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6358,7 +6383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468243969}
   - component: {fileID: 468243970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6429,7 +6454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 476230192}
   - component: {fileID: 476230193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6499,7 +6524,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 477315602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6541,7 +6566,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489575476}
   - component: {fileID: 489575477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6612,7 +6637,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491721564}
   - component: {fileID: 491721565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6683,7 +6708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 491804191}
   - component: {fileID: 491804192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6754,7 +6779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 493275026}
   - component: {fileID: 493275027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6816,6 +6841,73 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &505086114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 505086115}
+  - component: {fileID: 505086117}
+  - component: {fileID: 505086116}
+  m_Layer: 5
+  m_Name: Minimap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &505086115
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505086114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalScale: {x: 250, y: 250, z: 0}
+  m_Children: []
+  m_Father: {fileID: 364108765}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.5, y: -0.49999}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &505086116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505086114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 1d838604b855e584493bb94017ee01fe, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 8400000, guid: 156011df201b98241bcef5d5462ee870, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &505086117
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505086114}
 --- !u!1 &506543619
 GameObject:
   m_ObjectHideFlags: 0
@@ -6825,7 +6917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506543620}
   - component: {fileID: 506543621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6896,7 +6988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508282204}
   - component: {fileID: 508282205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6967,7 +7059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512074012}
   - component: {fileID: 512074013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7038,7 +7130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 520390934}
   - component: {fileID: 520390935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7109,7 +7201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 522361473}
   - component: {fileID: 522361474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7180,7 +7272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537298514}
   - component: {fileID: 537298515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,7 +7343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 545216770}
   - component: {fileID: 545216771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7322,7 +7414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569419998}
   - component: {fileID: 569419999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7393,7 +7485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569665557}
   - component: {fileID: 569665558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7464,7 +7556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581552360}
   - component: {fileID: 581552361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7535,7 +7627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 588446438}
   - component: {fileID: 588446439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7606,7 +7698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 595260014}
   - component: {fileID: 595260015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7677,7 +7769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603481421}
   - component: {fileID: 603481422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7748,7 +7840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 610556066}
   - component: {fileID: 610556067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7819,7 +7911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614085727}
   - component: {fileID: 614085728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7890,7 +7982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614610781}
   - component: {fileID: 614610782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7961,7 +8053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 616416546}
   - component: {fileID: 616416547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8031,7 +8123,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 630644797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Haybales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8065,7 +8157,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 631123985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8106,7 +8198,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 636824572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map_Elements_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8141,7 +8233,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 641269087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8187,7 +8279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 644164953}
   - component: {fileID: 644164954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8258,7 +8350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 651490985}
   - component: {fileID: 651490986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8329,7 +8421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652949464}
   - component: {fileID: 652949465}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8400,7 +8492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654052824}
   - component: {fileID: 654052825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8471,7 +8563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654149265}
   - component: {fileID: 654149266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8542,7 +8634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 655752567}
   - component: {fileID: 655752568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8612,7 +8704,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 656440506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8658,7 +8750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659548926}
   - component: {fileID: 659548927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8729,7 +8821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660267013}
   - component: {fileID: 660267014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8800,7 +8892,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663370714}
   - component: {fileID: 663370715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8871,7 +8963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674344479}
   - component: {fileID: 674344480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8938,6 +9030,123 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224467796686958004, guid: 1bb6214b8d8da8f49b09d355e945379c,
     type: 2}
   m_PrefabInternal: {fileID: 1467615715}
+--- !u!1 &680673451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 680673454}
+  - component: {fileID: 680673453}
+  - component: {fileID: 680673452}
+  m_Layer: 0
+  m_Name: Audio Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &680673452
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680673451}
+  m_Enabled: 1
+--- !u!82 &680673453
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680673451}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.015388489
+  MaxDistance: 520.80054
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &680673454
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680673451}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681671498
 GameObject:
   m_ObjectHideFlags: 0
@@ -8947,7 +9156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681671499}
   - component: {fileID: 681671500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9018,7 +9227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685086137}
   - component: {fileID: 685086138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9089,7 +9298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 686530675}
   - component: {fileID: 686530676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9160,7 +9369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695207184}
   - component: {fileID: 695207185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9231,7 +9440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706757463}
   - component: {fileID: 706757464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9302,7 +9511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707197518}
   - component: {fileID: 707197519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9373,7 +9582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 712183920}
   - component: {fileID: 712183921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9444,7 +9653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725138467}
   - component: {fileID: 725138468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9515,7 +9724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728124318}
   - component: {fileID: 728124319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9586,7 +9795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741563483}
   - component: {fileID: 741563484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9657,7 +9866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 745166391}
   - component: {fileID: 745166392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9728,7 +9937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 749997635}
   - component: {fileID: 749997636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9799,7 +10008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 756164469}
   - component: {fileID: 756164470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9870,7 +10079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 757715805}
   - component: {fileID: 757715806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9940,7 +10149,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 764901655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9986,7 +10195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767061924}
   - component: {fileID: 767061925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10057,7 +10266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 771002948}
   - component: {fileID: 771002949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10128,7 +10337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773361327}
   - component: {fileID: 773361328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10199,7 +10408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773456237}
   - component: {fileID: 773456238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10270,7 +10479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 779699882}
   - component: {fileID: 779699883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10341,7 +10550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 781847535}
   - component: {fileID: 781847536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10412,7 +10621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785955983}
   - component: {fileID: 785955984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10483,7 +10692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 787249075}
   - component: {fileID: 787249076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10554,7 +10763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 789524570}
   - component: {fileID: 789524571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10625,7 +10834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790377163}
   - component: {fileID: 790377164}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10696,7 +10905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791277421}
   - component: {fileID: 791277422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10767,7 +10976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 793591935}
   - component: {fileID: 793591936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10838,7 +11047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801595991}
   - component: {fileID: 801595992}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10909,7 +11118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805952238}
   - component: {fileID: 805952239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10980,7 +11189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 813915992}
   - component: {fileID: 813915993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11050,9 +11259,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 828123473}
-  - component: {fileID: 828123475}
-  - component: {fileID: 828123474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11074,93 +11281,6 @@ Transform:
   m_Father: {fileID: 1904519223}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &828123474
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 828123472}
-  m_Enabled: 1
---- !u!82 &828123475
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 828123472}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &829232654
 GameObject:
   m_ObjectHideFlags: 0
@@ -11170,7 +11290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829232655}
   - component: {fileID: 829232656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11241,7 +11361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837689021}
   - component: {fileID: 837689022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11312,7 +11432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838386759}
   - component: {fileID: 838386760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11383,7 +11503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 843146860}
   - component: {fileID: 843146861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11454,7 +11574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 845318847}
   - component: {fileID: 845318848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11525,7 +11645,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849870038}
   - component: {fileID: 849870039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11596,7 +11716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851170704}
   - component: {fileID: 851170705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11666,7 +11786,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 872982954}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map-top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11697,7 +11817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874336877}
   - component: {fileID: 874336878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11768,7 +11888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 879530061}
   - component: {fileID: 879530062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11839,7 +11959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 885578123}
   - component: {fileID: 885578124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11910,7 +12030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 892234776}
   - component: {fileID: 892234777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11981,7 +12101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894361721}
   - component: {fileID: 894361722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12052,7 +12172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 897007643}
   - component: {fileID: 897007644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12123,7 +12243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905185419}
   - component: {fileID: 905185420}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12194,7 +12314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932257929}
   - component: {fileID: 932257930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12265,7 +12385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936968724}
   - component: {fileID: 936968725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12336,7 +12456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 938727299}
   - component: {fileID: 938727300}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12407,7 +12527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941886093}
   - component: {fileID: 941886094}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12479,7 +12599,7 @@ GameObject:
   - component: {fileID: 957855781}
   - component: {fileID: 957855780}
   m_Layer: 0
-  m_Name: square
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12517,8 +12637,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -7
-  m_Sprite: {fileID: 21300000, guid: 88584bb0e6a391c4b887b6e3bf9f0744, type: 3}
-  m_Color: {r: 0.066176474, g: 0.066176474, b: 0.066176474, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 98607e6bdd971a843abd91842b9f9d24, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12535,10 +12655,10 @@ Transform:
   m_GameObject: {fileID: 957855779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 109.6, y: -155.4, z: 0}
-  m_LocalScale: {x: 149.31656, y: 144.26152, z: 0}
+  m_LocalScale: {x: 3000, y: 1100, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958957736
 GameObject:
@@ -12549,7 +12669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958957737}
   - component: {fileID: 958957738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12619,7 +12739,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 960657474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12660,7 +12780,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 963281852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12707,7 +12827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 968473331}
   - component: {fileID: 968473332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12778,7 +12898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002143908}
   - component: {fileID: 1002143909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12849,7 +12969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009355776}
   - component: {fileID: 1009355777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12920,7 +13040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022053348}
   - component: {fileID: 1022053349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12991,7 +13111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1023297050}
   - component: {fileID: 1023297051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13062,7 +13182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027840008}
   - component: {fileID: 1027840009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13133,7 +13253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1030438123}
   - component: {fileID: 1030438124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13204,7 +13324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032173887}
   - component: {fileID: 1032173888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13266,6 +13386,95 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1038658086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1038658087}
+  - component: {fileID: 1038658091}
+  - component: {fileID: 1038658090}
+  - component: {fileID: 1038658089}
+  - component: {fileID: 1038658088}
+  m_Layer: 0
+  m_Name: Minimap Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1038658087
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038658086}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 109.600006, y: -155.4, z: 0}
+  m_LocalScale: {x: 150, y: 10, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1038658088
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038658086}
+  m_Enabled: 0
+--- !u!92 &1038658089
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038658086}
+  m_Enabled: 1
+--- !u!124 &1038658090
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038658086}
+  m_Enabled: 1
+--- !u!20 &1038658091
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038658086}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 509.24194
+  m_Depth: 1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967240
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: 156011df201b98241bcef5d5462ee870, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!1 &1046217848
 GameObject:
   m_ObjectHideFlags: 0
@@ -13343,7 +13552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050441653}
   - component: {fileID: 1050441654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13414,7 +13623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069581291}
   - component: {fileID: 1069581292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13485,7 +13694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071183507}
   - component: {fileID: 1071183508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13556,7 +13765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1078473109}
   - component: {fileID: 1078473110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13627,7 +13836,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082145164}
   - component: {fileID: 1082145165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13698,7 +13907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085887836}
   - component: {fileID: 1085887837}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13769,7 +13978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096998894}
   - component: {fileID: 1096998895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13839,7 +14048,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1100148711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map_Elements_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13875,7 +14084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112424240}
   - component: {fileID: 1112424241}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13946,7 +14155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121304809}
   - component: {fileID: 1121304810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14016,7 +14225,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1122690366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BasicMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14038,7 +14247,7 @@ Transform:
   - {fileID: 872982954}
   - {fileID: 268853015}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124728900
 GameObject:
@@ -14049,7 +14258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124728901}
   - component: {fileID: 1124728902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14119,7 +14328,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1125451340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14165,7 +14374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1128102423}
   - component: {fileID: 1128102424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14235,7 +14444,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1128823120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Haybales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14270,7 +14479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1129061167}
   - component: {fileID: 1129061168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14341,7 +14550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131830928}
   - component: {fileID: 1131830929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14412,7 +14621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143516224}
   - component: {fileID: 1143516225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14483,7 +14692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144661016}
   - component: {fileID: 1144661017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14554,7 +14763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1145679432}
   - component: {fileID: 1145679433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14625,7 +14834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146347370}
   - component: {fileID: 1146347371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14696,7 +14905,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1153287990}
   - component: {fileID: 1153287991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14767,7 +14976,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154476962}
   - component: {fileID: 1154476963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14838,7 +15047,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1156650914}
   - component: {fileID: 1156650915}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14938,7 +15147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1163682650
 GameObject:
@@ -14949,7 +15158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163682651}
   - component: {fileID: 1163682652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15020,7 +15229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1165448444}
   - component: {fileID: 1165448445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15091,7 +15300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1166677157}
   - component: {fileID: 1166677158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15162,7 +15371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173837755}
   - component: {fileID: 1173837756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15233,7 +15442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175232814}
   - component: {fileID: 1175232815}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15304,7 +15513,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177232777}
   - component: {fileID: 1177232778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15375,7 +15584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1192090009}
   - component: {fileID: 1192090010}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15446,7 +15655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201935178}
   - component: {fileID: 1201935179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15516,9 +15725,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1210359442}
-  - component: {fileID: 1210359444}
-  - component: {fileID: 1210359443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15540,93 +15747,6 @@ Transform:
   m_Father: {fileID: 2042166002}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1210359443
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210359441}
-  m_Enabled: 1
---- !u!82 &1210359444
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1210359441}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1217439573
 GameObject:
   m_ObjectHideFlags: 0
@@ -15636,7 +15756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1217439574}
   - component: {fileID: 1217439575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15707,7 +15827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225398863}
   - component: {fileID: 1225398864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15778,7 +15898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227064655}
   - component: {fileID: 1227064656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15849,7 +15969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227651742}
   - component: {fileID: 1227651743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15919,7 +16039,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1241503296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15961,7 +16081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260293133}
   - component: {fileID: 1260293134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16032,7 +16152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261021311}
   - component: {fileID: 1261021312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16103,7 +16223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1262577839}
   - component: {fileID: 1262577840}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16174,7 +16294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1267107913}
   - component: {fileID: 1267107914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16245,7 +16365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1267201507}
   - component: {fileID: 1267201508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16316,7 +16436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1268467759}
   - component: {fileID: 1268467760}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16386,7 +16506,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1270376564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16434,7 +16554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282457990}
   - component: {fileID: 1282457991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16505,7 +16625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287198939}
   - component: {fileID: 1287198940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16575,7 +16695,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1290303676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16611,7 +16731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1293914146}
   - component: {fileID: 1293914147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16682,7 +16802,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1296120181}
   - component: {fileID: 1296120182}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16753,7 +16873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1306972306}
   - component: {fileID: 1306972307}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16824,7 +16944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1308578589}
   - component: {fileID: 1308578590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16894,9 +17014,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1309807762}
-  - component: {fileID: 1309807764}
-  - component: {fileID: 1309807763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16918,93 +17036,6 @@ Transform:
   m_Father: {fileID: 1100148711}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1309807763
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1309807761}
-  m_Enabled: 1
---- !u!82 &1309807764
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1309807761}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1309814467
 GameObject:
   m_ObjectHideFlags: 0
@@ -17014,7 +17045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309814468}
   - component: {fileID: 1309814469}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17085,7 +17116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309982554}
   - component: {fileID: 1309982555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17156,7 +17187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313074324}
   - component: {fileID: 1313074325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17227,7 +17258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318552414}
   - component: {fileID: 1318552415}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17298,7 +17329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325648658}
   - component: {fileID: 1325648659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17368,7 +17399,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1330876435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17415,7 +17446,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348607811}
   - component: {fileID: 1348607812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17486,7 +17517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350097631}
   - component: {fileID: 1350097632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17557,7 +17588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355995540}
   - component: {fileID: 1355995541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17628,7 +17659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1363329492}
   - component: {fileID: 1363329493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17699,7 +17730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1369966703}
   - component: {fileID: 1369966704}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17770,7 +17801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372056973}
   - component: {fileID: 1372056974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17841,7 +17872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1372612499}
   - component: {fileID: 1372612500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17912,7 +17943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1374113075}
   - component: {fileID: 1374113076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17983,7 +18014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376268150}
   - component: {fileID: 1376268151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18054,7 +18085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378639909}
   - component: {fileID: 1378639910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18125,7 +18156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382484405}
   - component: {fileID: 1382484406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18196,7 +18227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386087051}
   - component: {fileID: 1386087052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18267,7 +18298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386140731}
   - component: {fileID: 1386140732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18338,7 +18369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393009515}
   - component: {fileID: 1393009516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18409,7 +18440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396117120}
   - component: {fileID: 1396117121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18480,7 +18511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396497922}
   - component: {fileID: 1396497923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18660,7 +18691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405211774}
   - component: {fileID: 1405211775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18731,7 +18762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405615023}
   - component: {fileID: 1405615024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18802,7 +18833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406012328}
   - component: {fileID: 1406012329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18873,7 +18904,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1412686626}
   - component: {fileID: 1412686627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18944,7 +18975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414967028}
   - component: {fileID: 1414967029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19015,7 +19046,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417193942}
   - component: {fileID: 1417193943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19086,7 +19117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1420792743}
   - component: {fileID: 1420792744}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19157,7 +19188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1423766395}
   - component: {fileID: 1423766396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19228,7 +19259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424137332}
   - component: {fileID: 1424137333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19299,7 +19330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425135216}
   - component: {fileID: 1425135217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19370,7 +19401,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425536192}
   - component: {fileID: 1425536193}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19441,7 +19472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429449463}
   - component: {fileID: 1429449464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19505,7 +19536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1435758831}
   - component: {fileID: 1435758832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19576,7 +19607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1441025217}
   - component: {fileID: 1441025218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19740,6 +19771,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114151694718122852, guid: 1bb6214b8d8da8f49b09d355e945379c,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114917674413443212, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
@@ -19753,7 +19789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471728279}
   - component: {fileID: 1471728280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19824,7 +19860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1478750748}
   - component: {fileID: 1478750749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19895,7 +19931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495022689}
   - component: {fileID: 1495022690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19966,7 +20002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495046985}
   - component: {fileID: 1495046986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20037,7 +20073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499018138}
   - component: {fileID: 1499018139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20108,7 +20144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506508852}
   - component: {fileID: 1506508853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20184,7 +20220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534045012}
   - component: {fileID: 1534045013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20255,7 +20291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542975892}
   - component: {fileID: 1542975893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20326,7 +20362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551399684}
   - component: {fileID: 1551399685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20397,7 +20433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1554697546}
   - component: {fileID: 1554697547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20468,7 +20504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557474933}
   - component: {fileID: 1557474934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20539,7 +20575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559655899}
   - component: {fileID: 1559655900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20610,7 +20646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1576371821}
   - component: {fileID: 1576371822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20681,7 +20717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579489899}
   - component: {fileID: 1579489900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20752,7 +20788,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579713147}
   - component: {fileID: 1579713148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20823,7 +20859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1581418634}
   - component: {fileID: 1581418635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20893,7 +20929,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1584202628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20924,7 +20960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594202221}
   - component: {fileID: 1594202222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20995,7 +21031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1600697368}
   - component: {fileID: 1600697369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21066,7 +21102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1605650613}
   - component: {fileID: 1605650614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21137,7 +21173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1608300387}
   - component: {fileID: 1608300388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21208,7 +21244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1617182028}
   - component: {fileID: 1617182029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21279,7 +21315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1626025153}
   - component: {fileID: 1626025154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21350,7 +21386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627155923}
   - component: {fileID: 1627155924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21421,7 +21457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630788391}
   - component: {fileID: 1630788392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21492,7 +21528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630961325}
   - component: {fileID: 1630961326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21563,7 +21599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1637327303}
   - component: {fileID: 1637327304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21634,7 +21670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638789984}
   - component: {fileID: 1638789985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21705,7 +21741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648791477}
   - component: {fileID: 1648791478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21776,7 +21812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652011381}
   - component: {fileID: 1652011382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21847,7 +21883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652097241}
   - component: {fileID: 1652097242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21918,7 +21954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663481809}
   - component: {fileID: 1663481810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21989,7 +22025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666273065}
   - component: {fileID: 1666273066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22060,7 +22096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669154521}
   - component: {fileID: 1669154522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22131,7 +22167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1672909175}
   - component: {fileID: 1672909176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22202,7 +22238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1687285513}
   - component: {fileID: 1687285514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22272,9 +22308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1689244205}
-  - component: {fileID: 1689244207}
-  - component: {fileID: 1689244206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22296,93 +22330,6 @@ Transform:
   m_Father: {fileID: 636824572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1689244206
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1689244204}
-  m_Enabled: 1
---- !u!82 &1689244207
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1689244204}
-  m_Enabled: 0
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1694894507
 GameObject:
   m_ObjectHideFlags: 0
@@ -22392,7 +22339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694894508}
   - component: {fileID: 1694894509}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22463,7 +22410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697936023}
   - component: {fileID: 1697936024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22534,7 +22481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702885269}
   - component: {fileID: 1702885270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22611,7 +22558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725523034}
   - component: {fileID: 1725523035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22682,7 +22629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727437280}
   - component: {fileID: 1727437281}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22753,7 +22700,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1727968611}
   - component: {fileID: 1727968612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22824,7 +22771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728274342}
   - component: {fileID: 1728274343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22895,7 +22842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735608180}
   - component: {fileID: 1735608181}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22966,7 +22913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735640967}
   - component: {fileID: 1735640968}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23037,7 +22984,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738184330}
   - component: {fileID: 1738184331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23108,7 +23055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748770742}
   - component: {fileID: 1748770743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23179,7 +23126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752627017}
   - component: {fileID: 1752627018}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23250,7 +23197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753249707}
   - component: {fileID: 1753249708}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23320,7 +23267,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1759107917}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence-border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23362,7 +23309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768854897}
   - component: {fileID: 1768854898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23433,7 +23380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1776803214}
   - component: {fileID: 1776803215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23504,7 +23451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1776834183}
   - component: {fileID: 1776834184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23575,7 +23522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777198580}
   - component: {fileID: 1777198581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23646,7 +23593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786681815}
   - component: {fileID: 1786681816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23717,7 +23664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787235506}
   - component: {fileID: 1787235507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23787,7 +23734,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1788578426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23822,7 +23769,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1794341059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23853,7 +23800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794490324}
   - component: {fileID: 1794490325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23924,7 +23871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794726425}
   - component: {fileID: 1794726426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23995,7 +23942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798730404}
   - component: {fileID: 1798730405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24065,7 +24012,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1800106858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24111,7 +24058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1803517897}
   - component: {fileID: 1803517898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24182,7 +24129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804292174}
   - component: {fileID: 1804292175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24253,7 +24200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1807388801}
   - component: {fileID: 1807388802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24324,7 +24271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811300402}
   - component: {fileID: 1811300403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24395,7 +24342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1814144990}
   - component: {fileID: 1814144991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24466,7 +24413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816630059}
   - component: {fileID: 1816630060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24537,7 +24484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1818236870}
   - component: {fileID: 1818236871}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24608,7 +24555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822393001}
   - component: {fileID: 1822393002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24679,7 +24626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1822585158}
   - component: {fileID: 1822585159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24750,7 +24697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1825983348}
   - component: {fileID: 1825983349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24821,7 +24768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1827114994}
   - component: {fileID: 1827114995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24892,7 +24839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833936174}
   - component: {fileID: 1833936175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24963,7 +24910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847960463}
   - component: {fileID: 1847960464}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25034,7 +24981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1854434320}
   - component: {fileID: 1854434321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25105,7 +25052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1857826006}
   - component: {fileID: 1857826007}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25176,7 +25123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861480918}
   - component: {fileID: 1861480919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25247,7 +25194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862206538}
   - component: {fileID: 1862206539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25317,7 +25264,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1864928258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Haybales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25352,7 +25299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1865337516}
   - component: {fileID: 1865337517}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25423,7 +25370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867043787}
   - component: {fileID: 1867043788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25494,7 +25441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868465449}
   - component: {fileID: 1868465450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25603,6 +25550,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1413455660272276, guid: 564883d84cc971e4ebed40420ec96d28, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 564883d84cc971e4ebed40420ec96d28, type: 2}
   m_IsPrefabParent: 0
@@ -25619,7 +25570,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1873678386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Haybales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25654,7 +25605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1873784286}
   - component: {fileID: 1873784287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25725,7 +25676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875465849}
   - component: {fileID: 1875465850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25796,7 +25747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882590109}
   - component: {fileID: 1882590110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25867,7 +25818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1884936680}
   - component: {fileID: 1884936681}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25937,7 +25888,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1885009589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25984,7 +25935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885516459}
   - component: {fileID: 1885516460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26055,7 +26006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886460204}
   - component: {fileID: 1886460205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26125,7 +26076,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1889676550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass-terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26171,7 +26122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893304118}
   - component: {fileID: 1893304119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26242,7 +26193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895468587}
   - component: {fileID: 1895468588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26312,7 +26263,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1904519223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map_Elements_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26348,7 +26299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909611428}
   - component: {fileID: 1909611429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26419,7 +26370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915777119}
   - component: {fileID: 1915777120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26490,7 +26441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916045878}
   - component: {fileID: 1916045879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26561,7 +26512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920738615}
   - component: {fileID: 1920738616}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26632,7 +26583,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1926288686}
   - component: {fileID: 1926288687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26703,7 +26654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1928937751}
   - component: {fileID: 1928937752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26774,7 +26725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937167970}
   - component: {fileID: 1937167971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26845,7 +26796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937500149}
   - component: {fileID: 1937500150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26916,7 +26867,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939595783}
   - component: {fileID: 1939595784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26987,7 +26938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1939987835}
   - component: {fileID: 1939987836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27058,7 +27009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1951367126}
   - component: {fileID: 1951367127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27129,7 +27080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954073031}
   - component: {fileID: 1954073032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27193,7 +27144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954214833}
   - component: {fileID: 1954214834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27264,7 +27215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957030402}
   - component: {fileID: 1957030403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27335,7 +27286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973171921}
   - component: {fileID: 1973171922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27406,7 +27357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1973330804}
   - component: {fileID: 1973330805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27477,7 +27428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975741037}
   - component: {fileID: 1975741038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27548,7 +27499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975761107}
   - component: {fileID: 1975761108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27619,7 +27570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1977194784}
   - component: {fileID: 1977194785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27690,7 +27641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1980688910}
   - component: {fileID: 1980688911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27761,7 +27712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999625760}
   - component: {fileID: 1999625761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27832,7 +27783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002518590}
   - component: {fileID: 2002518591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27903,7 +27854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007368237}
   - component: {fileID: 2007368238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27974,7 +27925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009893594}
   - component: {fileID: 2009893595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28045,7 +27996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2011927057}
   - component: {fileID: 2011927058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28116,7 +28067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017046637}
   - component: {fileID: 2017046638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28187,7 +28138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028194422}
   - component: {fileID: 2028194423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28257,7 +28208,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2042166002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map_Elements_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28293,7 +28244,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2051624949}
   - component: {fileID: 2051624950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28364,7 +28315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2054605638}
   - component: {fileID: 2054605639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28435,7 +28386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055245360}
   - component: {fileID: 2055245361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28506,7 +28457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2057989679}
   - component: {fileID: 2057989680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28577,7 +28528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2080285341}
   - component: {fileID: 2080285342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28648,7 +28599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2087304263}
   - component: {fileID: 2087304264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28719,7 +28670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100248570}
   - component: {fileID: 2100248571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28790,7 +28741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108662243}
   - component: {fileID: 2108662244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28861,7 +28812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109724765}
   - component: {fileID: 2109724766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28983,7 +28934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2116123528}
   - component: {fileID: 2116123529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29054,7 +29005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128855515}
   - component: {fileID: 2128855516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29125,7 +29076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2129573981}
   - component: {fileID: 2129573982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29196,7 +29147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132342961}
   - component: {fileID: 2132342962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt_t (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29267,7 +29218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133397210}
   - component: {fileID: 2133397211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collision-inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29331,7 +29282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134104603}
   - component: {fileID: 2134104604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29453,7 +29404,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136983373
 GameObject:
@@ -29464,7 +29415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136983374}
   - component: {fileID: 2136983375}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: grass (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29535,7 +29486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144673564}
   - component: {fileID: 2144673565}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

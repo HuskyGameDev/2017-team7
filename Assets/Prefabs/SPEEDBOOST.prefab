@@ -79,6 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 4028138546305398}
+  tRotation: 0
+  currentRotation: 0
 --- !u!212 &212845177582578876
 SpriteRenderer:
   m_ObjectHideFlags: 1

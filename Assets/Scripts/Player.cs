@@ -42,6 +42,9 @@ public class Player : MonoBehaviour
     public float terrainSpeed = 1;
     public float terrainTurning = 1;
 
+    public AudioSource engineSound;
+    public AudioClip loopingEngine;
+
     IEnumerator endBoost()
     {
         yield return new WaitForSeconds(1);
