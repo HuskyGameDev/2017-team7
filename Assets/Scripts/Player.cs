@@ -329,7 +329,7 @@ public class Player : MonoBehaviour
 
                 if ((!ctrls.GetB() && driftTime > 100) || driftTime > 300)
                 {
-                    SetBoost(BOOSTS.DRIFT_BOOST, /*2 * driftTime * Time.fixedDeltaTime*/1);
+                    SetBoost(BOOSTS.DRIFT_BOOST, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     state = STATES.BOOST;
                 }

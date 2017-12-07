@@ -5,31 +5,27 @@ using UnityEngine;
 
 public class Controller {
 
-    private float turn;                         // Turning rotation
-    private float forward;                      // Forward movement
-    private float backward;
-
     // Thumbsticks
     private float lsXaxis;                      // Left stick X axis
     private float lsYaxis;                      // Left stick Y axis
-    private float lsClick;                      // Left stick click
+    private bool lsClick;                      // Left stick click
     private float rsXaxis;                      // Right stick X axis
     private float rsYaxis;                      // Right stick Y axis
-    private float rsClick;                      // Right stick click
+    private bool rsClick;                      // Right stick click
 
     // Triggers and bumpers
     private float LT;                           // Left trigger
     private float RT;                           // Right trigger
-    private float LB;                           // Left bumper
-    private float RB;                           // Right bumper
+    private bool LB;                           // Left bumper
+    private bool RB;                           // Right bumper
 
     // Buttons
-    private float A;                            // A button
+    private bool A;                            // A button
     private bool B;                            // B button
-    private float X;                            // X button
-    private float Y;                            // Y button
-    private float back;                         // back button
-    private float start;                        // start button
+    private bool X;                            // X button
+    private bool Y;                            // Y button
+    private bool back;                         // back button
+    private bool start;                        // start button
 
     // D-Pad
     private float dPadXaxis;                    // D-Pad X axis
@@ -37,21 +33,34 @@ public class Controller {
 
 
     // Update all input values
-    public void UpdateValues(float t, float f, float b, bool bb)
+    public void UpdateValues(float lsX, bool lsC, bool rsC,
+                                float lt, float rt, bool lb, bool rb,
+                                bool a, bool b, bool x, bool y, bool ba, bool st)
     {
-        lsXaxis = -t;
-        RT = f;
-        LT = b;
-        B = bb;
+        lsXaxis = -lsX;
+        lsClick = lsC;
+        rsClick = rsC;
+
+        LT = lt;
+        RT = rt;
+        LB = lb;
+        RB = rb;
+
+        A = a;
+        B = b;
+        X = x;
+        Y = y;
+        back = ba;
+        start = st;
     }
 
     // Update all input values
-    public void UpdateValues(float lsX, float lsY, float lsC, float rsX, float rsY, float rsC,
-                                float lt, float rt, float lb, float rb,
-                                float a, bool b, float x, float y, float ba, float st,
+    public void UpdateValues(float lsX, float lsY, bool lsC, float rsX, float rsY, bool rsC,
+                                float lt, float rt, bool lb, bool rb,
+                                bool a, bool b, bool x, bool y, bool ba, bool st,
                                 float dpX, float dpY)
     {
-        lsXaxis = lsX;
+        lsXaxis = -lsX;
         lsYaxis = lsY;
         lsClick = lsC;
         rsXaxis = rsX;
@@ -107,7 +116,7 @@ public class Controller {
     }
 
     // Return left stick click value
-    public float GetLsClick()
+    public bool GetLsClick()
     {
         return lsClick;
     }
@@ -125,7 +134,7 @@ public class Controller {
     }
 
     // Return right stick click value
-    public float GetRsClick()
+    public bool GetRsClick()
     {
         return rsClick;
     }
@@ -147,13 +156,13 @@ public class Controller {
     }
 
     // Return left bumper value
-    public float GetLB()
+    public bool GetLB()
     {
         return LB;
     }
 
     // Return right bumper value
-    public float GetRB()
+    public bool GetRB()
     {
         return RB;
     }
@@ -163,7 +172,7 @@ public class Controller {
     // Button gets
 
     // Return A button value
-    public float GetA()
+    public bool GetA()
     {
         return A;
     }
@@ -175,25 +184,25 @@ public class Controller {
     }
 
     // Return X button value
-    public float GetX()
+    public bool GetX()
     {
         return X;
     }
 
     // Return Y button value
-    public float GetY()
+    public bool GetY()
     {
         return Y;
     }
 
     // Return back button value
-    public float GetBack()
+    public bool GetBack()
     {
         return back;
     }
 
     // Return start button value
-    public float GetStart()
+    public bool GetStart()
     {
         return start;
     }
