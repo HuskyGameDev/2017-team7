@@ -50,9 +50,9 @@ public class LapTracker : MonoBehaviour {
 			if(laps[player-1] == maxLaps){
 				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
-				//if(playersFinished == numPlayers){
+				if(playersFinished == numPlayers){
 					TransitionToEnd();
-				//}
+				}
 			}
 			return;
 		}
