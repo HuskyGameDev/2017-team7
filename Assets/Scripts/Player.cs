@@ -148,6 +148,12 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.BOOST_PAD] = 187;
         speedList[(int) BOOSTS.DRAFT_BOOST] = 150;
         speedList[(int)BOOSTS.DRIFT_BOOST] = 160;
+        //TODO fix this dumb way of getting the list of players
+        if(PlayerData.players == null){
+            PlayerData.players = new Player[4];
+        }
+
+        PlayerData.players[playerNumber - 1] = this;
 
         if (PlayerData.playerChars[playerNumber - 1] < 0)
         {
@@ -159,8 +165,8 @@ public class Player : MonoBehaviour
         }
         
         Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
-        
 
+        
     }
 
     // Update is called once per frame
