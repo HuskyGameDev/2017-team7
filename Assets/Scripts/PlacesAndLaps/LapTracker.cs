@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LapTracker : MonoBehaviour {
+	public int maxLaps;
+	public int endSceneIndex;
+	private int playersFinished = 0;
 	private const int numPlayers = 4;
 	private const int POINTS_PER_TABLE = 25;
 	private const float MIN_PRECISION = 0.0001f;
@@ -43,12 +46,18 @@ public class LapTracker : MonoBehaviour {
 		if(checkpointNum == 0 && curCounts[player-1] == totalCheckpoints - 1){
 			laps[player-1]++;
 			curCounts[player-1] = 0;
-			Debug.Log("Player " + player + " crossed the finish line.");
+			//Debug.Log("Player " + player + " crossed the finish line.");
+			if(laps[player-1] == maxLaps){
+				playersFinished++;
+				if(playersFinished == numPlayers){
+					TransitionToEnd();
+				}
+			}
 			return;
 		}
 		if(checkpointNum - 1 == curCounts[player-1]){
 			curCounts[player-1] = checkpointNum;
-			Debug.Log("Player " + player + " hit checkpoint" + checkpointNum + ".");
+			//Debug.Log("Player " + player + " hit checkpoint" + checkpointNum + ".");
 		}
 	}
 
@@ -178,5 +187,10 @@ public class LapTracker : MonoBehaviour {
 
 	public int getPlayerLap(int playerNumber){
 		return laps[playerNumber - 1];
+	}
+
+	private void TransitionToEnd(){
+		//TODO figure out how to pass info to next scene
+		UnityEngine.SceneManagement.SceneManager.LoadScene(endSceneIndex);
 	}
 }
