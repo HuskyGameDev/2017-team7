@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LapDisplayMaster : MonoBehaviour {
-	public Player[] players;
+	private Player[] players;
 	private int[] positions;
 	public LapTracker lapTracker;
 
 	// Use this for initialization
 	void Start () {
-		
+		players = PlayerData.GetActivePlayers();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Maybe do this in onTick() instead?
+		//Maybe do this in on Tick instead?
 		//positions = lapTracker.GetPositions(players);
 	}
 

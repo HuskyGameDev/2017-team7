@@ -5,7 +5,7 @@ using UnityEngine;
 public class LapTracker : MonoBehaviour {
 	public int maxLaps;
 	private int playersFinished = 0;
-	private const int numPlayers = 4;
+	private const int max_players = 4;
 	private const int POINTS_PER_TABLE = 25;
 	private const float MIN_PRECISION = 0.0001f;
 	private int[] curCounts;
@@ -19,12 +19,12 @@ public class LapTracker : MonoBehaviour {
 		curves = GetComponent<CircularPath>().GetCurves();
 		totalCheckpoints = curves.Count;
 		curveLookupTables = new Vector2[curves.Count,POINTS_PER_TABLE];
-		curCounts = new int[numPlayers];
-		curPositionalCounts = new int[numPlayers];
-		laps = new int[numPlayers];
-		positionalLaps = new int[numPlayers];
+		curCounts = new int[max_players];
+		curPositionalCounts = new int[max_players];
+		laps = new int[max_players];
+		positionalLaps = new int[max_players];
 		//Probably unnecessary, but just to be sure, zero these variables.
-		for(int i = 0; i < numPlayers; i++){
+		for(int i = 0; i < max_players; i++){
 			curCounts[i] = 0;
 			laps[i] = 0;
 			curPositionalCounts[i] = 0;
@@ -50,7 +50,7 @@ public class LapTracker : MonoBehaviour {
 			if(laps[player-1] == maxLaps){
 				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
-				if(playersFinished == numPlayers){
+				if(playersFinished == PlayerData.GetActivePlayers().Length){
 					TransitionToEnd();
 				}
 			}
@@ -102,7 +102,7 @@ public class LapTracker : MonoBehaviour {
 
 	public int[] GetPositions(Player[] players){
 		int[] places = new int[players.Length];
-		float[] tVals = new float[numPlayers];
+		float[] tVals = new float[max_players];
 		int curPlayer = 0;
 		
 		foreach(Player p in players){
@@ -180,7 +180,7 @@ public class LapTracker : MonoBehaviour {
 					numBefore++;
 				}
 			}
-			places[curPlayer] = numPlayers - numBefore;
+			places[curPlayer] = PlayerData.GetActivePlayers().Length - numBefore;
 			curPlayer++;
 		}
 		return places;
