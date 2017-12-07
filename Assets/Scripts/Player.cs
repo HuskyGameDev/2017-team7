@@ -175,7 +175,7 @@ public class Player : MonoBehaviour
                 accel = newVel * acceleration * ctrls.GetSpeed();
 
                 //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed * terrainSpeed);
+                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
 
                 if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
                 if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2)) state = STATES.DRAFT;
@@ -197,7 +197,7 @@ public class Player : MonoBehaviour
                 accel = newVel * acceleration * ctrls.GetSpeed();
 
                 //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse * terrainSpeed);
+                newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
 
                 if (ctrls.GetSpeed() >= 0) state = STATES.ACCEL;
 
@@ -290,7 +290,7 @@ public class Player : MonoBehaviour
                 accel = newVel * acceleration * ctrls.GetSpeed();
 
                 //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed * terrainSpeed);
+                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
 
                 if (!drafting && draftTime > 0)
                 {
