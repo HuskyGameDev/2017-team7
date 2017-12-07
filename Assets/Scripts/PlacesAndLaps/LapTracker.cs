@@ -143,6 +143,9 @@ public class LapTracker : MonoBehaviour {
 		}
 
 		//Debug statements
+		foreach(Player p in players){
+			Debug.DrawLine(p.playerRB.position, curves[curPositionalCounts[p.playerNumber-1]].getPoint(tVals[p.playerNumber-1]), Color.blue, 0, false);	
+		}
 		//Debug.DrawLine(players[0].playerRB.position, curves[curPositionalCounts[0]].getPoint(tVals[0]), Color.blue, 0, false);
 		//Debug.DrawLine(players[1].playerRB.position, curves[curPositionalCounts[1]].getPoint(tVals[1]), Color.cyan, 0, false);
 		//Debug.DrawLine(players[2].playerRB.position, curves[curPositionalCounts[2]].getPoint(tVals[2]), Color.green, 0, false);

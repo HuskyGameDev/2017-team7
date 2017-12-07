@@ -161,7 +161,9 @@ public class Player : MonoBehaviour
         }
         else
         {
-            GetComponent<SpriteRenderer>().sprite = PlayerData.charTopDowns[PlayerData.playerChars[playerNumber - 1]];
+            if(PlayerData.charTopDowns != null){
+                GetComponent<SpriteRenderer>().sprite = PlayerData.charTopDowns[PlayerData.playerChars[playerNumber - 1]];
+            }
         }
         
         Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);

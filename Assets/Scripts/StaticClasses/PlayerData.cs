@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class PlayerData
 {
-    public static int[] playerChars = { -1, -1, -1, -1 };
+    public static int[] playerChars = { 0, 1, -1, -1 };
     public static Sprite[] charTopDowns;
     public static Sprite[] charIcons;
     
