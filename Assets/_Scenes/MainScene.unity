@@ -791,11 +791,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.1
+      value: -27.8
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -32.6
+      value: -91.8
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -807,7 +807,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Player1
+      value: Beefcake
       objectReference: {fileID: 0}
     - target: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -3419,11 +3419,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9.4
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -51.5
+      value: -91.9
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3435,7 +3435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Player2
+      value: FatStacks
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -3501,6 +3501,10 @@ Prefab:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
@@ -9463,7 +9467,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 02228ad7128a5294d85e8c1b718b79e6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8b6405d155462ea4f94669ea7aaef066, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -23234,11 +23238,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.1
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -92.7
+      value: -92.2
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23266,7 +23270,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Player3
+      value: Sheepish
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -29044,7 +29048,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxLaps: 3
-  endSceneIndex: 2
 --- !u!114 &2023557434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29724,11 +29727,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 16.7
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -110.5
+      value: -92.3
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -29756,7 +29759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Player4
+      value: Vainglory
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
