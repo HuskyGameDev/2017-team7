@@ -40,6 +40,7 @@ public class LapTracker : MonoBehaviour {
 			}
 			table++;
 		}
+		EndData.completionOrder = new int[4];
 	}
 	public void PlayerCrossed(int player, int checkpointNum) {
 		//Check if the last checkpoint was the last checkpoint, meaning the player has crossed the finish line
@@ -48,6 +49,7 @@ public class LapTracker : MonoBehaviour {
 			curCounts[player-1] = 0;
 			//Debug.Log("Player " + player + " crossed the finish line.");
 			if(laps[player-1] == maxLaps){
+				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
 				if(playersFinished == numPlayers){
 					TransitionToEnd();
