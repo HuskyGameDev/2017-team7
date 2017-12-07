@@ -12,8 +12,6 @@ public class Minimap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-       // mmIcon.rectTransform.position = new Vector3(0, 0, 0);
-        Debug.Log(mmIcon.rectTransform.position.ToString());
 
     }
 	
@@ -21,8 +19,8 @@ public class Minimap : MonoBehaviour {
 	void Update () {
         playerDist = new Vector3(ref1.position.x - player.playerRB.position.x,
                                  ref1.position.y - player.playerRB.position.y, 0);
-        iconPos = new Vector3(playerDist.x / 4 + ref2.position.x,
-                             playerDist.y / 4+ ref2.position.y, 0);
+        iconPos = new Vector3(playerDist.x / 3.8f + ref2.position.x,
+                             playerDist.y / 3.8f + ref2.position.y, 0);
 
         mmIcon.rectTransform.position = iconPos;
     }

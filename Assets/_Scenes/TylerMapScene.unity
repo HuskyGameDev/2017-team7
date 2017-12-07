@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429204}
   - component: {fileID: 1429205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9544649}
   - component: {fileID: 9544650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18848640}
   - component: {fileID: 18848641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 19729957}
   - component: {fileID: 19729958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (139)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28875809}
   - component: {fileID: 28875810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (101)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ Transform:
   m_Children:
   - {fileID: 1591337502}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &32390966
 MonoBehaviour:
@@ -1039,7 +1039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 36891266}
   - component: {fileID: 36891267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1181,7 +1181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39629769}
   - component: {fileID: 39629770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1252,7 +1252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40098778}
   - component: {fileID: 40098779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,6 +1314,46 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &40649630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 40649631}
+  - component: {fileID: 40649632}
+  m_Layer: 0
+  m_Name: MMReferencePoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &40649631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40649630}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01724265, y: 0.013243277, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1196329497}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.215, y: 0.085}
+  m_SizeDelta: {x: 5.223, y: 6.2793}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &40649632
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 40649630}
 --- !u!1 &41079868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41079869}
   - component: {fileID: 41079870}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 44836726}
   - component: {fileID: 44836727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (98)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1541,7 +1581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 48975250}
   - component: {fileID: 48975251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (226)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1896,7 +1936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62819496}
   - component: {fileID: 62819497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1967,7 +2007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 64765560}
   - component: {fileID: 64765561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2109,7 +2149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68571590}
   - component: {fileID: 68571591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2251,7 +2291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 70989801}
   - component: {fileID: 70989802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2393,7 +2433,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -2466,7 +2506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78632359}
   - component: {fileID: 78632360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2608,7 +2648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80974217}
   - component: {fileID: 80974218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (167)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +2719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 81251574}
   - component: {fileID: 81251575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2750,7 +2790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84108216}
   - component: {fileID: 84108217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2821,7 +2861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84189896}
   - component: {fileID: 84189897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (242)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,7 +3003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 88575412}
   - component: {fileID: 88575413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3034,7 +3074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96283857}
   - component: {fileID: 96283858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3288,7 +3328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104012066}
   - component: {fileID: 104012067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3400,7 +3440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106105732}
   - component: {fileID: 106105733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3542,7 +3582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114658346}
   - component: {fileID: 114658347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3826,7 +3866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 127916279}
   - component: {fileID: 127916280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,7 +3937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129352969}
   - component: {fileID: 129352970}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3968,7 +4008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129808022}
   - component: {fileID: 129808023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4110,7 +4150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130764153}
   - component: {fileID: 130764154}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4323,7 +4363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141173662}
   - component: {fileID: 141173663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (202)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4440,7 +4480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149883227}
   - component: {fileID: 149883228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4582,7 +4622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151359748}
   - component: {fileID: 151359749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4795,7 +4835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157480141}
   - component: {fileID: 157480142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (85)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5008,7 +5048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 162673960}
   - component: {fileID: 162673961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (239)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5150,7 +5190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171052007}
   - component: {fileID: 171052008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (235)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5221,7 +5261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184030124}
   - component: {fileID: 184030125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (156)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5363,7 +5403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 187829025}
   - component: {fileID: 187829026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (185)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5474,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188806481}
   - component: {fileID: 188806482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (144)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5576,7 +5616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192350659}
   - component: {fileID: 192350660}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (160)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5668,7 +5708,7 @@ Transform:
   - {fileID: 1488476549}
   - {fileID: 27204162}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &194554095
 GameObject:
@@ -5939,7 +5979,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 198251519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6005,7 +6045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198829243}
   - component: {fileID: 198829244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6076,7 +6116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201379561}
   - component: {fileID: 201379562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6146,7 +6186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 201709580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: terrains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6222,7 +6262,7 @@ Transform:
   - {fileID: 1183330648}
   - {fileID: 1749354971}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204842015
 GameObject:
@@ -6375,7 +6415,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -6448,7 +6488,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216395272}
   - component: {fileID: 216395273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6590,7 +6630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218025724}
   - component: {fileID: 218025725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6661,7 +6701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219985538}
   - component: {fileID: 219985539}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (254)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6732,7 +6772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 225673217}
   - component: {fileID: 225673218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6803,7 +6843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228902553}
   - component: {fileID: 228902554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (158)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6874,7 +6914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228950021}
   - component: {fileID: 228950022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7087,7 +7127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240489498}
   - component: {fileID: 240489499}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (258)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7158,7 +7198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 242046792}
   - component: {fileID: 242046793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7229,7 +7269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 243257948}
   - component: {fileID: 243257949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7300,7 +7340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244002962}
   - component: {fileID: 244002963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7554,7 +7594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247544972}
   - component: {fileID: 247544973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (222)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7625,7 +7665,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249572101}
   - component: {fileID: 249572102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7696,7 +7736,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -7782,7 +7822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 253070210}
   - component: {fileID: 253070211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7994,7 +8034,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 263909052}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-center-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8102,7 +8142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269876590}
   - component: {fileID: 269876591}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8243,7 +8283,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 272375702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8573,7 +8613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278844258}
   - component: {fileID: 278844259}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8644,7 +8684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286184999}
   - component: {fileID: 286185000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8715,7 +8755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 288390295}
   - component: {fileID: 288390296}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (96)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8857,7 +8897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308353228}
   - component: {fileID: 308353229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8999,7 +9039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313597851}
   - component: {fileID: 313597852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (236)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9070,7 +9110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 313726090}
   - component: {fileID: 313726091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9141,7 +9181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315506761}
   - component: {fileID: 315506762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (224)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9212,7 +9252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315943158}
   - component: {fileID: 315943159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9283,7 +9323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 316170871}
   - component: {fileID: 316170872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (173)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9638,7 +9678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327545477}
   - component: {fileID: 327545478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9709,7 +9749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 328388800}
   - component: {fileID: 328388801}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (233)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9780,7 +9820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 329899942}
   - component: {fileID: 329899943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9922,7 +9962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336785653}
   - component: {fileID: 336785654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider-inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9940,7 +9980,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 344345774}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &336785654
 PolygonCollider2D:
@@ -10038,7 +10078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339187384}
   - component: {fileID: 339187385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10109,7 +10149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341045922}
   - component: {fileID: 341045923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10171,6 +10211,126 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &342594102
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1196329497}
+    m_Modifications:
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1392
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765278416691022, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+      propertyPath: m_Name
+      value: Minimap Icon p4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref1
+      value: 
+      objectReference: {fileID: 1775852564}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref2
+      value: 
+      objectReference: {fileID: 40649631}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1597260588}
+    - target: {fileID: 114203643651324312, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eefa32be42df3d14b8712bd5dc1cd3b5,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &342594103 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+    type: 2}
+  m_PrefabInternal: {fileID: 342594102}
 --- !u!1 &342952597
 GameObject:
   m_ObjectHideFlags: 0
@@ -10180,7 +10340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342952598}
   - component: {fileID: 342952599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10252,7 +10412,7 @@ GameObject:
   - component: {fileID: 344345774}
   - component: {fileID: 344345773}
   - component: {fileID: 344345775}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10349,6 +10509,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 772239292}
   - {fileID: 1206721619}
   - {fileID: 1002483313}
   - {fileID: 201709580}
@@ -10358,7 +10519,7 @@ Transform:
   - {fileID: 336785653}
   - {fileID: 1936907665}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &344345775
 AudioListener:
@@ -10376,7 +10537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 346731014}
   - component: {fileID: 346731015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10517,7 +10678,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 348272447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10674,7 +10835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350646864}
   - component: {fileID: 350646865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10745,7 +10906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 354822860}
   - component: {fileID: 354822861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (212)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10933,7 +11094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 360380112}
   - component: {fileID: 360380113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (124)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11004,7 +11165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 362402322}
   - component: {fileID: 362402323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (87)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11146,7 +11307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 365835323}
   - component: {fileID: 365835324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11217,7 +11378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367931086}
   - component: {fileID: 367931087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11288,7 +11449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 368392366}
   - component: {fileID: 368392367}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (240)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11572,7 +11733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374203860}
   - component: {fileID: 374203861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11688,7 +11849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 376420559}
   - component: {fileID: 376420560}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (141)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12034,6 +12195,123 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &390186291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 390186294}
+  - component: {fileID: 390186293}
+  - component: {fileID: 390186292}
+  m_Layer: 0
+  m_Name: Audio Object
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &390186292
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390186291}
+  m_Enabled: 1
+--- !u!82 &390186293
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390186291}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8b6405d155462ea4f94669ea7aaef066, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.015388489
+  MaxDistance: 520.80054
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &390186294
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390186291}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &394172820
 GameObject:
   m_ObjectHideFlags: 0
@@ -12185,7 +12463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400154071}
   - component: {fileID: 400154072}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12256,7 +12534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 403134727}
   - component: {fileID: 403134728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12327,7 +12605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 406078416}
   - component: {fileID: 406078417}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12573,7 +12851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408538316}
   - component: {fileID: 408538317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (72)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12644,7 +12922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 411403621}
   - component: {fileID: 411403622}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (89)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12715,7 +12993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 412825289}
   - component: {fileID: 412825290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12786,7 +13064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 413540711}
   - component: {fileID: 413540712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12857,7 +13135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 414184048}
   - component: {fileID: 414184049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (217)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13070,7 +13348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417480778}
   - component: {fileID: 417480779}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13141,7 +13419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417637346}
   - component: {fileID: 417637347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (151)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13283,7 +13561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418627161}
   - component: {fileID: 418627162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13496,7 +13774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426055028}
   - component: {fileID: 426055029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13567,7 +13845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 426380425}
   - component: {fileID: 426380426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13638,7 +13916,7 @@ GameObject:
   m_Component:
   - component: {fileID: 427078391}
   - component: {fileID: 427078392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (199)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13780,7 +14058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429223658}
   - component: {fileID: 429223659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13851,7 +14129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429972928}
   - component: {fileID: 429972929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13922,7 +14200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430118020}
   - component: {fileID: 430118021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14064,7 +14342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 433686928}
   - component: {fileID: 433686929}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14135,7 +14413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436319763}
   - component: {fileID: 436319764}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14206,7 +14484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436811047}
   - component: {fileID: 436811048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (140)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14348,7 +14626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 438040831}
   - component: {fileID: 438040832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14419,7 +14697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440370347}
   - component: {fileID: 440370348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (250)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14490,7 +14768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441446791}
   - component: {fileID: 441446792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14561,7 +14839,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442064995}
   - component: {fileID: 442064996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14703,7 +14981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 445375883}
   - component: {fileID: 445375884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (207)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14845,7 +15123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454245096}
   - component: {fileID: 454245097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (203)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14916,7 +15194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455392902}
   - component: {fileID: 455392903}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14987,7 +15265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 456288118}
   - component: {fileID: 456288119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (200)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15058,7 +15336,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458531962}
   - component: {fileID: 458531963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15129,7 +15407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459255553}
   - component: {fileID: 459255554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15200,7 +15478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 459821254}
   - component: {fileID: 459821255}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15477,7 +15755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479036188}
   - component: {fileID: 479036189}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (118)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15548,7 +15826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 479261406}
   - component: {fileID: 479261407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (213)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15619,7 +15897,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
@@ -15705,7 +15983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489898294}
   - component: {fileID: 489898295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (241)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15847,7 +16125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499788474}
   - component: {fileID: 499788475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (88)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16105,7 +16383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505292474}
   - component: {fileID: 505292475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (172)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16389,7 +16667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 509854551}
   - component: {fileID: 509854552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (83)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16460,7 +16738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 510121537}
   - component: {fileID: 510121538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16602,7 +16880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511920339}
   - component: {fileID: 511920340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16673,7 +16951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512922323}
   - component: {fileID: 512922324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16744,7 +17022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513667315}
   - component: {fileID: 513667316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16886,7 +17164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517196603}
   - component: {fileID: 517196604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16957,7 +17235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 518970568}
   - component: {fileID: 518970569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17104,7 +17382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523603607}
   - component: {fileID: 523603608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17175,7 +17453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 524619746}
   - component: {fileID: 524619747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (119)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17594,7 +17872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544316595}
   - component: {fileID: 544316596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17665,7 +17943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 544723011}
   - component: {fileID: 544723012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17878,7 +18156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 549192675}
   - component: {fileID: 549192676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17955,7 +18233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 554606397}
   - component: {fileID: 554606398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (162)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18026,7 +18304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 559017364}
   - component: {fileID: 559017365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (247)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18239,7 +18517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 560790705}
   - component: {fileID: 560790706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18381,7 +18659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564959063}
   - component: {fileID: 564959064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18452,7 +18730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565831027}
   - component: {fileID: 565831028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (105)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18523,7 +18801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 567855326}
   - component: {fileID: 567855327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18594,7 +18872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571159600}
   - component: {fileID: 571159601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18665,7 +18943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575604478}
   - component: {fileID: 575604479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (187)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18807,7 +19085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586519381}
   - component: {fileID: 586519382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18878,7 +19156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 592478052}
   - component: {fileID: 592478053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18949,7 +19227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 594735971}
   - component: {fileID: 594735972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (121)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19020,7 +19298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 597971575}
   - component: {fileID: 597971576}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19162,7 +19440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601080730}
   - component: {fileID: 601080731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19303,7 +19581,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 601996711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1_start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19323,7 +19601,7 @@ Transform:
   - {fileID: 1050130175}
   - {fileID: 934424362}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603784601
 GameObject:
@@ -19334,7 +19612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603784602}
   - component: {fileID: 603784603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19405,7 +19683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 604267476}
   - component: {fileID: 604267477}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19476,7 +19754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 606771537}
   - component: {fileID: 606771538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19547,7 +19825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609925286}
   - component: {fileID: 609925287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19618,7 +19896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 614783324}
   - component: {fileID: 614783325}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19689,7 +19967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617584649}
   - component: {fileID: 617584650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19760,7 +20038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 619413662}
   - component: {fileID: 619413663}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (228)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19902,7 +20180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 623825675}
   - component: {fileID: 623825676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (135)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20183,7 +20461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629766155}
   - component: {fileID: 629766156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20538,7 +20816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640628695}
   - component: {fileID: 640628696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20609,7 +20887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 641685109}
   - component: {fileID: 641685110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20680,7 +20958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 643032104}
   - component: {fileID: 643032105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20822,7 +21100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 644422919}
   - component: {fileID: 644422920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (104)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20893,7 +21171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645669937}
   - component: {fileID: 645669938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (232)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21035,7 +21313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 649163433}
   - component: {fileID: 649163434}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21177,7 +21455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652128137}
   - component: {fileID: 652128138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (163)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21248,7 +21526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652971404}
   - component: {fileID: 652971405}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21423,7 +21701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654565982}
   - component: {fileID: 654565983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21565,7 +21843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657834238}
   - component: {fileID: 657834239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21707,7 +21985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 659090350}
   - component: {fileID: 659090351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21778,7 +22056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660132894}
   - component: {fileID: 660132895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21920,7 +22198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 662395314}
   - component: {fileID: 662395315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21991,7 +22269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665484620}
   - component: {fileID: 665484621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22062,7 +22340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 665638112}
   - component: {fileID: 665638113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22488,7 +22766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 677264021}
   - component: {fileID: 677264022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22559,7 +22837,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681260844}
   - component: {fileID: 681260845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22630,7 +22908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 681525647}
   - component: {fileID: 681525648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22843,7 +23121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685521186}
   - component: {fileID: 685521187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22914,7 +23192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 685714090}
   - component: {fileID: 685714091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23056,7 +23334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 687914061}
   - component: {fileID: 687914062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (238)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23434,7 +23712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693506639}
   - component: {fileID: 693506640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (152)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23505,7 +23783,7 @@ GameObject:
   m_Component:
   - component: {fileID: 695955728}
   - component: {fileID: 695955729}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (131)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23576,7 +23854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699911903}
   - component: {fileID: 699911904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23789,7 +24067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710052681}
   - component: {fileID: 710052682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24002,7 +24280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 717839497}
   - component: {fileID: 717839498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24144,7 +24422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720066896}
   - component: {fileID: 720066897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (221)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24357,7 +24635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 721663072}
   - component: {fileID: 721663073}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (116)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24499,7 +24777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728949130}
   - component: {fileID: 728949131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24760,7 +25038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731215135}
   - component: {fileID: 731215136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (106)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24973,7 +25251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738444382}
   - component: {fileID: 738444383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (179)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25044,7 +25322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 741973872}
   - component: {fileID: 741973873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25186,7 +25464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 747516845}
   - component: {fileID: 747516846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25257,7 +25535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748073983}
   - component: {fileID: 748073984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25399,7 +25677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758588012}
   - component: {fileID: 758588013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25470,7 +25748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759963828}
   - component: {fileID: 759963829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (186)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25683,7 +25961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763993091}
   - component: {fileID: 763993092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25896,7 +26174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 766799490}
   - component: {fileID: 766799491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26171,6 +26449,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!4 &772239292 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+    type: 2}
+  m_PrefabInternal: {fileID: 1911334390}
 --- !u!1 &772448723
 GameObject:
   m_ObjectHideFlags: 0
@@ -26322,7 +26605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 773687412}
   - component: {fileID: 773687413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (94)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26438,7 +26721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775846532}
   - component: {fileID: 775846533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26580,7 +26863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777276359}
   - component: {fileID: 777276360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26686,7 +26969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783264328}
   - component: {fileID: 783264329}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26828,7 +27111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784089560}
   - component: {fileID: 784089561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (191)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26899,7 +27182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784169649}
   - component: {fileID: 784169650}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (237)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27041,7 +27324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 786011634}
   - component: {fileID: 786011635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27396,7 +27679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801003671}
   - component: {fileID: 801003672}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (165)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27467,7 +27750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801516910}
   - component: {fileID: 801516911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (248)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27762,8 +28045,10 @@ RectTransform:
   - {fileID: 519209232}
   - {fileID: 1806636062}
   - {fileID: 691444636}
+  - {fileID: 1758851140}
+  - {fileID: 1196329497}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -27796,7 +28081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808494397}
   - component: {fileID: 808494398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28009,7 +28294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815642809}
   - component: {fileID: 815642810}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28151,7 +28436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820699712}
   - component: {fileID: 820699713}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28222,7 +28507,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826638291}
   - component: {fileID: 826638292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (234)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28293,7 +28578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827524730}
   - component: {fileID: 827524731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28364,7 +28649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 829363327}
   - component: {fileID: 829363328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28435,7 +28720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 830286041}
   - component: {fileID: 830286042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28506,7 +28791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836509409}
   - component: {fileID: 836509410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28577,7 +28862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 836872457}
   - component: {fileID: 836872458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28757,7 +29042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 846631919}
   - component: {fileID: 846631920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28970,7 +29255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854228553}
   - component: {fileID: 854228554}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29112,7 +29397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854895901}
   - component: {fileID: 854895902}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29254,7 +29539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 862606039}
   - component: {fileID: 862606040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (129)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29325,7 +29610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 862708121}
   - component: {fileID: 862708122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29573,7 +29858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 865971012}
   - component: {fileID: 865971013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29644,7 +29929,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866678183}
   - component: {fileID: 866678184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (169)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29715,7 +30000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867892838}
   - component: {fileID: 867892839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (79)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29786,7 +30071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 868479545}
   - component: {fileID: 868479546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (80)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29928,7 +30213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 873673762}
   - component: {fileID: 873673763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (177)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30063,7 +30348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883460096}
   - component: {fileID: 883460097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (134)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30276,7 +30561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890664631}
   - component: {fileID: 890664632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30448,7 +30733,7 @@ GameObject:
   m_Component:
   - component: {fileID: 894952848}
   - component: {fileID: 894952849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30590,7 +30875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 901259929}
   - component: {fileID: 901259930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30661,7 +30946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902158533}
   - component: {fileID: 902158534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (183)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30833,7 +31118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909234247}
   - component: {fileID: 909234248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30904,7 +31189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909991116}
   - component: {fileID: 909991117}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31046,7 +31331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 924531075}
   - component: {fileID: 924531076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (180)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31117,7 +31402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 928275241}
   - component: {fileID: 928275242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31304,7 +31589,7 @@ GameObject:
   m_Component:
   - component: {fileID: 932809787}
   - component: {fileID: 932809788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (75)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31375,7 +31660,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934424362}
   - component: {fileID: 934424363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31481,7 +31766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 936392549}
   - component: {fileID: 936392550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31694,7 +31979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 941549014}
   - component: {fileID: 941549015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31836,7 +32121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944478231}
   - component: {fileID: 944478232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (170)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31907,7 +32192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 944826237}
   - component: {fileID: 944826238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (171)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31978,7 +32263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946980925}
   - component: {fileID: 946980926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32191,7 +32476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951493518}
   - component: {fileID: 951493519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32262,7 +32547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952042023}
   - component: {fileID: 952042024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32333,7 +32618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956795298}
   - component: {fileID: 956795299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32404,7 +32689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957381394}
   - component: {fileID: 957381395}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32535,7 +32820,7 @@ Transform:
   m_LocalScale: {x: 1198.8528, y: 4934.249, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961478868
 GameObject:
@@ -32617,7 +32902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961763631}
   - component: {fileID: 961763632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32688,7 +32973,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962916845}
   - component: {fileID: 962916846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32830,7 +33115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966580074}
   - component: {fileID: 966580075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (137)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32901,7 +33186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972170319}
   - component: {fileID: 972170320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (157)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33043,7 +33328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 973789667}
   - component: {fileID: 973789668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33327,7 +33612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983459437}
   - component: {fileID: 983459438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33398,7 +33683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986180566}
   - component: {fileID: 986180567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (256)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33460,6 +33745,87 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &987553624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 987553628}
+  - component: {fileID: 987553627}
+  - component: {fileID: 987553626}
+  - component: {fileID: 987553625}
+  m_Layer: 0
+  m_Name: Minimap Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!92 &987553625
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987553624}
+  m_Enabled: 1
+--- !u!124 &987553626
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987553624}
+  m_Enabled: 1
+--- !u!20 &987553627
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987553624}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 461.9226
+  m_Depth: 100
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967240
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 8400000, guid: 156011df201b98241bcef5d5462ee870, type: 2}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &987553628
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 987553624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 200, y: 150, z: 0}
+  m_LocalScale: {x: 150, y: 10, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993369440
 GameObject:
   m_ObjectHideFlags: 0
@@ -33469,7 +33835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 993369441}
   - component: {fileID: 993369442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33540,7 +33906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995501693}
   - component: {fileID: 995501694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33682,7 +34048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000503070}
   - component: {fileID: 1000503071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (128)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33752,7 +34118,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1002483313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34091,7 +34457,7 @@ Transform:
   - {fileID: 219985538}
   - {fileID: 1404741810}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009990982
 GameObject:
@@ -34102,7 +34468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009990983}
   - component: {fileID: 1009990984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34386,7 +34752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015266643}
   - component: {fileID: 1015266644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34528,7 +34894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1024611087}
   - component: {fileID: 1024611088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34670,7 +35036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1026684910}
   - component: {fileID: 1026684911}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34741,7 +35107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033651268}
   - component: {fileID: 1033651269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34883,7 +35249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1036542435}
   - component: {fileID: 1036542436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (123)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34954,7 +35320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039722675}
   - component: {fileID: 1039722676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (86)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35096,7 +35462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1045029731}
   - component: {fileID: 1045029732}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35167,7 +35533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047056631}
   - component: {fileID: 1047056632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35238,7 +35604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047899852}
   - component: {fileID: 1047899853}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35309,7 +35675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050130175}
   - component: {fileID: 1050130176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35380,7 +35746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1050228227}
   - component: {fileID: 1050228228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (164)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35522,7 +35888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057155442}
   - component: {fileID: 1057155443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (90)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35593,7 +35959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057563036}
   - component: {fileID: 1057563037}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35664,7 +36030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057927558}
   - component: {fileID: 1057927559}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35735,7 +36101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1059355040}
   - component: {fileID: 1059355041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35841,7 +36207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061682052}
   - component: {fileID: 1061682053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (174)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35912,7 +36278,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1066137578}
   - component: {fileID: 1066137579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36084,7 +36450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069111109}
   - component: {fileID: 1069111110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36155,7 +36521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074326505}
   - component: {fileID: 1074326506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (108)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36226,7 +36592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074995385}
   - component: {fileID: 1074995386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36368,7 +36734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079708815}
   - component: {fileID: 1079708816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (198)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36727,7 +37093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092805530}
   - component: {fileID: 1092805531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36869,7 +37235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097247729}
   - component: {fileID: 1097247730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (142)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37011,7 +37377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100640125}
   - component: {fileID: 1100640126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37082,7 +37448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1101783583}
   - component: {fileID: 1101783584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37153,7 +37519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1102128518}
   - component: {fileID: 1102128519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37224,7 +37590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1105728458}
   - component: {fileID: 1105728459}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37295,7 +37661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109013714}
   - component: {fileID: 1109013715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (114)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37366,7 +37732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110255919}
   - component: {fileID: 1110255920}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37579,7 +37945,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115408268}
   - component: {fileID: 1115408269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (192)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37650,7 +38016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119959500}
   - component: {fileID: 1119959501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37792,7 +38158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123180478}
   - component: {fileID: 1123180479}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37969,7 +38335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1130896266}
   - component: {fileID: 1130896267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38040,7 +38406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1131225124}
   - component: {fileID: 1131225125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38111,7 +38477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1140730517}
   - component: {fileID: 1140730518}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38182,7 +38548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143033301}
   - component: {fileID: 1143033302}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (194)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38566,7 +38932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157758187
 GameObject:
@@ -38719,7 +39085,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160449799}
   - component: {fileID: 1160449800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38790,7 +39156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1160878268}
   - component: {fileID: 1160878269}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (84)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38923,6 +39289,136 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1171261157
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1196329497}
+    m_Modifications:
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1392
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765278416691022, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+      propertyPath: m_Name
+      value: Minimap Icon p3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref1
+      value: 
+      objectReference: {fileID: 1775852564}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref2
+      value: 
+      objectReference: {fileID: 40649631}
+    - target: {fileID: 114203643651324312, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce27faaaea2c6f1428434b921308978a,
+        type: 3}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 551308360}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1171261158 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1171261157}
 --- !u!1 &1173888731
 GameObject:
   m_ObjectHideFlags: 0
@@ -38932,7 +39428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173888732}
   - component: {fileID: 1173888733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39003,7 +39499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178651720}
   - component: {fileID: 1178651721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (210)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39074,7 +39570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1183330648}
   - component: {fileID: 1183330649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39216,7 +39712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194390173}
   - component: {fileID: 1194390174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (97)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39278,6 +39774,78 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1196329496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1196329497}
+  - component: {fileID: 1196329499}
+  - component: {fileID: 1196329498}
+  m_Layer: 5
+  m_Name: Minimap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1196329497
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196329496}
+  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 250, y: 250, z: 0}
+  m_Children:
+  - {fileID: 40649631}
+  - {fileID: 1247707842}
+  - {fileID: 2071606985}
+  - {fileID: 1171261158}
+  - {fileID: 342594103}
+  m_Father: {fileID: 807300946}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1196329498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196329496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 1d838604b855e584493bb94017ee01fe, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 8400000, guid: 156011df201b98241bcef5d5462ee870, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1196329499
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196329496}
 --- !u!1 &1200078789
 GameObject:
   m_ObjectHideFlags: 0
@@ -39287,7 +39855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1200078790}
   - component: {fileID: 1200078791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (74)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39422,7 +39990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1202530248}
   - component: {fileID: 1202530249}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (263)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39564,7 +40132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1205485064}
   - component: {fileID: 1205485065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39634,7 +40202,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1206721619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybales
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39653,7 +40221,7 @@ Transform:
   m_Children:
   - {fileID: 1730980486}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214502402
 GameObject:
@@ -39664,7 +40232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214502403}
   - component: {fileID: 1214502404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40090,7 +40658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225189128}
   - component: {fileID: 1225189129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40161,7 +40729,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1227070064}
   - component: {fileID: 1227070065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (126)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40232,7 +40800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229283060}
   - component: {fileID: 1229283061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40445,7 +41013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1235712078}
   - component: {fileID: 1235712079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (110)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40516,7 +41084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236717291}
   - component: {fileID: 1236717292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40791,6 +41359,136 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1247707841
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1196329497}
+    m_Modifications:
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1392
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1249677015}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref1
+      value: 
+      objectReference: {fileID: 1775852564}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref2
+      value: 
+      objectReference: {fileID: 40649631}
+    - target: {fileID: 1765278416691022, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+      propertyPath: m_Name
+      value: Minimap Icon p1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114203643651324312, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2680999d001766d4ca9f75967963800d,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &1247707842 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247707841}
 --- !u!1 &1248534726
 GameObject:
   m_ObjectHideFlags: 0
@@ -40800,7 +41498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248534727}
   - component: {fileID: 1248534728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40948,7 +41646,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254214320}
   - component: {fileID: 1254214321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (227)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41019,7 +41717,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254592603}
   - component: {fileID: 1254592604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (220)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41161,7 +41859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1261353829}
   - component: {fileID: 1261353830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41374,7 +42072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1266793900}
   - component: {fileID: 1266793901}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (154)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41445,7 +42143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270133364}
   - component: {fileID: 1270133365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41658,7 +42356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1275892962}
   - component: {fileID: 1275892963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (201)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41729,7 +42427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276885124}
   - component: {fileID: 1276885125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (136)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41942,7 +42640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280405933}
   - component: {fileID: 1280405934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42013,7 +42711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1280813942}
   - component: {fileID: 1280813943}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42084,7 +42782,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283788713}
   - component: {fileID: 1283788714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42155,7 +42853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1285585977}
   - component: {fileID: 1285585978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42226,7 +42924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286178652}
   - component: {fileID: 1286178653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42297,7 +42995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288020127}
   - component: {fileID: 1288020128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42481,7 +43179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1298762021}
   - component: {fileID: 1298762022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (95)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42552,7 +43250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1301707165}
   - component: {fileID: 1301707166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42907,7 +43605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318208231}
   - component: {fileID: 1318208232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (99)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43120,7 +43818,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1321243500}
   - component: {fileID: 1321243501}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43333,7 +44031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1329322427}
   - component: {fileID: 1329322428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43404,7 +44102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333424552}
   - component: {fileID: 1333424553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43475,7 +44173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1334647089}
   - component: {fileID: 1334647090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43617,7 +44315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343083421}
   - component: {fileID: 1343083422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43688,7 +44386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346736479}
   - component: {fileID: 1346736480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43901,7 +44599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350435834}
   - component: {fileID: 1350435835}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43972,7 +44670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350566111}
   - component: {fileID: 1350566112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (147)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44114,7 +44812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357826007}
   - component: {fileID: 1357826008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44185,7 +44883,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1362054465}
   - component: {fileID: 1362054466}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44503,7 +45201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386665860}
   - component: {fileID: 1386665861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44574,7 +45272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388318648}
   - component: {fileID: 1388318649}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44645,7 +45343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393606582}
   - component: {fileID: 1393606583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44716,7 +45414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394554566}
   - component: {fileID: 1394554567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44929,7 +45627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1395923440}
   - component: {fileID: 1395923441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (76)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45071,7 +45769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1396544818}
   - component: {fileID: 1396544819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45142,7 +45840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1399157876}
   - component: {fileID: 1399157877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45213,7 +45911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1401132551}
   - component: {fileID: 1401132552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45284,7 +45982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404741810}
   - component: {fileID: 1404741811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (255)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45355,7 +46053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404935645}
   - component: {fileID: 1404935646}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45568,7 +46266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1409309263}
   - component: {fileID: 1409309264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45639,7 +46337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1412464088}
   - component: {fileID: 1412464089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (145)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45781,7 +46479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417051257}
   - component: {fileID: 1417051258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45898,7 +46596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421342164}
   - component: {fileID: 1421342165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45969,7 +46667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421377788}
   - component: {fileID: 1421377789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46040,7 +46738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421897022}
   - component: {fileID: 1421897023}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (178)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46111,7 +46809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425502956}
   - component: {fileID: 1425502957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46182,7 +46880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425791918}
   - component: {fileID: 1425791919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (109)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46253,7 +46951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1429984654}
   - component: {fileID: 1429984655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46324,7 +47022,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1433036903}
   - component: {fileID: 1433036904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46679,7 +47377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1447615523}
   - component: {fileID: 1447615524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46750,7 +47448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453224973}
   - component: {fileID: 1453224974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (223)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46821,7 +47519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1453239342}
   - component: {fileID: 1453239343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47034,7 +47732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1461515043}
   - component: {fileID: 1461515044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47105,7 +47803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467548921}
   - component: {fileID: 1467548922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47176,7 +47874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471615174}
   - component: {fileID: 1471615175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47318,7 +48016,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481614144}
   - component: {fileID: 1481614145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47460,7 +48158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1485198796}
   - component: {fileID: 1485198797}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (159)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47673,7 +48371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1490819521}
   - component: {fileID: 1490819522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47744,7 +48442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1493310308}
   - component: {fileID: 1493310309}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (107)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47886,7 +48584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498972976}
   - component: {fileID: 1498972977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (113)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47957,7 +48655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1499503996}
   - component: {fileID: 1499503997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48028,7 +48726,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1503431841}
   - component: {fileID: 1503431842}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (130)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48099,7 +48797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507288651}
   - component: {fileID: 1507288652}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48170,7 +48868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1512758281}
   - component: {fileID: 1512758282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (176)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48241,7 +48939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1518891890}
   - component: {fileID: 1518891891}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (111)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48312,7 +49010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1520531143}
   - component: {fileID: 1520531144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48383,7 +49081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522061330}
   - component: {fileID: 1522061331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48454,7 +49152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1522694490}
   - component: {fileID: 1522694491}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48667,7 +49365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525231721}
   - component: {fileID: 1525231722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (206)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49164,7 +49862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535271411}
   - component: {fileID: 1535271412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49235,7 +49933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536594455}
   - component: {fileID: 1536594456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (143)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49448,7 +50146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545778570}
   - component: {fileID: 1545778571}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (260)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49590,7 +50288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552012344}
   - component: {fileID: 1552012345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49661,7 +50359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552291255}
   - component: {fileID: 1552291256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (195)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49803,7 +50501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1558656628}
   - component: {fileID: 1558656629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50087,7 +50785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1572724799}
   - component: {fileID: 1572724800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50203,7 +50901,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1574819913}
   - component: {fileID: 1574819914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (209)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50274,7 +50972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575729435}
   - component: {fileID: 1575729436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50700,7 +51398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590573492}
   - component: {fileID: 1590573493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (150)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50900,7 +51598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592861447}
   - component: {fileID: 1592861448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (204)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51048,7 +51746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1598755741}
   - component: {fileID: 1598755742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (166)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51225,7 +51923,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1604624477}
   - component: {fileID: 1604624478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51296,7 +51994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1604922850}
   - component: {fileID: 1604922851}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51367,7 +52065,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614423859}
   - component: {fileID: 1614423860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (155)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51438,7 +52136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614436352}
   - component: {fileID: 1614436353}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51509,7 +52207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615330767}
   - component: {fileID: 1615330768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51610,7 +52308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1619442298}
   - component: {fileID: 1619442299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51681,7 +52379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1620847407}
   - component: {fileID: 1620847408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51752,7 +52450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623062074}
   - component: {fileID: 1623062075}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (190)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51823,7 +52521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1623066023}
   - component: {fileID: 1623066024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51894,7 +52592,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624897626}
   - component: {fileID: 1624897627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (196)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52036,7 +52734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1640967183}
   - component: {fileID: 1640967184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (245)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52107,7 +52805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641040972}
   - component: {fileID: 1641040973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52178,7 +52876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1643951438}
   - component: {fileID: 1643951439}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (120)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52391,7 +53089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645134041}
   - component: {fileID: 1645134042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52462,7 +53160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1647333493}
   - component: {fileID: 1647333494}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (181)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52533,7 +53231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650061047}
   - component: {fileID: 1650061048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52604,7 +53302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650195487}
   - component: {fileID: 1650195488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52675,7 +53373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1651159963}
   - component: {fileID: 1651159964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52993,7 +53691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1657394001}
   - component: {fileID: 1657394002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53180,7 +53878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668380008}
   - component: {fileID: 1668380009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (229)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53251,7 +53949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668595980}
   - component: {fileID: 1668595981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53322,7 +54020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668886722}
   - component: {fileID: 1668886723}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (153)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53464,7 +54162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674687158}
   - component: {fileID: 1674687159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (231)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53535,7 +54233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1675262887}
   - component: {fileID: 1675262888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53715,7 +54413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1685084663}
   - component: {fileID: 1685084664}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53786,7 +54484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688470865}
   - component: {fileID: 1688470866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (82)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53857,7 +54555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688971754}
   - component: {fileID: 1688971755}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53999,7 +54697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691541195}
   - component: {fileID: 1691541196}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (215)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54070,7 +54768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1691613699}
   - component: {fileID: 1691613700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (246)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54212,7 +54910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1694373396}
   - component: {fileID: 1694373397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54283,7 +54981,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696197311}
   - component: {fileID: 1696197312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54354,7 +55052,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1696924050}
   - component: {fileID: 1696924051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54425,7 +55123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1703732171}
   - component: {fileID: 1703732172}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54526,7 +55224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1714405084}
   - component: {fileID: 1714405085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (117)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54597,7 +55295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715144920}
   - component: {fileID: 1715144921}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54668,7 +55366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728265544}
   - component: {fileID: 1728265545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54739,7 +55437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729716202}
   - component: {fileID: 1729716203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54810,7 +55508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1730980486}
   - component: {fileID: 1730980487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: haybale (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54915,7 +55613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733476799}
   - component: {fileID: 1733476800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54986,7 +55684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735430700}
   - component: {fileID: 1735430701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (211)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55270,7 +55968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1748621885}
   - component: {fileID: 1748621886}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (175)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55341,7 +56039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749354971}
   - component: {fileID: 1749354972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55412,7 +56110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1752196595}
   - component: {fileID: 1752196596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55474,6 +56172,73 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1758851139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1758851140}
+  - component: {fileID: 1758851142}
+  - component: {fileID: 1758851141}
+  m_Layer: 5
+  m_Name: MMBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1758851140
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758851139}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 150, y: 300, z: 1}
+  m_Children: []
+  m_Father: {fileID: 807300946}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1758851141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758851139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.29999998, g: 0.29999998, b: 0.29999998, a: 0.297}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 2800000, guid: 98607e6bdd971a843abd91842b9f9d24, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1758851142
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758851139}
 --- !u!1 &1758999544
 GameObject:
   m_ObjectHideFlags: 0
@@ -55483,7 +56248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758999545}
   - component: {fileID: 1758999546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (197)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55554,7 +56319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759460655}
   - component: {fileID: 1759460656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (168)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55625,7 +56390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760392407}
   - component: {fileID: 1760392408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (122)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55696,7 +56461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1761537823}
   - component: {fileID: 1761537824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (218)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55767,7 +56532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1763923739}
   - component: {fileID: 1763923740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55980,7 +56745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768279872}
   - component: {fileID: 1768279873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56051,7 +56816,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768443279}
   - component: {fileID: 1768443280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (249)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56335,7 +57100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1774566630}
   - component: {fileID: 1774566631}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (205)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56405,7 +57170,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1775501661}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56427,8 +57192,48 @@ Transform:
   - {fileID: 1977999875}
   - {fileID: 263909052}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1775852562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1775852564}
+  - component: {fileID: 1775852563}
+  m_Layer: 8
+  m_Name: MMReferencePoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &1775852563
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775852562}
+--- !u!224 &1775852564
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775852562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 9.588913, y: 7.5334144, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1, y: 223}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1777143834
 GameObject:
   m_ObjectHideFlags: 0
@@ -56438,7 +57243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777143835}
   - component: {fileID: 1777143836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56509,7 +57314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784267677}
   - component: {fileID: 1784267678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56580,7 +57385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1785687816}
   - component: {fileID: 1785687817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (138)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56864,7 +57669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792650908}
   - component: {fileID: 1792650909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56935,7 +57740,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1792658151}
   - component: {fileID: 1792658152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (225)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57148,7 +57953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800493872}
   - component: {fileID: 1800493873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (73)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57219,7 +58024,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804054518}
   - component: {fileID: 1804054519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57366,7 +58171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808430708}
   - component: {fileID: 1808430709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57437,7 +58242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808808349}
   - component: {fileID: 1808808350}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (133)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57579,7 +58384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1816362603}
   - component: {fileID: 1816362604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57721,7 +58526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1817487080}
   - component: {fileID: 1817487081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57792,7 +58597,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820460674}
   - component: {fileID: 1820460675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (262)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58014,7 +58819,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836244882}
   - component: {fileID: 1836244883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58085,7 +58890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837652049}
   - component: {fileID: 1837652050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58156,7 +58961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841712429}
   - component: {fileID: 1841712430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (148)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58227,7 +59032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842344284}
   - component: {fileID: 1842344285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (193)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58298,7 +59103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1846502994}
   - component: {fileID: 1846502995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58369,7 +59174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847387233}
   - component: {fileID: 1847387234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (216)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58440,7 +59245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1853438783}
   - component: {fileID: 1853438784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (93)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58653,7 +59458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1857114118}
   - component: {fileID: 1857114119}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (188)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58866,7 +59671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1867478296}
   - component: {fileID: 1867478297}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (112)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58937,7 +59742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868342043}
   - component: {fileID: 1868342044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (219)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59008,7 +59813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1869042492}
   - component: {fileID: 1869042493}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (184)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59079,7 +59884,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870255020}
   - component: {fileID: 1870255021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (103)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59298,7 +60103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875142368}
   - component: {fileID: 1875142369}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (102)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59369,7 +60174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1876373565}
   - component: {fileID: 1876373566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (100)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59440,7 +60245,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877532503}
   - component: {fileID: 1877532504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59511,7 +60316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877574995}
   - component: {fileID: 1877574996}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59582,7 +60387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1881113007}
   - component: {fileID: 1881113008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59653,7 +60458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1883871820}
   - component: {fileID: 1883871821}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59866,7 +60671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1895353878}
   - component: {fileID: 1895353879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60150,7 +60955,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897909388}
   - component: {fileID: 1897909389}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60221,7 +61026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1900211083}
   - component: {fileID: 1900211084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60434,7 +61239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906608994}
   - component: {fileID: 1906608995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60505,7 +61310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1907404963}
   - component: {fileID: 1907404964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60576,7 +61381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1909536059}
   - component: {fileID: 1909536060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60638,6 +61443,281 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1911334390
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 344345774}
+    m_Modifications:
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.size
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.1148682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 227.38837
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861329182343090, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
+      value: -17.747896
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
+      value: 5.709497
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
+      value: 12.501343
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
+      value: -11.674857
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
+      value: -6.530961
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
+      value: 16.963232
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -21.167074
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: -2.2144654
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].x
+      value: -17.790909
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[4].y
+      value: -9.404724
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].x
+      value: -15.431264
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
+      value: -12.179749
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].x
+      value: -12.501422
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[6].y
+      value: -15.712689
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].x
+      value: -12.080611
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
+      value: -16.060022
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].x
+      value: -6.1881976
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
+      value: -20.92455
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].x
+      value: -5.283403
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[9].y
+      value: -21.150745
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].x
+      value: 1.2927307
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
+      value: -22.20796
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].x
+      value: 8.862058
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[11].y
+      value: -20.917236
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].x
+      value: 13.684493
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].y
+      value: -16.777754
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].x
+      value: 15.328005
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[13].y
+      value: -15.251727
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].x
+      value: 16.408066
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[14].y
+      value: -13.945502
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].x
+      value: 20.657627
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[15].y
+      value: -9.021197
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].x
+      value: 23.564146
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[16].y
+      value: -2.0588684
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[17].x
+      value: 20.182142
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[17].y
+      value: 5.3884706
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[18].x
+      value: 14.1175785
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[18].y
+      value: 12.193433
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[19].x
+      value: 8.717658
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[19].y
+      value: 16.759363
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[20].x
+      value: 1.1971741
+      objectReference: {fileID: 0}
+    - target: {fileID: 60968596118474278, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[20].y
+      value: 20.319666
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856163778126776, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: t
+      value: 
+      objectReference: {fileID: 772239292}
+    - target: {fileID: 1022513500064234, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_TagString
+      value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022513500064234, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212244414369668366, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8e8dd99b967b6cd46acf7fdc7f4c3340, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1913384510
 GameObject:
   m_ObjectHideFlags: 0
@@ -60646,7 +61726,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1913384511}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60666,7 +61746,7 @@ Transform:
   - {fileID: 198251519}
   - {fileID: 348272447}
   m_Father: {fileID: 344345774}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914467548
 GameObject:
@@ -60748,7 +61828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914540758}
   - component: {fileID: 1914540759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60819,7 +61899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1914643158}
   - component: {fileID: 1914643159}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (259)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60890,7 +61970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915792317}
   - component: {fileID: 1915792318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60991,7 +62071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919583837}
   - component: {fileID: 1919583838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (189)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61062,7 +62142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924264762}
   - component: {fileID: 1924264763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (261)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61204,7 +62284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1929354443}
   - component: {fileID: 1929354444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (251)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61275,7 +62355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930408693}
   - component: {fileID: 1930408694}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61488,7 +62568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936907665}
   - component: {fileID: 1936907666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider-outside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61506,7 +62586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 344345774}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1936907666
 PolygonCollider2D:
@@ -61626,7 +62706,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937595037}
   - component: {fileID: 1937595038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61697,7 +62777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937807058}
   - component: {fileID: 1937807059}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (257)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61839,7 +62919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1949137243}
   - component: {fileID: 1949137244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61910,7 +62990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954962892}
   - component: {fileID: 1954962893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (252)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62123,7 +63203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956373908}
   - component: {fileID: 1956373909}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (149)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62194,7 +63274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1961358952}
   - component: {fileID: 1961358953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (125)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62265,7 +63345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966951565}
   - component: {fileID: 1966951566}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62336,7 +63416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1967607421}
   - component: {fileID: 1967607422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62478,7 +63558,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969230420}
   - component: {fileID: 1969230421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (127)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62549,7 +63629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1972813272}
   - component: {fileID: 1972813273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62761,7 +63841,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1977999875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-center-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62798,7 +63878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1978957053}
   - component: {fileID: 1978957054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63082,7 +64162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990482904}
   - component: {fileID: 1990482905}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63295,7 +64375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997571726}
   - component: {fileID: 1997571727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (253)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63437,7 +64517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999174422}
   - component: {fileID: 1999174423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63579,7 +64659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003891144}
   - component: {fileID: 2003891145}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (78)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63721,7 +64801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2009673952}
   - component: {fileID: 2009673953}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63792,7 +64872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013530107}
   - component: {fileID: 2013530108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63934,7 +65014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016399412}
   - component: {fileID: 2016399413}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64076,7 +65156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024812985}
   - component: {fileID: 2024812986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64146,7 +65226,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2028613875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border-left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64192,7 +65272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030447771}
   - component: {fileID: 2030447772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (230)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64263,7 +65343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030682443}
   - component: {fileID: 2030682444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (208)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64405,7 +65485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2034249592}
   - component: {fileID: 2034249593}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (182)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64618,7 +65698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048805830}
   - component: {fileID: 2048805831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (132)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64807,7 +65887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060546981}
   - component: {fileID: 2060546982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64878,7 +65958,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2063489437}
   - component: {fileID: 2063489438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (81)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65126,7 +66206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2068536146}
   - component: {fileID: 2068536147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (214)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65268,7 +66348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069985350}
   - component: {fileID: 2069985351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65339,7 +66419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070073190}
   - component: {fileID: 2070073191}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65410,7 +66490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070832139}
   - component: {fileID: 2070832140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (244)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65472,6 +66552,130 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &2071606984
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1196329497}
+    m_Modifications:
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.1392
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1765278416691022, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+      propertyPath: m_Name
+      value: Minimap Icon p2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref1
+      value: 
+      objectReference: {fileID: 1775852564}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: ref2
+      value: 
+      objectReference: {fileID: 40649631}
+    - target: {fileID: 114660741283200144, guid: 3c483d8c78365624482b9863354d299c,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1873761511}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3c483d8c78365624482b9863354d299c, type: 2}
+  m_IsPrefabParent: 0
+--- !u!224 &2071606985 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224087239808465762, guid: 3c483d8c78365624482b9863354d299c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2071606984}
 --- !u!1 &2071677246
 GameObject:
   m_ObjectHideFlags: 0
@@ -65552,7 +66756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2072255290}
   - component: {fileID: 2072255291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65694,7 +66898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078691235}
   - component: {fileID: 2078691236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65836,7 +67040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2082105965}
   - component: {fileID: 2082105966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65978,7 +67182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083068260}
   - component: {fileID: 2083068261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (161)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66120,7 +67324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084519596}
   - component: {fileID: 2084519597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (92)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66262,7 +67466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2089401505}
   - component: {fileID: 2089401506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66333,7 +67537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2090761561}
   - component: {fileID: 2090761562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66475,7 +67679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2091579715}
   - component: {fileID: 2091579716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66546,7 +67750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096081023}
   - component: {fileID: 2096081024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66901,7 +68105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2103384250}
   - component: {fileID: 2103384251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66972,7 +68176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104152690}
   - component: {fileID: 2104152691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67114,7 +68318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2107553954}
   - component: {fileID: 2107553955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (91)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67443,7 +68647,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2119553611}
   - component: {fileID: 2119553612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67514,7 +68718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120199310}
   - component: {fileID: 2120199311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67585,7 +68789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120454214}
   - component: {fileID: 2120454215}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67656,7 +68860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120503043}
   - component: {fileID: 2120503044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dirt (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67727,7 +68931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2120615531}
   - component: {fileID: 2120615532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67869,7 +69073,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2125492110}
   - component: {fileID: 2125492111}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 11 (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67940,7 +69144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128563377}
   - component: {fileID: 2128563378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68011,7 +69215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130461937}
   - component: {fileID: 2130461938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (243)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68082,7 +69286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2132284552}
   - component: {fileID: 2132284553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68153,7 +69357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2133633245}
   - component: {fileID: 2133633246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (146)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68275,7 +69479,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135586316
 GameObject:
@@ -68286,7 +69490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2135586317}
   - component: {fileID: 2135586318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (77)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68357,7 +69561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2139152612}
   - component: {fileID: 2139152613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68428,7 +69632,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141897925}
   - component: {fileID: 2141897926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68499,7 +69703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2142849399}
   - component: {fileID: 2142849400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fence (115)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
