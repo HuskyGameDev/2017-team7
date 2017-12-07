@@ -16158,11 +16158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04c7eca49ba486c4a94a0c3d062a2a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players:
-  - {fileID: 1249677015}
-  - {fileID: 1873761511}
-  - {fileID: 551308360}
-  - {fileID: 1597260588}
   lapTracker: {fileID: 32390966}
 --- !u!1 &808494396
 GameObject:

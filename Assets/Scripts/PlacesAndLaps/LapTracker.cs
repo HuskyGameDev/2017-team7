@@ -50,7 +50,7 @@ public class LapTracker : MonoBehaviour {
 			if(laps[player-1] == maxLaps){
 				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
-				if(playersFinished == PlayerData.GetActivePlayers().Length){
+				if(playersFinished == PlayerData.GetActivePlayers().Length - 1){
 					TransitionToEnd();
 				}
 			}
@@ -143,10 +143,10 @@ public class LapTracker : MonoBehaviour {
 		}
 
 		//Debug statements
-		Debug.DrawLine(players[0].playerRB.position, curves[curPositionalCounts[0]].getPoint(tVals[0]), Color.blue, 0, false);
-		Debug.DrawLine(players[1].playerRB.position, curves[curPositionalCounts[1]].getPoint(tVals[1]), Color.cyan, 0, false);
-		Debug.DrawLine(players[2].playerRB.position, curves[curPositionalCounts[2]].getPoint(tVals[2]), Color.green, 0, false);
-		Debug.DrawLine(players[3].playerRB.position, curves[curPositionalCounts[3]].getPoint(tVals[3]), Color.grey, 0, false);
+		//Debug.DrawLine(players[0].playerRB.position, curves[curPositionalCounts[0]].getPoint(tVals[0]), Color.blue, 0, false);
+		//Debug.DrawLine(players[1].playerRB.position, curves[curPositionalCounts[1]].getPoint(tVals[1]), Color.cyan, 0, false);
+		//Debug.DrawLine(players[2].playerRB.position, curves[curPositionalCounts[2]].getPoint(tVals[2]), Color.green, 0, false);
+		//Debug.DrawLine(players[3].playerRB.position, curves[curPositionalCounts[3]].getPoint(tVals[3]), Color.grey, 0, false);
 
 		foreach(CubicBezierCurve curve in curves){
 			curve.DebugDraw();
