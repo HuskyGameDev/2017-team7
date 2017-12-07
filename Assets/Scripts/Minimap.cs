@@ -1,24 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Minimap : MonoBehaviour {
 
-    public RectTransform location;
-    private Vector2 iconPos;
     public Player player;
+    public Image mmIcon;
+    public Transform ref1, ref2;
+    Vector3 playerDist, iconPos;
 
 	// Use this for initialization
 	void Start () {
-        iconPos = new Vector2(player.playerRB.position.x + 795, player.playerRB.position.y - 411);
-        location.position.Set(0, 0, 0);
-        Debug.Log(iconPos.ToString());
+       // mmIcon.rectTransform.position = new Vector3(0, 0, 0);
+        Debug.Log(mmIcon.rectTransform.position.ToString());
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        location.position.Set(0, 0, 0);
-        Debug.Log(location.position.ToString());
+        playerDist = new Vector3(ref1.position.x - player.playerRB.position.x,
+                                 ref1.position.y - player.playerRB.position.y, 0);
+        iconPos = new Vector3(playerDist.x / 4 + ref2.position.x,
+                             playerDist.y / 4+ ref2.position.y, 0);
+
+        mmIcon.rectTransform.position = iconPos;
     }
 }

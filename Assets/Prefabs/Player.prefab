@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 20378790338813270}
   - component: {fileID: 124273175699937474}
   - component: {fileID: 92191229882680198}
-  - component: {fileID: 81427144543320022}
   - component: {fileID: 114846998728240572}
   m_Layer: 0
   m_Name: Camera
@@ -175,13 +174,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.87, y: 6.37}
   m_Direction: 0
---- !u!81 &81427144543320022
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1537395655367276}
-  m_Enabled: 1
 --- !u!82 &82171013396694326
 AudioSource:
   m_ObjectHideFlags: 1
