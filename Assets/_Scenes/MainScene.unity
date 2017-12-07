@@ -807,7 +807,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Beefcake
+      value: Player 1
       objectReference: {fileID: 0}
     - target: {fileID: 114600300475931796, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -3423,7 +3423,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -91.9
+      value: -91.8
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3435,7 +3435,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: FatStacks
+      value: Player 2
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -6286,6 +6286,10 @@ Prefab:
       propertyPath: thisPlayer
       value: 
       objectReference: {fileID: 1718687929}
+    - target: {fileID: 1688446487032206, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
   m_IsPrefabParent: 0
@@ -19349,6 +19353,10 @@ Prefab:
       propertyPath: thisPlayer
       value: 
       objectReference: {fileID: 350507714}
+    - target: {fileID: 1688446487032206, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
   m_IsPrefabParent: 0
@@ -20445,6 +20453,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688446487032206, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114917674413443212, guid: 1bb6214b8d8da8f49b09d355e945379c, type: 2}
@@ -23242,7 +23254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -92.2
+      value: -91.8
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -23270,7 +23282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Sheepish
+      value: Player 3
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -23286,6 +23298,22 @@ Prefab:
         type: 2}
       propertyPath: playerNumber
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce27faaaea2c6f1428434b921308978a,
+        type: 3}
+    - target: {fileID: 61741095427818152, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61741095427818152, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
@@ -29731,7 +29759,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -92.3
+      value: -91.8
       objectReference: {fileID: 0}
     - target: {fileID: 4110572904792580, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -29759,7 +29787,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1016655889260490, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}
       propertyPath: m_Name
-      value: Vainglory
+      value: Player 4
       objectReference: {fileID: 0}
     - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
         type: 2}
@@ -29775,6 +29803,22 @@ Prefab:
         type: 2}
       propertyPath: playerNumber
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212477317636339240, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: eefa32be42df3d14b8712bd5dc1cd3b5,
+        type: 3}
+    - target: {fileID: 61741095427818152, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61741095427818152, guid: 2b3b2aa79486fa64ab120b17572befb7,
+        type: 2}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2b3b2aa79486fa64ab120b17572befb7, type: 2}

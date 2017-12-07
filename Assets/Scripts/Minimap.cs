@@ -12,7 +12,15 @@ public class Minimap : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        if (PlayerData.playerChars[player.playerNumber - 1] < 0)
+        {
+            mmIcon.gameObject.SetActive(false);
+        }
+        else
+        {
+            mmIcon.sprite = PlayerData.charIcons[PlayerData.playerChars[player.playerNumber - 1]];
+        }
+        
     }
 	
 	// Update is called once per frame

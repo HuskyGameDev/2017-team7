@@ -148,6 +148,19 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.BOOST_PAD] = 187;
         speedList[(int) BOOSTS.DRAFT_BOOST] = 150;
         speedList[(int)BOOSTS.DRIFT_BOOST] = 160;
+
+        if (PlayerData.playerChars[playerNumber - 1] < 0)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = PlayerData.charTopDowns[PlayerData.playerChars[playerNumber - 1]];
+        }
+        
+        Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
+        
+
     }
 
     // Update is called once per frame

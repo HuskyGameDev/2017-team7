@@ -6,14 +6,10 @@ using UnityEngine.UI;
 public class CharSelectController : MonoBehaviour {
 
     public Sprite[] images;
-    //public GameObject[] panels;
+    public Sprite[] playerTopDowns;
 
     private int[] SelectedChars = { -1, -1, -1, -1 };
     private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     public void selectCharacter(int playernum, int index) {
         SelectedChars[playernum] = index;
@@ -44,20 +40,6 @@ public class CharSelectController : MonoBehaviour {
 
     public int nextChar(int index)
     {
-        //int next = index;
-        //bool done = false;
-        //while (!done)
-        //{
-        //    next++;
-        //    if (next >= SelectedChars.Length) next = 0;
-        //    if (index == next)
-        //    {
-        //        done = true;
-        //        break;
-        //    }
-        //    done = !charSelected(next);
-        //}
-        //return next;
         int next = index + 1;
         if (next >= SelectedChars.Length) next = 0;
         return next;
@@ -67,20 +49,6 @@ public class CharSelectController : MonoBehaviour {
         int next = index - 1;
         if (next < 0) next = SelectedChars.Length - 1;
         return next;
-        //int next = index;
-        //bool done = false;
-        //while (!done)
-        //{
-        //    next--;
-        //    if (next < 0) next = SelectedChars.Length - 1;
-        //    if (index == next)
-        //    {
-        //        done = true;
-        //        break;
-        //    }
-        //    done = !charSelected(next);
-        //}
-        //return next;
     }
 
     public bool canStart()
@@ -102,7 +70,9 @@ public class CharSelectController : MonoBehaviour {
         if (canStart())
         {
             Debug.Log("Start");
-            //do communication prep
+            PlayerData.playerChars = (int []) SelectedChars.Clone();
+            PlayerData.charIcons = (Sprite[])images.Clone();
+            PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
         }
     }
