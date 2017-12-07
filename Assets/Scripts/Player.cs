@@ -34,6 +34,9 @@ public class Player : MonoBehaviour
     private int draftTime = 0;
     private float draftBoost = 1;
 
+    private float driftDir;
+    private int driftTime = 0;
+
     private bool drifting;
     private float tempRotation;
 
@@ -113,6 +116,25 @@ public class Player : MonoBehaviour
         newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
     }
 
+    // Turn player method for drifting (NEED TO ALLOW TURNING WHEN NOT MOVING)
+    private void setRotationDrifting()
+    {
+        float turn = ctrls.GetTurn();
+
+        //Add rotation
+        turnSp += turn * turnIncr;// * (playerRB.velocity.magnitude/(maxSpeed/2));
+        maxTS = Math.Abs(turn * turningSpeed * terrainTurning /* Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1)*/) * 1.5f;
+        turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
+        playerRB.rotation += turnSp;
+    }
+
+
+    private void setNewVelRotationDrifting(ref Vector2 newVel)
+    {
+        float rotation = Mathf.Deg2Rad * (driftDir + 90);
+        newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -125,6 +147,7 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
         speedList[(int) BOOSTS.BOOST_PAD] = 187;
         speedList[(int) BOOSTS.DRAFT_BOOST] = 150;
+        speedList[(int)BOOSTS.DRIFT_BOOST] = 160;
     }
 
     // Update is called once per frame
@@ -179,6 +202,11 @@ public class Player : MonoBehaviour
 
                 if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
                 if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2)) state = STATES.DRAFT;
+                if (ctrls.GetB())
+                {
+                    driftDir = playerRB.rotation;
+                    state = STATES.DRIFT;
+                }
 
                 break;
 
@@ -274,7 +302,30 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
 
                 break;
-            case STATES.DRIFT: break;
+            case STATES.DRIFT:
+
+                driftTime++;
+
+                //setting newvel direction at unit length
+                setNewVelRotationDrifting(ref newVel);
+                //change player turning
+                setRotationDrifting();
+
+                //set new velocity             
+                newVel = newVel * playerRB.velocity.magnitude * 0.99f;
+
+                if ((!ctrls.GetB() && driftTime > 100) || driftTime > 300)
+                {
+                    SetBoost(BOOSTS.DRIFT_BOOST, /*2 * driftTime * Time.fixedDeltaTime*/1);
+                    driftTime = 0;
+                    state = STATES.BOOST;
+                }
+                else if (!ctrls.GetB() && driftTime <= 100)
+                {
+                    driftTime = 0;
+                    state = STATES.MOVE_F;
+                }
+                break;
             case STATES.DRAFT:
 
                 draftTime++;
@@ -305,17 +356,7 @@ public class Player : MonoBehaviour
             case STATES.BOOST:
 
                 //Debug.Log("BOOSTING");
-
-                /*if (boost == BOOSTS.STANDARD)
-                {
-                    maxSpeed = speedList[1];
-                }
-                else
-                {
-                    maxSpeed = speedList[(int)boost];
-                }*/
-
-                //maxSpeed = 187;
+                
                 maxSpeed = speedList[(int)boost];
                 maxReverse = 60;
 

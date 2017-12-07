@@ -27,7 +27,8 @@ public class Inputs : MonoBehaviour
             float turning = Input.GetAxis("LeftStickX-" + player);
             float moveForward = Input.GetAxis("RightTrigger-" + player);
             float moveBackward = Input.GetAxis("LeftTrigger-" + player);
-            controllers[player - 1].UpdateValues(turning, moveForward, moveBackward);
+            bool bButton = Input.GetKey("joystick " + player + " button 1");
+            controllers[player - 1].UpdateValues(turning, moveForward, moveBackward, bButton);
         }
     }
 

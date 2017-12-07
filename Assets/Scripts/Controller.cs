@@ -25,7 +25,7 @@ public class Controller {
 
     // Buttons
     private float A;                            // A button
-    private float B;                            // B button
+    private bool B;                            // B button
     private float X;                            // X button
     private float Y;                            // Y button
     private float back;                         // back button
@@ -37,17 +37,18 @@ public class Controller {
 
 
     // Update all input values
-    public void UpdateValues(float t, float f, float b)
+    public void UpdateValues(float t, float f, float b, bool bb)
     {
         lsXaxis = -t;
         RT = f;
         LT = b;
+        B = bb;
     }
 
     // Update all input values
     public void UpdateValues(float lsX, float lsY, float lsC, float rsX, float rsY, float rsC,
                                 float lt, float rt, float lb, float rb,
-                                float a, float b, float x, float y, float ba, float st,
+                                float a, bool b, float x, float y, float ba, float st,
                                 float dpX, float dpY)
     {
         lsXaxis = lsX;
@@ -168,7 +169,7 @@ public class Controller {
     }
 
     // Return B button value
-    public float GetB()
+    public bool GetB()
     {
         return B;
     }
