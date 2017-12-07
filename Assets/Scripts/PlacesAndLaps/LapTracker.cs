@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LapTracker : MonoBehaviour {
 	public int maxLaps;
-	public int endSceneIndex;
 	private int playersFinished = 0;
 	private const int numPlayers = 4;
 	private const int POINTS_PER_TABLE = 25;
@@ -51,9 +50,9 @@ public class LapTracker : MonoBehaviour {
 			if(laps[player-1] == maxLaps){
 				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
-				if(playersFinished == numPlayers){
+				//if(playersFinished == numPlayers){
 					TransitionToEnd();
-				}
+				//}
 			}
 			return;
 		}
@@ -193,6 +192,6 @@ public class LapTracker : MonoBehaviour {
 
 	private void TransitionToEnd(){
 		//TODO figure out how to pass info to next scene
-		UnityEngine.SceneManagement.SceneManager.LoadScene(endSceneIndex);
+		UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
 	}
 }
