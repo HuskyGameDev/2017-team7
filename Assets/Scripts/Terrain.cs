@@ -51,8 +51,11 @@ public class Terrain : MonoBehaviour {
 
                 //collision.gameObject.GetComponent<Player>().maxSpeed = newMaxSpeed;
                 if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
-                    (currentRotation >= tRotation - 450  && currentRotation <= tRotation - 270))
+                    (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
+                {
                     collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST;
+                    collision.gameObject.GetComponent<Player>().SetBoost(Player.BOOSTS.BOOST_PAD, 1);
+                }
                 else
                     collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST_B;
 

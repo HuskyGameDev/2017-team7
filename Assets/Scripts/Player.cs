@@ -23,6 +23,11 @@ public class Player : MonoBehaviour
     public float maxSpeed;
     public float maxReverse;
 
+    private float[] speedList = new float [4];
+    public enum BOOSTS { STANDARD, BOOST_PAD, DRAFT_BOOST, DRIFT_BOOST };
+    private BOOSTS boost = BOOSTS.STANDARD;
+    private float boostTime;
+
     private CapsuleCollider2D collider;
     private BoxCollider2D draftingHitbox;
     private bool drafting = false;
@@ -45,9 +50,9 @@ public class Player : MonoBehaviour
     public AudioSource engineSound;
     public AudioClip loopingEngine;
 
-    IEnumerator endBoost()
+    IEnumerator endBoost(float time)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(time);
         maxSpeed = 125;
         Debug.Log("RESET MAX SPEED");
         
@@ -116,6 +121,10 @@ public class Player : MonoBehaviour
         playerRB.freezeRotation = true;
         collider = GetComponent<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();
+
+        speedList[(int) BOOSTS.STANDARD] = maxSpeed;
+        speedList[(int) BOOSTS.BOOST_PAD] = 187;
+        speedList[(int) BOOSTS.DRAFT_BOOST] = 150;
     }
 
     // Update is called once per frame
@@ -169,6 +178,7 @@ public class Player : MonoBehaviour
                 newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
 
                 if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
+                if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2)) state = STATES.DRAFT;
 
                 break;
 
@@ -265,12 +275,48 @@ public class Player : MonoBehaviour
 
                 break;
             case STATES.DRIFT: break;
-            case STATES.DRAFT: break;
+            case STATES.DRAFT:
+
+                draftTime++;
+                if (draftTime > 125) drafting = false;
+
+                //setting newvel direction at unit length
+                setNewVelRotation(ref newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(ref newVel);
+
+                accel = newVel * acceleration * ctrls.GetSpeed();
+
+                //set new velocity             
+                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
+
+                if (!drafting && draftTime > 0)
+                {
+                    SetBoost(BOOSTS.DRAFT_BOOST, 2 * draftTime * Time.fixedDeltaTime);
+                    draftTime = 0;
+                    state = STATES.BOOST;
+                }
+                if (ctrls.GetSpeed() <= 0) { draftTime = 0; state = STATES.DECEL; }
+
+                break;
 
             case STATES.BOOST:
-                
+
                 //Debug.Log("BOOSTING");
-                maxSpeed = 187;
+
+                /*if (boost == BOOSTS.STANDARD)
+                {
+                    maxSpeed = speedList[1];
+                }
+                else
+                {
+                    maxSpeed = speedList[(int)boost];
+                }*/
+
+                //maxSpeed = 187;
+                maxSpeed = speedList[(int)boost];
                 maxReverse = 60;
 
                 //setting newvel direction at unit length
@@ -284,11 +330,14 @@ public class Player : MonoBehaviour
 
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
-                
+                Debug.Log(boostTime);
                 //if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
                 StopAllCoroutines();
-                StartCoroutine(endBoost());
+                StartCoroutine(endBoost(boostTime));
+
+                // Reset states
                 state = STATES.MOVE_F;
+                boost = BOOSTS.STANDARD;
 
                 break;
             case STATES.BOOST_B:
@@ -380,6 +429,13 @@ public class Player : MonoBehaviour
     
     public float GetSpeedPercent()
     {
-        return playerRB.velocity.magnitude / maxSpeed;
+        return playerRB.velocity.magnitude / speedList[(int)BOOSTS.STANDARD];
+    }
+
+
+    public void SetBoost(BOOSTS b, float btime)
+    {
+        boost = b;
+        boostTime = btime;
     }
 }
