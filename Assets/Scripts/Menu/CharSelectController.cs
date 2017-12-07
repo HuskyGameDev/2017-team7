@@ -73,7 +73,7 @@ public class CharSelectController : MonoBehaviour {
             PlayerData.playerChars = (int []) SelectedChars.Clone();
             PlayerData.charIcons = (Sprite[])images.Clone();
             PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
-            UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("TylerMapScene");
         }
     }
 }
