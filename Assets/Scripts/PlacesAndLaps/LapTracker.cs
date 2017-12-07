@@ -175,4 +175,8 @@ public class LapTracker : MonoBehaviour {
 		}
 		return places;
 	}
+
+	public int getPlayerLap(int playerNumber){
+		return laps[playerNumber - 1];
+	}
 }
