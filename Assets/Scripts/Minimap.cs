@@ -18,7 +18,9 @@ public class Minimap : MonoBehaviour {
         }
         else
         {
-            mmIcon.sprite = PlayerData.charIcons[PlayerData.playerChars[player.playerNumber - 1]];
+            if(PlayerData.charIcons != null){
+                mmIcon.sprite = PlayerData.charIcons[PlayerData.playerChars[player.playerNumber - 1]];
+            }
         }
         
     }
