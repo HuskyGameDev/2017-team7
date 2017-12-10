@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XInputDotNetPure;
 
 public class Inputs : MonoBehaviour
 {
 
     private static Controller[] controllers;
     private int numPlayers = 4;
+
+    
 
     // Use this for initialization
     void Awake()
@@ -22,27 +25,34 @@ public class Inputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int player = 1; player <= numPlayers; player++)
+        for (int player = 0; player < numPlayers; player++)
         {
-            float lsX = Input.GetAxis("LeftStickX-" + player);
+            PlayerIndex playerIndex = (PlayerIndex)player;
+            GamePadState state = GamePad.GetState(playerIndex);
 
-            bool lsClick = Input.GetKey("joystick " + player + " button 8");
-            bool rsClick = Input.GetKey("joystick " + player + " button 9");
+            if (state.IsConnected)
+            {
+                float lsX = state.ThumbSticks.Left.X;
 
-            float rt = Input.GetAxis("RightTrigger-" + player);
-            float lt = Input.GetAxis("LeftTrigger-" + player);
-            bool lb = Input.GetKey("joystick " + player + " button 4");
-            bool rb = Input.GetKey("joystick " + player + " button 5");
+                bool lsClick = state.Buttons.LeftStick == ButtonState.Pressed;
+                bool rsClick = state.Buttons.RightStick == ButtonState.Pressed;
 
-            bool aButton = Input.GetKey("joystick " + player + " button 0");
-            bool bButton = Input.GetKey("joystick " + player + " button 1");
-            bool xButton = Input.GetKey("joystick " + player + " button 2");
-            bool yButton = Input.GetKey("joystick " + player + " button 3");
-            bool back = Input.GetKey("joystick " + player + " button 6");
-            bool start = Input.GetKey("joystick " + player + " button 7");
+                float rt = state.Triggers.Right;
+                float lt = state.Triggers.Left;
+                bool lb = state.Buttons.LeftShoulder == ButtonState.Pressed;
+                bool rb = state.Buttons.RightShoulder == ButtonState.Pressed;
 
-            controllers[player - 1].UpdateValues(lsX, lsClick, rsClick, lt, rt, lb, rb,
-                                aButton, bButton, xButton, yButton, back, start);
+                bool aButton = state.Buttons.A == ButtonState.Pressed;
+                bool bButton = state.Buttons.B == ButtonState.Pressed;
+                bool xButton = state.Buttons.X == ButtonState.Pressed;
+                bool yButton = state.Buttons.Y == ButtonState.Pressed;
+                bool back = state.Buttons.Back == ButtonState.Pressed;
+                bool start = state.Buttons.Start == ButtonState.Pressed;
+
+                controllers[player].UpdateValues(lsX, lsClick, rsClick, lt, rt, lb, rb,
+                                    aButton, bButton, xButton, yButton, back, start);
+            }
+            
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using XInputDotNetPure;
 
 public class CharSelection : MonoBehaviour {
 
@@ -20,25 +21,41 @@ public class CharSelection : MonoBehaviour {
 
     private bool axisBuffer;
 
+
+    PlayerIndex playerIndex;
+    GamePadState gp_state;
+    GamePadState prev_gp_state;
+
     void Start()
     {
         image.sprite = null;
+        playerIndex = (PlayerIndex)(playerNumber - 1);
     }
     void Update () {
+        prev_gp_state = gp_state;
+        gp_state = GamePad.GetState(playerIndex);
         switch (state)
         {
             case STATES.NONE:
-                pressStart.text = "Press Start to Join!";
                 charName.gameObject.SetActive(false);
                 pressStart.gameObject.SetActive(true);
                 image.gameObject.SetActive(false);
                 darkenPanel.gameObject.SetActive(true);
-                if (Input.GetKeyDown("joystick " + playerNumber + " button 7"))
+                if (gp_state.IsConnected)
                 {
-                    state = STATES.SELECTING;
-                    character = controller.nextChar(-1);
-                    image.sprite = controller.getCharImage(character);
+                    pressStart.text = "Press Start to Join!";
+                    if (gp_state.Buttons.Start == ButtonState.Pressed && prev_gp_state.Buttons.Start == ButtonState.Released)
+                    {
+                        state = STATES.SELECTING;
+                        character = controller.nextChar(-1);
+                        image.sprite = controller.getCharImage(character);
+                    }
                 }
+                else
+                {
+                    pressStart.text = "No controller connected.";
+                }
+                
                 break;
             case STATES.SELECTING:
                 charName.gameObject.SetActive(true);
@@ -46,21 +63,21 @@ public class CharSelection : MonoBehaviour {
                 pressStart.gameObject.SetActive(false);
                 image.gameObject.SetActive(true);
                 darkenPanel.gameObject.SetActive(controller.charSelected(character));
-                if (Input.GetAxis("LeftStickX-" + playerNumber) < 0 && axisBuffer)
+                if (gp_state.ThumbSticks.Left.X < 0 && axisBuffer)
                 {
                     character = controller.prevChar(character);
                     image.sprite = controller.getCharImage(character);
                     darkenPanel.gameObject.SetActive(controller.charSelected(character));
                     axisBuffer = false;
                 }
-                if (Input.GetAxis("LeftStickX-" + playerNumber) > 0 && axisBuffer)
+                if (gp_state.ThumbSticks.Left.X > 0 && axisBuffer)
                 {
                     character = controller.nextChar(character);
                     image.sprite = controller.getCharImage(character);
                     darkenPanel.gameObject.SetActive(controller.charSelected(character));
                     axisBuffer = false;
                 }
-                if (Input.GetKeyDown("joystick " + playerNumber + " button 0"))
+                if (gp_state.Buttons.A == ButtonState.Pressed && prev_gp_state.Buttons.A == ButtonState.Released)
                 {
                     if (!controller.charSelected(character))
                     {
@@ -70,7 +87,7 @@ public class CharSelection : MonoBehaviour {
                     }
                     
                 }
-                if (Input.GetKeyDown("joystick " + playerNumber + " button 1"))
+                if (gp_state.Buttons.B == ButtonState.Pressed && prev_gp_state.Buttons.B == ButtonState.Released)
                 {
                     character = -1;
                     state = STATES.NONE;
@@ -80,19 +97,19 @@ public class CharSelection : MonoBehaviour {
                 pressStart.gameObject.SetActive(true);
                 darkenPanel.gameObject.SetActive(true);
                 pressStart.text = "READY";
-                if (Input.GetKeyDown("joystick " + playerNumber + " button 1")) //b
+                if (gp_state.Buttons.B == ButtonState.Pressed && prev_gp_state.Buttons.B == ButtonState.Released) //b
                 {
                     controller.deselectCharacter(playerNumber - 1);
                     state = STATES.SELECTING;
                 }
-                if (Input.GetKeyDown("joystick " + playerNumber + " button 7")) //start
+                if (gp_state.Buttons.Start == ButtonState.Pressed && prev_gp_state.Buttons.Start == ButtonState.Released) //start
                 {
                     controller.startGame();
                 }
                 break;
         }	
         
-        if (Input.GetAxis("LeftStickX-" + playerNumber) == 0)
+        if (gp_state.ThumbSticks.Left.X == 0)
         {
             axisBuffer = true;
         }	
