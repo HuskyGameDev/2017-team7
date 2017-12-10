@@ -70,10 +70,11 @@ public class CharSelectController : MonoBehaviour {
         if (canStart())
         {
             Debug.Log("Start");
-            PlayerData.playerChars = (int []) SelectedChars.Clone();
+            PlayerData.playerChars = (int[])SelectedChars.Clone();
             PlayerData.charIcons = (Sprite[])images.Clone();
             PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
-            UnityEngine.SceneManagement.SceneManager.LoadScene("TylerMapScene");
+            string[] maps = { "MainScene", "TylerMapScene" };
+            UnityEngine.SceneManagement.SceneManager.LoadScene(maps[Random.Range(0, maps.Length)]);
         }
     }
 }

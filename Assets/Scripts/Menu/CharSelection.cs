@@ -44,7 +44,7 @@ public class CharSelection : MonoBehaviour {
                 if (gp_state.IsConnected)
                 {
                     pressStart.text = "Press Start to Join!";
-                    if (gp_state.Buttons.Start == ButtonState.Pressed && prev_gp_state.Buttons.Start == ButtonState.Released)
+                    if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start))
                     {
                         state = STATES.SELECTING;
                         character = controller.nextChar(-1);
@@ -56,6 +56,11 @@ public class CharSelection : MonoBehaviour {
                     pressStart.text = "No controller connected.";
                 }
                 
+                if (playerNumber == 1 && Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
+                {
+                    Barnout.ChangeScene("MainMenu");
+                }
+
                 break;
             case STATES.SELECTING:
                 charName.gameObject.SetActive(true);
@@ -77,7 +82,7 @@ public class CharSelection : MonoBehaviour {
                     darkenPanel.gameObject.SetActive(controller.charSelected(character));
                     axisBuffer = false;
                 }
-                if (gp_state.Buttons.A == ButtonState.Pressed && prev_gp_state.Buttons.A == ButtonState.Released)
+                if (Barnout.ButtonPressed(gp_state.Buttons.A, prev_gp_state.Buttons.A))
                 {
                     if (!controller.charSelected(character))
                     {
@@ -87,7 +92,7 @@ public class CharSelection : MonoBehaviour {
                     }
                     
                 }
-                if (gp_state.Buttons.B == ButtonState.Pressed && prev_gp_state.Buttons.B == ButtonState.Released)
+                if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
                     character = -1;
                     state = STATES.NONE;
@@ -97,12 +102,12 @@ public class CharSelection : MonoBehaviour {
                 pressStart.gameObject.SetActive(true);
                 darkenPanel.gameObject.SetActive(true);
                 pressStart.text = "READY";
-                if (gp_state.Buttons.B == ButtonState.Pressed && prev_gp_state.Buttons.B == ButtonState.Released) //b
+                if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
                     controller.deselectCharacter(playerNumber - 1);
                     state = STATES.SELECTING;
                 }
-                if (gp_state.Buttons.Start == ButtonState.Pressed && prev_gp_state.Buttons.Start == ButtonState.Released) //start
+                if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start)) //start
                 {
                     controller.startGame();
                 }

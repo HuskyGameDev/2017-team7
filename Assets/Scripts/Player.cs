@@ -58,7 +58,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(time);
         maxSpeed = 125;
         Debug.Log("RESET MAX SPEED");
-        
     }
     IEnumerator endBoostB()
     {
