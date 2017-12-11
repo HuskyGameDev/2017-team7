@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CheckpointBehaviour : MonoBehaviour {
 	public CircleCollider2D trigger;
 	public int checkpointNumber {get; set;}
