@@ -14,7 +14,7 @@ public static class PlayerData
         int count = 0;
         Player[] active;
         foreach(int i in playerChars){
-            if(i < 0){
+            if(i >= 0){
                 count++;
             }
         }
