@@ -16,6 +16,6 @@ public class LapDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "Laps: " + master.GetPlayerLap(player).ToString();
+		text.text = "Lap: " + master.GetPlayerLap(player).ToString() + "/" + master.lapTracker.maxLaps;
 	}
 }
