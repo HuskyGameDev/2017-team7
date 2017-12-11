@@ -33,7 +33,9 @@ public class Inputs : MonoBehaviour
             if (state.IsConnected)
             {
                 float lsX = state.ThumbSticks.Left.X;
-
+                float lsY = state.ThumbSticks.Left.Y;
+                float rsX = state.ThumbSticks.Right.X;
+                float rsY = state.ThumbSticks.Right.Y;
                 bool lsClick = state.Buttons.LeftStick == ButtonState.Pressed;
                 bool rsClick = state.Buttons.RightStick == ButtonState.Pressed;
 
@@ -49,8 +51,13 @@ public class Inputs : MonoBehaviour
                 bool back = state.Buttons.Back == ButtonState.Pressed;
                 bool start = state.Buttons.Start == ButtonState.Pressed;
 
-                controllers[player].UpdateValues(lsX, lsClick, rsClick, lt, rt, lb, rb,
-                                    aButton, bButton, xButton, yButton, back, start);
+                bool dpadUp = state.DPad.Up == ButtonState.Pressed;
+                bool dpadDown = state.DPad.Down == ButtonState.Pressed;
+                bool dpadLeft = state.DPad.Left == ButtonState.Pressed;
+                bool dpadRight = state.DPad.Right == ButtonState.Pressed;
+
+                controllers[player].UpdateValues(lsX, lsY, lsClick, rsX, rsY, rsClick, lt, rt, lb, rb,
+                                    aButton, bButton, xButton, yButton, back, start, dpadUp, dpadDown, dpadLeft, dpadRight);
             }
             
         }

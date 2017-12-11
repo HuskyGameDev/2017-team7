@@ -28,37 +28,17 @@ public class Controller {
     private bool start;                        // start button
 
     // D-Pad
-    private float dPadXaxis;                    // D-Pad X axis
-    private float dPadYaxis;                    // D-Pad Y axis
+    private bool dPadU;                        // D-Pad up
+    private bool dPadD;                        // D-Pad down
+    private bool dPadL;                        // D-Pad left
+    private bool dPadR;                        // D-Pad right
 
-
-    // Update all input values
-    public void UpdateValues(float lsX, bool lsC, bool rsC,
-                                float lt, float rt, bool lb, bool rb,
-                                bool a, bool b, bool x, bool y, bool ba, bool st)
-    {
-        lsXaxis = -lsX;
-        lsClick = lsC;
-        rsClick = rsC;
-
-        LT = lt;
-        RT = rt;
-        LB = lb;
-        RB = rb;
-
-        A = a;
-        B = b;
-        X = x;
-        Y = y;
-        back = ba;
-        start = st;
-    }
 
     // Update all input values
     public void UpdateValues(float lsX, float lsY, bool lsC, float rsX, float rsY, bool rsC,
                                 float lt, float rt, bool lb, bool rb,
                                 bool a, bool b, bool x, bool y, bool ba, bool st,
-                                float dpX, float dpY)
+                                bool dpu, bool dpd, bool dpl, bool dpr)
     {
         lsXaxis = -lsX;
         lsYaxis = lsY;
@@ -79,8 +59,10 @@ public class Controller {
         back = ba;
         start = st;
 
-        dPadXaxis = dpX;
-        dPadYaxis = dpY;
+        dPadU = dpu;
+        dPadD = dpd;
+        dPadL = dpl;
+        dPadR = dpr;
     }
 
 
@@ -211,15 +193,27 @@ public class Controller {
     //--------------------------------------------------------------------------------------------------------
     // D-Pad gets
 
-    // Return D-Pad X axis value
-    public float GetDPadXaxis()
+    // Return D-Pad up value
+    public bool GetDPadUp()
     {
-        return dPadXaxis;
+        return dPadU;
     }
 
-    // Return D-Pad Y axis value
-    public float GetDPadYaxis()
+    // Return D-Pad down value
+    public bool GetDPadDown()
     {
-        return dPadYaxis;
+        return dPadD;
+    }
+
+    // Return D-Pad left value
+    public bool GetDPadLeft()
+    {
+        return dPadL;
+    }
+
+    // Return D-Pad right value
+    public bool GetDPadRight()
+    {
+        return dPadR;
     }
 }
