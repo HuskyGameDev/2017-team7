@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LapTracker : MonoBehaviour {
 	public int maxLaps;
+	public Collider2D finishLine;
 	private int playersFinished = 0;
 	private const int max_players = 4;
 	private const int POINTS_PER_TABLE = 25;
@@ -196,5 +197,14 @@ public class LapTracker : MonoBehaviour {
 	private void TransitionToEnd(){
 		//TODO figure out how to pass info to next scene
 		UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+	}
+
+	public void OnTriggerEnter2D(Collider2D other){
+		Player p = other.gameObject.GetComponent<Player>();
+		
+		if(p == null) return;
+
+		//Debug.Log("Entering checkpoint");
+		PlayerCrossed(p.playerNumber, 0);
 	}
 }

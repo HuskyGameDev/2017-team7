@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CircularPath : MonoBehaviour {
-	public Collider2D finishLine;
 	public CheckpointBehaviour defaultCheckpoint;
 	[SerializeField]
 	private List<CubicBezierCurve> curves;
@@ -62,12 +61,5 @@ public class CircularPath : MonoBehaviour {
 		}
 	}
 
-	public void OnTriggerEnter2D(Collider2D other){
-		Player p = other.gameObject.GetComponent<Player>();
-		
-		if(p == null) return;
-
-		//Debug.Log("Entering checkpoint");
-		tracker.PlayerCrossed(p.playerNumber, 0);
-	}
+	
 }
