@@ -21,14 +21,23 @@ public class UI : MonoBehaviour {
         if (numPlayers == 2)
         {
             horizontalDivider.SetActive(false);
+            nop4image.SetActive(false);
+            p3laps.SetActive(false);
+            p3place.SetActive(false);
+            p4laps.SetActive(false);
+            p4place.SetActive(false);
+            p1place.GetComponent<RectTransform>().anchorMin = new Vector2(0.35f, 0);
+            p1place.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.1f);
+            p2place.GetComponent<RectTransform>().anchorMin = new Vector2(0.85f, 0);
+            p2place.GetComponent<RectTransform>().anchorMax = new Vector2(1, 0.1f);
             p1cam.rect = new Rect(0, 0, 0.5f, 1);
             p2cam.rect = new Rect(0.5f, 0, 0.5f, 1);
-            nop4image.SetActive(false);
         }
         else if (numPlayers == 3)
         {
             p4cam.rect = new Rect(0, 0, 0, 0);
-            
+            p4laps.SetActive(false);
+            p4place.SetActive(false);
         }
         else if (numPlayers == 4)
         {
