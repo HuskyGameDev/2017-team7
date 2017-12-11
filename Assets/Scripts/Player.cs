@@ -165,7 +165,7 @@ public class Player : MonoBehaviour
             }
         }
         
-        Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
+        //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
 
         
     }
