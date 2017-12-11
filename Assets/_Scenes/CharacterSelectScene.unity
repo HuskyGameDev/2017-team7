@@ -160,8 +160,8 @@ MonoBehaviour:
   playerTopDowns:
   - {fileID: 21300000, guid: 5130cf7f44419a74eb74120ad47b4757, type: 3}
   - {fileID: 21300000, guid: b17584702c347a145b4151050d0c0927, type: 3}
-  - {fileID: 21300000, guid: ce27faaaea2c6f1428434b921308978a, type: 3}
-  - {fileID: 21300000, guid: eefa32be42df3d14b8712bd5dc1cd3b5, type: 3}
+  - {fileID: 21300000, guid: 76c8ba6296d4e0546a25b356fbaca768, type: 3}
+  - {fileID: 21300000, guid: 84ba38d02ae0c0f45955f58c78ea6f76, type: 3}
 --- !u!224 &259541087 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224429261401268786, guid: 866b42b13e398544ab654ccba3c21a8f,
