@@ -9,6 +9,7 @@ TagManager:
   - Boost
   - Grass
   - Oil
+  - VertHandle
   layers:
   - Default
   - TransparentFX
