@@ -27,6 +27,7 @@ public class UI : MonoBehaviour {
 
             horizontalDivider.SetActive(false);
             nop4image.SetActive(false);
+
             p3laps.SetActive(false);
             p3place.SetActive(false);
             p4laps.SetActive(false);
@@ -36,37 +37,36 @@ public class UI : MonoBehaviour {
             p2place.GetComponent<RectTransform>().anchorMin = new Vector2(0.85f, 0);
             p2place.GetComponent<RectTransform>().anchorMax = new Vector2(1, 0.1f);
 
-            /*
-            p1cam.rect = new Rect(0, 0, 0.5f, 1);
-            p2cam.rect = new Rect(0.5f, 0, 0.5f, 1);
-            */
-
             PlayerData.GetActivePlayers()[0].GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
             PlayerData.GetActivePlayers()[1].GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
         }
         else if (numPlayers == 3)
         {
-            p4cam.rect = new Rect(0, 0, 0, 0);
-            p4laps.SetActive(false);
-            p4place.SetActive(false);
-
             if (PlayerData.playerChars[0] == -1)
             {
+                p1laps.SetActive(false);
+                p1place.SetActive(false);
                 nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0.5f);
                 nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 1);
             }
             else if (PlayerData.playerChars[1] == -1)
             {
+                p2laps.SetActive(false);
+                p2place.SetActive(false);
                 nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
                 nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
             }
             else if (PlayerData.playerChars[2] == -1)
             {
+                p3laps.SetActive(false);
+                p3place.SetActive(false);
                 nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
                 nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
             }
             else
             {
+                p4laps.SetActive(false);
+                p4place.SetActive(false);
                 nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0);
                 nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(1, 0.5f);
             }
