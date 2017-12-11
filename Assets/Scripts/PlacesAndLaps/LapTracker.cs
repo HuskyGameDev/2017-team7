@@ -204,7 +204,7 @@ public class LapTracker : MonoBehaviour {
 		
 		if(p == null) return;
 
-		//Debug.Log("Entering checkpoint");
+		Debug.Log("Entering checkpoint");
 		PlayerCrossed(p.playerNumber, 0);
 	}
 }
