@@ -7,7 +7,7 @@ public class CharSelectController : MonoBehaviour {
 
     public Sprite[] images;
     public Sprite[] playerTopDowns;
-
+    
     private int[] SelectedChars = { -1, -1, -1, -1 };
     private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
 
@@ -74,6 +74,7 @@ public class CharSelectController : MonoBehaviour {
             PlayerData.charIcons = (Sprite[])images.Clone();
             PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "TylerMapScene" };
+            MenuAudio.Instance.StopMusic();
             UnityEngine.SceneManagement.SceneManager.LoadScene(maps[Random.Range(0, maps.Length)]);
         }
     }
