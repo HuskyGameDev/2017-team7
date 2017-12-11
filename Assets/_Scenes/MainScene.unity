@@ -2104,6 +2104,16 @@ Prefab:
       propertyPath: p4cam
       value: 
       objectReference: {fileID: 252131340}
+    - target: {fileID: 114864733929228812, guid: d7edb14487fc3694d819e000d2656c24,
+        type: 2}
+      propertyPath: p1laps
+      value: 
+      objectReference: {fileID: 261342972}
+    - target: {fileID: 114864733929228812, guid: d7edb14487fc3694d819e000d2656c24,
+        type: 2}
+      propertyPath: p2laps
+      value: 
+      objectReference: {fileID: 1148776894}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7edb14487fc3694d819e000d2656c24, type: 2}
   m_IsPrefabParent: 0
@@ -3474,6 +3484,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &261342972 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1682458437553560, guid: d7edb14487fc3694d819e000d2656c24,
+    type: 2}
+  m_PrefabInternal: {fileID: 171014206}
 --- !u!1 &268853014
 GameObject:
   m_ObjectHideFlags: 0
@@ -12620,6 +12635,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1148776894 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1514599700864214, guid: d7edb14487fc3694d819e000d2656c24,
+    type: 2}
+  m_PrefabInternal: {fileID: 171014206}
 --- !u!1 &1153287989
 GameObject:
   m_ObjectHideFlags: 0

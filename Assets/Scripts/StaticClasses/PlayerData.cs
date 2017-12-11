@@ -25,7 +25,7 @@ public static class PlayerData
             if(playerChars[i] >= 0){
                 foreach(Player p in players){
                     if(p.playerNumber == i+1){
-                        active[i] = p; 
+                        active[--count] = p; 
                         break;
                     }
                 }
