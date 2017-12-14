@@ -20,12 +20,13 @@ public static class PlayerData
         }
 
         active = new Player[count];
+        count = 0;
 
         for(int i = 0; i < playerChars.Length;i++){
             if(playerChars[i] >= 0){
                 foreach(Player p in players){
                     if(p.playerNumber == i+1){
-                        active[--count] = p; 
+                        active[count++] = p; 
                         break;
                     }
                 }
