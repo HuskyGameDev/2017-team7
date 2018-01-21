@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     private BOOSTS boost = BOOSTS.STANDARD;
     private float boostTime;
 
-    private CapsuleCollider2D collider;
+    private CapsuleCollider2D col;
     private BoxCollider2D draftingHitbox;
     private bool drafting = false;
     private int draftTime = 0;
@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         ctrls = Inputs.GetController(playerNumber);
         playerRB.freezeRotation = true;
-        collider = GetComponent<CapsuleCollider2D>();
+        col = GetComponent<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
