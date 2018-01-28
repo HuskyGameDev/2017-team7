@@ -286,6 +286,7 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82171013396694326}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
+  powerupInstantiator: {fileID: 0}
   mapEvents: {fileID: 0}
 --- !u!114 &114846998728240572
 MonoBehaviour:
