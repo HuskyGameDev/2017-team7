@@ -57,6 +57,10 @@ public class Map : MonoBehaviour {
 		
 	}
 
+	public bool isPaused() {
+		return paused;
+	}
+
     private void OnTriggerEnter2D(Collider2D collision) {
 
     }
