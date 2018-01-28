@@ -241,7 +241,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 10
   playerRB: {fileID: 0}
   turnIncr: 0.03
   turningSpeed: 0.72
@@ -286,6 +286,7 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82171013396694326}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
+  mapEvents: {fileID: 0}
 --- !u!114 &114846998728240572
 MonoBehaviour:
   m_ObjectHideFlags: 1
