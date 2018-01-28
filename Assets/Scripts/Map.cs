@@ -13,6 +13,8 @@ public class Map : MonoBehaviour {
     public Image[] eggs;
     public Image chicken_go;
 
+    public Canvas PauseCanvas;
+
     public bool disableCountdown;
 
 	PlayerIndex pausePlayerIndex;
@@ -51,6 +53,7 @@ public class Map : MonoBehaviour {
 							Time.timeScale = 0.0F;
 							paused = true;
 							Debug.Log("PAUSED");
+                            PauseCanvas.gameObject.SetActive(true);
 						}
 					}
 				}
@@ -65,6 +68,7 @@ public class Map : MonoBehaviour {
 					Time.timeScale = 1.0F;
 					paused = false;
 					Debug.Log("NOT PAUSED");
+                    PauseCanvas.gameObject.SetActive(false);
 				}
 									
 			}

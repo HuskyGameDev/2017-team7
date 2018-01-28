@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public Player player;
-    private float zoomSpeed = 0.04f;
+    private float zoomSpeed = 0.017f;
     public int maxZoom;
     public int minZoom;
     private int zoomDif;
@@ -19,7 +19,7 @@ public class CameraControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomDif * player.GetSpeedPercent() + minZoom, zoomSpeed);
     }
