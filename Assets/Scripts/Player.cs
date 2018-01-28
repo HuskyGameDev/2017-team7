@@ -6,8 +6,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B };
-    public STATES state = STATES.IDLE;
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN };
+    public STATES state = STATES.COUNTDOWN;
 
     public Rigidbody2D playerRB;
     public Coroutine boostingCoR;
@@ -52,6 +52,8 @@ public class Player : MonoBehaviour
 
     public AudioSource engineSound;
     public AudioClip loopingEngine;
+
+    public Map mapEvents;
 
     IEnumerator endBoost(float time)
     {
@@ -187,6 +189,11 @@ public class Player : MonoBehaviour
 
         switch (state)
         {
+
+            case STATES.COUNTDOWN:
+                if (!mapEvents.inCountdown()) state = STATES.IDLE;
+
+                break;
 
             //Idle state
             case STATES.IDLE:
