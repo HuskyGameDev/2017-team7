@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class Powerup : MonoBehaviour {
 	
-	protected int uses = 1;
-	public int cooldownTicks = 0;
+	public int uses = 1;
+	public int cooldownTicks = 300;
 	protected int currentCooldown = 0;
 	protected Player owner = null;
 
@@ -17,7 +17,7 @@ public abstract class Powerup : MonoBehaviour {
 	
 		Decrements the amount of cooldown left.
 	*/
-	protected void FixedUpdate(){
+	protected virtual void FixedUpdate(){
 		currentCooldown = currentCooldown == 0 ? 0 : currentCooldown - 1;
 	}
 
@@ -27,12 +27,13 @@ public abstract class Powerup : MonoBehaviour {
 	
 	This calculates the base effect of powerups, like how the uses go down and reseting the cooldown.
 	*/
-	protected bool UsePowerup(){
+	public virtual bool UsePowerup(){
 		if(!CanUse()){
 			return false;
 		}
 		uses--;
 		currentCooldown = cooldownTicks;
+		Debug.Log("BASE CLASS USE.");
 		return true;
 	}
 
@@ -42,6 +43,10 @@ public abstract class Powerup : MonoBehaviour {
 	 */
 	public float CooldownRatio(){
 		return (float)currentCooldown / cooldownTicks;
+	}
+
+	public void SetOwner(Player p){
+		owner = p;
 	}
 
 }

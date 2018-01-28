@@ -53,6 +53,10 @@ public class Player : MonoBehaviour
     public AudioSource engineSound;
     public AudioClip loopingEngine;
 
+    private enum POWERUP_DIR {UP = 0x0, RIGHT = 0x1, DOWN = 0x2, LEFT = 0x3}
+    private Powerup[] powerups = {null, null, null, null};
+    public PowerupInstantiator powerupInstantiator;
+
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
@@ -167,7 +171,8 @@ public class Player : MonoBehaviour
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
 
-        
+        //DEBUG - give everyone a basic powerup
+        powerups[(int)POWERUP_DIR.UP] = powerupInstantiator.GetPowerup(PowerupType.EEL, this);
     }
 
     // Update is called once per frame
@@ -193,8 +198,6 @@ public class Player : MonoBehaviour
 
                 //if (playerNumber == 2) Debug.Log("In Idle.");
                 newVel.Set(0, 0);
-
-                
 
                 //checking change states
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
@@ -429,6 +432,7 @@ public class Player : MonoBehaviour
 
         playerRB.velocity = newVel;
 
+        TryPowerups();
 
         //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
@@ -498,5 +502,20 @@ public class Player : MonoBehaviour
     {
         boost = b;
         boostTime = btime;
+    }
+
+    private void TryPowerups(){
+        if(powerups[(int)POWERUP_DIR.UP] != null && ctrls.GetDPadUp()){
+            powerups[(int)POWERUP_DIR.UP].UsePowerup();
+        }
+        if(powerups[(int)POWERUP_DIR.RIGHT] != null && ctrls.GetDPadRight()){
+            powerups[(int)POWERUP_DIR.RIGHT].UsePowerup();
+        }
+        if(powerups[(int)POWERUP_DIR.DOWN] != null && ctrls.GetDPadDown()){
+            powerups[(int)POWERUP_DIR.DOWN].UsePowerup();
+        }
+        if(powerups[(int)POWERUP_DIR.LEFT] != null && ctrls.GetDPadLeft()){
+            powerups[(int)POWERUP_DIR.LEFT].UsePowerup();
+        }
     }
 }
