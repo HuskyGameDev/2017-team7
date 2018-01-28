@@ -3089,6 +3089,7 @@ MonoBehaviour:
   Snd_Beep: {fileID: 82858850158895598}
   Snd_Go: {fileID: 82562430109947948}
   Msc_Banjo: {fileID: 82173287507251522}
+  disableCountdown: 0
 --- !u!114 &114784831102322822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3706,7 +3707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5495954, y: 0.5}
-  m_AnchoredPosition: {x: -0.000008583069, y: 0.0000066757}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0.0000066757}
   m_SizeDelta: {x: 118.09, y: 19.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224196695861393894

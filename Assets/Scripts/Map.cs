@@ -9,6 +9,8 @@ public class Map : MonoBehaviour {
 	public AudioSource Snd_Go;
 	public AudioSource Msc_Banjo;
 
+    public bool disableCountdown;
+
 	PlayerIndex pausePlayerIndex;
     GamePadState pausePlayerState;
     GamePadState pausePlayerPrevState;
@@ -71,22 +73,24 @@ public class Map : MonoBehaviour {
 
 	void FixedUpdate() {
 		if (countdown) {
-		if (Time.unscaledTime - time >= 1)
-		{
-			time = Time.unscaledTime;
-			count--;
-			if (count == 0) {
+            if (disableCountdown)
+            {
+                StartRace();
+            }
+		    else if (Time.unscaledTime - time >= 1)
+		    {
+			    time = Time.unscaledTime;
+			    count--;
+			    if (count == 0) {
 				
-			Debug.Log("Go!");
-				Snd_Go.Play();
-				Msc_Banjo.PlayDelayed(0.3F);
-			countdown = false;
-			}
-			else {
-				Snd_Beep.Play();
-			Debug.Log(count);
-			}
-		}
+			        Debug.Log("Go!");
+                    StartRace();
+			    }
+			    else {
+				    Snd_Beep.Play();
+			    Debug.Log(count);
+			    }
+		    }
 		}
 	}
 
@@ -97,6 +101,14 @@ public class Map : MonoBehaviour {
 	public bool inCountdown() {
 		return countdown;
 	}
+
+    private void StartRace()
+    {
+        Snd_Go.Play();
+        Msc_Banjo.PlayDelayed(0.3F);
+        countdown = false;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision) {
 
