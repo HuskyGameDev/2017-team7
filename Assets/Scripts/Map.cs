@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using XInputDotNetPure;
 
 public class Map : MonoBehaviour {
@@ -8,6 +9,9 @@ public class Map : MonoBehaviour {
 	public AudioSource Snd_Beep;
 	public AudioSource Snd_Go;
 	public AudioSource Msc_Banjo;
+
+    public Image[] eggs;
+    public Image chicken_go;
 
     public bool disableCountdown;
 
@@ -17,7 +21,7 @@ public class Map : MonoBehaviour {
 	bool paused = false;
 	bool countdown = true;
 	float time;
-	int count = 4;
+	int count = -1;
 
 	GamePadState[] testStates = new GamePadState[4];
 
@@ -80,18 +84,27 @@ public class Map : MonoBehaviour {
 		    else if (Time.unscaledTime - time >= 1)
 		    {
 			    time = Time.unscaledTime;
-			    count--;
-			    if (count == 0) {
-				
+			    count++;
+			    if (count == 3) {
+                    eggs[2].gameObject.SetActive(false);
 			        Debug.Log("Go!");
                     StartRace();
 			    }
 			    else {
+                    foreach(Image e in eggs)
+                    {
+                        e.gameObject.SetActive(false);
+                    }
+                    eggs[count].gameObject.SetActive(true);
 				    Snd_Beep.Play();
 			    Debug.Log(count);
 			    }
 		    }
 		}
+        else
+        {
+            if (Time.unscaledTime - time > 1.5) chicken_go.gameObject.SetActive(false);
+        }
 	}
 
 	public bool isPaused() {
@@ -104,9 +117,11 @@ public class Map : MonoBehaviour {
 
     private void StartRace()
     {
+        chicken_go.gameObject.SetActive(true);
         Snd_Go.Play();
         Msc_Banjo.PlayDelayed(0.3F);
         countdown = false;
+        time = Time.unscaledTime;
     }
 
 
