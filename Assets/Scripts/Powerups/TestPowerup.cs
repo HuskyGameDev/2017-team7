@@ -6,9 +6,6 @@ public class TestPowerup : Powerup {
 
 	// Use this for initialization
 	void Start () {
-		/* Set up all the junk about  uses and cooldown*/
-		uses = 2;
-		cooldownTicks = 300;
 		currentCooldown = 0;
 	}
 	
