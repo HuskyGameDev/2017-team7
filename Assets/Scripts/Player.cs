@@ -53,15 +53,12 @@ public class Player : MonoBehaviour
     public AudioSource engineSound;
     public AudioClip loopingEngine;
 
-    private enum POWERUP_DIR {UP = 0x0, RIGHT = 0x1, DOWN = 0x2, LEFT = 0x3}
-    private Powerup[] powerups = {null, null, null, null};
-    public PowerupInstantiator powerupInstantiator;
     public Map mapEvents;
 
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
-        maxSpeed = 125;
+        maxSpeed = speedList[(int)boost];
         Debug.Log("RESET MAX SPEED");
     }
     IEnumerator endBoostB()
@@ -149,9 +146,9 @@ public class Player : MonoBehaviour
         draftingHitbox = GetComponent<BoxCollider2D>();
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
-        speedList[(int) BOOSTS.BOOST_PAD] = 187;
-        speedList[(int) BOOSTS.DRAFT_BOOST] = 150;
-        speedList[(int)BOOSTS.DRIFT_BOOST] = 160;
+        speedList[(int) BOOSTS.BOOST_PAD] = 200;
+        speedList[(int) BOOSTS.DRAFT_BOOST] = 175;
+        speedList[(int) BOOSTS.DRIFT_BOOST] = 175;
         //TODO fix this dumb way of getting the list of players
         if(PlayerData.players == null){
             PlayerData.players = new Player[4];
@@ -172,8 +169,7 @@ public class Player : MonoBehaviour
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
 
-        //DEBUG - give everyone a basic powerup
-        powerups[(int)POWERUP_DIR.UP] = powerupInstantiator.GetPowerup(PowerupType.EEL, this);
+        
     }
 
     // Update is called once per frame
@@ -204,6 +200,8 @@ public class Player : MonoBehaviour
 
                 //if (playerNumber == 2) Debug.Log("In Idle.");
                 newVel.Set(0, 0);
+
+                
 
                 //checking change states
                 if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
@@ -343,7 +341,7 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = newVel * playerRB.velocity.magnitude * 0.99f;
 
-                if ((!ctrls.GetB() && driftTime > 100) || driftTime > 300)
+                if ((!ctrls.GetB() && driftTime > 80) || driftTime > 300)
                 {
                     SetBoost(BOOSTS.DRIFT_BOOST, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
@@ -413,7 +411,7 @@ public class Player : MonoBehaviour
             case STATES.BOOST_B:
 
                 //Debug.Log("BOOSTING");
-                maxSpeed = 125;
+                maxSpeed = speedList[(int)boost];
                 maxReverse = 120;
 
                 //setting newvel direction at unit length
@@ -432,13 +430,12 @@ public class Player : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(endBoostB());
                 state = STATES.MOVE_B;
-
+                boost = BOOSTS.STANDARD;
                 break;
         }
 
         playerRB.velocity = newVel;
 
-        TryPowerups();
 
         //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
@@ -508,20 +505,5 @@ public class Player : MonoBehaviour
     {
         boost = b;
         boostTime = btime;
-    }
-
-    private void TryPowerups(){
-        if(powerups[(int)POWERUP_DIR.UP] != null && ctrls.GetDPadUp()){
-            powerups[(int)POWERUP_DIR.UP].UsePowerup();
-        }
-        if(powerups[(int)POWERUP_DIR.RIGHT] != null && ctrls.GetDPadRight()){
-            powerups[(int)POWERUP_DIR.RIGHT].UsePowerup();
-        }
-        if(powerups[(int)POWERUP_DIR.DOWN] != null && ctrls.GetDPadDown()){
-            powerups[(int)POWERUP_DIR.DOWN].UsePowerup();
-        }
-        if(powerups[(int)POWERUP_DIR.LEFT] != null && ctrls.GetDPadLeft()){
-            powerups[(int)POWERUP_DIR.LEFT].UsePowerup();
-        }
     }
 }

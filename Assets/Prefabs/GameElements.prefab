@@ -1484,7 +1484,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 5.1, y: 6.37}
     newSize: {x: 7, y: 7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1509,7 +1509,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
+    oldSize: {x: 5.1, y: 6.37}
     newSize: {x: 7, y: 7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2470,9 +2470,9 @@ MonoBehaviour:
   state: 10
   playerRB: {fileID: 0}
   turnIncr: 0.03
-  turningSpeed: 0.72
+  turningSpeed: 0.65
   acceleration: 3
-  maxSpeed: 125
+  maxSpeed: 140
   maxReverse: 60
   playerNumber: 4
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
@@ -2481,7 +2481,6 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82457130604817482}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  powerupInstantiator: {fileID: 0}
   mapEvents: {fileID: 114783952601838470}
 --- !u!114 &114194036382909936
 MonoBehaviour:
@@ -2581,9 +2580,9 @@ MonoBehaviour:
   state: 10
   playerRB: {fileID: 0}
   turnIncr: 0.03
-  turningSpeed: 0.72
+  turningSpeed: 0.65
   acceleration: 3
-  maxSpeed: 125
+  maxSpeed: 140
   maxReverse: 60
   playerNumber: 3
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
@@ -2592,7 +2591,6 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82326881617709692}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  powerupInstantiator: {fileID: 0}
   mapEvents: {fileID: 114783952601838470}
 --- !u!114 &114253889865580862
 MonoBehaviour:
@@ -2817,9 +2815,9 @@ MonoBehaviour:
   state: 10
   playerRB: {fileID: 0}
   turnIncr: 0.03
-  turningSpeed: 0.72
+  turningSpeed: 0.65
   acceleration: 3
-  maxSpeed: 125
+  maxSpeed: 140
   maxReverse: 60
   playerNumber: 2
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
@@ -2828,7 +2826,6 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82435859810202056}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  powerupInstantiator: {fileID: 0}
   mapEvents: {fileID: 114783952601838470}
 --- !u!114 &114375779499553386
 MonoBehaviour:
@@ -2844,9 +2841,9 @@ MonoBehaviour:
   state: 10
   playerRB: {fileID: 0}
   turnIncr: 0.03
-  turningSpeed: 0.72
+  turningSpeed: 0.65
   acceleration: 3
-  maxSpeed: 125
+  maxSpeed: 140
   maxReverse: 60
   playerNumber: 1
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
@@ -2855,7 +2852,6 @@ MonoBehaviour:
   terrainTurning: 1
   engineSound: {fileID: 82987332042557836}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  powerupInstantiator: {fileID: 0}
   mapEvents: {fileID: 114783952601838470}
 --- !u!114 &114393779155273770
 MonoBehaviour:
@@ -3820,7 +3816,7 @@ SpriteRenderer:
   m_SortingLayerID: 1759010191
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eefa32be42df3d14b8712bd5dc1cd3b5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84ba38d02ae0c0f45955f58c78ea6f76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -3904,7 +3900,7 @@ SpriteRenderer:
   m_SortingLayerID: 1759010191
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce27faaaea2c6f1428434b921308978a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 76c8ba6296d4e0546a25b356fbaca768, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
