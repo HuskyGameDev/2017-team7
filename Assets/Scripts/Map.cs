@@ -29,8 +29,10 @@ public class Map : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		time = Time.unscaledTime;
-		Debug.Log(time);
+        foreach (Image e in eggs) { e.gameObject.SetActive(false); }
+        chicken_go.gameObject.SetActive(false);
+        time = Time.unscaledTime;
+		//Debug.Log(time);
 	}
 	
 	// Update is called once per frame
@@ -95,10 +97,7 @@ public class Map : MonoBehaviour {
                     StartRace();
 			    }
 			    else {
-                    foreach(Image e in eggs)
-                    {
-                        e.gameObject.SetActive(false);
-                    }
+                    foreach(Image e in eggs) { e.gameObject.SetActive(false); }
                     eggs[count].gameObject.SetActive(true);
 				    Snd_Beep.Play();
 			    Debug.Log(count);
@@ -107,7 +106,7 @@ public class Map : MonoBehaviour {
 		}
         else
         {
-            if (Time.unscaledTime - time > 1.5) chicken_go.gameObject.SetActive(false);
+            //if (Time.unscaledTime - time > 1.5) chicken_go.gameObject.SetActive(false);
         }
 	}
 
