@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8143d160a006f614491003a4ec1d2edf
+timeCreated: 1517348523
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Brush Rebrushed
+  fontNames:
+  - Brush Rebrushed
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
