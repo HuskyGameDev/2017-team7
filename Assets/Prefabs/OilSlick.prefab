@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749ef214678fff1489b71e21654a64e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 0}
+  t: {fileID: 4620494503146174}
   tRotation: 0
   currentRotation: 0
 --- !u!212 &212923554979302972

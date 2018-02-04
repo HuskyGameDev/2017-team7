@@ -11749,7 +11749,7 @@ Transform:
   - {fileID: 268853015}
   - {fileID: 435071719}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124728900
 GameObject:
@@ -16288,6 +16288,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &1466377955
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -978.43646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 578.9526
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1471728278
 GameObject:
   m_ObjectHideFlags: 0
@@ -18459,6 +18501,11 @@ Transform:
   m_Father: {fileID: 636824572}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691172489 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1362542920435562, guid: 66f74214ac7908a4097e511272b4d845,
+    type: 2}
+  m_PrefabInternal: {fileID: 1466377955}
 --- !u!1 &1694894507
 GameObject:
   m_ObjectHideFlags: 0
@@ -18972,7 +19019,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748770741
 GameObject:
@@ -22749,6 +22796,8 @@ GameObject:
   - component: {fileID: 2011014408}
   - component: {fileID: 2011014407}
   - component: {fileID: 2011014410}
+  - component: {fileID: 2011014412}
+  - component: {fileID: 2011014411}
   m_Layer: 0
   m_Name: Powerups
   m_TagString: Untagged
@@ -22791,7 +22840,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2011014410
 MonoBehaviour:
@@ -22806,6 +22855,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uses: 3
   cooldownTicks: 100
+--- !u!114 &2011014411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011014406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c64cac8a1bf26f458c41e6e6e7b5119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 3
+  cooldownTicks: 300
+  useTimeTicks: 300
+--- !u!114 &2011014412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011014406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f8ee848d6e1b143869fa59aaa0265e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 3
+  cooldownTicks: 300
+  oil: {fileID: 1691172489}
 --- !u!1 &2011927056
 GameObject:
   m_ObjectHideFlags: 0
@@ -23044,7 +23121,7 @@ Transform:
   m_Children:
   - {fileID: 1995872377}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2023557436
 BoxCollider2D:
