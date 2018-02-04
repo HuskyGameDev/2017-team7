@@ -306,10 +306,10 @@ public class Player : MonoBehaviour
                 }
 
                 if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
-                //Debug.Log("NewVel mag: " + newVel.magnitude);
-                //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
+                Debug.Log("NewVel mag: " + newVel.magnitude);
+                Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
 
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.5) state = STATES.STOP_B;
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0) state = STATES.STOP_B;
 
                 break;
             case STATES.STOP_B:
