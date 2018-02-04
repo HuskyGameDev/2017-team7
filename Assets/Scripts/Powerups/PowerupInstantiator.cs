@@ -20,6 +20,10 @@ public class PowerupInstantiator : MonoBehaviour {
                 p = Instantiate(GetComponent<OilPowerup>());
                 p.SetOwner(owner);
                 return p;
+            case PowerupType.EAGLE:
+                p = Instantiate(GetComponent<EaglePowerup>());
+                p.SetOwner(owner);
+                return p;
             default:
 				p = Instantiate(GetComponent<TestPowerup>()); 
 				p.SetOwner(owner);
