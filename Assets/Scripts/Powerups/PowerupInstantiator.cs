@@ -14,9 +14,14 @@ public enum PowerupType {
 
 public class PowerupInstantiator : MonoBehaviour {
 	public Powerup GetPowerup(PowerupType type, Player owner){
+        Powerup p;
 		switch(type){
-			default:
-				Powerup p = Instantiate(GetComponent<TestPowerup>()); 
+            case PowerupType.EAGLE:
+                p = Instantiate(GetComponent<EaglePowerup>());
+                p.SetOwner(owner);
+                return p;
+            default:
+				p = Instantiate(GetComponent<TestPowerup>()); 
 				p.SetOwner(owner);
 				return p;
 		}
