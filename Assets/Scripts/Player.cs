@@ -177,6 +177,7 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
+        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.EAGLE, this);
     }
 
