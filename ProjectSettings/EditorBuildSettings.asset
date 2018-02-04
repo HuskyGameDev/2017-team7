@@ -17,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MainScene.unity
     guid: 9661b3bce46fbbf459a7b1ad4c323854
-  - enabled: 0
-    path: Assets/_Scenes/TylerMapScene.unity
-    guid: 9445ddae7bc65054e81ed45c5c014b32
   - enabled: 1
     path: Assets/_Scenes/MainScene2.unity
     guid: fb8a9ccb2834ad443b497081c0a5d1e6
