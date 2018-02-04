@@ -186,7 +186,6 @@ public class Player : MonoBehaviour
         Vector2 accel = new Vector2();
 
         //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
-
         switch (state)
         {
 
@@ -287,7 +286,7 @@ public class Player : MonoBehaviour
                 break;
             case STATES.DECEL:
 
-                //if (playerNumber == 2) Debug.Log("In Decel");
+                //if (playerNumber == 1) Debug.Log("In Decel");
 
                 //setting newvel direction at unit length
                 setNewVelRotation(ref newVel);
@@ -303,10 +302,14 @@ public class Player : MonoBehaviour
                     accel = newVel * acceleration * ctrls.GetSpeed();
                     //set new velocity             
                     newVel = (newVel * playerRB.velocity.magnitude) + accel;
+                    //Debug.Log("New vel: " + newVel + " Accel: " + accel);
                 }
 
                 if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.STOP_B;
+                //Debug.Log("NewVel mag: " + newVel.magnitude);
+                //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
+
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.5) state = STATES.STOP_B;
 
                 break;
             case STATES.STOP_B:
