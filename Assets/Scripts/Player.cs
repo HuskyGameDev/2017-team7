@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN };
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED };
     public STATES state = STATES.COUNTDOWN;
 
     public Rigidbody2D playerRB;
@@ -173,7 +173,8 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SPEEDBOOST, this);
+        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
     }
 
     // Update is called once per frame
@@ -438,6 +439,10 @@ public class Player : MonoBehaviour
                 StartCoroutine(endBoostB());
                 state = STATES.MOVE_B;
                 boost = BOOSTS.STANDARD;
+                break;
+
+            case STATES.INCAPACITATED:
+                Debug.Log("INCAPACITATED");
                 break;
         }
 

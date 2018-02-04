@@ -9,14 +9,27 @@ public enum PowerupType {
 	SQUID,
 	EAGLE,
 	PUFFERFISH,
-	CHICKEN
+	CHICKEN,
+	SPEEDBOOST
 };
 
 public class PowerupInstantiator : MonoBehaviour {
 	public Powerup GetPowerup(PowerupType type, Player owner){
+		Powerup p;
 		switch(type){
+
+			case PowerupType.EEL:
+				p = Instantiate(GetComponent<SpeedBoost>());
+				p.SetOwner(owner);
+				return p;
+			
+			case PowerupType.SPEEDBOOST:
+				p = Instantiate(GetComponent<SpeedBoost>());
+				p.SetOwner(owner);
+				return p;
+
 			default:
-				Powerup p = Instantiate(GetComponent<TestPowerup>()); 
+				p = Instantiate(GetComponent<TestPowerup>()); 
 				p.SetOwner(owner);
 				return p;
 		}
