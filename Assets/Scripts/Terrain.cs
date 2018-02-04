@@ -23,11 +23,11 @@ public class Terrain : MonoBehaviour {
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         {
-            if (this.tag == "Grass")
+            if (this.tag == "Grass" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
             {
                 collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
             }
-            else if (this.tag == "Oil")
+            else if (this.tag == "Oil" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
             {
                 collision.gameObject.GetComponent<Player>().terrainTurning = 0.25f;
             }

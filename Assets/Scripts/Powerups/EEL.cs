@@ -13,12 +13,8 @@ public class EEL : Powerup {
 		if(base.UsePowerup()) {
 			
 			//Change player image to the one with the eels surrounding the kart here.
-
-			//Detect that another kart has hit the eels
+			//.....
 			
-
-
-
 			Debug.Log("PLAYER " + owner.playerNumber + " USED EEL POWERUP, " + uses + " USES ARE LEFT.");
 			return true;
 		}else{

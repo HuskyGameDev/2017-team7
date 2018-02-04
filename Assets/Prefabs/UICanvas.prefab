@@ -634,7 +634,9 @@ MonoBehaviour:
   speedText: {fileID: 114108200315347612}
   thisPlayer: {fileID: 0}
   horizontalDivider: {fileID: 0}
+  p1laps: {fileID: 0}
   p1place: {fileID: 0}
+  p2laps: {fileID: 0}
   p2place: {fileID: 0}
   p3laps: {fileID: 0}
   p3place: {fileID: 0}
@@ -686,7 +688,9 @@ MonoBehaviour:
   speedText: {fileID: 114525475983270706}
   thisPlayer: {fileID: 0}
   horizontalDivider: {fileID: 0}
+  p1laps: {fileID: 0}
   p1place: {fileID: 0}
+  p2laps: {fileID: 0}
   p2place: {fileID: 0}
   p3laps: {fileID: 0}
   p3place: {fileID: 0}
@@ -1316,7 +1320,9 @@ MonoBehaviour:
   speedText: {fileID: 0}
   thisPlayer: {fileID: 0}
   horizontalDivider: {fileID: 1212881900495572}
+  p1laps: {fileID: 0}
   p1place: {fileID: 1637978572150478}
+  p2laps: {fileID: 0}
   p2place: {fileID: 1715658575187552}
   p3laps: {fileID: 1461321480606052}
   p3place: {fileID: 1191832034233760}
@@ -1820,7 +1826,7 @@ RectTransform:
   m_GameObject: {fileID: 1189189204710624}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 250, y: 250, z: 0}
+  m_LocalScale: {x: 200, y: 200, z: 0}
   m_Children:
   - {fileID: 4170294838463268}
   - {fileID: 224537040108766276}

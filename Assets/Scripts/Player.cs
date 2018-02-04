@@ -58,6 +58,10 @@ public class Player : MonoBehaviour
     private enum POWERUP_DIRECTION {UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3, SIZE = 4}
     public PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
+
+    private bool isFlying = false;
+
+
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
@@ -175,6 +179,9 @@ public class Player : MonoBehaviour
         //instantiate a powerup
         powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SPEEDBOOST, this);
         powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
+        powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
+        powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.EAGLE, this);
+
     }
 
     // Update is called once per frame
@@ -448,7 +455,10 @@ public class Player : MonoBehaviour
 
         playerRB.velocity = newVel;
 
-        DoPowerups();
+        if (state != STATES.COUNTDOWN)
+        {
+            DoPowerups();
+        }
 
         //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
@@ -530,5 +540,19 @@ public class Player : MonoBehaviour
         }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
             powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
         }
+    }
+
+
+    // Set boolean to show that Eagle powerup is in use
+    public void SetIsFlying(bool b)
+    {
+        isFlying = b;
+    }
+
+
+    // Get boolean status of Eagle powerup
+    public bool GetIsFlying()
+    {
+        return isFlying;
     }
 }

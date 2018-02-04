@@ -22,13 +22,19 @@ public class PowerupInstantiator : MonoBehaviour {
 				p = Instantiate(GetComponent<SpeedBoost>());
 				p.SetOwner(owner);
 				return p;
-			
 			case PowerupType.SPEEDBOOST:
 				p = Instantiate(GetComponent<SpeedBoost>());
 				p.SetOwner(owner);
 				return p;
-
-			default:
+            case PowerupType.SQUID:
+                p = Instantiate(GetComponent<OilPowerup>());
+                p.SetOwner(owner);
+                return p;
+            case PowerupType.EAGLE:
+                p = Instantiate(GetComponent<EaglePowerup>());
+                p.SetOwner(owner);
+                return p;
+            default:
 				p = Instantiate(GetComponent<TestPowerup>()); 
 				p.SetOwner(owner);
 				return p;
