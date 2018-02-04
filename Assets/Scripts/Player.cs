@@ -55,6 +55,9 @@ public class Player : MonoBehaviour
 
     public Map mapEvents;
 
+    private enum POWERUP_DIRECTION {UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3, SIZE = 4}
+    public PowerupInstantiator powerupInstatiatior;
+    private Powerup[] powerups;
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
@@ -168,8 +171,9 @@ public class Player : MonoBehaviour
         }
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
-
-        
+        powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
+        //instantiate a powerup
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
     }
 
     // Update is called once per frame
@@ -306,8 +310,8 @@ public class Player : MonoBehaviour
                 }
 
                 if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
-                Debug.Log("NewVel mag: " + newVel.magnitude);
-                Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
+                //Debug.Log("NewVel mag: " + newVel.magnitude);
+                //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
 
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0) state = STATES.STOP_B;
 
@@ -439,6 +443,7 @@ public class Player : MonoBehaviour
 
         playerRB.velocity = newVel;
 
+        DoPowerups();
 
         //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
@@ -508,5 +513,17 @@ public class Player : MonoBehaviour
     {
         boost = b;
         boostTime = btime;
+    }
+
+    public void DoPowerups(){
+        if(powerups[(int)POWERUP_DIRECTION.UP] != null && ctrls.GetDPadUp()){
+            powerups[(int)POWERUP_DIRECTION.UP].UsePowerup();
+        }else if(powerups[(int)POWERUP_DIRECTION.RIGHT] != null && ctrls.GetDPadRight()){
+            powerups[(int)POWERUP_DIRECTION.RIGHT].UsePowerup();
+        }else if(powerups[(int)POWERUP_DIRECTION.DOWN] != null && ctrls.GetDPadDown()){
+            powerups[(int)POWERUP_DIRECTION.DOWN].UsePowerup();
+        }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
+            powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
+        }
     }
 }
