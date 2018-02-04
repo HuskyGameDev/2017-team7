@@ -34,3 +34,4 @@ sysinfo.txt
 *.ide
 *.lock
 *.ide
+ProjectSettings/ProjectVersion.txt
