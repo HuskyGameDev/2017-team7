@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -71,6 +72,7 @@ public class CharSelectController : MonoBehaviour {
         {
             Debug.Log("Start");
             PlayerData.playerChars = (int[])SelectedChars.Clone();
+            PlayerData.numPlayers = SelectedChars.Count(x => x >= 0); 
             PlayerData.charIcons = (Sprite[])images.Clone();
             PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };

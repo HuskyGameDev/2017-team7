@@ -22,7 +22,6 @@ public class Minimap : MonoBehaviour {
                 mmIcon.sprite = PlayerData.charIcons[PlayerData.playerChars[player.playerNumber - 1]];
             }
         }
-        
     }
 	
 	// Update is called once per frame
