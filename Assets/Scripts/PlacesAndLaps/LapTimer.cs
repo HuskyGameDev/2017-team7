@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LapTimer : MonoBehaviour {
     public int player;
+    public Map mapEvents;
     //TODO change sprites instead of text.
     private Text text;
     private LapDisplayMaster master;
@@ -30,17 +31,20 @@ public class LapTimer : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (!switched)
+        if (!mapEvents.inCountdown())
         {
-            startTime = Time.time;
-            if (lap == master.GetPlayerLap(player))
+            if (!switched)
             {
-                switched = true;
+                startTime = Time.time;
+                if (lap == master.GetPlayerLap(player))
+                {
+                    switched = true;
+                }
             }
-        }
-        if (master.GetPlayerLap(player) == lap)
-        {
-            timer = Time.time - startTime;
+            if (master.GetPlayerLap(player) == lap)
+            {
+                timer = Time.time - startTime;
+            }
         }
 
 
