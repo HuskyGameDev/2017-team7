@@ -4,22 +4,34 @@ using UnityEngine;
 
 public static class MinigamePool {
 	//all available minigames
-	private static List<Minigame> minigames = new List<Minigame>();
+	private static List<MinigameMetadata> minigames = new List<MinigameMetadata>();
 	//all unchosen minigames
-	private static List<Minigame> minigamePool = null;
+	private static List<MinigameMetadata> minigamePool = null;
 
-	public static void RegisterMinigame(Minigame m){
+	private static MinigameMetadata current = null;
+/*
+	public static void RegisterAllMinigames(){
+		minigames.Add(new MinigameTuneEm());
+		//TODO put extra minigames here
+	}
+
+	public static void RegisterMinigame(MinigameMetadata m){
 		minigames.Add(m);
 	}
-
+ */
 	public static void ResetPool(){
-		minigamePool = new List<Minigame>(minigames);
+		minigamePool = new List<MinigameMetadata>(minigames);
 	}
 
-	public static Minigame ChooseMinigame(){
+	public static MinigameMetadata ChooseMinigame(){
 		int index = Random.Range(0, minigamePool.Count);
-		Minigame chosen = minigamePool[index];
+		current = minigamePool[index];
 		minigamePool.RemoveAt(index);
-		return chosen;
+		return current;
 	}
+
+	public static MinigameMetadata GetCurrentMinigame(){
+		return current;
+	}
+
 }
