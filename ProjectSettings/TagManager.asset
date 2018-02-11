@@ -56,6 +56,12 @@ TagManager:
   - name: Terrain-Borders
     uniqueID: 2876109685
     locked: 0
+  - name: Finish Line
+    uniqueID: 880207925
+    locked: 0
+  - name: Obstructions
+    uniqueID: 444482339
+    locked: 0
   - name: Fences
     uniqueID: 3406071605
     locked: 0
