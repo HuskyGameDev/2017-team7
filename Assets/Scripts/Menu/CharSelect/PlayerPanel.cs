@@ -23,7 +23,6 @@ public class PlayerPanel : MonoBehaviour {
         animator = GetComponent<Animator>();
         state = STATES.DISCONNECTED;
         playerIndex = (PlayerIndex)(playerNum - 1);
-        Debug.Log("" + playerIndex + " " + playerNum);
     }
 	
 
