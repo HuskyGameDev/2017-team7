@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED };
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED };
     public STATES state = STATES.COUNTDOWN;
 
     public Rigidbody2D playerRB;
@@ -344,6 +344,20 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
 
                 break;
+            case STATES.OILED:
+                
+                //setting newvel direction at unit length
+                setNewVelRotationDrifting(ref newVel);
+                //change player turning
+                setRotationDrifting();
+
+                newVel = newVel * playerRB.velocity.magnitude * 0.99f;
+
+                if (playerRB.velocity.magnitude < 50)
+                {
+                    state = STATES.MOVE_F;
+                }
+                break;
             case STATES.DRIFT:
 
                 driftTime++;
@@ -554,5 +568,10 @@ public class Player : MonoBehaviour
     public bool GetIsFlying()
     {
         return isFlying;
+    }
+
+    public void setDriftDir(float DriftDirection)
+    {
+        driftDir = DriftDirection;
     }
 }
