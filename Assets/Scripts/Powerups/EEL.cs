@@ -14,6 +14,8 @@ public class EEL : Powerup {
 			
 			//Change player image to the one with the eels surrounding the kart here.
 			//.....
+
+			//Activate the EELtrigger script that incapacitates the player that collided with the player who has the eel powerup running. Is this done by instantiating an object?
 			
 			Debug.Log("PLAYER " + owner.playerNumber + " USED EEL POWERUP, " + uses + " USES ARE LEFT.");
 			return true;
