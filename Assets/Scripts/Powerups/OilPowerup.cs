@@ -24,7 +24,7 @@ public class OilPowerup : Powerup {
             newOil = Instantiate(oil);
             newOil.transform.SetPositionAndRotation(new Vector3(owner.playerRB.position.x, owner.playerRB.position.y, 0), owner.playerRB.transform.rotation);
 
-            Debug.Log("PLAYER " + owner.playerNumber + " USED POWERUP, " + uses + " USES ARE LEFT.");
+            Debug.Log("PLAYER " + owner.playerNumber + " USED OIL POWERUP, " + uses + " USES ARE LEFT.");
             return true;
         }
         else
