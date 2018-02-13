@@ -11,6 +11,12 @@ public class PlayerPanel : MonoBehaviour {
     private STATES state;
 
 	public int playerNum;
+    public CharSelectController charSelectController;
+
+    public Text CharNameText;
+    public Image CharImage;
+
+    private int selChar = 0;
 
     private Animator animator;
 
@@ -55,8 +61,11 @@ public class PlayerPanel : MonoBehaviour {
 
                 if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start))
                 {
-                   animator.SetTrigger("Joined");
-                   state = STATES.SELECTING;
+                    animator.SetTrigger("Joined");
+                    state = STATES.SELECTING;
+                    CharPanel nextChar = charSelectController.NextChar(selChar - 1);
+                    ApplyCharacter(nextChar);
+                    
                 }
                 else if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
@@ -69,9 +78,70 @@ public class PlayerPanel : MonoBehaviour {
                     animator.SetTrigger("UnJoined");
                     state = STATES.UNJOINED;
                 }
+
+                if (gp_state.ThumbSticks.Left.Y < -0.3 && prev_gp_state.ThumbSticks.Left.Y >= -0.3) //down
+                {
+                    CharPanel nextChar = charSelectController.NextChar(selChar);
+                    ApplyCharacter(nextChar);
+                }
+                else if (gp_state.ThumbSticks.Left.Y > 0.3 && prev_gp_state.ThumbSticks.Left.Y <= 0.3) //up
+                {
+                    CharPanel prevChar = charSelectController.PrevChar(selChar);
+                    ApplyCharacter(prevChar);
+                    //TODO: go to one character up
+                }
+                
+                if (Barnout.ButtonPressed(gp_state.Buttons.A, prev_gp_state.Buttons.A))
+                {
+                    if (charSelectController.SelectChar(selChar, playerNum))
+                    {
+                        animator.SetTrigger("Ready");
+                        state = STATES.READY;
+                    }
+                }
+
+
                 break;
             case STATES.READY:
+
+                if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
+                {
+                    animator.SetTrigger("CancelReady");
+                    state = STATES.SELECTING;
+                    charSelectController.DeSelectChar(selChar);
+                }
+
+                if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start))
+                {
+                    charSelectController.StartGame();
+                }
+
                 break;
         }
 	}
+
+
+    private void ApplyCharacter(CharPanel panel)
+    {
+        charSelectController.RemoveOn(selChar, playerNum);
+        selChar = panel.Index;
+        charSelectController.AddOn(selChar, playerNum);
+        CharNameText.text = panel.CharName;
+        CharImage.sprite = panel.Portrait;
+    }
+
+    public int CharOn()
+    {
+        return selChar;
+    }
+
+    public bool IsReady()
+    {
+        return state == STATES.READY;
+    }
+    public bool IsSelecting()
+    {
+        return state == STATES.SELECTING;
+    }
+
 }
