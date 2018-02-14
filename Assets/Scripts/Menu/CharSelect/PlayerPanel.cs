@@ -45,6 +45,8 @@ public class PlayerPanel : MonoBehaviour {
         {
             state = STATES.DISCONNECTED;
             animator.SetTrigger("Disconnected");
+            charSelectController.RemoveOn(selChar, playerNum);
+            charSelectController.DeSelectChar(selChar);
         }
 
         switch (state) {
@@ -77,6 +79,7 @@ public class PlayerPanel : MonoBehaviour {
                 {
                     animator.SetTrigger("UnJoined");
                     state = STATES.UNJOINED;
+                    charSelectController.RemoveOn(selChar, playerNum);
                 }
 
                 if (gp_state.ThumbSticks.Left.Y < -0.3 && prev_gp_state.ThumbSticks.Left.Y >= -0.3) //down

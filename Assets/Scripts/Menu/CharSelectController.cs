@@ -9,6 +9,7 @@ public class CharSelectController : MonoBehaviour {
     public PlayerPanel[] players;
     public CharPanel[] chars;
 
+    public Sprite[] PlayerCoins;
      
     //private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
 
@@ -54,14 +55,14 @@ public class CharSelectController : MonoBehaviour {
     public CharPanel NextChar(int index)
     {
         int nextIndex = (index + 1) % chars.Length;
-        if (chars[nextIndex].IsSelected()) return NextChar(nextIndex);
+        //if (chars[nextIndex].IsSelected()) return NextChar(nextIndex);
         return chars[nextIndex];
     }
 
     public CharPanel PrevChar(int index)
     {
         int prevIndex = (index - 1 < 0) ? chars.Length - 1 : index - 1;
-        if (chars[prevIndex].IsSelected()) return PrevChar(prevIndex);
+        //if (chars[prevIndex].IsSelected()) return PrevChar(prevIndex);
         return chars[prevIndex];
     }
 
@@ -87,5 +88,10 @@ public class CharSelectController : MonoBehaviour {
             //MenuAudio.Instance.StopMusic();
             //UnityEngine.SceneManagement.SceneManager.LoadScene(maps[Random.Range(0, maps.Length)]);
         }
+    }
+
+    public Sprite GetPlayerCoin(int playerNum)
+    {
+        return PlayerCoins[playerNum - 1];
     }
 }
