@@ -46,7 +46,7 @@ public class PlayerPanel : MonoBehaviour {
             state = STATES.DISCONNECTED;
             animator.SetTrigger("Disconnected");
             charSelectController.RemoveOn(selChar, playerNum);
-            charSelectController.DeSelectChar(selChar);
+            charSelectController.DeSelectChar(selChar, true);
         }
 
         switch (state) {

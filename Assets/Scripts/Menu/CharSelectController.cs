@@ -29,9 +29,9 @@ public class CharSelectController : MonoBehaviour {
         return false;
     }
 
-    public void DeSelectChar(int charNum)
+    public void DeSelectChar(int charNum, bool disconnected = false)
     {
-        chars[charNum].DeSelect();
+        chars[charNum].DeSelect(disconnected);
     }
 
     private bool CanStart()
@@ -55,14 +55,14 @@ public class CharSelectController : MonoBehaviour {
     public CharPanel NextChar(int index)
     {
         int nextIndex = (index + 1) % chars.Length;
-        //if (chars[nextIndex].IsSelected()) return NextChar(nextIndex);
+        if (chars[nextIndex].IsSelected()) return NextChar(nextIndex);
         return chars[nextIndex];
     }
 
     public CharPanel PrevChar(int index)
     {
         int prevIndex = (index - 1 < 0) ? chars.Length - 1 : index - 1;
-        //if (chars[prevIndex].IsSelected()) return PrevChar(prevIndex);
+        if (chars[prevIndex].IsSelected()) return PrevChar(prevIndex);
         return chars[prevIndex];
     }
 

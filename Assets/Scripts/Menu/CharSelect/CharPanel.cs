@@ -47,9 +47,9 @@ public class CharPanel : MonoBehaviour {
         SelCoin.gameObject.SetActive(true);
         SetSelBy(playerNum);
     }
-    public void DeSelect()
+    public void DeSelect(bool disconnected)
     {
-        playersOn[selPlayer - 1] = true;
+        if (!disconnected) playersOn[selPlayer - 1] = true;
         selected = false;
         selPlayer = -1;
         SetCurrActivePlayers();
