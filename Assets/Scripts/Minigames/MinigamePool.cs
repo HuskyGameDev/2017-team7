@@ -21,16 +21,19 @@ public static class MinigamePool {
  */
 	public static void ResetPool(){
 		minigamePool = new List<MinigameMetadata>(minigames);
+		/* TODO: make this adjustable (maybe) */
+		MinigameData.minigamesLeft = (int)(1.5*PlayerData.numPlayers);
 	}
 
 	public static MinigameMetadata ChooseMinigame(){
 		int index = Random.Range(0, minigamePool.Count);
 		current = minigamePool[index];
 		minigamePool.RemoveAt(index);
+		MinigameData.minigamesLeft--;
 		return current;
 	}
 
-	public static MinigameMetadata GetCurrentMinigame(){
+	public static MinigameMetadata GetCurrentMinigameMetadata(){
 		return current;
 	}
 

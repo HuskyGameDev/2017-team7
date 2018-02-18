@@ -5,14 +5,24 @@ using UnityEngine;
 public abstract class Minigame : MonoBehaviour{
 
     MinigameMetadata metadata;
-    public virtual void Start(){
-        metadata = MinigamePool.GetCurrentMinigame();
+    public void Awake(){
+        metadata = MinigamePool.GetCurrentMinigameMetadata();
         GetComponent<MinigameController>().SetMinigame(this);
     }
-
+    
+    /* Implement this with the initialization code for your minigame */
     public abstract void InitMinigame();
-	public abstract void BeginMinigame();
+    
+    /* This code is calculated every tick of your mingame. Using FixedUpdate is fine, but using this method is preferred 
+     as it forces correct ordering of execution.
+    */
+	public abstract void Tick();
+    
+    
+    /* returns whether the minigame has ended or not. */
+    public abstract bool End();
 
+    /* Returns an array */
     public virtual void SetPlayerStandings(){
 		MinigameData.standings = new int[4];
 		MinigameData.standings[0] = 0;
