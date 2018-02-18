@@ -6,78 +6,109 @@ using UnityEngine.UI;
 
 public class CharSelectController : MonoBehaviour {
 
-    public Sprite[] images;
-    public Sprite[] playerTopDowns;
+    public PlayerPanel[] players;
+    public CharPanel[] chars;
+
+    public Sprite[] PlayerCoins;
+     
+    //private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
+
+
+    private bool CanSelect(int charNum)
+    {
+        return !chars[charNum].IsSelected();
+    }
     
-    private int[] SelectedChars = { -1, -1, -1, -1 };
-    private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
-
-    public void selectCharacter(int playernum, int index) {
-        SelectedChars[playernum] = index;
-    }
-    public void deselectCharacter(int playernum)
+    public bool SelectChar(int charNum, int playerNum)
     {
-        SelectedChars[playernum] = -1;
-    }
-    
-    public Sprite getCharImage(int index)
-    {
-        return images[index];
-    }
-
-    public string getCharName(int index)
-    {
-        return CharNames[index];
-    }
-
-    public bool charSelected(int index)
-    {
-        for (int i = 0; i < SelectedChars.Length; i++)
+        if (CanSelect(charNum))
         {
-            if (SelectedChars[i] == index) return true;
+            chars[charNum].Select(playerNum);
+            return true;
         }
         return false;
     }
 
-    public int nextChar(int index)
+    public void DeSelectChar(int charNum, bool disconnected = false)
     {
-        int next = index + 1;
-        if (next >= SelectedChars.Length) next = 0;
-        return next;
-    }
-    public int prevChar(int index)
-    {
-        int next = index - 1;
-        if (next < 0) next = SelectedChars.Length - 1;
-        return next;
+        chars[charNum].DeSelect(disconnected);
     }
 
-    public bool canStart()
+    private bool CanStart()
     {
-        int readyPlayers = 0;
-        for (int i = 0; i < SelectedChars.Length; i++)
+        int count = 0;
+        foreach (PlayerPanel p in players)
         {
-            if (SelectedChars[i] >= 0)
+            if (p.IsSelecting())
             {
-                readyPlayers++;
-                if (readyPlayers > 1) return true;
+                return false;
+            }
+            else if (p.IsReady())
+            {
+                count++;
             }
         }
-        return false;
+        return count >= 2;
     }
 
-    public void startGame()
+
+    public CharPanel NextChar(int index)
     {
-        if (canStart())
+        int nextIndex = (index + 1) % chars.Length;
+        if (chars[nextIndex].IsSelected()) return NextChar(nextIndex);
+        return chars[nextIndex];
+    }
+
+    public CharPanel PrevChar(int index)
+    {
+        int prevIndex = (index - 1 < 0) ? chars.Length - 1 : index - 1;
+        if (chars[prevIndex].IsSelected()) return PrevChar(prevIndex);
+        return chars[prevIndex];
+    }
+
+    public void AddOn(int charNum, int playerNum)
+    {
+        chars[charNum].AddOn(playerNum);
+    }
+    public void RemoveOn(int charNum, int playerNum)
+    {
+        chars[charNum].RemoveOn(playerNum);
+    }
+
+    public void StartGame()
+    {
+        if (CanStart())
         {
             Debug.Log("Start");
-            PlayerData.playerChars = (int[])SelectedChars.Clone();
-            PlayerData.numPlayers = SelectedChars.Count(x => x >= 0); 
-            PlayerData.charIcons = (Sprite[])images.Clone();
-            PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
+
+            int[] playerChars = new int[players.Length];
+
+
+            
+            for(int i = 0; i < playerChars.Length; i++)
+            {
+                if (players[i].IsReady())
+                {
+                    playerChars[i] = players[i].SelectedChar();
+                }
+                else
+                {
+                    playerChars[i] = -1;
+                }
+            }
+
+            PlayerData.playerChars = (int[])playerChars.Clone();
+            PlayerData.numPlayers = playerChars.Count(x => x >= 0); 
+            //PlayerData.charIcons = (Sprite[])images.Clone();
+            //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };
-            MenuAudio.Instance.StopMusic();
-            UnityEngine.SceneManagement.SceneManager.LoadScene(maps[Random.Range(0, maps.Length)]);
+            if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
+            Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
         }
+    }
+
+    public Sprite GetPlayerCoin(int playerNum)
+    {
+        return PlayerCoins[playerNum - 1];
     }
 }

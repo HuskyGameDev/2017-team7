@@ -52,7 +52,8 @@ public class LapTracker : MonoBehaviour {
 				EndData.completionOrder[playersFinished] = player;
 				playersFinished++;
 				if(playersFinished == PlayerData.GetActivePlayers().Length - 1){
-					TransitionToEnd();
+                    //EndData.raceDone = true;
+                    TransitionToEnd();
 				}
 			}
 			return;
@@ -207,4 +208,12 @@ public class LapTracker : MonoBehaviour {
 		Debug.Log("Entering checkpoint");
 		PlayerCrossed(p.playerNumber, 0);
 	}
+
+    void FixedUpdate()
+    {
+        if (EndData.raceDone)
+        {
+            EndData.EndTransition();
+        }
+    }
 }

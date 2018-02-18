@@ -8,6 +8,8 @@ public class Terrain : MonoBehaviour {
     public float tRotation;
     public float currentRotation;
 
+    public int collisions = -1;
+
   
     
 	// Use this for initialization
@@ -23,13 +25,19 @@ public class Terrain : MonoBehaviour {
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         {
+            collisions++;
             if (this.tag == "Grass" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
             {
                 collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
             }
             else if (this.tag == "Oil" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
             {
-                collision.gameObject.GetComponent<Player>().terrainTurning = 0.25f;
+                if (collision.gameObject.GetComponent<Player>().state != Player.STATES.MOVE_B &&
+                    collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL && collisions > 0)
+                {
+                    collision.gameObject.GetComponent<Player>().setDriftDir(collision.gameObject.GetComponent<Player>().playerRB.rotation);
+                    collision.gameObject.GetComponent<Player>().state = Player.STATES.OILED;
+                }
             }
             else if (this.tag == "Boost") 
             {
@@ -75,7 +83,7 @@ public class Terrain : MonoBehaviour {
             }
             else if (this.tag == "Oil")
             {
-                collision.gameObject.GetComponent<Player>().terrainTurning = 1;
+                
             }
             else if (this.tag == "Boost") 
             {

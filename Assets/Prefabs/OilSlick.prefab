@@ -94,6 +94,7 @@ MonoBehaviour:
   t: {fileID: 4620494503146174}
   tRotation: 0
   currentRotation: 0
+  collisions: -1
 --- !u!212 &212923554979302972
 SpriteRenderer:
   m_ObjectHideFlags: 1

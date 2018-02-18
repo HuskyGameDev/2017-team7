@@ -43,4 +43,19 @@ public static class PlayerData
         activePlayers = active;
         return active;
     }
+
+    public static Player GetPlayerByNumber(int i)
+    {
+        Player[] temp = GetActivePlayers();
+
+        foreach (Player p in temp)
+        {
+            if (p.playerNumber == i)
+            {
+                return p;
+            }
+        }
+
+        return null;
+    }
 }
