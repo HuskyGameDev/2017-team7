@@ -147,4 +147,8 @@ public class PlayerPanel : MonoBehaviour {
         return state == STATES.SELECTING;
     }
 
+    public int SelectedChar()
+    {
+        return selChar;
+    }
 }

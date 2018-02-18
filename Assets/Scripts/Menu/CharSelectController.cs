@@ -79,14 +79,31 @@ public class CharSelectController : MonoBehaviour {
     {
         if (CanStart())
         {
-            //Debug.Log("Start");
-            //PlayerData.playerChars = (int[])SelectedChars.Clone();
-            //PlayerData.numPlayers = SelectedChars.Count(x => x >= 0); 
+            Debug.Log("Start");
+
+            int[] playerChars = new int[players.Length];
+
+
+            
+            for(int i = 0; i < playerChars.Length; i++)
+            {
+                if (players[i].IsReady())
+                {
+                    playerChars[i] = players[i].SelectedChar();
+                }
+                else
+                {
+                    playerChars[i] = -1;
+                }
+            }
+
+            PlayerData.playerChars = (int[])playerChars.Clone();
+            PlayerData.numPlayers = playerChars.Count(x => x >= 0); 
             //PlayerData.charIcons = (Sprite[])images.Clone();
             //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
-            //string[] maps = { "MainScene", "MainScene2" };
-            //MenuAudio.Instance.StopMusic();
-            //UnityEngine.SceneManagement.SceneManager.LoadScene(maps[Random.Range(0, maps.Length)]);
+            string[] maps = { "MainScene", "MainScene2" };
+            if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
+            Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
         }
     }
 
