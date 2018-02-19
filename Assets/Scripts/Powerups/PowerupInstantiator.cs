@@ -19,7 +19,7 @@ public class PowerupInstantiator : MonoBehaviour {
 		switch(type){
 
 			case PowerupType.EEL:
-				p = Instantiate(GetComponent<SpeedBoost>());
+				p = Instantiate(GetComponent<Eel>());
 				p.SetOwner(owner);
 				return p;
 			case PowerupType.SPEEDBOOST:

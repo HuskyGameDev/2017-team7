@@ -76,6 +76,12 @@ public class Player : MonoBehaviour
 
     }
 
+    IEnumerator endIncapacitated(float time) {
+        yield return new WaitForSeconds(time);
+        state = STATES.IDLE;
+        Debug.Log("SENT TO IDLE");
+    }
+
     private void checkDrafting()
     {
         if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
@@ -463,6 +469,11 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.INCAPACITATED:
+
+                //Play a player getting electrocuted sound and/or animation.
+
+                StartCoroutine(endIncapacitated(1f));
+                newVel = newVel * playerRB.velocity.magnitude * 0.9f;
                 Debug.Log("INCAPACITATED");
                 break;
         }
