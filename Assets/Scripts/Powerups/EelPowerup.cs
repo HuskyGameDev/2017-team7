@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eel : Powerup {
+public class EelPowerup : Powerup {
 
 	public GameObject EelObject;
 
