@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    private Animator animator;
 
     public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED };
     public STATES state = STATES.COUNTDOWN;
@@ -66,6 +67,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         maxSpeed = speedList[(int)boost];
+        animator.SetTrigger("ToMoveF");
         Debug.Log("RESET MAX SPEED");
     }
     IEnumerator endBoostB()
@@ -152,6 +154,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        animator = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
         ctrls = Inputs.GetController(playerNumber);
         playerRB.freezeRotation = true;
@@ -198,7 +201,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        animator.SetFloat("TurnVal", -ctrls.GetTurn());
+        Debug.Log(ctrls.GetTurn());
         Vector2 newVel = new Vector2();
 
         Vector2 accel = new Vector2();
@@ -218,11 +222,19 @@ public class Player : MonoBehaviour
                 //if (playerNumber == 2) Debug.Log("In Idle.");
                 newVel.Set(0, 0);
 
-                
+
 
                 //checking change states
-                if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
-                else if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
+                if (ctrls.GetSpeed() < 0)
+                {
+                    state = STATES.MOVE_B;
+                    animator.SetTrigger("LT");
+                }
+                else if (ctrls.GetSpeed() > 0)
+                {
+                    state = STATES.MOVE_F;
+                    animator.SetTrigger("RT");
+                }
 
                 break;
 
@@ -244,12 +256,20 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed * terrainSpeed);
 
-                if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
-                if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2)) state = STATES.DRAFT;
+                if (ctrls.GetSpeed() <= 0)
+                {
+                    state = STATES.DECEL;
+                    animator.SetTrigger("NT");
+                }
+                if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+                {
+                    state = STATES.DRAFT;
+                }
                 if (ctrls.GetB())
                 {
                     driftDir = playerRB.rotation;
                     state = STATES.DRIFT;
+                    animator.SetTrigger("ToDrift");
                 }
 
                 break;
@@ -271,7 +291,11 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse * terrainSpeed);
 
-                if (ctrls.GetSpeed() >= 0) state = STATES.ACCEL;
+                if (ctrls.GetSpeed() >= 0)
+                {
+                    state = STATES.ACCEL;
+                    animator.SetTrigger("NT");
+                }
 
                 break;
 
@@ -299,8 +323,16 @@ public class Player : MonoBehaviour
                 }
                 //Debug.Log("After newVel " + newVel);
 
-                if (ctrls.GetSpeed() < 0) state = STATES.MOVE_B;
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05) state = STATES.IDLE;
+                if (ctrls.GetSpeed() < 0)
+                {
+                    state = STATES.MOVE_B;
+                    animator.SetTrigger("LT");
+                }
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05)
+                {
+                    state = STATES.IDLE;
+                    animator.SetTrigger("ToIdle");
+                }
                 break;
             case STATES.DECEL:
 
@@ -323,11 +355,19 @@ public class Player : MonoBehaviour
                     //Debug.Log("New vel: " + newVel + " Accel: " + accel);
                 }
 
-                if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
+                if (ctrls.GetSpeed() > 0)
+                {
+                    state = STATES.MOVE_F;
+                    animator.SetTrigger("RT");
+                }
                 //Debug.Log("NewVel mag: " + newVel.magnitude);
                 //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
 
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0) state = STATES.STOP_B;
+                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0)
+                {
+                    state = STATES.STOP_B;
+                    animator.SetTrigger("ToStop");
+                }
 
                 break;
             case STATES.STOP_B:
@@ -345,9 +385,15 @@ public class Player : MonoBehaviour
                     //newVel = accel;
                     wait = reverseWait;
                     state = STATES.IDLE;
+                    animator.SetTrigger("ToIdle");
                 }
 
-                if (ctrls.GetSpeed() > 0) state = STATES.MOVE_F;
+                if (ctrls.GetSpeed() > 0)
+                {
+                    state = STATES.MOVE_F;
+                    animator.SetTrigger("RT");
+                }
+
 
                 break;
             case STATES.OILED:
@@ -362,6 +408,7 @@ public class Player : MonoBehaviour
                 if (playerRB.velocity.magnitude < 50)
                 {
                     state = STATES.MOVE_F;
+                    animator.SetTrigger("ToMoveF");
                 }
                 break;
             case STATES.DRIFT:
@@ -381,11 +428,13 @@ public class Player : MonoBehaviour
                     SetBoost(BOOSTS.DRIFT_BOOST, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     state = STATES.BOOST;
+                    animator.SetTrigger("Boosted");
                 }
                 else if (!ctrls.GetB() && driftTime <= 100)
                 {
                     driftTime = 0;
                     state = STATES.MOVE_F;
+                    animator.SetTrigger("ToMoveF");
                 }
                 break;
             case STATES.DRAFT:
@@ -411,7 +460,11 @@ public class Player : MonoBehaviour
                     draftTime = 0;
                     state = STATES.BOOST;
                 }
-                if (ctrls.GetSpeed() <= 0) { draftTime = 0; state = STATES.DECEL; }
+                if (ctrls.GetSpeed() <= 0)
+                {
+                    draftTime = 0;
+                    state = STATES.DECEL;
+                }
 
                 break;
 
@@ -441,6 +494,7 @@ public class Player : MonoBehaviour
                 // Reset states
                 state = STATES.MOVE_F;
                 boost = BOOSTS.STANDARD;
+
 
                 break;
             case STATES.BOOST_B:
