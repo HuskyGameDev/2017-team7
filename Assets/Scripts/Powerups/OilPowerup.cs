@@ -19,8 +19,7 @@ public class OilPowerup : Powerup {
         if (base.UsePowerup())
         {
             /* PUT EFFECTS OF POWERUP HERE */
-            
-        
+
             newOil = Instantiate(oil);
             newOil.transform.SetPositionAndRotation(new Vector3(owner.playerRB.position.x, owner.playerRB.position.y, 0), owner.playerRB.transform.rotation);
 

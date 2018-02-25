@@ -93,14 +93,12 @@ public class Map : MonoBehaviour {
 			    count++;
 			    if (count == 3) {
                     eggs[2].gameObject.SetActive(false);
-			        Debug.Log("Go!");
                     StartRace();
 			    }
 			    else {
                     foreach(Image e in eggs) { e.gameObject.SetActive(false); }
                     eggs[count].gameObject.SetActive(true);
 				    Snd_Beep.Play();
-			    Debug.Log(count);
 			    }
 		    }
 		}
