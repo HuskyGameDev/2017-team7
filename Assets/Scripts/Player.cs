@@ -5,24 +5,29 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Animator animator;
+    public Players players;
+
+    [System.NonSerialized]
+    public Animator animator;
 
     public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED };
     public STATES state = STATES.COUNTDOWN;
 
+    [System.NonSerialized]
     public Rigidbody2D playerRB;
+
     public Coroutine boostingCoR;
 
     private Controller ctrls;
 
-    public float turnIncr;
-    public float turningSpeed;
+    private float turnIncr;
+    private float turningSpeed;
     private float maxTS;
     private float turnSp = 0;
 
-    public float acceleration;
-    public float maxSpeed;
-    public float maxReverse;
+    private float acceleration;
+    private float maxSpeed;
+    private float maxReverse;
 
     private float[] speedList = new float [4];
     public enum BOOSTS { STANDARD, BOOST_PAD, DRAFT_BOOST, DRIFT_BOOST };
@@ -43,21 +48,23 @@ public class Player : MonoBehaviour
 
     public int playerNumber;
 
-    public PhysicsMaterial2D wallMaterial, playerMaterial;
+    private PhysicsMaterial2D wallMaterial, playerMaterial;
 
     private int reverseWait = 10;
     private int wait;
 
+    [System.NonSerialized]
     public float terrainSpeed = 1;
+    [System.NonSerialized]
     public float terrainTurning = 1;
 
     public AudioSource engineSound;
     public AudioClip loopingEngine;
 
-    public Map mapEvents;
+    private Map mapEvents;
 
     private enum POWERUP_DIRECTION {UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3, SIZE = 4}
-    public PowerupInstantiator powerupInstatiatior;
+    private PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
 
     private bool isFlying = false;
@@ -83,6 +90,22 @@ public class Player : MonoBehaviour
         state = STATES.IDLE;
         Debug.Log("SENT TO IDLE");
     }
+
+    private void initValues()
+    {
+        turnIncr = players.turnIncr;
+        turningSpeed = players.turningSpeed;
+        acceleration = players.acceleration;
+        maxSpeed = players.maxSpeed;
+        maxReverse = players.maxReverse;
+        wallMaterial = players.wallMaterial;
+        playerMaterial = players.playerMaterial;
+        terrainSpeed = players.terrainSpeed;
+        terrainTurning = players.terrainTurning;
+        mapEvents = players.mapEvents;
+        powerupInstatiatior = players.powerupInstantiator;
+    }
+
 
     private void checkDrafting()
     {
@@ -154,6 +177,7 @@ public class Player : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        initValues();
         animator = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
         ctrls = Inputs.GetController(playerNumber);
@@ -176,12 +200,6 @@ public class Player : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        else
-        {
-            if(PlayerData.charTopDowns != null){
-                GetComponent<SpriteRenderer>().sprite = PlayerData.charTopDowns[PlayerData.playerChars[playerNumber - 1]];
-            }
-        }
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
@@ -202,7 +220,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
-        Debug.Log(ctrls.GetTurn());
+        //Debug.Log(ctrls.GetTurn());
         Vector2 newVel = new Vector2();
 
         Vector2 accel = new Vector2();
