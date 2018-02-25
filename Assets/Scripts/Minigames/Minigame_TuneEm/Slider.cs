@@ -103,6 +103,7 @@ public class Slider : MonoBehaviour {
 		redArea.localPosition = new Vector3(redArea.localPosition.x, ypos, redArea.localPosition.z);
 		redArea.localScale = new Vector3(redArea.localScale.x, redLength, redArea.localScale.z);
 	}
+
 	public void RegisterHit(MinigameTuneEmPlayer p){
 		//speed += speedIncrement;
 		//UpdateRedSlider();
@@ -133,5 +134,14 @@ public class Slider : MonoBehaviour {
 
 		Debug.Log("Failed - ypos: " + ypos + ", ymax: " + ymax + ", ymin: " + ymin );	
 		return false;
+	}
+
+	private bool AreAllDisabled(){
+		foreach(PlayerSlider slider in playerSliders){
+			if(slider.active){
+				return false;
+			}
+		}
+		return true;
 	}
 }
