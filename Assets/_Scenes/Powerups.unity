@@ -22002,6 +22002,11 @@ Transform:
   m_Father: {fileID: 268853015}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1905659174 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1315833870849432, guid: be171fb7b00d6104aa59ab235f0fb666,
+    type: 2}
+  m_PrefabInternal: {fileID: 973147646}
 --- !u!1 &1909611427
 GameObject:
   m_ObjectHideFlags: 0
@@ -23157,6 +23162,7 @@ GameObject:
   - component: {fileID: 2011014411}
   - component: {fileID: 2011014414}
   - component: {fileID: 2011014413}
+  - component: {fileID: 2011014415}
   m_Layer: 0
   m_Name: Powerups
   m_TagString: Untagged
@@ -23270,6 +23276,20 @@ MonoBehaviour:
   uses: 3
   cooldownTicks: 300
   chicken: {fileID: 353525504}
+--- !u!114 &2011014415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011014406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7856c8e4472d3f459df182eef9a1862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  EelObject: {fileID: 1905659174}
 --- !u!1 &2011927056
 GameObject:
   m_ObjectHideFlags: 0
