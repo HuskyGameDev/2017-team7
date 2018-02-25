@@ -8,12 +8,17 @@ public class Inputs : MonoBehaviour
 
     private static Controller[] controllers;
     private int numPlayers = 4;
-
+    private static bool alreadyInitialized = false;
     
 
     // Use this for initialization
     void Awake()
     {
+        if(alreadyInitialized){
+            Debug.LogError("Multiple instance of Inputs detected! Please remove an instance of Inputs.");
+            return;
+        }
+        alreadyInitialized = true;
         controllers = new Controller[numPlayers];
 
         for (int i = 0; i < numPlayers; i++)
