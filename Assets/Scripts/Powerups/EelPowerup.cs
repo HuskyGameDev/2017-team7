@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EelPowerup : Powerup {
 
-	public GameObject EelObject;
+    public GameObject[] EelObjects;
 
 	IEnumerator endEel(float time) {
 		yield return new WaitForSeconds(time);
-		EelObject.SetActive(false);
+		EelObjects[owner.playerNumber - 1].SetActive(false);
 	}
 
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class EelPowerup : Powerup {
 			//Change player image to the one with the eels surrounding the kart here.
 			//.....
 
-			EelObject.SetActive(true);
+			EelObjects[owner.playerNumber - 1].SetActive(true);
 
 			StartCoroutine(endEel(3f));
 			
