@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public CameraControl overheadCamera;
+
     public Players players;
 
     [System.NonSerialized]
