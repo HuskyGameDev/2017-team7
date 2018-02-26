@@ -218,7 +218,7 @@ public class LapTracker : MonoBehaviour
                     numBefore++;
                 }
             }
-            places[curPlayer] = PlayerData.GetActivePlayers().Length - numBefore;
+            places[curPlayer] = PlayerData.numPlayers - numBefore;
             curPlayer++;
         }
         return places;
