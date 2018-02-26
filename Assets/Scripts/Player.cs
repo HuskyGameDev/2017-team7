@@ -191,17 +191,7 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.BOOST_PAD] = 200;
         speedList[(int) BOOSTS.DRAFT_BOOST] = 175;
         speedList[(int) BOOSTS.DRIFT_BOOST] = 175;
-        //TODO fix this dumb way of getting the list of players
-        if(PlayerData.players == null){
-            PlayerData.players = new Player[4];
-        }
-
-        PlayerData.players[playerNumber - 1] = this;
-
-        if (PlayerData.playerChars[playerNumber - 1] < 0)
-        {
-            gameObject.SetActive(false);
-        }
+        
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
