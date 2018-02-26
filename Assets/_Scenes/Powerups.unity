@@ -360,6 +360,7 @@ MonoBehaviour:
   collisions: -1
   rotation: 0
   projectileRB: {fileID: 12835833}
+  frog: {fileID: 12835832}
 --- !u!1 &17112989
 GameObject:
   m_ObjectHideFlags: 0
@@ -10292,7 +10293,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 957855779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 199, y: -1, z: 0}
+  m_LocalPosition: {x: -250, y: -412, z: 0}
   m_LocalScale: {x: 3000, y: 2053.331, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13717,6 +13718,11 @@ Prefab:
       propertyPath: lapTracker
       value: 
       objectReference: {fileID: 2023557433}
+    - target: {fileID: 114783952601838470, guid: 9447eb67f4e57c941adba1734500e1f0,
+        type: 2}
+      propertyPath: disableCountdown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9447eb67f4e57c941adba1734500e1f0, type: 2}
   m_IsPrefabParent: 0
