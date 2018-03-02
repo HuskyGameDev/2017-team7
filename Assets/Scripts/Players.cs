@@ -24,6 +24,8 @@ public class Players : MonoBehaviour {
     public RuntimeAnimatorController[] cameraControllers2p;
     public RuntimeAnimatorController[] cameraControllers4p;
 
+    public LapDisplayMaster lapDisplayMaster;
+
     private int playerCount;
 
     private void Start()
@@ -52,5 +54,7 @@ public class Players : MonoBehaviour {
                 players[i].gameObject.SetActive(false);
             }
         }
+
+        PlayerData.players = players;
     }
 }
