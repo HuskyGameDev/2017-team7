@@ -22,13 +22,16 @@ public abstract class Minigame : MonoBehaviour{
     /* returns whether the minigame has ended or not. */
     public abstract bool End();
 
-    /* Returns an array */
+    /* Sets MinigameData.standings */
     public virtual void SetPlayerStandings(){
-		MinigameData.standings = new int[4];
-		MinigameData.standings[0] = 0;
-		MinigameData.standings[1] = 1;
-		MinigameData.standings[2] = 2;
-		MinigameData.standings[3] = 3;
+        List<MinigameData.Standing> standings = new List<MinigameData.Standing>();
+        for(int i = 0; i < 4; i++){
+            MinigameData.Standing standing;
+            standing.playerNumber = i+1;
+            standing.standing = i+1;
+            standings.Add(standing);
+        }
+        MinigameData.standings = standings.ToArray();
 	}
 
 }

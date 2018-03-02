@@ -19,6 +19,8 @@ public class Slider : MonoBehaviour {
 	private Transform redArea, greenArea;
 	private List<PlayerSlider> playerSliders;
 
+	private List<MinigameData.Standing> playerStandings = new List<MinigameData.Standing>();
+
 	// Use this for initialization
 	void Awake () {
 		redArea = this.transform.Find("Slider_Red");
@@ -40,12 +42,13 @@ public class Slider : MonoBehaviour {
 		pSlider.active = true;
 		pSlider.player = p;
 		playerSliders.Add(pSlider);
-		Debug.Log("Player " + (p.playerNum + 1) + "Registered.");
+		//Debug.Log("Player " + (p.playerNum + 1) + "Registered.");
 	}
 
 	public void BeginSlider(){
 		slide = true;
 		ResetSliders();
+		Debug.Log("Sliders started");
 	}
 
 	void FixedUpdate () {
@@ -58,16 +61,22 @@ public class Slider : MonoBehaviour {
 	//Call to update the yellow slider movement;
 	private void UpdateSliders(){
 		float newY;
+		if(AreAllDisabled()){
+			Debug.Log("REseteting");
+			ResetSliders();
+			return;
+		}
+
 		for(int i = 0; i < playerSliders.Count; i++){
 			PlayerSlider slider = playerSliders[i];
-			Debug.Log("Player " + (slider.player.playerNum + 1) + ": " + slider.active);
+			//Debug.Log("Player " + (slider.player.playerNum + 1) + ": " + slider.active);
 			if(!slider.active) continue;
 
 			newY = slider.transform.localPosition.y + direction*speed;
 			if( newY >= (greenArea.localScale.y / 2) - (slider.transform.localScale.y / 2)){
 				//TODO insert code that eliminates player from game
 				slider.active = false;
-				slider.player.Lose();
+				RegisterHit(slider.player);
 			} else {
 				newY = slider.transform.localPosition.y + direction*speed;
 			}
@@ -86,9 +95,10 @@ public class Slider : MonoBehaviour {
 			slider.transform.localPosition = new Vector3(slider.transform.localPosition.x, 
 				greenArea.localPosition.y - greenArea.localScale.y/2, 
 				slider.transform.localPosition.z);
-			Debug.Log("Player " + slider.player.playerNum + 1 +":");
+			slider.player.Reset();
+			/*Debug.Log("Player " + (slider.player.playerNum + 1) +":");
 			Debug.Log(greenArea.localPosition.y - greenArea.localScale.y/2);
-			Debug.Log(slider.transform.localPosition.y);
+			Debug.Log(slider.transform.localPosition.y);*/
 		}
 	}
 	//Call to pick a new red area for the slider
@@ -99,7 +109,7 @@ public class Slider : MonoBehaviour {
 
 	private void RandomRedSlider(){
 		float ypos = Random.value * (greenArea.localScale.y - redLength) - (greenArea.localScale.y/2 - redLength/2);
-		Debug.Log("Ypos: " + ypos);
+		//Debug.Log("Ypos: " + ypos);
 		redArea.localPosition = new Vector3(redArea.localPosition.x, ypos, redArea.localPosition.z);
 		redArea.localScale = new Vector3(redArea.localScale.x, redLength, redArea.localScale.z);
 	}
@@ -107,14 +117,20 @@ public class Slider : MonoBehaviour {
 	public void RegisterHit(MinigameTuneEmPlayer p){
 		//speed += speedIncrement;
 		//UpdateRedSlider();
+		MinigameData.Standing standing = new MinigameData.Standing();
 		for(int i = 0; i < playerSliders.Count; i++){
 			PlayerSlider slider = playerSliders[i];
 			if(slider.player == p){
-				Debug.Log("Deactivating player " + (p.playerNum + 1));
+				//Debug.Log("Deactivating player " + (p.playerNum + 1));
 				slider.active = false;
 
 				if(!IsInArea(slider.transform)){
+					standing.playerNumber = p.playerNum;
+					standing.standing = PlayerData.numPlayers - playerStandings.Count;
+					playerStandings.Add(standing);
 					slider.player.Lose();
+
+					playerSliders.RemoveAt(i);
 				}
 				//slider is not a reference, it's a copy. 
 				//So playerSliders[i] must be overwritten with slider.
@@ -143,5 +159,16 @@ public class Slider : MonoBehaviour {
 			}
 		}
 		return true;
+	}
+
+	public bool Done(){
+		if(playerSliders.Count <= 1){
+			return true;
+		}
+		return false;
+	}
+
+	public MinigameData.Standing[] GetStandings(){
+		return playerStandings.ToArray();
 	}
 }

@@ -23,34 +23,29 @@ public class MinigameTuneEm : Minigame {
 
 	public override void InitMinigame(){
 		/* Initialization code goes here */
-		;
 	}
-	/* 
-		return whether to continue or not, true means continue, false means
-		stop; Minigame is over
-	 */
+	
 	public override void Tick(){
 		if(!startedSlider){
 			startedSlider = true;
 			slider.BeginSlider();
 		}
 	}
-
+	/* 
+		return whether to continue or not, true means continue, false means
+		stop; Minigame is over
+	 */
 	public override bool End(){
-		return false;
+		return slider.Done();
 	}
 
-	public void SetPlayerStandings(){
+	public override void SetPlayerStandings(){
 		/* Sets the player standings. */
 		/*  TODO:
 			This  method may switch to some "Coin Flip" scene, which 
 			will decide a tie between players. Might need some ideas on how this works.
 		*/
-		MinigameData.standings = new int[PlayerData.numPlayers];
-		playerScores.OrderByDescending( x => x.count);
-		for(int i = 0; i < playerScores.Count(); i++){
-			MinigameData.standings[i] = playerScores[i].player.playerNum;
-		}
+		MinigameData.standings = slider.GetStandings();
 	}
 	
 }

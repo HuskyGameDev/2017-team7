@@ -32,4 +32,10 @@ public class MinigameTuneEmPlayer : MonoBehaviour {
 	public void Lose(){
 		outOfTheGame = true;
 	}
+
+	public void Reset(){
+		if(outOfTheGame){
+			gameObject.SetActive(false);
+		}
+	}
 }
