@@ -41,11 +41,12 @@ public class Players : MonoBehaviour {
                 p.animator.runtimeAnimatorController = playerControllers[playerChar];
                 if (playerCount > 2)
                 {
-                    p.overheadCamera.SetAnimator(cameraControllers4p[index]);
+                    p.overheadCamera.SetAnimator(cameraControllers4p[cameraControllers4p.Length - index - 1]);
                 }
                 else
                 {
-                    p.overheadCamera.SetAnimator(cameraControllers2p[index]);
+                    p.overheadCamera.SetAnimator(cameraControllers2p[cameraControllers2p.Length - index - 1]);
+                    
                 }
                 index++;
             }

@@ -12,7 +12,7 @@ public static class EndData {
     {
         foreach (Player p in PlayerData.GetActivePlayers())
         {
-            Animator animator = p.GetComponentInChildren<Animator>();
+            Animator animator = p.overheadCamera.GetComponent<Animator>();
             if (p.playerNumber == completionOrder[0])
             {
                 animator.SetTrigger("Win");
