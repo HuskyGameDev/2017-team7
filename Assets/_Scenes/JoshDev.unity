@@ -4362,6 +4362,10 @@ Prefab:
       propertyPath: lapTracker
       value: 
       objectReference: {fileID: 1148146493}
+    - target: {fileID: 1148439547730018, guid: 991eebe0da49933459355411e327378e, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 991eebe0da49933459355411e327378e, type: 2}
   m_IsPrefabParent: 0
@@ -13861,7 +13865,7 @@ GameObject:
   - component: {fileID: 1148146494}
   - component: {fileID: 1148146493}
   - component: {fileID: 1148146492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}

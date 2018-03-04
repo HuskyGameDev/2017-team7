@@ -20,8 +20,8 @@ public class LapDisplayMaster : MonoBehaviour {
 
 	void FixedUpdate () {
 		Player[] playerArray = (Player[])players.players.Clone();
-		playerArray.Where(x => x.isActiveAndEnabled);
-		positions = lapTracker.GetPositions(players.players);
+		playerArray = playerArray.Where(x => x.isActiveAndEnabled).ToArray<Player>();
+		positions = lapTracker.GetPositions(playerArray);
 	}
 
 	public int GetPlayerPosition(int playerNumber){
