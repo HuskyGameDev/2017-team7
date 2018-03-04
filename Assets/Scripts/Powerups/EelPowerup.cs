@@ -24,7 +24,6 @@ public class EelPowerup : Powerup {
 			//.....
 
 			EelObjects[owner.playerNumber - 1].SetActive(true);
-
 			StartCoroutine(endEel(3f));
 			
 			

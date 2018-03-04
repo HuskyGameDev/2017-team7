@@ -71,6 +71,8 @@ public class Player : MonoBehaviour
 
     private bool isFlying = false;
 
+    public Coroutine lastIncapCoroutine = null;
+
 
     IEnumerator endBoost(float time)
     {
@@ -196,7 +198,7 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SPEEDBOOST, this);
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.CHICKEN, this);
         powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
@@ -533,10 +535,9 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.INCAPACITATED:
-
-                //Play a player getting electrocuted sound and/or animation.
-
-                StartCoroutine(endIncapacitated(1f));
+                //TODO: THIS COROUTINE IS CREATED EVERY GAME TICK!!!
+                //Play a player getting electrocuted sound and/or animation.               
+                lastIncapCoroutine = StartCoroutine(endIncapacitated(1f));
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
                 Debug.Log("INCAPACITATED");
                 break;
@@ -587,6 +588,10 @@ public class Player : MonoBehaviour
         //        newVel.Set(0, 0);
         //    }
         //}
+    }
+    public void stopLastIncapCoroutine()
+    {
+        StopCoroutine(lastIncapCoroutine);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

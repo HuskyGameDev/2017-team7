@@ -7,7 +7,7 @@ public class ChickenPowerup : Powerup {
 	public GameObject chicken;
 	private GameObject newChicken;
 
-	void Start () {
+    void Start () {
 		uses = 3;
 		currentCooldown = 0;
 	}

@@ -13,4 +13,23 @@ public class FrogObject : Projectile {
 	void Update () {
 		
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetType().Equals(typeof(CapsuleCollider2D)) && collision.gameObject.tag == "Player")
+        {
+            collisions++;
+            Debug.Log("Collisions: " + collision.ToString());
+            if (collisions > 0)
+            {
+                collision.gameObject.GetComponent<Player>().state = Player.STATES.INCAPACITATED;
+                Destroy(gameObject);
+            }
+        }
+        else if (collision.gameObject.tag == "wall")
+        {
+            Debug.Log(this.ToString() + " Hit wall");
+            Destroy(gameObject);
+        }
+    }
 }
