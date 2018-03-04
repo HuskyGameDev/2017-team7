@@ -12,21 +12,25 @@ public class MinigameTuneEmPlayer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inputs = Inputs.GetController(playerNum + 1);
-		
-		slider.RegisterPlayerSlider(this.transform, this);
+
+		if(inputs == null){ 
+			Debug.Log("Couldn't get controller for player " + playerNum + ", disabling!");
+			gameObject.SetActive(false);
+		}else{
+			slider.RegisterPlayerSlider(this.transform, this);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
 		if(outOfTheGame) return;
-
+		
 		if(inputs.GetA()){
 			if(!aDown){
 				slider.RegisterHit(this);
 			}
 		}
-				
+
 	}
 
 	public void Lose(){

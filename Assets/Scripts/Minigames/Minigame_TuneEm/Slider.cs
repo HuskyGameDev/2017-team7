@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Slider : MonoBehaviour {
 
@@ -42,28 +43,32 @@ public class Slider : MonoBehaviour {
 		pSlider.active = true;
 		pSlider.player = p;
 		playerSliders.Add(pSlider);
-		//Debug.Log("Player " + (p.playerNum + 1) + "Registered.");
 	}
 
 	public void BeginSlider(){
 		slide = true;
-		ResetSliders();
+		ResetSliders(false);
 		Debug.Log("Sliders started");
 	}
 
 	void FixedUpdate () {
 		if(!slide) {
-			ResetSliders();
+			ResetSliders(true);
 			return;
 		}
 		UpdateSliders();
 	}
-	//Call to update the yellow slider movement;
+	//Call to update the players slider movement;
 	private void UpdateSliders(){
 		float newY;
 		if(AreAllDisabled()){
-			Debug.Log("REseteting");
-			ResetSliders();
+			//If everyone lost, give them a second chance
+			if(playerSliders.Count(x => IsInArea(x.transform)) < 1){
+				ResetSliders(false);
+			}else{
+				ResetSliders(true);
+			}
+			
 			return;
 		}
 
@@ -88,14 +93,21 @@ public class Slider : MonoBehaviour {
 		}
 	}
 
-	public void ResetSliders(){
+	public void ResetSliders(bool eliminate_players){
+		float vertical_position = 0;
 		for(int i = 0; i < playerSliders.Count; i++){
 			PlayerSlider slider = playerSliders[i];
+
+			if(eliminate_players) EliminatePlayerIfNeeded(i);
+
 			slider.active = true;
 			slider.transform.localPosition = new Vector3(slider.transform.localPosition.x, 
-				greenArea.localPosition.y - greenArea.localScale.y/2, 
+				vertical_position + greenArea.localPosition.y - greenArea.localScale.y/2, 
 				slider.transform.localPosition.z);
+			vertical_position += slider.transform.localScale.y;
 			slider.player.Reset();
+
+			playerSliders[i] = slider;
 			/*Debug.Log("Player " + (slider.player.playerNum + 1) +":");
 			Debug.Log(greenArea.localPosition.y - greenArea.localScale.y/2);
 			Debug.Log(slider.transform.localPosition.y);*/
@@ -117,21 +129,11 @@ public class Slider : MonoBehaviour {
 	public void RegisterHit(MinigameTuneEmPlayer p){
 		//speed += speedIncrement;
 		//UpdateRedSlider();
-		MinigameData.Standing standing = new MinigameData.Standing();
 		for(int i = 0; i < playerSliders.Count; i++){
 			PlayerSlider slider = playerSliders[i];
 			if(slider.player == p){
 				//Debug.Log("Deactivating player " + (p.playerNum + 1));
 				slider.active = false;
-
-				if(!IsInArea(slider.transform)){
-					standing.playerNumber = p.playerNum;
-					standing.standing = PlayerData.numPlayers - playerStandings.Count;
-					playerStandings.Add(standing);
-					slider.player.Lose();
-
-					playerSliders.RemoveAt(i);
-				}
 				//slider is not a reference, it's a copy. 
 				//So playerSliders[i] must be overwritten with slider.
 				playerSliders[i] = slider;
@@ -162,12 +164,25 @@ public class Slider : MonoBehaviour {
 	}
 
 	public bool Done(){
-		if(playerSliders.Count <= 1){
+		if(playerSliders.Count == 1){
 			return true;
 		}
 		return false;
 	}
 
+	private void EliminatePlayerIfNeeded(int index){
+		PlayerSlider slider = playerSliders[index];
+		if(!IsInArea(slider.transform)){
+			MinigameData.Standing standing = new MinigameData.Standing();
+			
+			standing.playerNumber = slider.player.playerNum;
+			standing.standing = PlayerData.numPlayers - playerStandings.Count;
+			playerStandings.Add(standing);
+			slider.player.Lose();
+			
+			playerSliders.RemoveAt(index);
+		}
+	}
 	public MinigameData.Standing[] GetStandings(){
 		return playerStandings.ToArray();
 	}
