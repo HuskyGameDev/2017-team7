@@ -42,6 +42,7 @@ public class CameraControl : MonoBehaviour
 
     public void SetAnimator(RuntimeAnimatorController controller)
     {
+        if (animator == null) animator = GetComponent<Animator>(); //fix to execution order bug. Wouldn't hurt to revisit
         animator.runtimeAnimatorController = controller;
     }
 

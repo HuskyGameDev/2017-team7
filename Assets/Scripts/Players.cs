@@ -32,6 +32,7 @@ public class Players : MonoBehaviour {
     {
         playerCount = PlayerData.playerChars.Count(x => x >=0);
         int index = 0;
+        Debug.Log(playerCount);
         for (int i = players.Length - 1; i >= 0; i--)
         {
             int playerChar = PlayerData.playerChars[i];
@@ -46,7 +47,6 @@ public class Players : MonoBehaviour {
                 else
                 {
                     p.overheadCamera.SetAnimator(cameraControllers2p[cameraControllers2p.Length - index - 1]);
-                    
                 }
                 index++;
             }
