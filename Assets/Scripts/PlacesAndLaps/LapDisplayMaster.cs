@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LapDisplayMaster : MonoBehaviour {
 	private int[] positions;
@@ -18,6 +19,8 @@ public class LapDisplayMaster : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
+		Player[] playerArray = (Player[])players.players.Clone();
+		playerArray.Where(x => x.isActiveAndEnabled);
 		positions = lapTracker.GetPositions(players.players);
 	}
 

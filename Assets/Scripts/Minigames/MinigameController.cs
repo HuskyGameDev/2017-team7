@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MinigameController : MonoBehaviour {
 	Minigame minigame;
-	
+	private bool minigameStarted;
 	void Start () {
-		minigame.InitMinigame();
+		/*minigame.InitMinigame();*/
 	}
 	
 	void FixedUpdate () {
-		minigame.Tick();
+		if(!minigameStarted){
+			minigameStarted = true;
+			minigame.BeginMinigame();
+		}
 		if(minigame.End()){
 			EndCode();
 		}

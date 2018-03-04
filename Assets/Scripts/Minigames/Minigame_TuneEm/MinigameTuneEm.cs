@@ -12,7 +12,6 @@ public class MinigameTuneEm : Minigame {
 
 	private List<ScoreKeeping> playerScores = new List<ScoreKeeping>();
 	public Slider slider;
-	bool startedSlider = false;
 
 	public void AddPlayer(MinigameTuneEmPlayer p){
 		ScoreKeeping k = new ScoreKeeping();
@@ -21,15 +20,8 @@ public class MinigameTuneEm : Minigame {
 		playerScores.Add(k);
 	}
 
-	public override void InitMinigame(){
-		/* Initialization code goes here */
-	}
-	
-	public override void Tick(){
-		if(!startedSlider){
-			startedSlider = true;
-			slider.BeginSlider();
-		}
+	public override void BeginMinigame(){
+		slider.BeginSlider();
 	}
 	/* 
 		return whether to continue or not, true means continue, false means

@@ -10,13 +10,11 @@ public abstract class Minigame : MonoBehaviour{
         GetComponent<MinigameController>().SetMinigame(this);
     }
     
-    /* Implement this with the initialization code for your minigame */
-    public abstract void InitMinigame();
-    
-    /* This code is calculated every tick of your mingame. Using FixedUpdate is fine, but using this method is preferred 
-     as it forces correct ordering of execution.
-    */
-	public abstract void Tick();
+    /* 
+    Implement this with the initialization code for your minigame.
+    Minigame starts when this is called.
+     */
+    public abstract void BeginMinigame();
     
     
     /* returns whether the minigame has ended or not. */
