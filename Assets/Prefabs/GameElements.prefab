@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224689230571576170}
   - component: {fileID: 222830917357037678}
   - component: {fileID: 114222567350428416}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: No Player Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 224886089846655734}
   - component: {fileID: 222888625787389440}
   - component: {fileID: 114913761986524852}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: SSDivider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 224745676291910074}
   - component: {fileID: 222266168976807896}
   - component: {fileID: 114318196534413972}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 224772082680554822}
   - component: {fileID: 222658298192205432}
   - component: {fileID: 114319666976407294}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Minimap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4354661230770552}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MMReferencePoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 224765851192982098}
   - component: {fileID: 222822432026477214}
   - component: {fileID: 114451594186729208}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: SSDivider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 222426905413655952}
   - component: {fileID: 114106621667714408}
   - component: {fileID: 114330585761585308}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Minimap Icon p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 114974211215522938}
   - component: {fileID: 114220626220387814}
   - component: {fileID: 114007218319591048}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 222246694900024692}
   - component: {fileID: 114404506913406078}
   - component: {fileID: 114253889865580862}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Minimap Icon p4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 224562094268669870}
   - component: {fileID: 222538986478820692}
   - component: {fileID: 114005649415116474}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: MMBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -413,7 +413,7 @@ GameObject:
   - component: {fileID: 224738711326813834}
   - component: {fileID: 222130628990920984}
   - component: {fileID: 114616616848704962}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: logo-panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 222850104932305764}
   - component: {fileID: 114996161662480182}
   - component: {fileID: 114537182039300498}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Minimap Icon p3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 222378544070097814}
   - component: {fileID: 114784831102322822}
   - component: {fileID: 114702250330226030}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Minimap Icon p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,6 +671,7 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!81 &81776680123684654
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1905,9 +1906,9 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1370864771242636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224640438462498454}
   - {fileID: 224407090443963326}
@@ -1963,9 +1964,9 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1559227851747098}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 224765851192982098}
   - {fileID: 224886089846655734}

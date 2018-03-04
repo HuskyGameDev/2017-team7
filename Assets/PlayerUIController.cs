@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerUIController : MonoBehaviour {
 
     public Player player;
-    public Text placeText;
-    public Text lapText;
+    public Animator LapPanel;
+    public Animator PosPanel;
     int place;
     int lap;
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class PlayerUIController : MonoBehaviour {
         LapDisplayMaster lapDisplayMaster = player.players.lapDisplayMaster;
         place = lapDisplayMaster.GetPlayerPosition(player.playerNumber);
         lap = lapDisplayMaster.GetPlayerLap(player.playerNumber);
-        placeText.text = "Place: " + place;
-        lapText.text = "Laps: " + lap;
+        LapPanel.SetInteger("Lap", lap);
+        PosPanel.SetInteger("Position", place);
 	}
 }

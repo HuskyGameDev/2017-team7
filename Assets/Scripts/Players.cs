@@ -33,7 +33,7 @@ public class Players : MonoBehaviour {
         playerCount = PlayerData.playerChars.Count(x => x >=0);
         int index = 0;
         Debug.Log(playerCount);
-        for (int i = players.Length - 1; i >= 0; i--)
+        for (int i = 0; i < PlayerData.playerChars.Length;  i++)
         {
             int playerChar = PlayerData.playerChars[i];
             if (playerChar >= 0)
@@ -42,11 +42,11 @@ public class Players : MonoBehaviour {
                 p.animator.runtimeAnimatorController = playerControllers[playerChar];
                 if (playerCount > 2)
                 {
-                    p.overheadCamera.SetAnimator(cameraControllers4p[cameraControllers4p.Length - index - 1]);
+                    p.overheadCamera.SetAnimator(cameraControllers4p[i]);
                 }
                 else
                 {
-                    p.overheadCamera.SetAnimator(cameraControllers2p[cameraControllers2p.Length - index - 1]);
+                    p.overheadCamera.SetAnimator(cameraControllers2p[index]);
                 }
                 index++;
             }
