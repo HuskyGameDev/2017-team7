@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     [System.NonSerialized]
     public Animator animator;
 
-    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED };
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED, FLYING };
     public STATES state = STATES.COUNTDOWN;
 
     [System.NonSerialized]
@@ -111,7 +111,7 @@ public class Player : MonoBehaviour
 
     private void checkDrafting()
     {
-        if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+        if (drafting && GetSpeedPercent() > 0.5)
         {
             draftTime++;
             if (draftTime > 125) drafting = false;
@@ -196,7 +196,7 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SPEEDBOOST, this);
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.EAGLE, this);
         powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
@@ -271,7 +271,7 @@ public class Player : MonoBehaviour
                     state = STATES.DECEL;
                     animator.SetTrigger("NT");
                 }
-                if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+                if (drafting && GetSpeedPercent() > 0.5)
                 {
                     state = STATES.DRAFT;
                 }
@@ -540,6 +540,24 @@ public class Player : MonoBehaviour
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
                 Debug.Log("INCAPACITATED");
                 break;
+
+            case STATES.FLYING:
+
+                //setting newvel direction at unit length
+                setNewVelRotation(ref newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(ref newVel);
+
+                //accel = newVel * acceleration * ctrls.GetSpeed();
+
+                //set new velocity             
+                newVel = newVel * speedList[(int)BOOSTS.STANDARD] * 1.5f;
+
+                
+
+                break;
         }
 
         playerRB.velocity = newVel;
@@ -633,17 +651,22 @@ public class Player : MonoBehaviour
 
 
     // Set boolean to show that Eagle powerup is in use
-    public void SetIsFlying(bool b)
+    public void SetPlayerStateFlying(bool b)
     {
-        isFlying = b;
+        if (b == true)
+        {
+            state = STATES.FLYING;
+            gameObject.layer = EaglePowerup.flyingLayer;
+        }
+        else
+        {
+            state = STATES.MOVE_F;
+            gameObject.layer = 0;               // Return to default layer
+        }
     }
 
 
-    // Get boolean status of Eagle powerup
-    public bool GetIsFlying()
-    {
-        return isFlying;
-    }
+    
 
     public void setDriftDir(float DriftDirection)
     {

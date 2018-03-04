@@ -7,20 +7,23 @@ public class EaglePowerup : Powerup
 
     public int useTimeTicks = 300;
     private int currentUseTime = -1;
+    public const int flyingLayer = 11;
+    private const int flyingLayerMask = 1 << 8;
 
     // Use this for initialization
     void Start()
     {
         currentCooldown = 0;
+        Physics2D.SetLayerCollisionMask(flyingLayer, flyingLayerMask);      // Sets eagle collisions for only map layer
     }
 
     public override bool UsePowerup()
     {
-        if (base.UsePowerup())
+        if (base.UsePowerup() && owner.GetSpeedPercent() > 0.5)
         {
             /* PUT EFFECTS OF POWERUP HERE */
             Debug.Log("PLAYER " + owner.playerNumber + " USED EAGLE, " + uses + " USES ARE LEFT.");
-            owner.SetIsFlying(true);
+            owner.SetPlayerStateFlying(true);
             currentUseTime = useTimeTicks;
             return true;
         }
@@ -37,7 +40,7 @@ public class EaglePowerup : Powerup
         if (currentUseTime == 0)
         {
             Debug.Log("The eagle has left.");
-            owner.SetIsFlying(false);
+            owner.SetPlayerStateFlying(false);
             currentUseTime = currentUseTime - 1;
         }
         else
