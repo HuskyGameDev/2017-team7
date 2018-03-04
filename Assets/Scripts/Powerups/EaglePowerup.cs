@@ -8,13 +8,11 @@ public class EaglePowerup : Powerup
     public int useTimeTicks = 300;
     private int currentUseTime = -1;
     public const int flyingLayer = 11;
-    private const int flyingLayerMask = 1 << 8;
 
     // Use this for initialization
     void Start()
     {
         currentCooldown = 0;
-        Physics2D.SetLayerCollisionMask(flyingLayer, flyingLayerMask);      // Sets eagle collisions for only map layer
     }
 
     public override bool UsePowerup()
