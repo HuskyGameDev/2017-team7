@@ -69,8 +69,6 @@ public class Player : MonoBehaviour
     private PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
 
-    private bool isFlying = false;
-
 
     IEnumerator endBoost(float time)
     {
@@ -657,15 +655,20 @@ public class Player : MonoBehaviour
         {
             state = STATES.FLYING;
             gameObject.layer = EaglePowerup.flyingLayer;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 99;        // Makes flyer render above other players
         }
         else
         {
             state = STATES.MOVE_F;
-            gameObject.layer = 0;               // Return to default layer
+            gameObject.layer = 0;                                               // Return to default layer
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;         // Returns to initial order
         }
     }
 
-
+    public STATES GetPlayerState()
+    {
+        return state;
+    }
     
 
     public void setDriftDir(float DriftDirection)
