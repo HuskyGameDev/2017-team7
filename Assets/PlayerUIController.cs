@@ -10,6 +10,9 @@ public class PlayerUIController : MonoBehaviour {
     public Animator PosPanel;
     int place;
     int lap;
+
+    private bool raceDone;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,10 +20,26 @@ public class PlayerUIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        LapDisplayMaster lapDisplayMaster = player.players.lapDisplayMaster;
-        place = lapDisplayMaster.GetPlayerPosition(player.playerNumber);
-        lap = lapDisplayMaster.GetPlayerLap(player.playerNumber);
+        if (!raceDone)
+        {
+            if (EndData.raceDone) {
+                LapPanel.SetBool("End", true);
+                PosPanel.SetBool("End", true);
+                raceDone = true;
+            }
+            else {
+                LapDisplayMaster lapDisplayMaster = player.players.lapDisplayMaster;
+                place = lapDisplayMaster.GetPlayerPosition(player.playerNumber);
+                lap = lapDisplayMaster.GetPlayerLap(player.playerNumber);
+                SetPanels(lap, place);
+            }  
+        }        
+	}
+
+    private void SetPanels(int lap, int place)
+    {
         LapPanel.SetInteger("Lap", lap);
         PosPanel.SetInteger("Position", place);
-	}
+    }
+
 }

@@ -85,22 +85,6 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Alpha
-    path: PlayerCanvas
-    classID: 225
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
         value: 1
         inSlope: 0
         outSlope: 0
@@ -194,13 +178,6 @@ AnimationClip:
       attribute: 3746800359
       script: {fileID: 0}
       typeID: 20
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2403869964
-      attribute: 1574349066
-      script: {fileID: 0}
-      typeID: 225
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
@@ -316,22 +293,6 @@ AnimationClip:
     attribute: m_NormalizedViewPortRect.width
     path: 
     classID: 20
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Alpha
-    path: PlayerCanvas
-    classID: 225
     script: {fileID: 0}
   - curve:
       serializedVersion: 2

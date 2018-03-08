@@ -23,6 +23,7 @@ public static class EndData {
             }
         }
 
+        raceDone = true;
         /*Player winner = PlayerData.GetPlayerByNumber(completionOrder[0]);
         //Player loser = PlayerData.GetPlayerByNumber(1);
 
