@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class PlayerData
 {
-    public static int numPlayers = 2;
-    public static int[] playerChars = { 0, 1, -1, -1 };
+    public static int numPlayers = 4;
+    public static int[] playerChars = { 0, 1, 2, 3 };
 
     public static Sprite[] charIcons;
     
