@@ -176,7 +176,7 @@ public class Slider : MonoBehaviour {
 			MinigameData.Standing standing = new MinigameData.Standing();
 			
 			standing.playerNumber = slider.player.playerNum;
-			standing.standing = PlayerData.numPlayers - playerStandings.Count;
+			standing.standing = PlayerData.instance.numPlayers - playerStandings.Count;
 			playerStandings.Add(standing);
 			slider.player.Lose();
 			

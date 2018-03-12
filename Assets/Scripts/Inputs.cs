@@ -20,9 +20,9 @@ public class Inputs : MonoBehaviour
 
         alreadyInitialized = true;
         
-        controllers = new Controller[PlayerData.numPlayers];
+        controllers = new Controller[PlayerData.instance.numPlayers];
 
-        for (int i = 0; i < PlayerData.numPlayers; i++)
+        for (int i = 0; i < PlayerData.instance.numPlayers; i++)
         {
             controllers[i] = new Controller();
         }
@@ -31,7 +31,7 @@ public class Inputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int player = 0; player < PlayerData.numPlayers; player++)
+        for (int player = 0; player < PlayerData.instance.numPlayers; player++)
         {
             PlayerIndex playerIndex = (PlayerIndex)player;
             GamePadState state = GamePad.GetState(playerIndex);

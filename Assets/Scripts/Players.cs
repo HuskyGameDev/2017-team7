@@ -30,12 +30,12 @@ public class Players : MonoBehaviour {
 
     private void Start()
     {
-        playerCount = PlayerData.playerChars.Count(x => x >=0);
+        playerCount = PlayerData.instance.numPlayers;
         int index = 0;
-        Debug.Log(playerCount);
-        for (int i = 0; i < PlayerData.playerChars.Length;  i++)
+        for (int i = 0; i < PlayerData.instance.playerChars.Length;  i++)
         {
-            int playerChar = PlayerData.playerChars[i];
+            int playerChar = PlayerData.instance.playerChars[i];
+            Debug.Log(playerChar);
             if (playerChar >= 0)
             {
                 Player p = players[i];
@@ -52,10 +52,11 @@ public class Players : MonoBehaviour {
             }
             else
             {
+                
                 players[i].gameObject.SetActive(false);
             }
         }
 
-        PlayerData.players = players;
+        PlayerData.instance.players = players;
     }
 }

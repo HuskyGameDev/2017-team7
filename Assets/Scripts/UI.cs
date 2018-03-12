@@ -6,74 +6,22 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
-    public Text speedText;
-    public Player thisPlayer;
     private int numPlayers;
 
-    public GameObject horizontalDivider, p1laps, p1place, p2laps, p2place, p3laps, p3place, p4laps, p4place, nop4image;
-    public Camera p1cam, p2cam, p3cam, p4cam;
+    public GameObject horizontalDivider;
 
 	// Use this for initialization
 	void Start () {
 
         //  speedText.text = "Speed: ###";
-        numPlayers = PlayerData.GetActivePlayers().Length;
+        numPlayers = PlayerData.instance.numPlayers;
         if (numPlayers == 2)
         {
-            p1laps.GetComponent<LapDisplay>().player = PlayerData.GetActivePlayers()[0].playerNumber;
-            p1place.GetComponent<PlacesDisplay>().player = PlayerData.GetActivePlayers()[0].playerNumber;
-            p2laps.GetComponent<LapDisplay>().player = PlayerData.GetActivePlayers()[1].playerNumber;
-            p2place.GetComponent<PlacesDisplay>().player = PlayerData.GetActivePlayers()[1].playerNumber;
-
             horizontalDivider.SetActive(false);
-            nop4image.SetActive(false);
-
-            p3laps.SetActive(false);
-            p3place.SetActive(false);
-            p4laps.SetActive(false);
-            p4place.SetActive(false);
-            p1place.GetComponent<RectTransform>().anchorMin = new Vector2(0.35f, 0);
-            p1place.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.1f);
-            p2place.GetComponent<RectTransform>().anchorMin = new Vector2(0.85f, 0);
-            p2place.GetComponent<RectTransform>().anchorMax = new Vector2(1, 0.1f);
-
-            PlayerData.GetActivePlayers()[0].GetComponentInChildren<Camera>().rect = new Rect(0, 0, 0.5f, 1);
-            PlayerData.GetActivePlayers()[1].GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0, 0.5f, 1);
         }
-        else if (numPlayers == 3)
+        else
         {
-            if (PlayerData.playerChars[0] == -1)
-            {
-                p1laps.SetActive(false);
-                p1place.SetActive(false);
-                nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0.5f);
-                nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 1);
-            }
-            else if (PlayerData.playerChars[1] == -1)
-            {
-                p2laps.SetActive(false);
-                p2place.SetActive(false);
-                nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
-                nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
-            }
-            else if (PlayerData.playerChars[2] == -1)
-            {
-                p3laps.SetActive(false);
-                p3place.SetActive(false);
-                nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
-                nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
-            }
-            else
-            {
-                p4laps.SetActive(false);
-                p4place.SetActive(false);
-                nop4image.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0);
-                nop4image.GetComponent<RectTransform>().anchorMax = new Vector2(1, 0.5f);
-            }
-        }
-        else if (numPlayers == 4)
-        {
-            nop4image.SetActive(false);
+            horizontalDivider.SetActive(true);
         }
     }
 	

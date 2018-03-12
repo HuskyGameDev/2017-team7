@@ -2,15 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EndData {
-	//Player numbers, such that 0 completed first, and 3 completed last
-	public static int[] completionOrder;
-    private static float zoomSpeed = 0.017f;
-    public static bool raceDone = false;
+public class EndData {
 
-    public static void EndTransition()
+    public static EndData instance = new EndData();
+
+    public static void Instantiate()
     {
-        foreach (Player p in PlayerData.GetActivePlayers())
+        instance = new EndData();
+    }
+
+    EndData()
+    {
+        zoomSpeed = 0.017f;
+        raceDone = false;
+        //completionOrder = ;
+    }
+
+	//Player numbers, such that 0 completed first, and 3 completed last
+	public int[] completionOrder;
+    private float zoomSpeed;
+    public bool raceDone;
+
+    public void EndTransition()
+    {
+        foreach (Player p in PlayerData.instance.players)
         {
             Animator animator = p.overheadCamera.GetComponent<Animator>();
             if (p.playerNumber == completionOrder[0])
@@ -49,12 +64,13 @@ public static class EndData {
         //camLose.rect = r;*/
     }
 
-    public static void EndZoom()
+    public void EndZoom()
     {
-        Player winner = PlayerData.GetPlayerByNumber(completionOrder[0]);
+        Player winner = PlayerData.instance.players[completionOrder[0] - 1];
 
         Camera cam = winner.GetComponentInChildren<Camera>();
 
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, 20, zoomSpeed);
+        Time.timeScale = Mathf.Lerp(Time.timeScale, 0.5f, 0.05f);
     }
 }

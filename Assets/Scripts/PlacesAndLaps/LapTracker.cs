@@ -45,7 +45,7 @@ public class LapTracker : MonoBehaviour
             }
             table++;
         }
-        EndData.completionOrder = new int[4];
+        EndData.instance.completionOrder = new int[4];
     }
     public void PlayerCrossed(int player, int checkpointNum)
     {
@@ -57,12 +57,12 @@ public class LapTracker : MonoBehaviour
             //Debug.Log("Player " + player + " crossed the finish line.");
             if (laps[player - 1] == maxLaps)
             {
-                EndData.completionOrder[playersFinished] = player;
+                EndData.instance.completionOrder[playersFinished] = player;
                 playersFinished++;
-                if (playersFinished == PlayerData.GetActivePlayers().Length - 1)
+                if (playersFinished == PlayerData.instance.numPlayers - 1)
                 {
-                    EndData.raceDone = true;
-                    EndData.EndTransition();
+                    EndData.instance.raceDone = true;
+                    EndData.instance.EndTransition();
                     StartCoroutine(SwitchToEnd());
                 }
             }
@@ -218,7 +218,7 @@ public class LapTracker : MonoBehaviour
                     numBefore++;
                 }
             }
-            places[curPlayer] = PlayerData.numPlayers - numBefore;
+            places[curPlayer] = PlayerData.instance.numPlayers - numBefore;
             curPlayer++;
         }
         return places;
@@ -232,7 +232,8 @@ public class LapTracker : MonoBehaviour
     private void TransitionToEnd()
     {
         //TODO figure out how to pass info to next scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+        Time.timeScale = 1;
+        Barnout.ChangeScene("EndScene");
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -247,15 +248,15 @@ public class LapTracker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (EndData.raceDone)
+        if (EndData.instance.raceDone)
         {
-            EndData.EndZoom();
+            EndData.instance.EndZoom();
         }
     }
 
     IEnumerator SwitchToEnd()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSecondsRealtime(4);
         TransitionToEnd();
     }
 }

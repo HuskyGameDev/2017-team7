@@ -97,8 +97,8 @@ public class CharSelectController : MonoBehaviour {
                 }
             }
 
-            PlayerData.playerChars = (int[])playerChars.Clone();
-            PlayerData.numPlayers = playerChars.Count(x => x >= 0); 
+            PlayerData.instance.playerChars = (int[])playerChars.Clone();
+            PlayerData.instance.numPlayers = playerChars.Count(x => x >= 0); 
             //PlayerData.charIcons = (Sprite[])images.Clone();
             //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };

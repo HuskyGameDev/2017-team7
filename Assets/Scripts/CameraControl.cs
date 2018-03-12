@@ -25,7 +25,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!EndData.raceDone)
+        if (!EndData.instance.raceDone)
         {
             cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomDif * player.GetSpeedPercent() + minZoom, zoomSpeed);
         }

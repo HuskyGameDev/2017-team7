@@ -22,7 +22,7 @@ public class PlayerUIController : MonoBehaviour {
 	void Update () {
         if (!raceDone)
         {
-            if (EndData.raceDone) {
+            if (EndData.instance.raceDone) {
                 LapPanel.SetBool("End", true);
                 PosPanel.SetBool("End", true);
                 raceDone = true;

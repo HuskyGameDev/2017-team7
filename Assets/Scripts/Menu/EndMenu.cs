@@ -13,7 +13,7 @@ public class EndMenu : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		Text text = GetComponent<Text>();
-		text.text = "Player " + EndData.completionOrder[0].ToString() + " Wins!";
+		text.text = "Player " + EndData.instance.completionOrder[0].ToString() + " Wins!";
         for (int i = 0; i < 4; ++i)
         {
             PlayerIndex testPlayerIndex = (PlayerIndex)i;

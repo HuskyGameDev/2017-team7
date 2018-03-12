@@ -22,7 +22,7 @@ public static class MinigamePool {
 	public static void ResetPool(){
 		minigamePool = new List<MinigameMetadata>(minigames);
 		/* TODO: make this adjustable (maybe) */
-		MinigameData.minigamesLeft = (int)(1.5*PlayerData.numPlayers);
+		MinigameData.minigamesLeft = (int)(1.5*PlayerData.instance.numPlayers);
 	}
 
 	public static MinigameMetadata ChooseMinigame(){
