@@ -18,7 +18,7 @@ public class PlayerData
     }
 
     public int numPlayers;
-    public int[] playerChars = { 0, -1, 2, 3 };
+    public int[] playerChars = { 1, 2, -1, -1 };
     //public static Sprite[] charIcons;
     
     public Player[] players;

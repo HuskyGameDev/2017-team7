@@ -935,13 +935,12 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 12397087ca5f9394e94e663d074d7be9,
-        type: 2}
+      objectReference: {fileID: 9100000, guid: be26cb927330160438506ce8ee562708, type: 2}
     - target: {fileID: 95170859042165492, guid: be171fb7b00d6104aa59ab235f0fb666,
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: 859e9fffc3bc8604fb8306e3182fc434,
+      objectReference: {fileID: 22100000, guid: 12397087ca5f9394e94e663d074d7be9,
         type: 2}
     - target: {fileID: 95628886248822746, guid: be171fb7b00d6104aa59ab235f0fb666,
         type: 2}
