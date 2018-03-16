@@ -97,12 +97,12 @@ public class CharSelectController : MonoBehaviour {
                 }
             }
 
-            PlayerData.instance.playerChars = (int[])playerChars.Clone();
-            PlayerData.instance.numPlayers = playerChars.Count(x => x >= 0); 
+            PlayerData.Instantiate((int[])playerChars.Clone());
             //PlayerData.charIcons = (Sprite[])images.Clone();
             //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };
             if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
+            EndData.Instantiate();
             Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
         }
     }

@@ -7,18 +7,23 @@ public class PlayerData
 {
 
     public static PlayerData instance = new PlayerData();
-    public void Instantiate()
+    public static void Instantiate(int[] newPlayerChars)
     {
-        instance = new PlayerData();
+        instance = new PlayerData(newPlayerChars);
     }
 
-    PlayerData()
+    PlayerData(int[] newPlayerChars)
     {
+        playerChars = newPlayerChars;
         numPlayers = playerChars.Count(x => x >= 0);
+    }
+    PlayerData() 
+        : this( new int[] { 1, 2, -1, 3 }) {
+
     }
 
     public int numPlayers;
-    public int[] playerChars = { 1, 2, -1, -1 };
+    public int[] playerChars;
     //public static Sprite[] charIcons;
     
     public Player[] players;
