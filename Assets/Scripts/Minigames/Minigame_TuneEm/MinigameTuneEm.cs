@@ -31,13 +31,13 @@ public class MinigameTuneEm : Minigame {
 		return slider.Done();
 	}
 
-	public override void SetPlayerStandings(){
+	public override MinigameData.Standing[] GetPlayerStandings(){
 		/* Sets the player standings. */
 		/*  TODO:
 			This  method may switch to some "Coin Flip" scene, which 
 			will decide a tie between players. Might need some ideas on how this works.
 		*/
-		MinigameData.standings = slider.GetStandings();
+		return slider.GetStandings();
 	}
 	
 }

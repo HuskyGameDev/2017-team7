@@ -6,7 +6,7 @@ public abstract class Minigame : MonoBehaviour{
 
     MinigameMetadata metadata;
     public void Awake(){
-        metadata = MinigamePool.GetCurrentMinigameMetadata();
+        metadata = MinigamePool.instance.GetCurrentMinigameMetadata();
         GetComponent<MinigameController>().SetMinigame(this);
     }
     
@@ -21,7 +21,7 @@ public abstract class Minigame : MonoBehaviour{
     public abstract bool End();
 
     /* Sets MinigameData.standings */
-    public virtual void SetPlayerStandings(){
+    public virtual MinigameData.Standing[] GetPlayerStandings(){
         List<MinigameData.Standing> standings = new List<MinigameData.Standing>();
         for(int i = 0; i < 4; i++){
             MinigameData.Standing standing;
@@ -29,7 +29,7 @@ public abstract class Minigame : MonoBehaviour{
             standing.standing = i+1;
             standings.Add(standing);
         }
-        MinigameData.standings = standings.ToArray();
+        return standings.ToArray();
 	}
 
 }
