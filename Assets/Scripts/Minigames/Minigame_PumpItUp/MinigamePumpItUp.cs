@@ -57,7 +57,7 @@ public class MinigamePumpItUp : Minigame {
 
     public override MinigameData.Standing[] GetPlayerStandings()
     {
-        List<MinigamePumpItUpPlayer> playerOrder = new List<MinigamePumpItUpPlayer>();
+        List<MinigamePumpItUpPlayer> playerOrder = new List<MinigamePumpItUpPlayer>(players);
         playerOrder.Sort((p1, p2) => p1.GetNumOfPumps().CompareTo(p2.GetNumOfPumps()));
         List<MinigameData.Standing> standings = new List<MinigameData.Standing>();
         for(int i = 0; i < playerOrder.Count; i++)

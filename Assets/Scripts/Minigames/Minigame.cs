@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public abstract class Minigame : MonoBehaviour{
+
+    public MinigamePlayer [] players;
 
     MinigameMetadata metadata;
     public void Awake(){
@@ -22,11 +25,14 @@ public abstract class Minigame : MonoBehaviour{
 
     /* Sets MinigameData.standings */
     public virtual MinigameData.Standing[] GetPlayerStandings(){
+        List<MinigamePlayer> playerOrder = new List<MinigamePlayer>(players);
+        playerOrder.Sort((p1, p2) => p1.CompareScore(p2));
         List<MinigameData.Standing> standings = new List<MinigameData.Standing>();
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < playerOrder.Count; i++){
+            MinigamePlayer p = playerOrder[i];
             MinigameData.Standing standing;
-            standing.playerNumber = i+1;
-            standing.standing = i+1;
+            standing.playerNumber = p.playerNum;
+            standing.standing = i + 1;
             standings.Add(standing);
         }
         return standings.ToArray();
