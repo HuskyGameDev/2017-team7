@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour {
 
+    bool raceFinished = false;
     private int numPlayers;
 
     public GameObject horizontalDivider;
 
+    Animator animator;
 	// Use this for initialization
 	void Start () {
-
+        animator = GetComponent<Animator>();
         //  speedText.text = "Speed: ###";
         numPlayers = PlayerData.instance.numPlayers;
         if (numPlayers == 2)
@@ -26,7 +28,11 @@ public class UI : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        // speedText.text = "Speed: " + Mathf.Ceil(thisPlayer.playerRB.velocity.magnitude);
+	void FixedUpdate () {
+        if (EndData.instance.raceDone)
+        {
+            raceFinished = true;
+            animator.SetTrigger("Done");
+        }
     }
 }

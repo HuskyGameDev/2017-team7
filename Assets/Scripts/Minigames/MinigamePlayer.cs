@@ -6,24 +6,23 @@ public class MinigamePlayer : MonoBehaviour {
 
     protected float score = 0;
     public int playerNum;
+    bool isActive;
+
+    protected Controller controller;
 
     public virtual int CompareScore(MinigamePlayer p)
     {
-        return score.CompareTo(p.score);
+        return isActive? score.CompareTo(p.score) : -1;
     }
 
-    public float getScore()
+    public float GetScore()
     {
         return score;
     }
 
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	void Awake () {
+        isActive = PlayerData.instance.playerChars[playerNum - 1] >= 0;
+        controller = Inputs.GetController(playerNum);
 	}
 }

@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinigamePumpItUpPlayer : MonoBehaviour {
-    public int playerNum;
+public class MinigamePumpItUpPlayer : MinigamePlayer {
 
-    int numOfPumps = 0;
     bool up = false;
-    Controller controller;
-
+    Animator animator;
 	// Use this for initialization
 	void Start () {
-        controller = Inputs.GetController(playerNum);        
+        controller = Inputs.GetController(playerNum);
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,8 +22,8 @@ public class MinigamePumpItUpPlayer : MonoBehaviour {
                 if (controller.GetLsYaxis() < -0.75)
                 {
                     up = false;
-                    numOfPumps++;
-                    
+                    score++;
+                    animator.SetBool("Up", up);
                 }
             }
             else
@@ -33,14 +31,9 @@ public class MinigamePumpItUpPlayer : MonoBehaviour {
                 if (controller.GetLsYaxis() > 0.75)
                 {
                     up = true;
-                   
+                    animator.SetBool("Up", up);
                 }
             }
         }
 	}
-
-
-
-
-    public int GetNumOfPumps() { return numOfPumps; }
 }

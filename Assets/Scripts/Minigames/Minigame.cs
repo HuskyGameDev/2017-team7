@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public abstract class Minigame : MonoBehaviour{
+public abstract class Minigame : MonoBehaviour {
 
     public MinigamePlayer [] players;
 

@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TuneEmPlayer : MonoBehaviour {
+public class TuneEmPlayer : MinigamePlayer {
 
-    public int playerNum;
     public TuneEm minigame;
 
     bool failed = false;
     bool pressed;
-    float numPressed = 0;
 
-    Controller controller;
     bool aBuffer = true;
 	// Use this for initialization
 	void Start () {
-        controller = Inputs.GetController(playerNum);
+        
 	}
 	
 	// Update is called once per frame
@@ -25,6 +22,7 @@ public class TuneEmPlayer : MonoBehaviour {
         {
             if (controller.GetA() && aBuffer)
             {
+                aBuffer = false;
                 pressed = true;
                 if (minigame.InBounds())
                 {
@@ -35,6 +33,10 @@ public class TuneEmPlayer : MonoBehaviour {
                     Fail();
                 }
             }
+            else
+            {
+                aBuffer = true;
+            }
         }
         
 	}
@@ -42,26 +44,18 @@ public class TuneEmPlayer : MonoBehaviour {
     void Success()
     {
         //animator.SetTrigger("Crank");
-        numPressed += 1;
+        score++;
     }
     public void Fail()
     {
         failed = true;
-        if (pressed) numPressed += minigame.GetCloseScore();
+        if (pressed) score += minigame.GetCloseScore();
         //animator.SetTrigger("Fail");
     }
 
     public bool HasPressed()
     {
         return pressed;
-    }
-    public float NumPressed()
-    {
-        return numPressed;
-    }
-    public int ComparePressed(TuneEmPlayer p)
-    {
-        return numPressed.CompareTo(p.NumPressed());
     }
     public void Reset()
     {
