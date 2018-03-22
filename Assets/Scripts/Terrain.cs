@@ -49,26 +49,15 @@ public class Terrain : MonoBehaviour {
 
                 tRotation = t.rotation.eulerAngles.z;
 
-
-               /* while (tRotation < -360)
-                    tRotation += 360;
-                if (tRotation >= 360)
-                    tRotation = tRotation % 360;*/
-                Debug.Log(currentRotation);
-                Debug.Log(tRotation);
-
-                //collision.gameObject.GetComponent<Player>().maxSpeed = newMaxSpeed;
+                //if facing forward
                 if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
                     (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
                 {
-                    collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST;
-                    collision.gameObject.GetComponent<Player>().SetBoost(Player.BOOSTS.BOOST_PAD, 1);
+                    collision.gameObject.GetComponent<Player>().StartBoost(Player.BOOSTS.PAD, 1);
                 }
+                //if facing backward
                 else
-                    collision.gameObject.GetComponent<Player>().state = Player.STATES.BOOST_B;
-
-               // collision.gameObject.GetComponent<Player>().terrainSpeed = 50f;
-               //collision.gameObject.GetComponent<Player>().playerRB.rotation = 
+                    collision.gameObject.GetComponent<Player>().StartBoostB(Player.BOOSTS.PAD_BACK, 1);
             }
         }
     }

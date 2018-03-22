@@ -31,8 +31,8 @@ public class Player : MonoBehaviour
     private float maxSpeed;
     private float maxReverse;
 
-    private float[] speedList = new float [4];
-    public enum BOOSTS { STANDARD, BOOST_PAD, DRAFT_BOOST, DRIFT_BOOST };
+    private float[] speedList = new float [7];
+    public enum BOOSTS { STANDARD, STANDARD_BACK, PAD, PAD_BACK, DRAFT, DRIFT, POWERUP };
     private BOOSTS boost = BOOSTS.STANDARD;
     private float boostTime;
 
@@ -71,29 +71,14 @@ public class Player : MonoBehaviour
 
     private bool isFlying = false;
 
-    public Coroutine lastIncapCoroutine = null;
+    private Coroutine lastIncapCoroutine = null;
+    private Coroutine lastBoostFCoroutine = null;
+    private Coroutine lastBoostBCoroutine = null;
 
 
-    IEnumerator endBoost(float time)
-    {
-        yield return new WaitForSeconds(time);
-        maxSpeed = speedList[(int)boost];
-        animator.SetTrigger("ToMoveF");
-        Debug.Log("RESET MAX SPEED");
-    }
-    IEnumerator endBoostB()
-    {
-        yield return new WaitForSeconds(1);
-        maxReverse = 60;
-        Debug.Log("RESET MAX SPEED");
+ 
 
-    }
-
-    IEnumerator endIncapacitated(float time) {
-        yield return new WaitForSeconds(time);
-        state = STATES.IDLE;
-        Debug.Log("SENT TO IDLE");
-    }
+    
 
     private void initValues()
     {
@@ -190,11 +175,14 @@ public class Player : MonoBehaviour
         draftingHitbox = GetComponent<BoxCollider2D>();
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
-        speedList[(int) BOOSTS.BOOST_PAD] = 200;
-        speedList[(int) BOOSTS.DRAFT_BOOST] = 175;
-        speedList[(int) BOOSTS.DRIFT_BOOST] = 175;
-        
-        
+        speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
+        speedList[(int) BOOSTS.PAD] = 200;
+        speedList[(int) BOOSTS.PAD_BACK] = 120;
+        speedList[(int) BOOSTS.DRAFT] = 175;
+        speedList[(int) BOOSTS.DRIFT] = 175;
+        speedList[(int) BOOSTS.POWERUP] = 200;
+
+
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
@@ -222,7 +210,6 @@ public class Player : MonoBehaviour
         //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
         switch (state)
         {
-
             case STATES.COUNTDOWN:
                 if (!mapEvents.inCountdown()) state = STATES.IDLE;
 
@@ -437,10 +424,9 @@ public class Player : MonoBehaviour
 
                 if ((!ctrls.GetB() && driftTime > 80) || driftTime > 300)
                 {
-                    SetBoost(BOOSTS.DRIFT_BOOST, driftTime * Time.fixedDeltaTime);
+                    StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
-                    state = STATES.BOOST;
-                    animator.SetTrigger("Boosted");
+                    
                 }
                 else if (!ctrls.GetB() && driftTime <= 100)
                 {
@@ -468,9 +454,8 @@ public class Player : MonoBehaviour
 
                 if (!drafting && draftTime > 0)
                 {
-                    SetBoost(BOOSTS.DRAFT_BOOST, 2 * draftTime * Time.fixedDeltaTime);
+                    StartBoost(BOOSTS.DRAFT, 2 * draftTime * Time.fixedDeltaTime);
                     draftTime = 0;
-                    state = STATES.BOOST;
                 }
                 if (ctrls.GetSpeed() <= 0)
                 {
@@ -481,12 +466,6 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.BOOST:
-
-                //Debug.Log("BOOSTING");
-                
-                maxSpeed = speedList[(int)boost];
-                maxReverse = 60;
-
                 //setting newvel direction at unit length
                 setNewVelRotation(ref newVel);
                 //change player turning
@@ -499,47 +478,28 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
                 Debug.Log(boostTime);
-                //if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
-                StopAllCoroutines();
-                StartCoroutine(endBoost(boostTime));
-
-                // Reset states
-                state = STATES.MOVE_F;
-                boost = BOOSTS.STANDARD;
-
 
                 break;
+
             case STATES.BOOST_B:
-
-                //Debug.Log("BOOSTING");
-                maxSpeed = speedList[(int)boost];
-                maxReverse = 120;
-
                 //setting newvel direction at unit length
                 setNewVelRotation(ref newVel);
                 //change player turning
                 setRotation(newVel);
                 //setting newvel direction to turning direction
                 setNewVelRotation(ref newVel);
-
-                accel = newVel * acceleration;
-
+                accel = newVel * acceleration;          
                 //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * -100000) + accel, maxSpeed);
+                newVel = Vector2.ClampMagnitude((newVel * -100000) + accel, maxReverse);
 
-                //if (ctrls.GetSpeed() <= 0) state = STATES.DECEL;
-                StopAllCoroutines();
-                StartCoroutine(endBoostB());
-                state = STATES.MOVE_B;
-                boost = BOOSTS.STANDARD;
                 break;
 
             case STATES.INCAPACITATED:
                 //TODO: THIS COROUTINE IS CREATED EVERY GAME TICK!!!
                 //Play a player getting electrocuted sound and/or animation.               
-                lastIncapCoroutine = StartCoroutine(endIncapacitated(1f));
+                
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
-                Debug.Log("INCAPACITATED");
+
                 break;
         }
 
@@ -549,8 +509,6 @@ public class Player : MonoBehaviour
         {
             DoPowerups();
         }
-
-        //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
 
 
 
@@ -618,10 +576,74 @@ public class Player : MonoBehaviour
     }
 
 
-    public void SetBoost(BOOSTS b, float btime)
+    public void StartBoost(BOOSTS b, float btime)
     {
-        boost = b;
-        boostTime = btime;
+        Debug.Log("STARTING NEW BOOST");
+        animator.SetTrigger("Boosted");
+        state = STATES.BOOST;
+        maxSpeed = speedList[(int)b];
+        maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
+
+        //overwrite the old coroutine if one exists
+        if (lastBoostFCoroutine != null)
+            StopCoroutine(lastBoostFCoroutine);
+        lastBoostFCoroutine = StartCoroutine(endBoost(btime));
+    }
+
+    public void StartBoostB(BOOSTS b, float btime)
+    {
+        state = STATES.BOOST_B;
+        maxSpeed = speedList[(int)BOOSTS.STANDARD];
+        maxReverse = speedList[(int)b];
+
+        //overwrite the old coroutine if one exists
+        if (lastBoostBCoroutine != null)
+            StopCoroutine(lastBoostBCoroutine);
+        lastBoostBCoroutine = StartCoroutine(endBoostB(btime));
+    }
+
+    IEnumerator endBoost(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Debug.Log("STOPPING BOOST");
+        maxSpeed = speedList[(int) BOOSTS.STANDARD];
+        animator.SetTrigger("ToMoveF");
+        state = STATES.MOVE_F;
+        lastBoostFCoroutine = null;
+        Debug.Log("RESET MAX SPEED");
+    }
+    IEnumerator endBoostB(float time)
+    {
+        yield return new WaitForSeconds(time);
+        maxReverse = speedList[(int) BOOSTS.STANDARD_BACK];
+        state = STATES.MOVE_B;
+        lastBoostBCoroutine = null;
+        Debug.Log("RESET MAX SPEED");
+    }
+
+    public void StartIncap(float itime)
+    {
+        state = STATES.INCAPACITATED;
+        maxSpeed = speedList[(int)BOOSTS.STANDARD];
+        maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
+
+        //Stop any boost coroutines
+        if (lastBoostFCoroutine != null)
+            StopCoroutine(lastBoostFCoroutine);
+        if (lastBoostBCoroutine != null)
+            StopCoroutine(lastBoostBCoroutine);
+
+        //overwrite the old incap coroutine if one exists
+        if (lastIncapCoroutine != null)
+            StopCoroutine(lastIncapCoroutine);
+        lastIncapCoroutine = StartCoroutine(endIncapacitated(itime));
+    }
+
+    IEnumerator endIncapacitated(float time)
+    {
+        yield return new WaitForSeconds(time);
+        state = STATES.IDLE;
+        Debug.Log("SENT TO IDLE");
     }
 
     public void DoPowerups(){
