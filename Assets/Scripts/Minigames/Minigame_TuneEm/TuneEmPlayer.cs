@@ -7,7 +7,7 @@ public class TuneEmPlayer : MinigamePlayer {
     public TuneEm minigame;
 
     bool failed = false;
-    bool pressed;
+    bool pressed = false;
 
     bool aBuffer = true;
 	// Use this for initialization
@@ -16,13 +16,14 @@ public class TuneEmPlayer : MinigamePlayer {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate ()
+	protected override void Tick ()
     {
+        //if ()
         if (!pressed)
         {
-            if (controller.GetA() && aBuffer)
+            if (controller.GetA())
             {
-                aBuffer = false;
+                //Debug.Log("Pressed A");
                 pressed = true;
                 if (minigame.InBounds())
                 {
@@ -33,31 +34,34 @@ public class TuneEmPlayer : MinigamePlayer {
                     Fail();
                 }
             }
-            else
-            {
-                aBuffer = true;
-            }
         }
         
 	}
 
     void Success()
     {
+        Debug.Log("Player " + playerNum + " got it!");
         //animator.SetTrigger("Crank");
         score++;
     }
-    public void Fail()
+    void Fail()
     {
+        Debug.Log("Player " + playerNum + " failed");
         failed = true;
         if (pressed) score += minigame.GetCloseScore();
         //animator.SetTrigger("Fail");
+    }
+
+    public void ElimIfUnpressed()
+    {
+        if (isActive && !pressed) Fail();
     }
 
     public bool HasPressed()
     {
         return pressed;
     }
-    public void Reset()
+    public void ResetPlayer()
     {
         if (!HasFailed())
         {

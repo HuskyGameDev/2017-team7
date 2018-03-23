@@ -13,7 +13,7 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	protected override void Tick () {
         
         if (controller != null)
         {

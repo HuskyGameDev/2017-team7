@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public Animator charAnimator;
+
     public CameraControl overheadCamera;
 
     public Players players;
@@ -554,9 +557,11 @@ public class Player : MonoBehaviour
         }
 
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
+        charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
         float animspeed = newVel.magnitude;
         if (state == STATES.MOVE_B || state == STATES.ACCEL) animspeed = -animspeed;
         animator.SetFloat("Speed", animspeed);
+        charAnimator.SetFloat("Speed", animspeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

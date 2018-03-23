@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TuneEmSlider : MonoBehaviour {
-    public GameObject line;
     public TuneEm minigame;
 
 	// Use this for initialization
