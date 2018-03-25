@@ -65,7 +65,7 @@ public class LapTracker : MonoBehaviour
                     EndData.instance.raceDone = true;
                     PlayerData.instance.players[EndData.instance.completionOrder[0]-1].SetTransparency(false);
                     EndData.instance.EndTransition();
-                    //StartCoroutine(SwitchToEnd());
+                    StartCoroutine(SwitchToEnd());
                 }
             }
             return;
