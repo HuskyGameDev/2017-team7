@@ -1154,7 +1154,7 @@ Prefab:
         type: 2}
       propertyPath: oil
       value: 
-      objectReference: {fileID: 1681475893}
+      objectReference: {fileID: 1681475894}
     - target: {fileID: 114266164351232224, guid: 3c1ecd3108dfd0541af258e179265aa3,
         type: 2}
       propertyPath: frog
@@ -1164,7 +1164,7 @@ Prefab:
         type: 2}
       propertyPath: chicken
       value: 
-      objectReference: {fileID: 1932016025}
+      objectReference: {fileID: 1932016026}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c1ecd3108dfd0541af258e179265aa3, type: 2}
   m_IsPrefabParent: 0
@@ -9335,11 +9335,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -402
+      value: -707
       objectReference: {fileID: 0}
     - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 219
+      value: 290
       objectReference: {fileID: 0}
     - target: {fileID: 4620494503146174, guid: 66f74214ac7908a4097e511272b4d845, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10430,11 +10430,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4338884240774384, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -400
+      value: -718
       objectReference: {fileID: 0}
     - target: {fileID: 4338884240774384, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 96
+      value: 236
       objectReference: {fileID: 0}
     - target: {fileID: 4338884240774384, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10480,6 +10480,10 @@ Prefab:
       propertyPath: eggSplats.Array.data[3]
       value: 
       objectReference: {fileID: 1544373813}
+    - target: {fileID: 1635767552761150, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
   m_IsPrefabParent: 0
@@ -10767,7 +10771,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 957855779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.6, y: -139.2, z: 0}
+  m_LocalPosition: {x: 109.6, y: -143, z: 0}
   m_LocalScale: {x: 3000, y: 2053.331, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18552,11 +18556,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1681475893 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1362542920435562, guid: 66f74214ac7908a4097e511272b4d845,
+--- !u!114 &1681475894 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114647461018226654, guid: 66f74214ac7908a4097e511272b4d845,
     type: 2}
   m_PrefabInternal: {fileID: 813146142}
+  m_Script: {fileID: 11500000, guid: 749ef214678fff1489b71e21654a64e2, type: 3}
 --- !u!1 &1687285512
 GameObject:
   m_ObjectHideFlags: 0
@@ -22069,11 +22074,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1932016025 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1635767552761150, guid: a3b4654e61b3f6a47826cf50f1293e62,
+--- !u!114 &1932016026 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114372268673547432, guid: a3b4654e61b3f6a47826cf50f1293e62,
     type: 2}
   m_PrefabInternal: {fileID: 920893127}
+  m_Script: {fileID: 11500000, guid: ae4c648aa71e8cb4bb2c995bf666c5e8, type: 3}
 --- !u!1 &1937167969
 GameObject:
   m_ObjectHideFlags: 0

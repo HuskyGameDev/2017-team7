@@ -5384,11 +5384,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &255163536 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1635767552761150, guid: a3b4654e61b3f6a47826cf50f1293e62,
+--- !u!114 &255163537 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114372268673547432, guid: a3b4654e61b3f6a47826cf50f1293e62,
     type: 2}
   m_PrefabInternal: {fileID: 834038948}
+  m_Script: {fileID: 11500000, guid: ae4c648aa71e8cb4bb2c995bf666c5e8, type: 3}
 --- !u!114 &255358954 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114537419845520474, guid: be171fb7b00d6104aa59ab235f0fb666,
@@ -9194,7 +9195,7 @@ Prefab:
         type: 2}
       propertyPath: chicken
       value: 
-      objectReference: {fileID: 255163536}
+      objectReference: {fileID: 255163537}
     - target: {fileID: 114670343865482774, guid: 3c1ecd3108dfd0541af258e179265aa3,
         type: 2}
       propertyPath: oil

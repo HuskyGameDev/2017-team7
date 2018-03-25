@@ -261,7 +261,7 @@ public class Player : MonoBehaviour
                 {
                     state = STATES.DRAFT;
                 }
-                if (ctrls.GetB())
+                if (ctrls.GetA())
                 {
                     driftDir = playerRB.rotation;
                     state = STATES.DRIFT;
@@ -411,13 +411,13 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = newVel * playerRB.velocity.magnitude * 0.99f;
 
-                if ((!ctrls.GetB() && driftTime > 80) || driftTime > 300)
+                if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     
                 }
-                else if (!ctrls.GetB() && driftTime <= 100)
+                else if (!ctrls.GetA() && driftTime <= 100)
                 {
                     driftTime = 0;
                     state = STATES.MOVE_F;
@@ -466,6 +466,15 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
                 Debug.Log(boostTime);
+
+                if (ctrls.GetA())
+                {
+                    StopCoroutine(lastBoostFCoroutine);
+                    lastBoostFCoroutine = null;
+                    maxSpeed = speedList[(int)BOOSTS.STANDARD];
+                    driftDir = playerRB.rotation;
+                    state = STATES.DRIFT;
+                }
 
                 break;
 
