@@ -1,3 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1577305889	Play_Barn			\Default Work Unit\Play_Barn	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30078443	Sheep Bleat 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Sheep Bleat 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sheep Bleat 1		198592
 	117450992	Drift Sound	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Drift Sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drift Sound		388224

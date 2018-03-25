@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="UISounds" ID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Toggle" ID="{71C8BCB6-6218-4E4F-8C24-175E4C16990D}">
+					<ChildrenList>
+						<Action Name="" ID="{6A4C7CEF-80CB-4888-B47C-6E02CA4AAB96}" ShortID="646404850">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="joystick toggle" ID="{BC3BD712-CE18-41D9-9B55-4631C0436BA4}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Select" ID="{1DAAFD75-26BC-46C4-851B-50B70CF5B65B}">
+					<ChildrenList>
+						<Action Name="" ID="{6A27D7DE-8F3A-4A3F-8FC5-4C0EC99A826D}" ShortID="41798423">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu Select Sound" ID="{71BE54D8-2869-412E-8F0A-83C4C38FD3A6}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -23,8 +23,8 @@ TagManager:
   - MinimapOnly
   - PlayerUI
   - FullUI
-  - 
-  - 
+  - Flying
+  - Ghost
   - 
   - 
   - 
@@ -67,6 +67,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1759010191
+    locked: 0
+  - name: RisenPlayer
+    uniqueID: 2293115701
     locked: 0
   - name: Player UI
     uniqueID: 2416607647

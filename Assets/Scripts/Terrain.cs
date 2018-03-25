@@ -7,14 +7,15 @@ public class Terrain : MonoBehaviour {
     public Transform t;
     public float tRotation;
     public float currentRotation;
-
-    public int collisions = -1;
+    public Player owner;
+    int collisions = 0;
 
   
     
 	// Use this for initialization
 	void Start () {
         tRotation = t.rotation.z;
+        StartCoroutine(clearOwner(2));
     }
 	
 	// Update is called once per frame
@@ -25,7 +26,6 @@ public class Terrain : MonoBehaviour {
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         {
-            collisions++;
             if (this.tag == "Grass")
             {
                 collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
@@ -33,10 +33,14 @@ public class Terrain : MonoBehaviour {
             else if (this.tag == "Oil")
             {
                 if (collision.gameObject.GetComponent<Player>().state != Player.STATES.MOVE_B &&
-                    collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL && collisions > 0)
+                    collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL && 
+                    collision.gameObject.GetComponent<Player>() != owner)
                 {
+                    collisions++;
                     collision.gameObject.GetComponent<Player>().setDriftDir(collision.gameObject.GetComponent<Player>().playerRB.rotation);
                     collision.gameObject.GetComponent<Player>().state = Player.STATES.OILED;
+                    if (collisions >= 3)
+                        Destroy(gameObject);
                 }
             }
             else if (this.tag == "Boost") 
@@ -78,7 +82,12 @@ public class Terrain : MonoBehaviour {
             {
 
             }
-        }
-        
+        }      
+    }
+
+    IEnumerator clearOwner(float time)
+    {
+        yield return new WaitForSeconds(time);
+        owner = null;
     }
 }

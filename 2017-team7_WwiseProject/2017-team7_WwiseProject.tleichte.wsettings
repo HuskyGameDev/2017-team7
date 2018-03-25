@@ -4,7 +4,10 @@
 		<UserProjectSettings Name="" ID="{82BCC46A-A34C-44FD-B241-E6F442BAB105}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="D:\HGD Sound FX"/>
+				<Property Name="Event Action List\{1DAAFD75-26BC-46C4-851B-50B70CF5B65B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{49FD8FB9-25F1-4036-A212-31F33D1EEE79}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{71C8BCB6-6218-4E4F-8C24-175E4C16990D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{C1A20691-7DA5-4164-982B-5A2BFCD079E0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

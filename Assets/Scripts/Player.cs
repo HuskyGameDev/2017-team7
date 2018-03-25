@@ -71,8 +71,9 @@ public class Player : MonoBehaviour
     private enum POWERUP_DIRECTION {UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3, SIZE = 4}
     private PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
-
-    private bool isFlying = false;
+    
+    private bool finished = false;
+    private int ghostLayer = 13;
 
     private Coroutine lastIncapCoroutine = null;
     private Coroutine lastBoostFCoroutine = null;
@@ -261,7 +262,7 @@ public class Player : MonoBehaviour
                 {
                     state = STATES.DRAFT;
                 }
-                if (ctrls.GetB())
+                if (ctrls.GetA())
                 {
                     driftDir = playerRB.rotation;
                     state = STATES.DRIFT;
@@ -411,13 +412,13 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = newVel * playerRB.velocity.magnitude * 0.99f;
 
-                if ((!ctrls.GetB() && driftTime > 80) || driftTime > 300)
+                if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     
                 }
-                else if (!ctrls.GetB() && driftTime <= 100)
+                else if (!ctrls.GetA() && driftTime <= 100)
                 {
                     driftTime = 0;
                     state = STATES.MOVE_F;
@@ -467,6 +468,15 @@ public class Player : MonoBehaviour
                 newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
                 Debug.Log(boostTime);
 
+                if (ctrls.GetA())
+                {
+                    StopCoroutine(lastBoostFCoroutine);
+                    lastBoostFCoroutine = null;
+                    maxSpeed = speedList[(int)BOOSTS.STANDARD];
+                    driftDir = playerRB.rotation;
+                    state = STATES.DRIFT;
+                }
+
                 break;
 
             case STATES.BOOST_B:
@@ -512,7 +522,7 @@ public class Player : MonoBehaviour
 
         playerRB.velocity = newVel;
 
-        if (state != STATES.COUNTDOWN)
+        if (state != STATES.COUNTDOWN || !finished)
         {
             DoPowerups();
         }
@@ -643,13 +653,15 @@ public class Player : MonoBehaviour
         {
             state = STATES.FLYING;
             gameObject.layer = EaglePowerup.flyingLayer;
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 99;        // Makes flyer render above other players
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";      // Makes flyer render above other players
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";
         }
         else
         {
             state = STATES.MOVE_F;
-            gameObject.layer = 0;                                               // Return to default layer
-            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;         // Returns to initial order
+            gameObject.layer = 0;                                                          // Return to default layer
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";         // Returns to initial order
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
         }
     }
 
@@ -662,5 +674,30 @@ public class Player : MonoBehaviour
     public void setDriftDir(float DriftDirection)
     {
         driftDir = DriftDirection;
+    }
+
+
+    public void SetTransparency(bool b)
+    {
+        if (b)
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 0.5f);
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+        }
+    }
+
+
+    public void SetFinished()
+    {
+        finished = true;
+        gameObject.layer = ghostLayer;
+        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";                  // Makes flyer render above other players
+        charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";
+        SetTransparency(true);
     }
 }

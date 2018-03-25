@@ -58,10 +58,12 @@ public class LapTracker : MonoBehaviour
             if (laps[player - 1] == maxLaps)
             {
                 EndData.instance.completionOrder[playersFinished] = player;
+                PlayerData.instance.players[player-1].SetFinished();
                 playersFinished++;
                 if (playersFinished == PlayerData.instance.numPlayers - 1)
                 {
                     EndData.instance.raceDone = true;
+                    PlayerData.instance.players[EndData.instance.completionOrder[0]-1].SetTransparency(false);
                     EndData.instance.EndTransition();
                     StartCoroutine(SwitchToEnd());
                 }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class OilPowerup : Powerup {
 
-    public GameObject oil;
-    private GameObject newOil;
+    public Terrain oil;
+    private Terrain newOil;
+
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,8 @@ public class OilPowerup : Powerup {
 
             newOil = Instantiate(oil);
             newOil.transform.SetPositionAndRotation(new Vector3(owner.playerRB.position.x, owner.playerRB.position.y, 0), owner.playerRB.transform.rotation);
+            newOil.owner = owner;
+
 
             Debug.Log("PLAYER " + owner.playerNumber + " USED OIL POWERUP, " + uses + " USES ARE LEFT.");
             return true;

@@ -22,7 +22,7 @@ public class FrogObject : Projectile {
             Debug.Log("Collisions: " + collision.ToString());
             if (collisions > 0)
             {
-                collision.gameObject.GetComponent<Player>().state = Player.STATES.INCAPACITATED;
+                collision.gameObject.GetComponent<Player>().StartIncap(2);
                 Destroy(gameObject);
             }
         }

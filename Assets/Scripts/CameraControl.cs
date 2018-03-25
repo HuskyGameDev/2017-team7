@@ -6,8 +6,8 @@ public class CameraControl : MonoBehaviour
 {
     public Player player;
     private float zoomSpeed = 0.017f;
-    public int maxZoom;
-    public int minZoom;
+    private int maxZoom;
+    private int minZoom;
     private int zoomDif;
     Camera cam;
 
@@ -18,7 +18,18 @@ public class CameraControl : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         animator = GetComponent<Animator>();
+        if (PlayerData.instance.numPlayers > 2)
+        {
+            maxZoom = player.players.maxCamZoom4;
+            minZoom = player.players.minCamZoom4;
+        }
+        else
+        {
+            maxZoom = player.players.maxCamZoom2;
+            minZoom = player.players.minCamZoom2;
+        }
         zoomDif = maxZoom - minZoom;
+
 
     }
 

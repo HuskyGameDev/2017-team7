@@ -7,7 +7,7 @@ public class EaglePowerup : Powerup
 
     public int useTimeTicks = 300;
     private int currentUseTime = -1;
-    public const int flyingLayer = 11;
+    public const int flyingLayer = 12;
     private int minTime = 50;
 
     // Use this for initialization
