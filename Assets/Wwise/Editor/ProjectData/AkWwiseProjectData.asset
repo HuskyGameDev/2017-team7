@@ -44,9 +44,18 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: 1950136302
-    m_lastTimePart2: -1999276232
-    List: []
+    m_lastTimePsrt1: -1968151192
+    m_lastTimePart2: -1999274854
+    List:
+    - Name: New_SoundBank
+      Path: Default Work Unit\New_SoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_SoundBank
+        ObjectType: 7
+      ID: -222937841
+      Guid: 74e0dc75e00cb34e82dab6503963bc06
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -68,7 +77,10 @@ MonoBehaviour:
     m_lastTimePsrt1: 1950191346
     m_lastTimePart2: -1999276232
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /2017-team7_WwiseProject
+  - /2017-team7_WwiseProject/SoundBanks
+  - /2017-team7_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\GeneratedSoundBanks\Mac\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="4072029455" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
+			<ShortName>New_SoundBank</ShortName>
+			<Path>New_SoundBank.bnk</Path>
+			<IncludedMemoryFiles>
+				<File Id="30078443" Language="SFX">
+					<ShortName>Sheep Bleat 1.wav</ShortName>
+					<Path>SFX\Sheep Bleat 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="117450992" Language="SFX">
+					<ShortName>Drift Sound.wav</ShortName>
+					<Path>SFX\Drift Sound_1C9C67B2.wem</Path>
+				</File>
+				<File Id="209911356" Language="SFX">
+					<ShortName>Ready Set Go.wav</ShortName>
+					<Path>SFX\Ready Set Go_1C9C67B2.wem</Path>
+				</File>
+				<File Id="226991367" Language="SFX">
+					<ShortName>single go.wav</ShortName>
+					<Path>SFX\single go_1C9C67B2.wem</Path>
+				</File>
+				<File Id="255870224" Language="SFX">
+					<ShortName>Boost Sound.wav</ShortName>
+					<Path>SFX\Boost Sound_1C9C67B2.wem</Path>
+				</File>
+				<File Id="312854248" Language="SFX">
+					<ShortName>Horse Whinny 1.wav</ShortName>
+					<Path>SFX\Horse Whinny 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="528168672" Language="SFX">
+					<ShortName>single beep.wav</ShortName>
+					<Path>SFX\single beep_1C9C67B2.wem</Path>
+				</File>
+				<File Id="627774607" Language="SFX">
+					<ShortName>Ready Set Go (Rooster).wav</ShortName>
+					<Path>SFX\Ready Set Go (Rooster)_1C9C67B2.wem</Path>
+				</File>
+				<File Id="712917818" Language="SFX">
+					<ShortName>Barn Track Theme.wav</ShortName>
+					<Path>SFX\Barn Track Theme_1C9C67B2.wem</Path>
+				</File>
+				<File Id="753950387" Language="SFX">
+					<ShortName>Pig Oink 1.wav</ShortName>
+					<Path>SFX\Pig Oink 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="858512381" Language="SFX">
+					<ShortName>Kart Take Off.wav</ShortName>
+					<Path>SFX\Kart Take Off_1C9C67B2.wem</Path>
+				</File>
+				<File Id="955100116" Language="SFX">
+					<ShortName>Looping engine.wav</ShortName>
+					<Path>SFX\Looping engine_1C9C67B2.wem</Path>
+				</File>
+				<File Id="973345197" Language="SFX">
+					<ShortName>Farmula 1 Music Loop 1.wav</ShortName>
+					<Path>SFX\Farmula 1 Music Loop 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1064298560" Language="SFX">
+					<ShortName>Cow Moo 1.wav</ShortName>
+					<Path>SFX\Cow Moo 1_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

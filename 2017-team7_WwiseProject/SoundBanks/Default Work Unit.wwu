@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}" SchemaVersion="85">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="New_SoundBank" ID="{75DCE074-0CE0-4EB3-82DA-B6503963BC06}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Ready Set Go" ID="{9257C5DC-8ABF-4007-B599-9D089962F0CF}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="single go" ID="{7ECE86D1-1418-40CF-99ED-3B7A4F842893}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pig Oink 1" ID="{74788AA8-877D-4106-B803-00FB9E88D8B9}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Boost Sound" ID="{FA48DE2D-D7A7-412B-9BC4-0EF832C1DFED}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Farmula 1 Music Loop 1" ID="{0047957A-6956-4200-AC29-A23F11014CBC}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Drift Sound" ID="{31E24EEF-95AB-4220-8932-3102405C3151}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Kart Take Off" ID="{AE93390A-BF62-43B9-8358-B93447A75973}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Looping engine" ID="{8C42AAE9-9A57-4570-97C2-954760875E31}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="single beep" ID="{A2380A4C-80FF-4768-A389-35768686BA45}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Sheep Bleat 1" ID="{24316EBF-7E22-492B-AE3D-8E878546F921}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Cow Moo 1" ID="{7C5B82EB-874A-4C7F-9950-84843A0B2617}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ready Set Go (Rooster)" ID="{CEDEEA8F-1ED5-4EEB-9B66-34F0A450146E}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Horse Whinny 1" ID="{E7E5C238-3721-4F04-8466-079D42CA0C3A}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Barn Track Theme" ID="{D6BBCF7C-5EAF-4FCE-920B-10F6BB6F13E8}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

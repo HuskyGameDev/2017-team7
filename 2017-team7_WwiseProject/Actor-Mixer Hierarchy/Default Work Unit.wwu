@@ -1,6 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" SchemaVersion="85">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Barn Track Theme" ID="{D6BBCF7C-5EAF-4FCE-920B-10F6BB6F13E8}" ShortID="286444590">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Barn Track Theme" ID="{74D35654-36DC-4106-A203-199AA9DB5AF0}" ShortID="712917818">
+							<Language>SFX</Language>
+							<AudioFile>Barn Track Theme.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Barn Track Theme" ID="{74D35654-36DC-4106-A203-199AA9DB5AF0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Boost Sound" ID="{FA48DE2D-D7A7-412B-9BC4-0EF832C1DFED}" ShortID="419759878">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Boost Sound" ID="{FE0380AB-0D44-489F-8B77-C9E37E3317AF}" ShortID="255870224">
+							<Language>SFX</Language>
+							<AudioFile>Boost Sound.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Boost Sound" ID="{FE0380AB-0D44-489F-8B77-C9E37E3317AF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Cow Moo 1" ID="{7C5B82EB-874A-4C7F-9950-84843A0B2617}" ShortID="457754424">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cow Moo 1" ID="{78DB6A6A-FA67-44B6-8296-1E747EFB061B}" ShortID="1064298560">
+							<Language>SFX</Language>
+							<AudioFile>Cow Moo 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Cow Moo 1" ID="{78DB6A6A-FA67-44B6-8296-1E747EFB061B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Drift Sound" ID="{31E24EEF-95AB-4220-8932-3102405C3151}" ShortID="355987917">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Drift Sound" ID="{C73371F3-16AF-44D5-B728-A9C5CD79F3A6}" ShortID="117450992">
+							<Language>SFX</Language>
+							<AudioFile>Drift Sound.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Drift Sound" ID="{C73371F3-16AF-44D5-B728-A9C5CD79F3A6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Farmula 1 Music Loop 1" ID="{0047957A-6956-4200-AC29-A23F11014CBC}" ShortID="625355840">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Farmula 1 Music Loop 1" ID="{2363CC2E-57DF-4374-AACA-F67AA646491B}" ShortID="973345197">
+							<Language>SFX</Language>
+							<AudioFile>Farmula 1 Music Loop 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Farmula 1 Music Loop 1" ID="{2363CC2E-57DF-4374-AACA-F67AA646491B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Horse Whinny 1" ID="{E7E5C238-3721-4F04-8466-079D42CA0C3A}" ShortID="657419692">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Horse Whinny 1" ID="{A9211986-0D19-4973-B58C-B4051D66A598}" ShortID="312854248">
+							<Language>SFX</Language>
+							<AudioFile>Horse Whinny 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Horse Whinny 1" ID="{A9211986-0D19-4973-B58C-B4051D66A598}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Kart Take Off" ID="{AE93390A-BF62-43B9-8358-B93447A75973}" ShortID="553142684">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Kart Take Off" ID="{6DFA0807-53D7-4F9A-91CE-4C3AC870C6E7}" ShortID="858512381">
+							<Language>SFX</Language>
+							<AudioFile>Kart Take Off.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Kart Take Off" ID="{6DFA0807-53D7-4F9A-91CE-4C3AC870C6E7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Looping engine" ID="{8C42AAE9-9A57-4570-97C2-954760875E31}" ShortID="378648927">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Looping engine" ID="{FDD940A0-B070-482A-8490-4E1220D527F0}" ShortID="955100116">
+							<Language>SFX</Language>
+							<AudioFile>Looping engine.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Looping engine" ID="{FDD940A0-B070-482A-8490-4E1220D527F0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Pig Oink 1" ID="{74788AA8-877D-4106-B803-00FB9E88D8B9}" ShortID="244439071">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Pig Oink 1" ID="{4CF401F4-8A17-438D-A8D2-758EDFA93E21}" ShortID="753950387">
+							<Language>SFX</Language>
+							<AudioFile>Pig Oink 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Pig Oink 1" ID="{4CF401F4-8A17-438D-A8D2-758EDFA93E21}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ready Set Go (Rooster)" ID="{CEDEEA8F-1ED5-4EEB-9B66-34F0A450146E}" ShortID="96706917">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ready Set Go (Rooster)" ID="{25AE91B6-0A18-43B5-9882-5130D38C758C}" ShortID="627774607">
+							<Language>SFX</Language>
+							<AudioFile>Ready Set Go (Rooster).wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ready Set Go (Rooster)" ID="{25AE91B6-0A18-43B5-9882-5130D38C758C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ready Set Go" ID="{9257C5DC-8ABF-4007-B599-9D089962F0CF}" ShortID="1016618748">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ready Set Go" ID="{A0BFB393-BEAD-44FA-A3FD-BEB7B0E72202}" ShortID="209911356">
+							<Language>SFX</Language>
+							<AudioFile>Ready Set Go.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ready Set Go" ID="{A0BFB393-BEAD-44FA-A3FD-BEB7B0E72202}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Sheep Bleat 1" ID="{24316EBF-7E22-492B-AE3D-8E878546F921}" ShortID="99818057">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Sheep Bleat 1" ID="{61133510-7CBB-4FFB-9EC8-1F9B578EFF99}" ShortID="30078443">
+							<Language>SFX</Language>
+							<AudioFile>Sheep Bleat 1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Sheep Bleat 1" ID="{61133510-7CBB-4FFB-9EC8-1F9B578EFF99}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="single beep" ID="{A2380A4C-80FF-4768-A389-35768686BA45}" ShortID="93539697">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="single beep" ID="{EB0A2437-88DC-408B-95AB-58F9C19016F4}" ShortID="528168672">
+							<Language>SFX</Language>
+							<AudioFile>single beep.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="single beep" ID="{EB0A2437-88DC-408B-95AB-58F9C19016F4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="single go" ID="{7ECE86D1-1418-40CF-99ED-3B7A4F842893}" ShortID="717585685">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="single go" ID="{423D1D08-1C47-4F1B-A273-EDF7360F2FC0}" ShortID="226991367">
+							<Language>SFX</Language>
+							<AudioFile>single go.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="single go" ID="{423D1D08-1C47-4F1B-A273-EDF7360F2FC0}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

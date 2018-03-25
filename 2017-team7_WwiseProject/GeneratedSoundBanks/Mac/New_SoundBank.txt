@@ -1,0 +1,16 @@
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	30078443	Sheep Bleat 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Sheep Bleat 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Sheep Bleat 1		198592
+	117450992	Drift Sound	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Drift Sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Drift Sound		388224
+	209911356	Ready Set Go	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Ready Set Go_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ready Set Go		1058544
+	226991367	single go	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\single go_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\single go		1058544
+	255870224	Boost Sound	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Boost Sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Boost Sound		352992
+	312854248	Horse Whinny 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Horse Whinny 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Horse Whinny 1		374996
+	528168672	single beep	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\single beep_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\single beep		705744
+	627774607	Ready Set Go (Rooster)	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Ready Set Go (Rooster)_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ready Set Go (Rooster)		1102644
+	712917818	Barn Track Theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Barn Track Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Barn Track Theme		21168144
+	753950387	Pig Oink 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Pig Oink 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pig Oink 1		176544
+	858512381	Kart Take Off	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Kart Take Off_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Kart Take Off		1058544
+	955100116	Looping engine	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Looping engine_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Looping engine		705744
+	973345197	Farmula 1 Music Loop 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Farmula 1 Music Loop 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Farmula 1 Music Loop 1		9031872
+	1064298560	Cow Moo 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Cow Moo 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cow Moo 1		352944
+
