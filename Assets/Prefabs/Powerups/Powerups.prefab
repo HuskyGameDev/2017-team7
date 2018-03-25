@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1160076541209440}
+  m_IsPrefabParent: 1
+--- !u!1 &1160076541209440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4015974304536282}
+  - component: {fileID: 114870886462579930}
+  - component: {fileID: 114760690936216672}
+  - component: {fileID: 114283625439103720}
+  - component: {fileID: 114670343865482774}
+  - component: {fileID: 114436796606941420}
+  - component: {fileID: 114816780180507992}
+  - component: {fileID: 114266164351232224}
+  - component: {fileID: 114369401434258778}
+  m_Layer: 0
+  m_Name: Powerups
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4015974304536282
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -348.8379, y: -195.25456, z: 16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114266164351232224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d2ba83ce8b3174d98dc3f5033ce97c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  frog: {fileID: 0}
+--- !u!114 &114283625439103720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3654e8fdf25ab3f45ade9e5ec41ddfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+--- !u!114 &114369401434258778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7856c8e4472d3f459df182eef9a1862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  EelObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &114436796606941420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c64cac8a1bf26f458c41e6e6e7b5119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  useTimeTicks: 300
+--- !u!114 &114670343865482774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f8ee848d6e1b143869fa59aaa0265e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  oil: {fileID: 0}
+--- !u!114 &114760690936216672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709c0598b6adcbe489242b600934677e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+--- !u!114 &114816780180507992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05f3a6c39cb9bd4b8772fb61d92aa12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uses: 1
+  cooldownTicks: 300
+  chicken: {fileID: 0}
+--- !u!114 &114870886462579930
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160076541209440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42197596665222c46a664d45ee5bd888, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
