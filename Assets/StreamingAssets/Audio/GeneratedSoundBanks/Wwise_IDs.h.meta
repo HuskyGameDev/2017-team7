@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h.meta
 guid: bae0f238321c97346a364943905beb0d
 timeCreated: 1519595656
+=======
+guid: d9dba9e320824c14f82c6a4458ddb706
+folderAsset: yes
+timeCreated: 1521160189
+>>>>>>> 7dfbae749fe35ce85f30d358e1bb68d1a7145c22:Assets/Images/Player/Sheepish.meta
 licenseType: Free
 DefaultImporter:
   userData: 

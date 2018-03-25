@@ -6,5 +6,11 @@ AnimatorOverrideController:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Vainglory
-  m_Controller: {fileID: 9100000, guid: ae229ba074c64a249a08811740af24c1, type: 2}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 8e1bee9730619a6489d37f6423ef6315, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d3d812117988ecf418947ada54e8d5f5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a3916631fb3b1fc468f4ad6d6abf3426, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1118e024a18e3704db44132af3bfa988, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e7a64ecadb04de1459a646e428d00b07, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 625fcd172ffd4c8458ced6d50d9287f8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9e5aee576649c2844936c4e5dbcee88d, type: 2}

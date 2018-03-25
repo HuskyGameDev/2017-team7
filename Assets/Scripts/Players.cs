@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Players : MonoBehaviour {
 
@@ -19,22 +20,43 @@ public class Players : MonoBehaviour {
     public PowerupInstantiator powerupInstantiator;
 
     public Player[] players;
-    public RuntimeAnimatorController[] animatorControllers;
+    public RuntimeAnimatorController[] playerControllers;
+    public RuntimeAnimatorController[] cameraControllers2p;
+    public RuntimeAnimatorController[] cameraControllers4p;
 
+    public LapDisplayMaster lapDisplayMaster;
+
+    private int playerCount;
 
     private void Start()
     {
-        for (int i = 0; i < players.Length; i++)
+        playerCount = PlayerData.instance.numPlayers;
+        int index = 0;
+        for (int i = 0; i < PlayerData.instance.playerChars.Length;  i++)
         {
-            int playerChar = PlayerData.playerChars[i];
+            int playerChar = PlayerData.instance.playerChars[i];
+            Debug.Log(playerChar);
             if (playerChar >= 0)
             {
-                players[i].animator.runtimeAnimatorController = animatorControllers[playerChar];
+                Player p = players[i];
+                p.animator.runtimeAnimatorController = playerControllers[playerChar];
+                if (playerCount > 2)
+                {
+                    p.overheadCamera.SetAnimator(cameraControllers4p[i]);
+                }
+                else
+                {
+                    p.overheadCamera.SetAnimator(cameraControllers2p[index]);
+                }
+                index++;
             }
             else
             {
+                
                 players[i].gameObject.SetActive(false);
             }
         }
+
+        PlayerData.instance.players = players;
     }
 }

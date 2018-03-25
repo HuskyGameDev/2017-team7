@@ -11,6 +11,7 @@ public class MinigameTuneEm : Minigame {
 	}
 
 	private List<ScoreKeeping> playerScores = new List<ScoreKeeping>();
+	public Slider slider;
 
 	public void AddPlayer(MinigameTuneEmPlayer p){
 		ScoreKeeping k = new ScoreKeeping();
@@ -19,29 +20,24 @@ public class MinigameTuneEm : Minigame {
 		playerScores.Add(k);
 	}
 
-	public override void Start(){
-		base.Start();
-	}
-
-	public override void InitMinigame(){
-
-	}
-
 	public override void BeginMinigame(){
-		
+		slider.BeginSlider();
+	}
+	/* 
+		return whether to continue or not, true means continue, false means
+		stop; Minigame is over
+	 */
+	public override bool End(){
+		return slider.Done();
 	}
 
-	public void SetPlayerStandings(){
+	public override MinigameData.Standing[] GetPlayerStandings(){
 		/* Sets the player standings. */
 		/*  TODO:
 			This  method may switch to some "Coin Flip" scene, which 
 			will decide a tie between players. Might need some ideas on how this works.
 		*/
-		MinigameData.standings = new int[PlayerData.numPlayers];
-		playerScores.OrderByDescending( x => x.count);
-		for(int i = 0; i < playerScores.Count(); i++){
-			MinigameData.standings[i] = playerScores[i].player.playerNum;
-		}
+		return slider.GetStandings();
 	}
 	
 }

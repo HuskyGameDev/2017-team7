@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    public Animator charAnimator;
+
+    public CameraControl overheadCamera;
+
     public Players players;
 
     [System.NonSerialized]
     public Animator animator;
 
-    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED };
+    public enum STATES { IDLE, MOVE_F, MOVE_B, DECEL, ACCEL, STOP_B, DRIFT, DRAFT, BOOST, BOOST_B, COUNTDOWN, INCAPACITATED, OILED, FLYING };
     public STATES state = STATES.COUNTDOWN;
 
     [System.NonSerialized]
@@ -67,14 +72,11 @@ public class Player : MonoBehaviour
     private PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
 
-    private bool isFlying = false;
-
 
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
         maxSpeed = speedList[(int)boost];
-        animator.SetTrigger("ToMoveF");
         Debug.Log("RESET MAX SPEED");
     }
     IEnumerator endBoostB()
@@ -109,7 +111,7 @@ public class Player : MonoBehaviour
 
     private void checkDrafting()
     {
-        if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+        if (drafting && GetSpeedPercent() > 0.5)
         {
             draftTime++;
             if (draftTime > 125) drafting = false;
@@ -189,22 +191,12 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.BOOST_PAD] = 200;
         speedList[(int) BOOSTS.DRAFT_BOOST] = 175;
         speedList[(int) BOOSTS.DRIFT_BOOST] = 175;
-        //TODO fix this dumb way of getting the list of players
-        if(PlayerData.players == null){
-            PlayerData.players = new Player[4];
-        }
-
-        PlayerData.players[playerNumber - 1] = this;
-
-        if (PlayerData.playerChars[playerNumber - 1] < 0)
-        {
-            gameObject.SetActive(false);
-        }
+        
         
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.SPEEDBOOST, this);
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.EAGLE, this);
         powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
@@ -219,8 +211,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        animator.SetFloat("TurnVal", -ctrls.GetTurn());
-        //Debug.Log(ctrls.GetTurn());
+        
         Vector2 newVel = new Vector2();
 
         Vector2 accel = new Vector2();
@@ -246,12 +237,12 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() < 0)
                 {
                     state = STATES.MOVE_B;
-                    animator.SetTrigger("LT");
+                   
                 }
                 else if (ctrls.GetSpeed() > 0)
                 {
                     state = STATES.MOVE_F;
-                    animator.SetTrigger("RT");
+                   
                 }
 
                 break;
@@ -277,9 +268,9 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() <= 0)
                 {
                     state = STATES.DECEL;
-                    animator.SetTrigger("NT");
+                   
                 }
-                if (drafting && playerRB.velocity.magnitude > (maxSpeed / 2))
+                if (drafting && GetSpeedPercent() > 0.5)
                 {
                     state = STATES.DRAFT;
                 }
@@ -287,7 +278,7 @@ public class Player : MonoBehaviour
                 {
                     driftDir = playerRB.rotation;
                     state = STATES.DRIFT;
-                    animator.SetTrigger("ToDrift");
+                   
                 }
 
                 break;
@@ -312,7 +303,6 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() >= 0)
                 {
                     state = STATES.ACCEL;
-                    animator.SetTrigger("NT");
                 }
 
                 break;
@@ -344,12 +334,10 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() < 0)
                 {
                     state = STATES.MOVE_B;
-                    animator.SetTrigger("LT");
                 }
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05)
                 {
                     state = STATES.IDLE;
-                    animator.SetTrigger("ToIdle");
                 }
                 break;
             case STATES.DECEL:
@@ -376,7 +364,6 @@ public class Player : MonoBehaviour
                 if (ctrls.GetSpeed() > 0)
                 {
                     state = STATES.MOVE_F;
-                    animator.SetTrigger("RT");
                 }
                 //Debug.Log("NewVel mag: " + newVel.magnitude);
                 //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
@@ -384,7 +371,6 @@ public class Player : MonoBehaviour
                 if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0)
                 {
                     state = STATES.STOP_B;
-                    animator.SetTrigger("ToStop");
                 }
 
                 break;
@@ -403,13 +389,11 @@ public class Player : MonoBehaviour
                     //newVel = accel;
                     wait = reverseWait;
                     state = STATES.IDLE;
-                    animator.SetTrigger("ToIdle");
                 }
 
                 if (ctrls.GetSpeed() > 0)
                 {
                     state = STATES.MOVE_F;
-                    animator.SetTrigger("RT");
                 }
 
 
@@ -426,7 +410,6 @@ public class Player : MonoBehaviour
                 if (playerRB.velocity.magnitude < 50)
                 {
                     state = STATES.MOVE_F;
-                    animator.SetTrigger("ToMoveF");
                 }
                 break;
             case STATES.DRIFT:
@@ -446,13 +429,11 @@ public class Player : MonoBehaviour
                     SetBoost(BOOSTS.DRIFT_BOOST, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     state = STATES.BOOST;
-                    animator.SetTrigger("Boosted");
                 }
                 else if (!ctrls.GetB() && driftTime <= 100)
                 {
                     driftTime = 0;
                     state = STATES.MOVE_F;
-                    animator.SetTrigger("ToMoveF");
                 }
                 break;
             case STATES.DRAFT:
@@ -548,6 +529,24 @@ public class Player : MonoBehaviour
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
                 Debug.Log("INCAPACITATED");
                 break;
+
+            case STATES.FLYING:
+
+                //setting newvel direction at unit length
+                setNewVelRotation(ref newVel);
+                //change player turning
+                setRotation(newVel);
+                //setting newvel direction to turning direction
+                setNewVelRotation(ref newVel);
+
+                //accel = newVel * acceleration * ctrls.GetSpeed();
+
+                //set new velocity             
+                newVel = newVel * speedList[(int)BOOSTS.STANDARD] * 1.5f;
+
+                
+
+                break;
         }
 
         playerRB.velocity = newVel;
@@ -557,44 +556,12 @@ public class Player : MonoBehaviour
             DoPowerups();
         }
 
-        //private enum STATES { IDLE, MOVE_F, MOVE_B, DECEL_B, STOP_B, DRIFT, DRAFT, BOOST };
-
-
-
-
-
-
-
-        //checkDrafting();
-       
-       // setRotation(newVel);
-
-        // if(ctrls.GetTurn() != 0 && turnSp != maxTS) Debug.Log("Turn: " + ctrls.GetTurn() + " turnSp: " + turnSp + " maxTS: " + maxTS );
-
-
-        //Vector2 accel = new Vector2();
-        
-       // rotation = Mathf.Deg2Rad * (playerRB.rotation + 90);
-        
-        //newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
-
-        //accel = newVel * acceleration * draftBoost * terrainSpeed * ctrls.GetSpeed();
-
-        // Moving backward
-        //else if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
-        //{
-        //    newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse);
-        //}
-        // Move forward
-        //else
-        //{
-        //    newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed);
-        //    // Check for direction switch
-        //    if (!(Vector2.Angle(playerRB.velocity, newVel) < 90))
-        //    {
-        //        newVel.Set(0, 0);
-        //    }
-        //}
+        animator.SetFloat("TurnVal", -ctrls.GetTurn());
+        charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
+        float animspeed = newVel.magnitude;
+        if (state == STATES.MOVE_B || state == STATES.ACCEL) animspeed = -animspeed;
+        animator.SetFloat("Speed", animspeed);
+        charAnimator.SetFloat("Speed", animspeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -641,17 +608,27 @@ public class Player : MonoBehaviour
 
 
     // Set boolean to show that Eagle powerup is in use
-    public void SetIsFlying(bool b)
+    public void SetPlayerStateFlying(bool b)
     {
-        isFlying = b;
+        if (b == true)
+        {
+            state = STATES.FLYING;
+            gameObject.layer = EaglePowerup.flyingLayer;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 99;        // Makes flyer render above other players
+        }
+        else
+        {
+            state = STATES.MOVE_F;
+            gameObject.layer = 0;                                               // Return to default layer
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;         // Returns to initial order
+        }
     }
 
-
-    // Get boolean status of Eagle powerup
-    public bool GetIsFlying()
+    public STATES GetPlayerState()
     {
-        return isFlying;
+        return state;
     }
+    
 
     public void setDriftDir(float DriftDirection)
     {

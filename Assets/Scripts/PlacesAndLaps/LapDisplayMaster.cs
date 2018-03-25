@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LapDisplayMaster : MonoBehaviour {
-	private Player[] players;
 	private int[] positions;
 	public LapTracker lapTracker;
+    public Players players;
 
 	// Use this for initialization
 	void Start () {
-		players = PlayerData.GetActivePlayers();
 	}
 	
 	// Update is called once per frame
@@ -19,13 +19,15 @@ public class LapDisplayMaster : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		positions = lapTracker.GetPositions(players);
+		Player[] playerArray = (Player[])players.players.Clone();
+		playerArray = playerArray.Where(x => x.isActiveAndEnabled).ToArray<Player>();
+		positions = lapTracker.GetPositions(playerArray);
 	}
 
 	public int GetPlayerPosition(int playerNumber){
 		if(positions == null) return 4;
-		for(int i = 0;i < players.Length; i++){
-			if(players[i].playerNumber == playerNumber){
+		for(int i = 0;i < players.players.Length; i++){
+			if(players.players[i].playerNumber == playerNumber){
 				return positions[i];
 			}
 		}

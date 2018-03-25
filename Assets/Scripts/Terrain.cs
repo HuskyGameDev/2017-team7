@@ -26,11 +26,11 @@ public class Terrain : MonoBehaviour {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         {
             collisions++;
-            if (this.tag == "Grass" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
+            if (this.tag == "Grass")
             {
                 collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
             }
-            else if (this.tag == "Oil" && collision.gameObject.GetComponent<Player>().GetIsFlying() == false)
+            else if (this.tag == "Oil")
             {
                 if (collision.gameObject.GetComponent<Player>().state != Player.STATES.MOVE_B &&
                     collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL && collisions > 0)

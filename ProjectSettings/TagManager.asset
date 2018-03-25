@@ -21,8 +21,8 @@ TagManager:
   - 
   - Map
   - MinimapOnly
-  - 
-  - 
+  - PlayerUI
+  - FullUI
   - 
   - 
   - 
@@ -67,4 +67,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1759010191
+    locked: 0
+  - name: Player UI
+    uniqueID: 2416607647
     locked: 0

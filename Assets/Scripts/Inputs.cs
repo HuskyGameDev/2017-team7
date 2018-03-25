@@ -7,16 +7,22 @@ public class Inputs : MonoBehaviour
 {
 
     private static Controller[] controllers;
-    private int numPlayers = 4;
-
+    private static bool alreadyInitialized = false;
     
 
     // Use this for initialization
     void Awake()
     {
-        controllers = new Controller[numPlayers];
+        if(alreadyInitialized){
+            Debug.LogError("Multiple instance of Inputs detected! Please remove an instance of Inputs.");
+            return;
+        }
 
-        for (int i = 0; i < numPlayers; i++)
+        alreadyInitialized = true;
+        
+        controllers = new Controller[PlayerData.instance.numPlayers];
+
+        for (int i = 0; i < PlayerData.instance.numPlayers; i++)
         {
             controllers[i] = new Controller();
         }
@@ -25,7 +31,7 @@ public class Inputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int player = 0; player < numPlayers; player++)
+        for (int player = 0; player < PlayerData.instance.numPlayers; player++)
         {
             PlayerIndex playerIndex = (PlayerIndex)player;
             GamePadState state = GamePad.GetState(playerIndex);
@@ -66,6 +72,8 @@ public class Inputs : MonoBehaviour
     // Returns Controller object for the given playerNum
     public static Controller GetController(int playerNum)
     {
+        if(playerNum > controllers.Length) return null;
+
         return controllers[playerNum - 1];
     }
 }
