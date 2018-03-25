@@ -12,8 +12,7 @@ public class SpeedBoost : Powerup {
 	public override bool UsePowerup() {
 		if(base.UsePowerup()) {
 			
-			owner.SetBoost(Player.BOOSTS.BOOST_PAD, 1);
-			owner.state = Player.STATES.BOOST;
+			owner.StartBoost(Player.BOOSTS.POWERUP, 1);
 
 			Debug.Log("PLAYER " + owner.playerNumber + " USED SPEEDBOOST, " + uses + " USES ARE LEFT.");
 			return true;
