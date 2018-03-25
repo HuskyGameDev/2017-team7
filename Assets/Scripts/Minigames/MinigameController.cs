@@ -26,7 +26,7 @@ public class MinigameController : MonoBehaviour {
         MinigameData.standings = minigame.GetPlayerStandings();
 
 		if(MinigameData.minigamesLeft > 0){
-			Barnout.ChangeScene(MinigamePool.instance.ChooseMinigame().sceneName);
+			Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName); 
 		}else{
 			/* TODO FIXME This only loads scene 0 after all minigames are done, but should choose a 
 			random racing map from all of the available ones. */

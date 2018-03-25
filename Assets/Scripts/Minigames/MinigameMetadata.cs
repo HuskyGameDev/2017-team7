@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 /* Contains metadata about the minigame. */
-public class MinigameMetadata : MonoBehaviour {
+[System.Serializable]
+public class MinigameMetadata {
+	public string minigameName;
 	public string description;
 	public string sceneName;
 }

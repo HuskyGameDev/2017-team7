@@ -4,17 +4,27 @@ using UnityEngine;
 
 public class MinigamePool {
 
-    public static MinigamePool instance = new MinigamePool();
-    public static void Instantiate()
-    {
-        instance = new MinigamePool();
-    }
+    private static MinigamePool instance = null;
+	/*Only create once. Use ResetPool to reset the pool.*/
+	public static MinigamePool Instance {
+		get {
+			if(instance == null){
+				return new MinigamePool();
+			}
+			return instance;
+		}
+	}
 
     MinigamePool()
     {
+		Debug.Log("Starting up minigame pool...");
         minigames = new List<MinigameMetadata>();
         minigamePool = null;
         current = null;
+		/* 
+		Load defined minigames
+		*/
+		LoadJSON();
     }
 
 
@@ -24,16 +34,7 @@ public class MinigamePool {
 	private List<MinigameMetadata> minigamePool;
 
 	private MinigameMetadata current;
-/*
-	public static void RegisterAllMinigames(){
-		minigames.Add(new MinigameTuneEm());
-		//TODO put extra minigames here
-	}
 
-	public static void RegisterMinigame(MinigameMetadata m){
-		minigames.Add(m);
-	}
- */
 	public void ResetPool(){
 		minigamePool = new List<MinigameMetadata>(minigames);
 		/* TODO: make this adjustable (maybe) */
@@ -50,6 +51,17 @@ public class MinigamePool {
 
 	public MinigameMetadata GetCurrentMinigameMetadata(){
 		return current;
+	}
+
+	private void LoadJSON(){
+		Object[] resources = Resources.LoadAll("MinigameMetadata", typeof(TextAsset));
+		
+		Debug.Log("Found " + resources.Length + " resources.");
+
+		foreach(TextAsset resource in resources){
+			minigames.Add(JsonUtility.FromJson<MinigameMetadata>(resource.text));
+			Debug.Log("Loaded Minigame " + minigames[minigames.Count - 1].description);
+		}
 	}
 
 }

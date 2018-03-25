@@ -9,7 +9,7 @@ public abstract class Minigame : MonoBehaviour {
 
     MinigameMetadata metadata;
     public void Awake(){
-        metadata = MinigamePool.instance.GetCurrentMinigameMetadata();
+        metadata = MinigamePool.Instance.GetCurrentMinigameMetadata();
         GetComponent<MinigameController>().SetMinigame(this);
     }
     
