@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" SchemaVersion="85">
+	<AudioObjects>
+		<WorkUnit Name="UISounds" ID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="joystick toggle" ID="{BC3BD712-CE18-41D9-9B55-4631C0436BA4}" ShortID="276221390">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="joystick toggle" ID="{BEF411FA-6A8F-4282-9864-4E4233C58052}" ShortID="524106578">
+							<Language>SFX</Language>
+							<AudioFile>joystick toggle.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="joystick toggle" ID="{BEF411FA-6A8F-4282-9864-4E4233C58052}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Menu Select Sound" ID="{71BE54D8-2869-412E-8F0A-83C4C38FD3A6}" ShortID="586334951">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Menu Select Sound" ID="{B21E741F-4C98-4B3E-B8F0-AE5B3245A989}" ShortID="813472014">
+							<Language>SFX</Language>
+							<AudioFile>Menu Select Sound.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Menu Select Sound" ID="{B21E741F-4C98-4B3E-B8F0-AE5B3245A989}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

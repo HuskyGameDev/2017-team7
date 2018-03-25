@@ -6,6 +6,8 @@ using XInputDotNetPure;
 
 public class MainMenuHandler : MonoBehaviour {
 
+    public MM_AudioMaster audioMaster;
+
     public MenuButton[] buttons;
     private int currButton = 0;
 
@@ -57,6 +59,7 @@ public class MainMenuHandler : MonoBehaviour {
             if (currButton >= buttons.Length) currButton = 0;
             buttons[currButton].ToHover();
             axisBuffer = false;
+            audioMaster.PlayToggle();
         }
         else if (state.ThumbSticks.Left.Y > 0 && axisBuffer)
         {
@@ -65,10 +68,12 @@ public class MainMenuHandler : MonoBehaviour {
             if (currButton < 0) currButton = buttons.Length - 1;
             buttons[currButton].ToHover();
             axisBuffer = false;
+            audioMaster.PlayToggle();
         }
         if (state.Buttons.A == ButtonState.Pressed && prevState.Buttons.A == ButtonState.Released)
         {
             buttons[currButton].ActivateButton();
+            audioMaster.PlaySelect();
         }
         
     }
