@@ -28,6 +28,12 @@ public class Players : MonoBehaviour {
 
     private int playerCount;
 
+    public int maxCamZoom2;
+    public int minCamZoom2;
+    public int maxCamZoom4;
+    public int minCamZoom4;
+
+
     private void Start()
     {
         playerCount = PlayerData.instance.numPlayers;
