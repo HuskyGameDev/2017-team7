@@ -38,6 +38,10 @@ public class PowerupInstantiator : MonoBehaviour {
                 p = Instantiate(GetComponent<FrogPowerup>());
                 p.SetOwner(owner);
                 return p;
+            case PowerupType.CHICKEN:
+                p = Instantiate(GetComponent<ChickenPowerup>());
+                p.SetOwner(owner);
+                return p;
             default:
 				p = Instantiate(GetComponent<TestPowerup>()); 
 				p.SetOwner(owner);
