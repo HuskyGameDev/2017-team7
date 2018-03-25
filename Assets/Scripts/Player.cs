@@ -72,11 +72,31 @@ public class Player : MonoBehaviour
     private PowerupInstantiator powerupInstatiatior;
     private Powerup[] powerups;
 
+<<<<<<< HEAD
+
+    IEnumerator endBoost(float time)
+    {
+        yield return new WaitForSeconds(time);
+        maxSpeed = speedList[(int)boost];
+        Debug.Log("RESET MAX SPEED");
+    }
+    IEnumerator endBoostB()
+    {
+        yield return new WaitForSeconds(1);
+        maxReverse = 60;
+        Debug.Log("RESET MAX SPEED");
+=======
     private bool isFlying = false;
 
     private Coroutine lastIncapCoroutine = null;
     private Coroutine lastBoostFCoroutine = null;
     private Coroutine lastBoostBCoroutine = null;
+
+>>>>>>> Alex-branch
+
+ 
+
+    
 
     private void initValues()
     {
@@ -184,7 +204,11 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
+<<<<<<< HEAD
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.EAGLE, this);
+=======
         powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.CHICKEN, this);
+>>>>>>> Alex-branch
         powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
@@ -415,7 +439,11 @@ public class Player : MonoBehaviour
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
+<<<<<<< HEAD
+                    state = STATES.BOOST;
+=======
                     
+>>>>>>> Alex-branch
                 }
                 else if (!ctrls.GetB() && driftTime <= 100)
                 {
@@ -489,6 +517,18 @@ public class Player : MonoBehaviour
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
 
                 break;
+<<<<<<< HEAD
+=======
+        }
+
+        playerRB.velocity = newVel;
+
+        if (state != STATES.COUNTDOWN)
+        {
+            DoPowerups();
+        }
+
+>>>>>>> Alex-branch
 
             case STATES.FLYING:
 
@@ -507,7 +547,6 @@ public class Player : MonoBehaviour
                 
 
                 break;
-
         }
 
         playerRB.velocity = newVel;
