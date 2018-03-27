@@ -17,11 +17,21 @@ public abstract class Minigame : MonoBehaviour {
     Implement this with the initialization code for your minigame.
     Minigame starts when this is called.
      */
-    public abstract void BeginMinigame();
-    
+    public void BeginMinigame()
+    {
+        foreach (TuneEmPlayer p in players)
+        {
+            p.PlayerInit();
+        }
+        InitMinigame();
+    }
+
+    protected abstract void InitMinigame();
     
     /* returns whether the minigame has ended or not. */
     public abstract bool End();
+
+    public abstract void Tick();
 
     /* Sets MinigameData.standings */
     public virtual MinigameData.Standing[] GetPlayerStandings(){
@@ -35,6 +45,7 @@ public abstract class Minigame : MonoBehaviour {
             standing.standing = i + 1;
             standings.Add(standing);
         }
+        foreach (MinigameData.Standing s in standings) Debug.Log(s.playerNumber);
         return standings.ToArray();
 	}
 

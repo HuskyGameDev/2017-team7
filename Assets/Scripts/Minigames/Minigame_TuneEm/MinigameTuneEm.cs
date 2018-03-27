@@ -20,7 +20,7 @@ public class MinigameTuneEm : Minigame {
 		playerScores.Add(k);
 	}
 
-	public override void BeginMinigame(){
+	protected override void InitMinigame(){
 		slider.BeginSlider();
 	}
 	/* 
@@ -39,5 +39,5 @@ public class MinigameTuneEm : Minigame {
 		*/
 		return slider.GetStandings();
 	}
-	
+    public override void Tick() { }
 }

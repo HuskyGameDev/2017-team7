@@ -5,15 +5,20 @@ using UnityEngine;
 public class TuneEmBG : MonoBehaviour {
 
     public Animator[] panels;
-
+    public TuneEmPlayer player;
+    public GameObject NotPlaying;
 	// Use this for initialization
-	public void Init () {
+	public void Start () {
         int startVal = 3;
         foreach (Animator panel in panels)
         {
-            panel.SetInteger("BeginNum", startVal);
-            startVal--;
+            if (true)
+            {
+                panel.SetInteger("BeginNum", startVal);
+                startVal--;
+            }
         }
+        NotPlaying.SetActive(!player.IsActive());
 	}
 	
     public void Increment()

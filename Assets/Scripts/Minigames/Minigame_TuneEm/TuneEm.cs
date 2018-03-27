@@ -11,9 +11,13 @@ public class TuneEm : Minigame {
     float step = 0.0025f;
     bool done = false;
 
-    public override void BeginMinigame()
+    public float stepIncr;
+
+    bool started = false;
+
+    protected override void InitMinigame()
     {
-        
+        started = true;
     }
 
     public override bool End()
@@ -25,17 +29,16 @@ public class TuneEm : Minigame {
     void Start () {
         ResetRound();
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
+
+    public override void Tick()
+    {
         linePos += step;
         if (linePos >= 1)
         {
             ElimUnpressed();
             ResetRound();
         }
-        //Debug.Log(linePos);
-	}
+    }
 
     public bool InBounds()
     {
@@ -59,7 +62,7 @@ public class TuneEm : Minigame {
         //Debug.Log(highBound - lowBound);
 
         linePos = 0;
-        step += 0.00015f;// = Mathf.Min(0.01f, step * 1.05f); //increase step speed
+        step += stepIncr;// = Mathf.Min(0.01f, step * 1.05f); //increase step speed
         foreach(TuneEmPlayer p in players)
         {
             p.ResetPlayer();

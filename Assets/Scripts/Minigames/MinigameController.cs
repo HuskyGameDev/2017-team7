@@ -3,21 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MinigameController : MonoBehaviour {
-	Minigame minigame;
+    public MinigameIntro intro;
+    Minigame minigame;
 	private bool minigameStarted;
+    public bool skipIntro;
 	void Start () {
-		/*minigame.InitMinigame();*/
+		if (skipIntro)
+        {
+            intro.GetComponent<Animator>().SetTrigger("SkipIntro");
+            StartMinigame();
+        }
 	}
 	
 	void FixedUpdate () {
-		if(!minigameStarted){
-			minigameStarted = true;
-			minigame.BeginMinigame();
+		if(intro.IsDone() && !minigameStarted){
+            StartMinigame();
 		}
+        if (minigameStarted)
+        {
+            minigame.Tick();
+        }
 		if(minigame.End()){
 			EndCode();
 		}
 	}
+
+    private void StartMinigame()
+    {
+        minigameStarted = true;
+		minigame.BeginMinigame();
+    }
 	/* Ending code, switches to next scene; allows users to pick powerups maybe? */
 	void EndCode(){
         /* TODO: Probably the incorrect thing to do, but it's good for now 

@@ -16,16 +16,15 @@ public class TuneEmPlayer : MinigamePlayer {
     Animator animator;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Init () {
         animator = GetComponent<Animator>();
         animator.SetBool("IsActive", isActive);
-        bg.Init();
+        //bg.Init(isActive);
 	}
 	
 	// Update is called once per frame
 	protected override void Tick ()
     {
-        //if ()
         if (!pressed && !failed)
         {
             if (controller.GetA())
@@ -47,17 +46,16 @@ public class TuneEmPlayer : MinigamePlayer {
 
     void Success()
     {
-        Debug.Log("Player " + playerNum + " got it!");
         animator.SetTrigger("Crank");
         bg.Increment();
         score++;
     }
     void Fail()
     {
-        Debug.Log("Player " + playerNum + " failed");
         failed = true;
         if (pressed) score += minigame.GetCloseScore();
         animator.SetTrigger("Fail");
+        Debug.Log("Player " + playerNum + " failed: Score: " + score);
     }
 
     public void ElimIfUnpressed()

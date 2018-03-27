@@ -8,8 +8,9 @@ public class MinigamePumpItUp : Minigame {
     public float timeGiven;
     bool done = false;
     Coroutine timer;
+    bool begun = false;
 
-    public override void BeginMinigame()
+    protected override void InitMinigame()
     {
         timer = StartCoroutine(BeginTimer());
     }
@@ -21,7 +22,7 @@ public class MinigamePumpItUp : Minigame {
     }
 	
 	
-	void FixedUpdate ()
+	public override void Tick ()
     {
         if (!done)
         {
