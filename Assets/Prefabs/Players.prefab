@@ -218,7 +218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4767098859910694}
   - component: {fileID: 61716503387612118}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MiddleRectangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4042736950291680}
   - component: {fileID: 61204365823119482}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UpperDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4166430007297878}
   - component: {fileID: 61896222078258014}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MiddleRectangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4848684211469282}
   - component: {fileID: 61400053873067154}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UpperDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4425308576043178}
   - component: {fileID: 61856923354863152}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UpperDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444789361180254}
   - component: {fileID: 61763689729622098}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LowerDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1291,7 +1291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4446500872656962}
   - component: {fileID: 61901987425577502}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MiddleRectangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1359,7 +1359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4121866433473442}
   - component: {fileID: 61081113577428244}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LowerDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1393,7 +1393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4077208570465988}
   - component: {fileID: 61292144529193124}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LowerDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1409,7 +1409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4194168278909558}
   - component: {fileID: 61493903003534624}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: UpperDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1442,7 +1442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4078170177785308}
   - component: {fileID: 61965244135539578}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LowerDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447976448768518}
   - component: {fileID: 61435466841116426}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: MiddleRectangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
