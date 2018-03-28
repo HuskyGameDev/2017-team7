@@ -20,7 +20,7 @@ public class TuneEm : Minigame {
         started = true;
     }
 
-    public override bool End()
+    public override bool HasEnded()
     {
         return done;
     }
@@ -37,6 +37,7 @@ public class TuneEm : Minigame {
         {
             ElimUnpressed();
             ResetRound();
+            CheckIfDone();
         }
     }
 
@@ -74,7 +75,12 @@ public class TuneEm : Minigame {
 
     void CheckIfDone()
     {
-        //foreach()
+        bool check = true;
+        foreach(TuneEmPlayer p in players)
+        {
+            if (p.IsActive() && !p.HasFailed()) check = false;
+        }
+        done = check;
     }
 
     public float GetCloseScore()

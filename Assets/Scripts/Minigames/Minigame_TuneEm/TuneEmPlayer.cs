@@ -44,6 +44,12 @@ public class TuneEmPlayer : MinigamePlayer {
         
 	}
 
+    protected override void OnGameDone()
+    {
+        
+    }
+
+
     void Success()
     {
         animator.SetTrigger("Crank");

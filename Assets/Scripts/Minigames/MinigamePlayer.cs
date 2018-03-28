@@ -9,6 +9,7 @@ public abstract class MinigamePlayer : MonoBehaviour {
     protected bool isActive;
     protected bool initialized = false;
     protected Controller controller;
+    protected bool finished;
 
     public virtual void PlayerInit()
     {
@@ -21,7 +22,11 @@ public abstract class MinigamePlayer : MonoBehaviour {
 
     public virtual int CompareScore(MinigamePlayer p)
     {
-        return isActive? score.CompareTo(p.score) : -1;
+        if (isActive)
+        {
+            return p.IsActive() ? -score.CompareTo(p.score) : -1;
+        }
+        return 1;
     }
 
     public float GetScore()
@@ -39,9 +44,16 @@ public abstract class MinigamePlayer : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (isActive && initialized) Tick();
+        if (isActive && initialized && controller != null && !finished) Tick();
     }
 
     public bool IsActive() { return isActive; }
+
+    public void Finish() {
+        finished = true;
+        if (isActive) OnGameDone();
+    }
+
+    protected abstract void OnGameDone();
 
 }

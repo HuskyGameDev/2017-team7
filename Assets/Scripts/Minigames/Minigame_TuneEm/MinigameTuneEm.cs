@@ -27,7 +27,7 @@ public class MinigameTuneEm : Minigame {
 		return whether to continue or not, true means continue, false means
 		stop; Minigame is over
 	 */
-	public override bool End(){
+	public override bool HasEnded(){
 		return slider.Done();
 	}
 

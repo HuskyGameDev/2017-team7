@@ -6,14 +6,15 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
 
     bool up = false;
     Animator animator;
-	// Use this for initialization
+	
 	protected override void Init () {
         animator = GetComponent<Animator>();
+        if (isActive) animator.SetTrigger("ToActive");
 	}
 	
-	// Update is called once per frame
 	protected override void Tick ()
-    { 
+    {
+        
         if (up)
         {
             if (controller.GetLsYaxis() < -0.75)
@@ -27,10 +28,16 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
         {
             if (controller.GetLsYaxis() > 0.75)
             {
+                Debug.Log("Going Up");
                 up = true;
                 animator.SetBool("Up", up);
             }
         }
         
 	}
+
+    protected override void OnGameDone()
+    {
+        animator.SetTrigger("Finish");
+    }
 }

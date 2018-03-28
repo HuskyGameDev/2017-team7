@@ -19,7 +19,7 @@ public abstract class Minigame : MonoBehaviour {
      */
     public void BeginMinigame()
     {
-        foreach (TuneEmPlayer p in players)
+        foreach (MinigamePlayer p in players)
         {
             p.PlayerInit();
         }
@@ -29,7 +29,7 @@ public abstract class Minigame : MonoBehaviour {
     protected abstract void InitMinigame();
     
     /* returns whether the minigame has ended or not. */
-    public abstract bool End();
+    public abstract bool HasEnded();
 
     public abstract void Tick();
 
@@ -45,8 +45,16 @@ public abstract class Minigame : MonoBehaviour {
             standing.standing = i + 1;
             standings.Add(standing);
         }
-        foreach (MinigameData.Standing s in standings) Debug.Log(s.playerNumber);
+        foreach (MinigameData.Standing s in standings) Debug.Log("Playernum: " + s.playerNumber + " Standing: " + s.standing);
         return standings.ToArray();
 	}
+
+    public void Finish()
+    {
+        foreach (MinigamePlayer p in players)
+        {
+            p.Finish();
+        }
+    }
 
 }

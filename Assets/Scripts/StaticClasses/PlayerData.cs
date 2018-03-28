@@ -18,7 +18,7 @@ public class PlayerData
         numPlayers = playerChars.Count(x => x >= 0);
     }
     PlayerData() 
-        : this( new int[] { 0,3, -1, -1 }) {
+        : this( new int[] { 1,2, -1, -1 }) {
 
     }
 

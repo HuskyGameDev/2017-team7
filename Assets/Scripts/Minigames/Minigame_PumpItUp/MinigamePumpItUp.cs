@@ -15,10 +15,10 @@ public class MinigamePumpItUp : Minigame {
         timer = StartCoroutine(BeginTimer());
     }
 
-    public override bool End()
+    public override bool HasEnded()
     {
         //UNCOMMENT WHEN READY
-        return false;// done; 
+        return done; 
     }
 	
 	
@@ -31,7 +31,7 @@ public class MinigamePumpItUp : Minigame {
                 if (p.GetScore() >= pumpsNeeded)
                 {
                     StopCoroutine(timer);
-                    Finish();
+                    Done();
                 }
             }
         }
@@ -42,11 +42,12 @@ public class MinigamePumpItUp : Minigame {
     {
         yield return new WaitForSecondsRealtime(timeGiven);
         Debug.Log("Timer done");
-        Finish();
+        Done();
     }
 
-    void Finish()
+    void Done()
     {
+        Debug.Log("Finished");
         done = true;
     }
 }

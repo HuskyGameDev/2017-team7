@@ -7,6 +7,7 @@ public class MinigameController : MonoBehaviour {
     Minigame minigame;
 	private bool minigameStarted;
     public bool skipIntro;
+    private bool ended = false;
 	void Start () {
 		if (skipIntro)
         {
@@ -23,7 +24,7 @@ public class MinigameController : MonoBehaviour {
         {
             minigame.Tick();
         }
-		if(minigame.End()){
+		if(minigame.HasEnded() && !ended){
 			EndCode();
 		}
 	}
@@ -38,15 +39,19 @@ public class MinigameController : MonoBehaviour {
         /* TODO: Probably the incorrect thing to do, but it's good for now 
 		  (Don't immediately load another minigame)
 		*/
+        ended = true;
+        minigame.Finish();
+        intro.StartOutro();
+
         MinigameData.standings = minigame.GetPlayerStandings();
 
-		if(MinigameData.minigamesLeft > 0){
-			Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName); 
-		}else{
-			/* TODO FIXME This only loads scene 0 after all minigames are done, but should choose a 
-			random racing map from all of the available ones. */
-			Barnout.ChangeScene("MainMenu");
-		}
+		//if(MinigameData.minigamesLeft > 0){
+		//	Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName); 
+		//}else{
+		//	/* TODO FIXME This only loads scene 0 after all minigames are done, but should choose a 
+		//	random racing map from all of the available ones. */
+		//	Barnout.ChangeScene("MainMenu");
+		//}
 	}
 
 	public void SetMinigame(Minigame m){
