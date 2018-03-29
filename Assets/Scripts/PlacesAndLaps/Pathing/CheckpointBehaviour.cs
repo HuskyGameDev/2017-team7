@@ -16,11 +16,9 @@ public class CheckpointBehaviour : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other){
-		Player p = other.gameObject.GetComponent<Player>();
-		
+		Player p = other.GetComponentInParent<Player>();
 		if(p == null) return;
 
-		//Debug.Log("Entering checkpoint");
 		lapTracker.PlayerCrossed(p.playerNumber, checkpointNumber);
 	}
 }

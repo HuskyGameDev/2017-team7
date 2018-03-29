@@ -11,7 +11,7 @@ public abstract class MinigamePlayer : MonoBehaviour {
     protected Controller controller;
     protected bool finished;
 
-    public virtual void PlayerInit()
+    public void PlayerInit()
     {
         initialized = true;
         controller = Inputs.GetController(playerNum);
