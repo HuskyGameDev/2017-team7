@@ -448,7 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 123744152}
-  numSlices: 6
+  numSlices: 4
   maxTime: 10
   maxCharges: 10
   minMagnitude: 0.5
