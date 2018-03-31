@@ -25,6 +25,7 @@ public class MinigamePool {
 		Load defined minigames
 		*/
 		LoadJSON();
+        ResetPool();
     }
 
 
