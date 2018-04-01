@@ -466,7 +466,6 @@ public class Player : MonoBehaviour
 
                 //set new velocity             
                 newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
-                Debug.Log(boostTime);
 
                 if (ctrls.GetA())
                 {
@@ -564,7 +563,6 @@ public class Player : MonoBehaviour
 
     public void StartBoost(BOOSTS b, float btime)
     {
-        Debug.Log("STARTING NEW BOOST");
         state = STATES.BOOST;
         maxSpeed = speedList[(int)b];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
@@ -590,11 +588,9 @@ public class Player : MonoBehaviour
     IEnumerator endBoost(float time)
     {
         yield return new WaitForSeconds(time);
-        Debug.Log("STOPPING BOOST");
         maxSpeed = speedList[(int) BOOSTS.STANDARD];
         state = STATES.MOVE_F;
         lastBoostFCoroutine = null;
-        Debug.Log("RESET MAX SPEED");
     }
     IEnumerator endBoostB(float time)
     {
@@ -602,7 +598,6 @@ public class Player : MonoBehaviour
         maxReverse = speedList[(int) BOOSTS.STANDARD_BACK];
         state = STATES.MOVE_B;
         lastBoostBCoroutine = null;
-        Debug.Log("RESET MAX SPEED");
     }
 
     public void StartIncap(float itime)
@@ -627,7 +622,6 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         state = STATES.IDLE;
-        Debug.Log("SENT TO IDLE");
     }
 
     public void DoPowerups(){

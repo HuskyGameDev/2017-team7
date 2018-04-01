@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class FrogObject : Projectile {
 
+    public bool toDestroy = false;
+
 	// Use this for initialization
 	void Start () {
-		
+		if (toDestroy)
+        {
+            Destroy(gameObject, 10);
+        }
 	}
 	
 	// Update is called once per frame
