@@ -15,7 +15,7 @@ public class MinigameChargePlayer : MinigamePlayer {
 
     protected override void OnGameDone()
     {
-        
+        score += GetPartialScore();
     }
 
     protected override void Tick()
@@ -54,6 +54,11 @@ public class MinigameChargePlayer : MinigamePlayer {
 		score++;
 		Debug.Log("Player " + playerNum + " got a crank. " + score );
 	}
+
+	private float GetPartialScore(){
+		return curSlice/minigame.numSlices;
+	}
+
 	//Takes in an angle, and spits it out, normalized.
 	//Normalized, in this case, means to place it on the interval of
 	//[0, 2*Mathf.PI)
