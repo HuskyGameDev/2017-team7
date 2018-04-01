@@ -16,13 +16,13 @@ public class FrogObject : Projectile {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)) && collision.gameObject.tag == "Player")
+        if (collision.tag == "PlayerWallCollider")
         {
             collisions++;
             Debug.Log("Collisions: " + collision.ToString());
             if (collisions > 0)
             {
-                collision.gameObject.GetComponent<Player>().StartIncap(2);
+                collision.GetComponentInParent<Player>().StartIncap(2);
                 Destroy(gameObject);
             }
         }

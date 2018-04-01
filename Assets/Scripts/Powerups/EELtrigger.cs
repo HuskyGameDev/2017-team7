@@ -15,8 +15,8 @@ public class EELtrigger : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.GetType().Equals(typeof(CapsuleCollider2D))) {
-            collision.gameObject.GetComponent<Player>().StartIncap(2);
+		if (collision.tag == "PlayerWallCollider") {
+            collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
 		}
 
 		if (collision.GetType().Equals(typeof(CircleCollider2D))) {

@@ -16,6 +16,8 @@ public class CheckpointBehaviour : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter2D(Collider2D other){
+		if(other.tag != "PlayerWallCollider") return;
+
 		Player p = other.GetComponentInParent<Player>();
 		if(p == null) return;
 

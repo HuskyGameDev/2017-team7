@@ -240,7 +240,9 @@ public class LapTracker : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Player p = other.gameObject.GetComponent<Player>();
+        if(other.tag != "PlayerWallCollider") return;
+
+        Player p = other.gameObject.GetComponentInParent<Player>();
 
         if (p == null) return;
 

@@ -24,10 +24,10 @@ public class ChickenObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)) && collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Player>() != owner)
+        if (collision.tag == "PlayerWallCollider"  && collision.gameObject.GetComponentInParent<Player>() != owner)
         {
             collisions++;
-            eggSplats[collision.gameObject.GetComponent<Player>().playerNumber - 1].enableSplat(2f);
+            eggSplats[collision.gameObject.GetComponentInParent<Player>().playerNumber - 1].enableSplat(2f);
             if (collisions >= 1)
                 Destroy(gameObject);
         }
