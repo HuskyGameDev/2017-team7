@@ -4293,7 +4293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50879ffb9b3861d4ead0f5003d42cb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charAnimator: {fileID: 0}
+  charAnimator: {fileID: 95886989722730252}
   overheadCamera: {fileID: 114364945992877628}
   players: {fileID: 114631910059217500}
   state: 10
