@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 61899857922403568}
   m_Layer: 14
   m_Name: UpperDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 61716503387612118}
   m_Layer: 14
   m_Name: MiddleRectangle
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 61204365823119482}
   m_Layer: 14
   m_Name: UpperDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -855,7 +855,7 @@ GameObject:
   - component: {fileID: 61808660179356368}
   m_Layer: 14
   m_Name: MiddleRectangle
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 61896222078258014}
   m_Layer: 14
   m_Name: MiddleRectangle
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 61093119801210304}
   m_Layer: 14
   m_Name: LowerDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 61400053873067154}
   m_Layer: 14
   m_Name: UpperDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1181,7 +1181,7 @@ GameObject:
   - component: {fileID: 61856923354863152}
   m_Layer: 14
   m_Name: UpperDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 61763689729622098}
   m_Layer: 14
   m_Name: LowerDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1537,7 +1537,7 @@ GameObject:
   - component: {fileID: 61081113577428244}
   m_Layer: 14
   m_Name: LowerDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1571,7 +1571,7 @@ GameObject:
   - component: {fileID: 61292144529193124}
   m_Layer: 14
   m_Name: LowerDiamond
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1624,7 +1624,7 @@ GameObject:
   - component: {fileID: 61435466841116426}
   m_Layer: 14
   m_Name: MiddleRectangle
-  m_TagString: Untagged
+  m_TagString: PlayerDiamondCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

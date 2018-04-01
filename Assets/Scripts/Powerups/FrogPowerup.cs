@@ -9,7 +9,7 @@ public class FrogPowerup : Powerup {
 
 	// Use this for initialization
 	void Start () {
-        uses = 103;
+        uses = 10;
         currentCooldown = 0;
     }
 
@@ -24,6 +24,7 @@ public class FrogPowerup : Powerup {
             newFrog.transform.SetPositionAndRotation(new Vector3(owner.playerRB.position.x, owner.playerRB.position.y, 0), owner.playerRB.transform.rotation);
             newFrog.rotation = owner.playerRB.rotation;
             newFrog.projectileRB.velocity = owner.transform.up * 300;
+            newFrog.owner = owner;
             newFrog.toDestroy = true;
 
             Debug.Log("PLAYER " + owner.playerNumber + " USED FROG POWERUP, " + uses + " USES ARE LEFT.");

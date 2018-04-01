@@ -5,6 +5,7 @@ using UnityEngine;
 public class FrogObject : Projectile {
 
     public bool toDestroy = false;
+    public Player owner;
 
 	// Use this for initialization
 	void Start () {
@@ -21,24 +22,16 @@ public class FrogObject : Projectile {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerWallCollider")
+        if (collision.tag == "PlayerWallCollider" && collision.gameObject.GetComponentInParent<Player>() != owner)
         {
             if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
             {
-
-                collisions++;
-                Debug.Log("Collisions: " + collision.ToString());
-                if (collisions > 0)
-                {
-                    collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
-                    Destroy(gameObject);
-                }
-
+                collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
+                Destroy(gameObject);
             }
         }
         else if (collision.gameObject.tag == "wall")
         {
-            Debug.Log(this.ToString() + " Hit wall");
             Destroy(gameObject);
         }
     }

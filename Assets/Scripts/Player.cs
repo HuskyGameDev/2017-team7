@@ -79,6 +79,9 @@ public class Player : MonoBehaviour
     private Coroutine lastBoostFCoroutine = null;
     private Coroutine lastBoostBCoroutine = null;
 
+    private Component[] boxes;
+    private Component[] caps;
+
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -190,6 +193,8 @@ public class Player : MonoBehaviour
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
 
+        boxes = gameObject.GetComponentsInChildren<BoxCollider2D>();
+        caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -605,6 +610,7 @@ public class Player : MonoBehaviour
         state = STATES.INCAPACITATED;
         maxSpeed = speedList[(int)BOOSTS.STANDARD];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
+        setGhosted(true);
 
         //Stop any boost coroutines
         if (lastBoostFCoroutine != null)
@@ -621,6 +627,7 @@ public class Player : MonoBehaviour
     IEnumerator endIncapacitated(float time)
     {
         yield return new WaitForSeconds(time);
+        setGhosted(false);
         state = STATES.IDLE;
     }
 
@@ -682,13 +689,45 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void setGhosted(bool set)
+    {
+        if (set)
+        {
+            for (int i = 0; i < boxes.Length; i++)
+            {
+                boxes[i].gameObject.layer = ghostLayer;
+            }
+            for (int i = 0; i < caps.Length; i++)
+            {
+                caps[i].gameObject.layer = ghostLayer;
+            }
+
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";                  // Makes flyer render above other players
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";
+
+            SetTransparency(true);
+        }
+        else
+        {
+            for (int i = 0; i < boxes.Length; i++)
+            {
+                boxes[i].gameObject.layer = 0;
+            }
+            for (int i = 0; i < caps.Length; i++)
+            {
+                caps[i].gameObject.layer = 0;
+            }
+
+            gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";                  // Makes flyer render above other players
+            charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";
+
+            SetTransparency(false);
+        }
+    }
 
     public void SetFinished()
     {
         finished = true;
-        gameObject.layer = ghostLayer;
-        gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";                  // Makes flyer render above other players
-        charAnimator.gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";
-        SetTransparency(true);
+        setGhosted(true);
     }
 }
