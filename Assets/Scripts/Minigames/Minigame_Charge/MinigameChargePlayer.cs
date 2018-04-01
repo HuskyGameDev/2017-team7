@@ -20,7 +20,11 @@ public class MinigameChargePlayer : MinigamePlayer {
 
     protected override void Tick()
     {
+		//We need to invert the X axis, for whatever reason.
 		CheckSlice(-controller.GetLsXaxis(), controller.GetLsYaxis());
+		if(score >= minigame.maxCharges){
+			minigame.End();
+		}
     }
 
 	//Check if the slice is new, increment it if it's the succesor slice, if it's now 0, call Crank 
@@ -34,8 +38,9 @@ public class MinigameChargePlayer : MinigamePlayer {
 
 		if(Mathf.Abs(Mathf.DeltaAngle(curAngle, nextSliceMidAngle)) < (angleBetweenSlices / 2) &&
 			curMagnitude >= minigame.minMagnitude){
-
+			//Increment slice. Should also (possibly)trigger the players arm movement later.
 			curSlice++;
+
 			if(curSlice == minigame.numSlices){
 				curSlice = 0;
 				Crank();

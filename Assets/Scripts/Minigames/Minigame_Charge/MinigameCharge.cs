@@ -8,10 +8,13 @@ public class MinigameCharge : Minigame {
 	public float maxTime;
 	public int maxCharges;
 	public float minMagnitude;
+    private bool isDone = false;
 
+    IEnumerator timer;
     protected override void InitMinigame()
     {
-
+        timer = StartTimer();
+        StartCoroutine(timer);
     }
 
     public override void Tick()
@@ -21,7 +24,17 @@ public class MinigameCharge : Minigame {
 
     public override bool HasEnded()
     {
-    	return false;
+    	return isDone;
+    }
+
+    IEnumerator StartTimer(){
+        yield return new WaitForSecondsRealtime(maxTime);
+        End();
+    }
+
+    public void End(){
+        StopCoroutine(timer);
+        isDone = true;
     }
 
 }

@@ -449,7 +449,7 @@ MonoBehaviour:
   players:
   - {fileID: 123744152}
   numSlices: 4
-  maxTime: 10
+  maxTime: 5
   maxCharges: 10
   minMagnitude: 0.5
 --- !u!1001 &2006670142
