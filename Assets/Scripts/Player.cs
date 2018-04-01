@@ -565,7 +565,6 @@ public class Player : MonoBehaviour
     public void StartBoost(BOOSTS b, float btime)
     {
         Debug.Log("STARTING NEW BOOST");
-        animator.SetTrigger("Boosted");
         state = STATES.BOOST;
         maxSpeed = speedList[(int)b];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
@@ -593,7 +592,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(time);
         Debug.Log("STOPPING BOOST");
         maxSpeed = speedList[(int) BOOSTS.STANDARD];
-        animator.SetTrigger("ToMoveF");
         state = STATES.MOVE_F;
         lastBoostFCoroutine = null;
         Debug.Log("RESET MAX SPEED");

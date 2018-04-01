@@ -22,18 +22,18 @@ public class PufferObject : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)) && collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Player>() != owner)
+        if (collision.tag == "PlayerWallCollider" && collision.gameObject.GetComponentInParent<Player>() != owner)
         {
             collisions++;
 
             hitColliders = Physics2D.OverlapCircleAll(this.transform.position, 30);
             for (int i = 0; i < hitColliders.Length; i++)
             {
-                if (hitColliders[i].GetType().Equals(typeof(CapsuleCollider2D)))
+                if (hitColliders[i].tag == "PlayerWallCollider")
                 {
-                    if (hitColliders[i].gameObject.GetComponent<Player>().state != Player.STATES.FLYING)
+                    if (hitColliders[i].gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
                     {
-                        hitColliders[i].gameObject.GetComponent<Player>().StartIncap(2f);
+                        hitColliders[i].gameObject.GetComponentInParent<Player>().StartIncap(2f);
                     }
                 }
             }
