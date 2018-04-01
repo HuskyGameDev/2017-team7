@@ -26,42 +26,45 @@ public class Terrain : MonoBehaviour {
     {
         if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
         {
-            if (this.tag == "Grass")
+            if (collision.gameObject.GetComponent<Player>().state != Player.STATES.FLYING)
             {
-                collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
-            }
-            else if (this.tag == "Oil")
-            {
-                if (collision.gameObject.GetComponent<Player>().state != Player.STATES.MOVE_B &&
-                    collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL && 
-                    collision.gameObject.GetComponent<Player>() != owner)
+                if (this.tag == "Grass")
                 {
-                    collisions++;
-                    collision.gameObject.GetComponent<Player>().setDriftDir(collision.gameObject.GetComponent<Player>().playerRB.rotation);
-                    collision.gameObject.GetComponent<Player>().state = Player.STATES.OILED;
-                    if (collisions >= 3)
-                        Destroy(gameObject);
+                    collision.gameObject.GetComponent<Player>().terrainSpeed = 0.5f;
                 }
-            }
-            else if (this.tag == "Boost") 
-            {
-                currentRotation = collision.gameObject.GetComponent<Player>().playerRB.rotation;
-                while (currentRotation < -360)
-                    currentRotation += 360;
-                if (currentRotation >= 360)
-                    currentRotation = currentRotation % 360;
-
-                tRotation = t.rotation.eulerAngles.z;
-
-                //if facing forward
-                if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
-                    (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
+                else if (this.tag == "Oil")
                 {
-                    collision.gameObject.GetComponent<Player>().StartBoost(Player.BOOSTS.PAD, 1);
+                    if (collision.gameObject.GetComponent<Player>().state != Player.STATES.MOVE_B &&
+                        collision.gameObject.GetComponent<Player>().state != Player.STATES.ACCEL &&
+                        collision.gameObject.GetComponent<Player>() != owner)
+                    {
+                        collisions++;
+                        collision.gameObject.GetComponent<Player>().setDriftDir(collision.gameObject.GetComponent<Player>().playerRB.rotation);
+                        collision.gameObject.GetComponent<Player>().state = Player.STATES.OILED;
+                        if (collisions >= 3)
+                            Destroy(gameObject);
+                    }
                 }
-                //if facing backward
-                else
-                    collision.gameObject.GetComponent<Player>().StartBoostB(Player.BOOSTS.PAD_BACK, 1);
+                else if (this.tag == "Boost")
+                {
+                    currentRotation = collision.gameObject.GetComponent<Player>().playerRB.rotation;
+                    while (currentRotation < -360)
+                        currentRotation += 360;
+                    if (currentRotation >= 360)
+                        currentRotation = currentRotation % 360;
+
+                    tRotation = t.rotation.eulerAngles.z;
+
+                    //if facing forward
+                    if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
+                        (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
+                    {
+                        collision.gameObject.GetComponent<Player>().StartBoost(Player.BOOSTS.PAD, 1);
+                    }
+                    //if facing backward
+                    else
+                        collision.gameObject.GetComponent<Player>().StartBoostB(Player.BOOSTS.PAD_BACK, 1);
+                }
             }
         }
     }

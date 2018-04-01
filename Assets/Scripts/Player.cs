@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
         powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.CHICKEN, this);
-        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
+        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.PUFFERFISH, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
 
