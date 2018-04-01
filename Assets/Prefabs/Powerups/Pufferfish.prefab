@@ -9,45 +9,45 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1635767552761150}
+  m_RootGameObject: {fileID: 1835459634676254}
   m_IsPrefabParent: 1
---- !u!1 &1635767552761150
+--- !u!1 &1835459634676254
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4338884240774384}
-  - component: {fileID: 212802621087045234}
-  - component: {fileID: 58378276215880070}
-  - component: {fileID: 114372268673547432}
-  m_Layer: 8
-  m_Name: Chicken
+  - component: {fileID: 4292052941328302}
+  - component: {fileID: 212718071262684252}
+  - component: {fileID: 114859524467673296}
+  - component: {fileID: 58263167002203738}
+  m_Layer: 0
+  m_Name: Pufferfish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4338884240774384
+--- !u!4 &4292052941328302
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635767552761150}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -718, y: 236, z: 16}
+  m_GameObject: {fileID: 1835459634676254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -664.4, y: 273.1, z: -570}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58378276215880070
+--- !u!58 &58263167002203738
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635767552761150}
+  m_GameObject: {fileID: 1835459634676254}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -57,30 +57,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 10
---- !u!114 &114372268673547432
+--- !u!114 &114859524467673296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635767552761150}
+  m_GameObject: {fileID: 1835459634676254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4c648aa71e8cb4bb2c995bf666c5e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d20c10d9f5612e45a459a160c07b09b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: 0
   owner: {fileID: 0}
-  eggSplats:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!212 &212802621087045234
+--- !u!212 &212718071262684252
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1635767552761150}
+  m_GameObject: {fileID: 1835459634676254}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -104,15 +99,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 400779165
-  m_SortingLayer: 1
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: cd2dd32d9c7246e429e17f15046a9b6d, type: 3}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 6a2ac6380beb7264db45effba2e93285, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

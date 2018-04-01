@@ -15,13 +15,14 @@ public class EELtrigger : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.tag == "PlayerWallCollider") {
-            collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
-		}
 
-		if (collision.GetType().Equals(typeof(CircleCollider2D))) {
-			//Todo: make the players bounce off of each other if they both have the eel powerup activated.
-		}		
+		if (collision.tag == "PlayerWallCollider") {
+            if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
+            {
+                collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
+            }
+		}	
+
 	}
 
 	//Also need to add a method that does stuff (if anything) on the collider exit.

@@ -186,7 +186,7 @@ public class Player : MonoBehaviour
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
         powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.CHICKEN, this);
-        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.EEL, this);
+        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.PUFFERFISH, this);
         powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
         powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
 
@@ -565,7 +565,6 @@ public class Player : MonoBehaviour
     public void StartBoost(BOOSTS b, float btime)
     {
         Debug.Log("STARTING NEW BOOST");
-        animator.SetTrigger("Boosted");
         state = STATES.BOOST;
         maxSpeed = speedList[(int)b];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
@@ -593,7 +592,6 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(time);
         Debug.Log("STOPPING BOOST");
         maxSpeed = speedList[(int) BOOSTS.STANDARD];
-        animator.SetTrigger("ToMoveF");
         state = STATES.MOVE_F;
         lastBoostFCoroutine = null;
         Debug.Log("RESET MAX SPEED");

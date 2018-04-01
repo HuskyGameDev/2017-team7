@@ -18,12 +18,17 @@ public class FrogObject : Projectile {
     {
         if (collision.tag == "PlayerWallCollider")
         {
-            collisions++;
-            Debug.Log("Collisions: " + collision.ToString());
-            if (collisions > 0)
+            if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
             {
-                collision.GetComponentInParent<Player>().StartIncap(2);
-                Destroy(gameObject);
+
+                collisions++;
+                Debug.Log("Collisions: " + collision.ToString());
+                if (collisions > 0)
+                {
+                    collision.gameObject.GetComponentInParent<Player>().StartIncap(2);
+                    Destroy(gameObject);
+                }
+
             }
         }
         else if (collision.gameObject.tag == "wall")

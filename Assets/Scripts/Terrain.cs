@@ -26,42 +26,47 @@ public class Terrain : MonoBehaviour {
     {
         if (collision.tag == "PlayerWallCollider")
         {
-            if (this.tag == "Grass")
+            if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
             {
-                collision.gameObject.GetComponentInParent<Player>().terrainSpeed = 0.5f;
-            }
-            else if (this.tag == "Oil")
-            {
-                if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.MOVE_B &&
-                    collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.ACCEL && 
-                    collision.gameObject.GetComponentInParent<Player>() != owner)
+                if (this.tag == "Grass")
                 {
-                    collisions++;
-                    collision.gameObject.GetComponentInParent<Player>().setDriftDir(collision.gameObject.GetComponentInParent<Player>().playerRB.rotation);
-                    collision.gameObject.GetComponentInParent<Player>().state = Player.STATES.OILED;
-                    if (collisions >= 3)
-                        Destroy(gameObject);
+                    collision.gameObject.GetComponentInParent<Player>().terrainSpeed = 0.5f;
                 }
-            }
-            else if (this.tag == "Boost") 
-            {
-                currentRotation = collision.gameObject.GetComponentInParent<Player>().playerRB.rotation;
-                while (currentRotation < -360)
-                    currentRotation += 360;
-                if (currentRotation >= 360)
-                    currentRotation = currentRotation % 360;
-
-                tRotation = t.rotation.eulerAngles.z;
-
-                //if facing forward
-                if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
-                    (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
+                else if (this.tag == "Oil")
                 {
-                    collision.gameObject.GetComponentInParent<Player>().StartBoost(Player.BOOSTS.PAD, 1);
+                    if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.MOVE_B &&
+                        collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.ACCEL &&
+                        collision.gameObject.GetComponentInParent<Player>() != owner)
+                    {
+                        collisions++;
+                        collision.gameObject.GetComponentInParent<Player>().setDriftDir(collision.gameObject.GetComponentInParent<Player>().playerRB.rotation);
+                        collision.gameObject.GetComponentInParent<Player>().state = Player.STATES.OILED;
+                        if (collisions >= 3)
+                            Destroy(gameObject);
+                    }
                 }
-                //if facing backward
-                else
-                    collision.gameObject.GetComponentInParent<Player>().StartBoostB(Player.BOOSTS.PAD_BACK, 1);
+                else if (this.tag == "Boost")
+                {
+                    currentRotation = collision.gameObject.GetComponentInParent<Player>().playerRB.rotation;
+                    while (currentRotation < -360)
+                        currentRotation += 360;
+                    if (currentRotation >= 360)
+                        currentRotation = currentRotation % 360;
+
+
+                    tRotation = t.rotation.eulerAngles.z;
+
+
+                    //if facing forward
+                    if ((currentRotation >= tRotation - 90 && currentRotation <= tRotation + 90) ||
+                        (currentRotation >= tRotation - 450 && currentRotation <= tRotation - 270))
+                    {
+                        collision.gameObject.GetComponentInParent<Player>().StartBoost(Player.BOOSTS.PAD, 1);
+                    }
+                    //if facing backward
+                    else
+                        collision.gameObject.GetComponentInParent<Player>().StartBoostB(Player.BOOSTS.PAD_BACK, 1);
+                }
             }
         }
     }
