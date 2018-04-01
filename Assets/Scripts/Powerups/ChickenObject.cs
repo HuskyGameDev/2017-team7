@@ -27,10 +27,10 @@ public class ChickenObject : MonoBehaviour
         if (collision.tag == "PlayerWallCollider"  && collision.gameObject.GetComponentInParent<Player>() != owner)
         {
 
-            if (collision.gameObject.GetComponent<Player>().state != Player.STATES.FLYING)
+            if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
             {
                 collisions++;
-                eggSplats[collision.gameObject.GetComponent<Player>().playerNumber - 1].enableSplat(2f);
+                eggSplats[collision.gameObject.GetComponentInParent<Player>().playerNumber - 1].enableSplat(2f);
                 if (collisions >= 1)
                     Destroy(gameObject);
             }
