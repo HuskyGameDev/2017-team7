@@ -38,14 +38,13 @@ public class Players : MonoBehaviour {
     {
         playerCount = PlayerData.instance.numPlayers;
         int index = 0;
-        for (int i = 0; i < PlayerData.instance.playerChars.Length;  i++)
+        for (int i = 0; i < PlayerData.instance.barnoutPlayers.Length;  i++)
         {
-            int playerChar = PlayerData.instance.playerChars[i];
-            Debug.Log(playerChar);
-            if (playerChar >= 0)
+            BarnoutPlayer barnoutPlayer = PlayerData.instance.barnoutPlayers[i];         
+            if (barnoutPlayer.IsActive())
             {
                 Player p = players[i];
-                p.animator.runtimeAnimatorController = playerControllers[playerChar];
+                p.animator.runtimeAnimatorController = playerControllers[barnoutPlayer.GetCharacter()];
                 if (playerCount > 2)
                 {
                     p.overheadCamera.SetAnimator(cameraControllers4p[i]);

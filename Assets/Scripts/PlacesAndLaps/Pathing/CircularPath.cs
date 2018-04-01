@@ -17,10 +17,6 @@ public class CircularPath : MonoBehaviour {
 		createdCheckpoints = new List<CheckpointBehaviour>();
 		
 		if(curves == null || curves.Count == 0) return;
-		//Use the default checkpoint as the first one.
-		/*defaultCheckpoint.checkpointNumber = currentCheckpointNumber;
-		defaultCheckpoint.trigger.offset = curves[0].p0Checkpoint.position;
-		defaultCheckpoint.trigger.radius = curves[0].p0Checkpoint.radius;*/
 		
 		//Instantiate all checkpoint colliders
 		currentCheckpointNumber++;

@@ -170,7 +170,7 @@ public class Player : MonoBehaviour
         playerRB = GetComponent<Rigidbody2D>();
         ctrls = Inputs.GetController(playerNumber);
         playerRB.freezeRotation = true;
-        col = GetComponent<CapsuleCollider2D>();
+        col = GetComponentInChildren<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
@@ -541,15 +541,14 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
-        //if (collision.gameObject.tag == "Player")
+        if (collision.tag == "PlayerWallCollider")
         {
             drafting = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)))
+        if (collision.tag == "PlayerWallCollider")
         // if (collision.gameObject.tag == "Player")
         {
             drafting = false;

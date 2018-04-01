@@ -16,10 +16,11 @@ public class FrogObject : Projectile {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType().Equals(typeof(CapsuleCollider2D)) && collision.gameObject.tag == "Player")
+        if (collision.tag == "PlayerWallCollider")
         {
             if (collision.gameObject.GetComponent<Player>().state != Player.STATES.FLYING)
             {
+<<<<<<< HEAD
                 collisions++;
                 Debug.Log("Collisions: " + collision.ToString());
                 if (collisions > 0)
@@ -27,6 +28,10 @@ public class FrogObject : Projectile {
                     collision.gameObject.GetComponent<Player>().StartIncap(2);
                     Destroy(gameObject);
                 }
+=======
+                collision.GetComponentInParent<Player>().StartIncap(2);
+                Destroy(gameObject);
+>>>>>>> 0cc2186ea9c092c02d9200ba8081544b63406c15
             }
         }
         else if (collision.gameObject.tag == "wall")
