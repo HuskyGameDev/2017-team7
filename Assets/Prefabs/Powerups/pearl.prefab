@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 60527691520511898}
   - component: {fileID: 50670917524719050}
   - component: {fileID: 114077040248911012}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: pearl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,6 +115,7 @@ MonoBehaviour:
   collisions: -1
   rotation: 0
   projectileRB: {fileID: 50670917524719050}
+  toDestroy: 0
 --- !u!212 &212460357168372520
 SpriteRenderer:
   m_ObjectHideFlags: 1
