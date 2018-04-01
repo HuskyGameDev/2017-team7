@@ -45,16 +45,8 @@ public class DoggoScene : MonoBehaviour {
         skips.Add(new DoggoPanel(DoggoPanel.EMOTION.SAD, "Aw, fine. Here we go.", 2));
 
 
-        int[] players = PlayerData.instance.playerChars;
+        firstPlayerController = Inputs.GetController(PlayerData.instance.GetFirstActivePlayer().GetPlayerNum());
 
-        for (int i = 0; i < players.Length; i++)
-        {
-            if (players[i] >= 0)
-            {
-                firstPlayerController = Inputs.GetController(i + 1);
-                break;
-            }
-        }
         SetAnimator(instructions[0]);
     }
 	

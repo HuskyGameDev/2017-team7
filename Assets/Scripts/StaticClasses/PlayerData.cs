@@ -7,23 +7,36 @@ public class PlayerData
 {
 
     public static PlayerData instance = new PlayerData();
-    public static void Instantiate(int[] newPlayerChars)
+    public static void Instantiate(BarnoutPlayer[] newBarnoutPlayers)
     {
-        instance = new PlayerData(newPlayerChars);
+        instance = new PlayerData(newBarnoutPlayers);
     }
 
-    PlayerData(int[] newPlayerChars)
+    PlayerData(BarnoutPlayer[] newBarnoutPlayers)
     {
-        playerChars = newPlayerChars;
-        numPlayers = playerChars.Count(x => x >= 0);
+        barnoutPlayers = newBarnoutPlayers;
+        numPlayers = barnoutPlayers.Count(x => x.IsActive());
     }
     PlayerData() 
-        : this( new int[] { 1,2, -1, -1 }) {
+        : this( new BarnoutPlayer[] { 
+            new BarnoutPlayer(true, 0, 1),
+            new BarnoutPlayer(true, 1, 2),
+            new BarnoutPlayer(false, 0, 3),
+            new BarnoutPlayer(false, 0, 4)
+        }) {}
 
+    public BarnoutPlayer GetFirstActivePlayer()
+    {
+        foreach(BarnoutPlayer p in barnoutPlayers)
+        {
+            if (p.IsActive()) return p;
+        }
+        return null;
     }
 
     public int numPlayers;
-    public int[] playerChars;
+    //public int[] playerChars;
+    public BarnoutPlayer[] barnoutPlayers;
     //public static Sprite[] charIcons;
     
     public Player[] players;

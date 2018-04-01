@@ -38,7 +38,7 @@ public abstract class MinigamePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        isActive = PlayerData.instance.playerChars[playerNum - 1] >= 0;
+        isActive = PlayerData.instance.barnoutPlayers[playerNum - 1].IsActive();
         controller = Inputs.GetController(playerNum);
 	}
 

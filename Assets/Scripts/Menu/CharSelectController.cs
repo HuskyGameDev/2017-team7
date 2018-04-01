@@ -79,25 +79,21 @@ public class CharSelectController : MonoBehaviour {
     {
         if (CanStart())
         {
-            Debug.Log("Start");
-
-            int[] playerChars = new int[players.Length];
-
-
+            BarnoutPlayer[] barnoutPlayers = new BarnoutPlayer[players.Length];
             
-            for(int i = 0; i < playerChars.Length; i++)
+            for(int i = 0; i < barnoutPlayers.Length; i++)
             {
                 if (players[i].IsReady())
                 {
-                    playerChars[i] = players[i].SelectedChar();
+                    barnoutPlayers[i] = new BarnoutPlayer(true, players[i].SelectedChar(), i + 1);
                 }
                 else
                 {
-                    playerChars[i] = -1;
+                    barnoutPlayers[i] = new BarnoutPlayer(false, -1, i + 1);
                 }
             }
 
-            PlayerData.Instantiate((int[])playerChars.Clone());
+            PlayerData.Instantiate((BarnoutPlayer[])barnoutPlayers.Clone());
             //PlayerData.charIcons = (Sprite[])images.Clone();
             //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };
