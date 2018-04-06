@@ -11,6 +11,14 @@ public abstract class MinigamePlayer : MonoBehaviour {
     protected Controller controller;
     protected bool finished;
 
+    //gets called so the player can set a "ready" animation for active players
+    public void ToReadyInit()
+    {
+        ToReady();
+    }
+
+    protected abstract void ToReady();
+
     public void PlayerInit()
     {
         initialized = true;

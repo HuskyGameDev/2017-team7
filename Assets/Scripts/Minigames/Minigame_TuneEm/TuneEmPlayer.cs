@@ -15,10 +15,15 @@ public class TuneEmPlayer : MinigamePlayer {
 
     Animator animator;
 
-	// Use this for initialization
-	protected override void Init () {
+    protected override void ToReady()
+    {
         animator = GetComponent<Animator>();
         animator.SetBool("IsActive", isActive);
+    }
+
+    // Use this for initialization
+    protected override void Init ()
+    {
         //bg.Init(isActive);
 	}
 	

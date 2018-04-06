@@ -6,10 +6,16 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
 
     bool up = false;
     Animator animator;
-	
-	protected override void Init () {
+
+    protected override void ToReady()
+    {
         animator = GetComponent<Animator>();
         if (isActive) animator.SetTrigger("ToActive");
+    }
+
+    protected override void Init ()
+    {
+        
 	}
 	
 	protected override void Tick ()

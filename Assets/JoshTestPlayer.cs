@@ -8,6 +8,11 @@ public class JoshTestPlayer : MinigamePlayer {
 
     public int Lives { get; set; }
 
+    protected override void ToReady()
+    {
+        
+    }
+
     protected override void Init()
     {
         score = 4;

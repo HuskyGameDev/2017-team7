@@ -13,6 +13,15 @@ public abstract class Minigame : MonoBehaviour {
         GetComponent<MinigameController>().SetMinigame(this);
     }
     
+
+    public void ToReady()
+    {
+        foreach (MinigamePlayer p in players)
+        {
+            p.ToReadyInit();
+        }
+    }
+
     /* 
     Implement this with the initialization code for your minigame.
     Minigame starts when this is called.

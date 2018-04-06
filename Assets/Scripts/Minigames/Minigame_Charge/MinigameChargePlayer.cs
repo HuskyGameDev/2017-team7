@@ -8,7 +8,12 @@ public class MinigameChargePlayer : MinigamePlayer {
 
 	public MinigameCharge minigame;
 
-	protected override void Init()
+    protected override void ToReady()
+    {
+        
+    }
+
+    protected override void Init()
     {
 
     }

@@ -5,18 +5,24 @@ using UnityEngine;
 public class MinigameController : MonoBehaviour {
     public MinigameIntro intro;
     Minigame minigame;
+    private bool minigameReady;
 	private bool minigameStarted;
     public bool skipIntro;
     private bool ended = false;
 	void Start () {
 		if (skipIntro)
         {
-            intro.GetComponent<Animator>().SetTrigger("SkipIntro");
+            intro.SkipIntro();
+            ReadyMinigame();
             StartMinigame();
         }
 	}
 	
 	void FixedUpdate () {
+        if (intro.IsReady() && !minigameReady)
+        {
+            ReadyMinigame();
+        }
 		if(intro.IsDone() && !minigameStarted){
             StartMinigame();
 		}
@@ -28,6 +34,12 @@ public class MinigameController : MonoBehaviour {
 			EndCode();
 		}
 	}
+
+    private void ReadyMinigame()
+    {
+        minigameReady = true;
+        minigame.ToReady();
+    }
 
     private void StartMinigame()
     {
