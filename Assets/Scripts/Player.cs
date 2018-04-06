@@ -24,7 +24,10 @@ public class Player : MonoBehaviour
     public Coroutine boostingCoR;
 
     private Controller ctrls;
-
+    /*Decay rate for velocity. vel = decay*vel */
+    private float decayRate = 0.97f;
+    /* Decay rate for misc forces */
+    private float forceDecayRate = 0.75f;
     private float turnIncr;
     private float turningSpeed;
     private float maxTS;
@@ -81,6 +84,12 @@ public class Player : MonoBehaviour
 
     private Component[] boxes;
     private Component[] caps;
+    /* Current speed */
+    private float speed = 0;
+    /*This vector will contain data about other accelerations; E.G. Bouncing off walls and players will set this vector*/
+    private Vector2 miscForces;
+    /* Might not be necessary, but I'm going to keep track of the last non-colliding positon, just in case*/
+    private Vector2 lastKnownGoodPosition;
 
     private void initValues()
     {
@@ -538,6 +547,7 @@ public class Player : MonoBehaviour
         animator.SetFloat("Speed", animspeed);
         charAnimator.SetFloat("Speed", animspeed);
     }
+
     public void stopLastIncapCoroutine()
     {
         StopCoroutine(lastIncapCoroutine);
@@ -729,5 +739,37 @@ public class Player : MonoBehaviour
     {
         finished = true;
         setGhosted(true);
+    }
+
+    /* NEW PHYSICS STUFF */
+    private void DoPhysics(float acceleration, float turnIncrement){
+        Vector3 calculatedVelocity = new Vector3(Mathf.Cos(transform.eulerAngles.z + turnIncrement), 
+                                                 Mathf.Sin(transform.eulerAngles.z + turnIncrement), 1f);
+        /*increase speed by acceleration */
+        speed += speed + acceleration;
+        speed = Mathf.Clamp(speed, 0, maxSpeed);
+        
+        calculatedVelocity *= (speed + acceleration);
+        //We add acceleration to velocity, cap it to the max speed, and then calculate the next position
+        calculatedVelocity += (Vector3)miscForces;
+        //Decay velocity. This decay should be proportional to the velocity.
+        //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
+        calculatedVelocity *= decayRate;
+        miscForces *= forceDecayRate;
+        //Calculate the position, as god intended
+        transform.position += calculatedVelocity;
+    }
+
+    void OnCollisionEnter2D(Collision other){
+        if(other.collider.tag == "PlayerDiamondCollider"){
+            Player otherPlayer = other.collider.GetComponentInParent<Player>();
+            /* TODO scale this by some number or something */
+            miscForces += (Vector2)(transform.position - otherPlayer.transform.position);
+        }else{
+            /* TODO make it so that we KNOW we are colliding with a wall
+                Also, again, could use some scaling 
+            */
+            miscForces += (Vector2)(other.contacts[0].normal);
+        }
     }
 }
