@@ -84,7 +84,9 @@ public class Player : MonoBehaviour
 
     private Component[] boxes;
     private Component[] caps;
-    /* Current speed */
+    /*Speed for the last update */
+    private float lastSpeed = 0;
+    /* Current speed */    
     private float speed = 0;
     /*This vector will contain data about other accelerations; E.G. Bouncing off walls and players will set this vector*/
     private Vector2 miscForces;
@@ -127,11 +129,11 @@ public class Player : MonoBehaviour
     }
 
     //passed in unit length vector in direction we are facing prior to calculating rotation
-    private void setRotation(Vector2 newVel)
+    private float GetTurnIncrement()
     {
         float turn;
         // Forward
-        if (Vector2.Angle(playerRB.velocity, newVel) < 90)
+        if (speed > 0)
         {
             turn = ctrls.GetTurn();
         }
@@ -142,21 +144,14 @@ public class Player : MonoBehaviour
         }
 
         //Add rotation
-        turnSp += turn * turnIncr;// * (playerRB.velocity.magnitude/(maxSpeed/2));
-        maxTS = Math.Abs(turn * turningSpeed * terrainTurning * Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1));
+        turnSp += turn * turnIncr;
+        maxTS = Math.Abs(turn * turningSpeed * terrainTurning * Math.Min(speed / (2 * maxSpeed / 3), 1));
         turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
-        playerRB.rotation += turnSp;
-    }
-
-
-    private void setNewVelRotation(ref Vector2 newVel)
-    {
-        float rotation = Mathf.Deg2Rad * (playerRB.rotation + 90);
-        newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+        return turnSp;
     }
 
     // Turn player method for drifting (NEED TO ALLOW TURNING WHEN NOT MOVING)
-    private void setRotationDrifting()
+    private float GetTurningIncrementDrifting()
     {
         float turn = ctrls.GetTurn();
 
@@ -164,14 +159,7 @@ public class Player : MonoBehaviour
         turnSp += turn * turnIncr;// * (playerRB.velocity.magnitude/(maxSpeed/2));
         maxTS = Math.Abs(turn * turningSpeed * terrainTurning /* Math.Min(playerRB.velocity.magnitude / (2 * maxSpeed / 3), 1)*/) * 1.5f;
         turnSp = Math.Min(Math.Max(-maxTS, turnSp), maxTS);
-        playerRB.rotation += turnSp;
-    }
-
-
-    private void setNewVelRotationDrifting(ref Vector2 newVel)
-    {
-        float rotation = Mathf.Deg2Rad * (driftDir + 90);
-        newVel.Set((float)Math.Cos(rotation), (float)Math.Sin(rotation));
+        return turnSp;
     }
 
     // Use this for initialization
@@ -185,13 +173,15 @@ public class Player : MonoBehaviour
         col = GetComponentInChildren<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();
 
+        wait = reverseWait;
+
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
         speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
-        speedList[(int) BOOSTS.PAD] = 200;
-        speedList[(int) BOOSTS.PAD_BACK] = 120;
-        speedList[(int) BOOSTS.DRAFT] = 175;
-        speedList[(int) BOOSTS.DRIFT] = 175;
-        speedList[(int) BOOSTS.POWERUP] = 200;
+        speedList[(int) BOOSTS.PAD] = 1.75f;
+        speedList[(int) BOOSTS.PAD_BACK] = 1f;
+        speedList[(int) BOOSTS.DRAFT] = 1.66f;
+        speedList[(int) BOOSTS.DRIFT] = 1.66f;
+        speedList[(int) BOOSTS.POWERUP] = 1.75f;
 
 
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
@@ -214,11 +204,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-        Vector2 newVel = new Vector2();
-
-        Vector2 accel = new Vector2();
-
+        float accel = 0;
+        float turningAccel = 0;
         //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
         switch (state)
         {
@@ -229,12 +216,7 @@ public class Player : MonoBehaviour
 
             //Idle state
             case STATES.IDLE:
-
-                //if (playerNumber == 2) Debug.Log("In Idle.");
-                newVel.Set(0, 0);
-
-
-
+                speed = 0;
                 //checking change states
                 if (ctrls.GetSpeed() < 0)
                 {
@@ -253,19 +235,8 @@ public class Player : MonoBehaviour
             case STATES.MOVE_F:
                 //Debug.Log("MOVING F");
                 //if (playerNumber == 2) Debug.Log("In Move Forward.");
-
-
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
-                accel = newVel * acceleration * ctrls.GetSpeed();
-
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed * terrainSpeed);
+                accel = acceleration * ctrls.GetSpeed();
+                turningAccel = GetTurnIncrement();
 
                 if (ctrls.GetSpeed() <= 0)
                 {
@@ -290,17 +261,8 @@ public class Player : MonoBehaviour
 
                 //if (playerNumber == 2) Debug.Log("In Move Backward.");
 
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
-                accel = newVel * acceleration * ctrls.GetSpeed();
-
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * (-1) * playerRB.velocity.magnitude) + accel, maxReverse * terrainSpeed);
+                accel = acceleration * ctrls.GetSpeed();
+                turningAccel = GetTurnIncrement();
 
                 if (ctrls.GetSpeed() >= 0)
                 {
@@ -313,31 +275,18 @@ public class Player : MonoBehaviour
 
                 //if (playerNumber == 2) Debug.Log("In Accel.");
 
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
                 //Debug.Log("Before newVel " + newVel);
                // Debug.Log("Velocity " + playerRB.velocity);
 
-                if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.99f;
-                else
-                {
-                    accel = newVel * acceleration * ctrls.GetSpeed();
-                   // Debug.Log("Accel " + accel);
-                    //set new velocity             
-                    newVel = (newVel * (-1) * playerRB.velocity.magnitude) + accel;
-                }
+                accel = acceleration * ctrls.GetSpeed();
+                turningAccel = GetTurnIncrement();
                 //Debug.Log("After newVel " + newVel);
 
                 if (ctrls.GetSpeed() < 0)
                 {
                     state = STATES.MOVE_B;
                 }
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 0.05)
+                if (speed > 0)
                 {
                     state = STATES.IDLE;
                 }
@@ -345,50 +294,32 @@ public class Player : MonoBehaviour
             case STATES.DECEL:
 
                 //if (playerNumber == 1) Debug.Log("In Decel");
-
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-                
-                //setting player speed to slightly smaller ratio of current velocity
-                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.99f;
-                else
-                {
-                    accel = newVel * acceleration * ctrls.GetSpeed();
-                    //set new velocity             
-                    newVel = (newVel * playerRB.velocity.magnitude) + accel;
-                    //Debug.Log("New vel: " + newVel + " Accel: " + accel);
-                }
+        
+                accel = acceleration * ctrls.GetSpeed();
+                turningAccel = GetTurnIncrement();
 
                 if (ctrls.GetSpeed() > 0)
                 {
                     state = STATES.MOVE_F;
                 }
-                //Debug.Log("NewVel mag: " + newVel.magnitude);
-                //Debug.Log("NewVel angle: " + Vector2.Angle(playerRB.velocity, newVel));
-
-                if (!(Vector2.Angle(playerRB.velocity, newVel) < 90) || newVel.magnitude < 1.0)
+                /*TODO make sure this check is correct; */
+                if (speed <= 0.01)
                 {
                     state = STATES.STOP_B;
                 }
 
                 break;
             case STATES.STOP_B:
-
-                //if (playerNumber == 2) Debug.Log("In Stopped");
-
-                newVel.Set(0, 0);
+                speed = 0;
+                //if (playerNumber == 1) Debug.Log("In Stopped");
 
                 if (wait > 0)
                 {
+                    //if (playerNumber == 1) Debug.Log("Waiting");
                     wait--;
                 }
                 else
                 {
-                    //newVel = accel;
                     wait = reverseWait;
                     state = STATES.IDLE;
                 }
@@ -401,15 +332,9 @@ public class Player : MonoBehaviour
 
                 break;
             case STATES.OILED:
-                
-                //setting newvel direction at unit length
-                setNewVelRotationDrifting(ref newVel);
-                //change player turning
-                setRotationDrifting();
+                turningAccel = GetTurningIncrementDrifting();
 
-                newVel = newVel * playerRB.velocity.magnitude * 0.99f;
-
-                if (playerRB.velocity.magnitude < 50)
+                if (speed < 50)
                 {
                     state = STATES.MOVE_F;
                 }
@@ -417,15 +342,7 @@ public class Player : MonoBehaviour
             case STATES.DRIFT:
 
                 driftTime++;
-
-                //setting newvel direction at unit length
-                setNewVelRotationDrifting(ref newVel);
-                //change player turning
-                setRotationDrifting();
-
-                //set new velocity             
-                newVel = newVel * playerRB.velocity.magnitude * 0.99f;
-
+                turningAccel = GetTurningIncrementDrifting();
                 if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
@@ -443,17 +360,8 @@ public class Player : MonoBehaviour
                 draftTime++;
                 if (draftTime > 125) drafting = false;
 
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
-                accel = newVel * acceleration * ctrls.GetSpeed();
-
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * playerRB.velocity.magnitude) + accel, maxSpeed * terrainSpeed);
+                accel = acceleration * ctrls.GetSpeed();
+                turningAccel = GetTurnIncrement();
 
                 if (!drafting && draftTime > 0)
                 {
@@ -469,17 +377,9 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.BOOST:
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
-                accel = newVel * acceleration;
-
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * 100000) + accel, maxSpeed);
+                /* TODO don't hardcode values */
+                accel = 100000;
+                turningAccel = GetTurnIncrement();
 
                 if (ctrls.GetA())
                 {
@@ -493,56 +393,38 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.BOOST_B:
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-                accel = newVel * acceleration;          
-                //set new velocity             
-                newVel = Vector2.ClampMagnitude((newVel * -100000) + accel, maxReverse);
+                accel = -100000;
+                turningAccel = GetTurnIncrement();
 
                 break;
 
             case STATES.INCAPACITATED:
                 //TODO: THIS COROUTINE IS CREATED EVERY GAME TICK!!!
                 //Play a player getting electrocuted sound and/or animation.               
-                
-                newVel = newVel * playerRB.velocity.magnitude * 0.9f;
-
+                //TODO right now, decay happens at a uniform rate. We could change the velocity decay rate here,
+                //then change it back when we leave this state.
                 break;
 
             case STATES.FLYING:
 
-                //setting newvel direction at unit length
-                setNewVelRotation(ref newVel);
-                //change player turning
-                setRotation(newVel);
-                //setting newvel direction to turning direction
-                setNewVelRotation(ref newVel);
-
-                //accel = newVel * acceleration * ctrls.GetSpeed();
-
                 //set new velocity             
-                newVel = newVel * speedList[(int)BOOSTS.STANDARD] * 1.5f;
-
-                
+                accel =  speedList[(int)BOOSTS.STANDARD] * 1.5f;
+                turningAccel = GetTurnIncrement();
 
                 break;
 
         }
-
-        playerRB.velocity = newVel;
 
         if (state != STATES.COUNTDOWN || !finished)
         {
             DoPowerups();
         }
 
+        DoPhysics(accel, turningAccel);
+
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
         charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
-        float animspeed = newVel.magnitude;
+        float animspeed = speed;
         if (state == STATES.MOVE_B || state == STATES.ACCEL) animspeed = -animspeed;
         animator.SetFloat("Speed", animspeed);
         charAnimator.SetFloat("Speed", animspeed);
@@ -743,24 +625,28 @@ public class Player : MonoBehaviour
 
     /* NEW PHYSICS STUFF */
     private void DoPhysics(float acceleration, float turnIncrement){
-        Vector3 calculatedVelocity = new Vector3(Mathf.Cos(transform.eulerAngles.z + turnIncrement), 
-                                                 Mathf.Sin(transform.eulerAngles.z + turnIncrement), 1f);
+        /* TODO calculate the worldspace coodinates for these rotations!*/
+        Vector3 calculatedVelocity = new Vector3(Mathf.Cos(Mathf.Deg2Rad*(transform.eulerAngles.z + turnIncrement + 90)), 
+                                                 Mathf.Sin(Mathf.Deg2Rad*(transform.eulerAngles.z + turnIncrement + 90)), 0f);
+        //if(turnIncrement != 0) Debug.Log("TurnIncrement = " + turnIncrement);
+        lastSpeed = speed;
         /*increase speed by acceleration */
-        speed += speed + acceleration;
-        speed = Mathf.Clamp(speed, 0, maxSpeed);
-        
-        calculatedVelocity *= (speed + acceleration);
+        speed +=  acceleration;
+        speed = Mathf.Clamp(speed, -maxReverse, maxSpeed);
+        //Debug.Log("Speed: " + speed);
+        calculatedVelocity *= speed;
         //We add acceleration to velocity, cap it to the max speed, and then calculate the next position
         calculatedVelocity += (Vector3)miscForces;
         //Decay velocity. This decay should be proportional to the velocity.
         //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
-        calculatedVelocity *= decayRate;
+        speed *= decayRate;
         miscForces *= forceDecayRate;
         //Calculate the position, as god intended
         transform.position += calculatedVelocity;
+        transform.Rotate(0, 0, turnIncrement);
     }
 
-    void OnCollisionEnter2D(Collision other){
+    void OnCollisionEnter2D(Collision2D other){
         if(other.collider.tag == "PlayerDiamondCollider"){
             Player otherPlayer = other.collider.GetComponentInParent<Player>();
             /* TODO scale this by some number or something */
