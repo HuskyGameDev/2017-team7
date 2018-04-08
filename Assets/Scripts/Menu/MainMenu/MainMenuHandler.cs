@@ -21,6 +21,7 @@ public class MainMenuHandler : MonoBehaviour {
 
     private void Start()
     {
+        audioMaster.PlayMusic();
         buttons[currButton].ToHover();
     }
 
