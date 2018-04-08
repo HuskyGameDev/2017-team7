@@ -319,7 +319,7 @@ public class Player : MonoBehaviour
                 //Debug.Log("Before newVel " + newVel);
                // Debug.Log("Velocity " + playerRB.velocity);
 
-                if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.99f;
+                if (ctrls.GetSpeed() == 0) newVel *= -playerRB.velocity.magnitude * 0.999f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
@@ -405,7 +405,7 @@ public class Player : MonoBehaviour
 
                 newVel = newVel * playerRB.velocity.magnitude * 0.99f;
 
-                if (playerRB.velocity.magnitude < 50)
+                if (playerRB.velocity.magnitude < speedList[(int)BOOSTS.STANDARD] / 3)
                 {
                     state = STATES.MOVE_F;
                 }
@@ -501,9 +501,7 @@ public class Player : MonoBehaviour
 
                 break;
 
-            case STATES.INCAPACITATED:
-                //TODO: THIS COROUTINE IS CREATED EVERY GAME TICK!!!
-                //Play a player getting electrocuted sound and/or animation.               
+            case STATES.INCAPACITATED:              
                 
                 newVel = newVel * playerRB.velocity.magnitude * 0.9f;
 
@@ -632,8 +630,14 @@ public class Player : MonoBehaviour
     IEnumerator endIncapacitated(float time)
     {
         yield return new WaitForSeconds(time);
-        setGhosted(false);
+        StartCoroutine(endGhosted(1f));
         state = STATES.IDLE;
+    }
+
+    IEnumerator endGhosted(float time)
+    {
+        yield return new WaitForSeconds(time);
+        setGhosted(false);
     }
 
     public void DoPowerups(){
