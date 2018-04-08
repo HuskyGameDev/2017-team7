@@ -11,6 +11,7 @@ TagManager:
   - Oil
   - VertHandle
   - PlayerWallCollider
+  - PlayerDiamondCollider
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class SpeedBoost : Powerup {
 
 	// Use this for initialization
 	void Start () {
-		currentCooldown = 0;
+
 	}
 	
 	public override bool UsePowerup() {

@@ -6,10 +6,6 @@ using XInputDotNetPure;
 
 public class Map : MonoBehaviour {
 
-	public AudioSource Snd_Beep;
-	public AudioSource Snd_Go;
-	public AudioSource Msc_Banjo;
-
     public Image[] eggs;
     public Image chicken_go;
 
@@ -98,7 +94,6 @@ public class Map : MonoBehaviour {
 			    else {
                     foreach(Image e in eggs) { e.gameObject.SetActive(false); }
                     eggs[count].gameObject.SetActive(true);
-				    Snd_Beep.Play();
 			    }
 		    }
 		}
@@ -119,8 +114,6 @@ public class Map : MonoBehaviour {
     private void StartRace()
     {
         chicken_go.gameObject.SetActive(true);
-        Snd_Go.Play();
-        Msc_Banjo.PlayDelayed(0.3F);
         countdown = false;
         time = Time.unscaledTime;
     }
