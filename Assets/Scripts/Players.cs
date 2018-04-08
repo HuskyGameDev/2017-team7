@@ -16,6 +16,9 @@ public class Players : MonoBehaviour {
     public float terrainSpeed = 1;
     public float terrainTurning = 1;
 
+    public float minDriftTime;
+    public float maxDriftTime;
+
     public Map mapEvents;
     public PowerupInstantiator powerupInstantiator;
 

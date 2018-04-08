@@ -51,6 +51,9 @@ public class Player : MonoBehaviour
     private bool drifting;
     private float tempRotation;
 
+    private float minDriftTime;
+    private float maxDriftTime;
+
     public int playerNumber;
 
     private PhysicsMaterial2D wallMaterial, playerMaterial;
@@ -89,6 +92,8 @@ public class Player : MonoBehaviour
         acceleration = players.acceleration;
         maxSpeed = players.maxSpeed;
         maxReverse = players.maxReverse;
+        minDriftTime = players.minDriftTime * (1 / Time.fixedDeltaTime);
+        maxDriftTime = players.maxDriftTime * (1 / Time.fixedDeltaTime);
         wallMaterial = players.wallMaterial;
         playerMaterial = players.playerMaterial;
         terrainSpeed = players.terrainSpeed;
@@ -178,10 +183,10 @@ public class Player : MonoBehaviour
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
         speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
-        speedList[(int) BOOSTS.PAD] = 200;
+        speedList[(int) BOOSTS.PAD] = 325;
         speedList[(int) BOOSTS.PAD_BACK] = 120;
         speedList[(int) BOOSTS.DRAFT] = 175;
-        speedList[(int) BOOSTS.DRIFT] = 175;
+        speedList[(int) BOOSTS.DRIFT] = 250;
         speedList[(int) BOOSTS.POWERUP] = 200;
 
 
@@ -417,13 +422,13 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = newVel * playerRB.velocity.magnitude * 0.99f;
 
-                if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
+                if ((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     
                 }
-                else if (!ctrls.GetA() && driftTime <= 100)
+                else if (!ctrls.GetA() && driftTime <= minDriftTime)
                 {
                     driftTime = 0;
                     state = STATES.MOVE_F;
