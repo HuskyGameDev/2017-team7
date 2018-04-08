@@ -8,7 +8,8 @@ public class ChickenPowerup : Powerup {
 	private ChickenObject newChicken;
 
     void Start () {
-
+		uses = 3;
+		currentCooldown = 0;
 	}
 	
 	public override bool UsePowerup() {

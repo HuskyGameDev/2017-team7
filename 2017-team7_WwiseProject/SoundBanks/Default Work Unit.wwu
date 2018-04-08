@@ -29,9 +29,7 @@
 						<ObjectRef Name="Menu Select Sound" ID="{71BE54D8-2869-412E-8F0A-83C4C38FD3A6}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="joystick toggle" ID="{BC3BD712-CE18-41D9-9B55-4631C0436BA4}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Select" ID="{1DAAFD75-26BC-46C4-851B-50B70CF5B65B}" WorkUnitID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Mello Barn Theme" ID="{08DA422D-420F-4B23-B5F7-5BC79C14A491}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Toggle" ID="{71C8BCB6-6218-4E4F-8C24-175E4C16990D}" WorkUnitID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_MM_Music" ID="{483F62D2-988D-4FD6-837F-51FB318CE49B}" WorkUnitID="{5D365F5F-2777-44B3-BBDC-3DA868785231}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

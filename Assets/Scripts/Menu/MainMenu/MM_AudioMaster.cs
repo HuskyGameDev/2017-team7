@@ -12,10 +12,6 @@ public class MM_AudioMaster : MonoBehaviour {
         PlaySound("Play_Select");
     }
 
-    public void PlayMusic()
-    {
-        PlaySound("Play_MM_Music");
-    }
 
     private void PlaySound(string soundName)
     {

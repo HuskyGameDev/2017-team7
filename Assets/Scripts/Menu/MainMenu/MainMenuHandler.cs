@@ -22,7 +22,6 @@ public class MainMenuHandler : MonoBehaviour {
     private void Start()
     {
         buttons[currButton].ToHover();
-        audioMaster.PlayMusic();
     }
 
     // Update is called once per frame

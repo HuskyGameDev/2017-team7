@@ -13,7 +13,7 @@ public class EelPowerup : Powerup {
 
 	// Use this for initialization
 	void Start () {
-
+		currentCooldown = 0;
 	}
 
 	

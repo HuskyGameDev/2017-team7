@@ -36,7 +36,6 @@ public class Terrain : MonoBehaviour {
                 {
                     if (collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.MOVE_B &&
                         collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.ACCEL &&
-                        collision.gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING &&
                         collision.gameObject.GetComponentInParent<Player>() != owner)
                     {
                         collisions++;

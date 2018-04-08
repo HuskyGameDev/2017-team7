@@ -21,7 +21,6 @@
 			<ShortName>Main_Menu</ShortName>
 			<Path>Main_Menu.bnk</Path>
 			<IncludedEvents>
-				<Event Id="293921080" Name="Play_MM_Music" ObjectPath="\Events\MainMenu\Play_MM_Music"/>
 				<Event Id="1042987450" Name="Play_Select" ObjectPath="\Events\UISounds\Play_Select"/>
 				<Event Id="1943693866" Name="Play_Toggle" ObjectPath="\Events\UISounds\Play_Toggle"/>
 			</IncludedEvents>
@@ -29,10 +28,6 @@
 				<File Id="524106578" Language="SFX">
 					<ShortName>joystick toggle.wav</ShortName>
 					<Path>SFX\joystick toggle_1C9C67B2.wem</Path>
-				</File>
-				<File Id="538372903" Language="SFX">
-					<ShortName>Mello Barn Theme.wav</ShortName>
-					<Path>SFX\Mello Barn Theme_1C9C67B2.wem</Path>
 				</File>
 				<File Id="813472014" Language="SFX">
 					<ShortName>Menu Select Sound.wav</ShortName>
