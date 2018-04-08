@@ -11,7 +11,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Farmula 1 Music Loop 1" ID="{0047957A-6956-4200-AC29-A23F11014CBC}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}"/>
+									<ObjectRef Name="Mello Barn Theme" ID="{08DA422D-420F-4B23-B5F7-5BC79C14A491}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

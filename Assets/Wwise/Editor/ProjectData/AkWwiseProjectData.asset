@@ -34,8 +34,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MainMenu.wwu
     ParentPhysicalPath: 
     Guid: '{5D365F5F-2777-44B3-BBDC-3DA868785231}'
-    m_lastTimePsrt1: -1422712471
-    m_lastTimePart2: -1999269224
+    m_lastTimePsrt1: -1202690446
+    m_lastTimePart2: -1999266425
     List:
     - Name: Play_MM_Music
       Path: MainMenu\Play_MM_Music
@@ -104,8 +104,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -1414346686
-    m_lastTimePart2: -1999269224
+    m_lastTimePsrt1: -997541517
+    m_lastTimePart2: -1999266425
     List:
     - Name: Main_Menu
       Path: Default Work Unit\Main_Menu
@@ -148,8 +148,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /2017-team7_WwiseProject
-  - /2017-team7_WwiseProject/SoundBanks
-  - /2017-team7_WwiseProject/SoundBanks/Default Work Unit
+  - /2017-team7_WwiseProject/Events
+  - /2017-team7_WwiseProject/Events/MainMenu
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
