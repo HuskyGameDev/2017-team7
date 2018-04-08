@@ -50,6 +50,9 @@ public class Player : MonoBehaviour
     private bool drifting;
     private float tempRotation;
 
+    private float minDriftTime;
+    private float maxDriftTime;
+
     public int playerNumber;
 
     private PhysicsMaterial2D wallMaterial, playerMaterial;
@@ -100,6 +103,9 @@ public class Player : MonoBehaviour
     /* Decay rate for misc forces */
     private float forceDecayRate;/* = 0.97f; */
     private float lastRotationIncr;
+
+    public bool lostDrift = false;
+
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -107,6 +113,8 @@ public class Player : MonoBehaviour
         acceleration = players.acceleration;
         maxSpeed = players.maxSpeed;
         maxReverse = players.maxReverse;
+        minDriftTime = players.minDriftTime * (1 / Time.fixedDeltaTime);
+        maxDriftTime = players.maxDriftTime * (1 / Time.fixedDeltaTime);
         wallMaterial = players.wallMaterial;
         playerMaterial = players.playerMaterial;
         terrainSpeed = players.terrainSpeed;
@@ -348,26 +356,37 @@ public class Player : MonoBehaviour
             case STATES.OILED:
                 turningAccel = GetTurningIncrementDrifting();
 
-                if (speed < 50)
+                if (speed < speedList[(int)BOOSTS.STANDARD] / 3)
                 {
                     state = STATES.MOVE_F;
                 }
                 break;
             case STATES.DRIFT:
-
+                
                 driftTime++;
                 turningAccel = GetTurningIncrementDrifting();
                 if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
+
+                if (terrainSpeed < 1)
+                {
+                    speed *= 0.985f;
+                    lostDrift = true;
+                }
+
+                if (((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime) && !lostDrift)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     
                 }
-                else if (!ctrls.GetA() && driftTime <= 100)
+                else if (!ctrls.GetA() && (driftTime <= minDriftTime || lostDrift))
                 {
                     driftTime = 0;
+                    lostDrift = false;
                     state = STATES.MOVE_F;
                 }
+
+                
                 break;
             case STATES.DRAFT:
 
@@ -533,8 +552,14 @@ public class Player : MonoBehaviour
     IEnumerator endIncapacitated(float time)
     {
         yield return new WaitForSeconds(time);
-        setGhosted(false);
+        StartCoroutine(endGhosted(1f));
         state = STATES.IDLE;
+    }
+
+    IEnumerator endGhosted(float time)
+    {
+        yield return new WaitForSeconds(time);
+        setGhosted(false);
     }
 
     public void DoPowerups(){
