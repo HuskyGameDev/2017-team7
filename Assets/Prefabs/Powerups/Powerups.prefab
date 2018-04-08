@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d2ba83ce8b3174d98dc3f5033ce97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 10
   cooldownTicks: 300
   frog: {fileID: 0}
 --- !u!114 &114283625439103720
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3654e8fdf25ab3f45ade9e5ec41ddfe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
 --- !u!114 &114369401434258778
 MonoBehaviour:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7856c8e4472d3f459df182eef9a1862, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
   EelObjects:
   - {fileID: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c64cac8a1bf26f458c41e6e6e7b5119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
   useTimeTicks: 300
 --- !u!114 &114670343865482774
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f8ee848d6e1b143869fa59aaa0265e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
   oil: {fileID: 0}
 --- !u!114 &114760690936216672
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 709c0598b6adcbe489242b600934677e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
 --- !u!114 &114816780180507992
 MonoBehaviour:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d05f3a6c39cb9bd4b8772fb61d92aa12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uses: 1
+  uses: 3
   cooldownTicks: 300
   chicken: {fileID: 0}
 --- !u!114 &114870886462579930

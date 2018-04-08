@@ -350,7 +350,7 @@ public class Player : MonoBehaviour
                 setNewVelRotation(ref newVel);
                 
                 //setting player speed to slightly smaller ratio of current velocity
-                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.99f;
+                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.985f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
@@ -422,6 +422,11 @@ public class Player : MonoBehaviour
                 //set new velocity             
                 newVel = newVel * playerRB.velocity.magnitude * 0.995f;
 
+                if (terrainSpeed < 1)
+                {
+                    driftTime = 0;
+                    state = STATES.MOVE_F;
+                }
                 if ((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
@@ -433,6 +438,8 @@ public class Player : MonoBehaviour
                     driftTime = 0;
                     state = STATES.MOVE_F;
                 }
+
+                
                 break;
             case STATES.DRAFT:
 
