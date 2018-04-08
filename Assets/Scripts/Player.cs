@@ -104,7 +104,8 @@ public class Player : MonoBehaviour
     private float forceDecayRate;/* = 0.97f; */
     private float lastRotationIncr;
 
-    public bool lostDrift = false;
+    private bool lostDrift = false;
+    public bool ignoreTerrain = false;
 
     private void initValues()
     {
@@ -496,6 +497,9 @@ public class Player : MonoBehaviour
         maxSpeed = speedList[(int)b];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
 
+        if (b != BOOSTS.DRIFT)
+            ignoreTerrain = true;
+
         //overwrite the old coroutine if one exists
         if (lastBoostFCoroutine != null)
             StopCoroutine(lastBoostFCoroutine);
@@ -518,6 +522,7 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         maxSpeed = speedList[(int) BOOSTS.STANDARD];
+        ignoreTerrain = false;
         state = STATES.MOVE_F;
         lastBoostFCoroutine = null;
     }
@@ -541,6 +546,8 @@ public class Player : MonoBehaviour
             StopCoroutine(lastBoostFCoroutine);
         if (lastBoostBCoroutine != null)
             StopCoroutine(lastBoostBCoroutine);
+
+        ignoreTerrain = false;
 
         //overwrite the old incap coroutine if one exists
         if (lastIncapCoroutine != null)
@@ -688,8 +695,16 @@ public class Player : MonoBehaviour
     }
     /* Gets the current velocity due to only this player, without external forces*/
     private Vector2 GetCurrentVelocity(){
-        return new Vector2(speed * terrainSpeed * Mathf.Cos(Mathf.Deg2Rad*(playerRB.rotation + 90)), 
-                           speed * terrainSpeed * Mathf.Sin(Mathf.Deg2Rad*(playerRB.rotation + 90)));
+        if (!ignoreTerrain)
+        {
+            return new Vector2(speed * terrainSpeed * Mathf.Cos(Mathf.Deg2Rad * (playerRB.rotation + 90)),
+                               speed * terrainSpeed * Mathf.Sin(Mathf.Deg2Rad * (playerRB.rotation + 90)));
+        }
+        else
+        {
+            return new Vector2(speed * Mathf.Cos(Mathf.Deg2Rad * (playerRB.rotation + 90)),
+                           speed * Mathf.Sin(Mathf.Deg2Rad * (playerRB.rotation + 90)));
+        }
     }
 
     private Vector2 GetLastVelocity(){
