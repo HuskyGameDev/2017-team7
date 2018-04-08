@@ -85,6 +85,8 @@ public class Player : MonoBehaviour
     private Component[] boxes;
     private Component[] caps;
 
+    public bool lostDrift = false;
+
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -411,7 +413,7 @@ public class Player : MonoBehaviour
                 }
                 break;
             case STATES.DRIFT:
-
+                
                 driftTime++;
 
                 //setting newvel direction at unit length
@@ -420,22 +422,28 @@ public class Player : MonoBehaviour
                 setRotationDrifting();
 
                 //set new velocity             
-                newVel = newVel * playerRB.velocity.magnitude * 0.995f;
+                
 
                 if (terrainSpeed < 1)
                 {
-                    driftTime = 0;
-                    state = STATES.MOVE_F;
+                    newVel = newVel * playerRB.velocity.magnitude * 0.985f;
+                    lostDrift = true;
                 }
-                if ((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime)
+                else
+                {
+                    newVel = newVel * playerRB.velocity.magnitude * 0.995f;
+                }
+
+                if (((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime) && !lostDrift)
                 {
                     StartBoost(BOOSTS.DRIFT, driftTime * Time.fixedDeltaTime);
                     driftTime = 0;
                     
                 }
-                else if (!ctrls.GetA() && driftTime <= minDriftTime)
+                else if (!ctrls.GetA() && (driftTime <= minDriftTime || lostDrift))
                 {
                     driftTime = 0;
+                    lostDrift = false;
                     state = STATES.MOVE_F;
                 }
 
@@ -533,7 +541,6 @@ public class Player : MonoBehaviour
                 break;
 
         }
-
         playerRB.velocity = newVel;
 
         if (state != STATES.COUNTDOWN || !finished)
