@@ -366,11 +366,9 @@ public class Player : MonoBehaviour
                 updateDecayRate = 0.995f;
                 driftTime++;
                 turningAccel = GetTurningIncrementDrifting();
-                if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
 
                 if (terrainSpeed < 1)
                 {
-                    speed *= 0.985f;
                     lostDrift = true;
                 }
 
@@ -690,8 +688,8 @@ public class Player : MonoBehaviour
     }
     /* Gets the current velocity due to only this player, without external forces*/
     private Vector2 GetCurrentVelocity(){
-        return new Vector2(speed * Mathf.Cos(Mathf.Deg2Rad*(playerRB.rotation + 90)), 
-                           speed * Mathf.Sin(Mathf.Deg2Rad*(playerRB.rotation + 90)));
+        return new Vector2(speed * terrainSpeed * Mathf.Cos(Mathf.Deg2Rad*(playerRB.rotation + 90)), 
+                           speed * terrainSpeed * Mathf.Sin(Mathf.Deg2Rad*(playerRB.rotation + 90)));
     }
 
     private Vector2 GetLastVelocity(){
