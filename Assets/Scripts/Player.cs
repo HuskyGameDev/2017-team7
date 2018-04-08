@@ -24,12 +24,6 @@ public class Player : MonoBehaviour
     public Coroutine boostingCoR;
 
     private Controller ctrls;
-    /*Decay rate for velocity. vel = decay*vel */
-    private float decayRate = 0.97f;
-    /* Decay rate for misc forces */
-    private float forceDecayRate = 0.97f;
-    /*SHOULD ALWAYS BE 0 (or very small) */
-    private float restoringForceDecayRate = 0.0f;
     private float turnIncr;
     private float turningSpeed;
     private float maxTS;
@@ -92,20 +86,19 @@ public class Player : MonoBehaviour
     private float speed = 0;
     /*This vector will contain data about other accelerations; E.G. Bouncing off walls and players will set this vector*/
     private Vector2 miscForces;
-    /*Restoring force vector; Used for pushing out players in colliders. The difference between this
-    and misc forces is this one is only applied ONCE. Decay is instant. miscForces decays slowly.
-     */
-     private Vector2 restoringForces;
     /* Might not be necessary, but I'm going to keep track of the last non-colliding positon, just in case*/
     private Vector2 lastKnownGoodPosition;
     /*The bounciness for walls coefficient. Changes how powerful bounces between walls and players are. */
-    private float wallBounciness = 1f;
-    private float playerBounciness = 0.15f;
+    private float wallBounciness; /* = 1f; */
+    private float playerBounciness;/* = 0.15f */
     /*Last velocity */
     private Vector2 lastVelocity;
     /* Last rotation */
     private float lastRotation;
-
+    /*Decay rate for velocity. vel = decay*vel */
+    private float decayRate; /* = 0.97 */
+    /* Decay rate for misc forces */
+    private float forceDecayRate;/* = 0.97f; */
     private float lastRotationIncr;
     private void initValues()
     {
@@ -120,6 +113,10 @@ public class Player : MonoBehaviour
         terrainTurning = players.terrainTurning;
         mapEvents = players.mapEvents;
         powerupInstatiatior = players.powerupInstantiator;
+        wallBounciness = players.wallBounciness;
+        playerBounciness = players.playerBounciness;
+        decayRate = players.decayRate;
+        forceDecayRate = players.forceDecayRate;
     }
 
 
@@ -646,6 +643,7 @@ public class Player : MonoBehaviour
         lastRotation = playerRB.rotation;
         lastRotationIncr = turnIncrement;
         lastSpeed = speed;
+        lastKnownGoodPosition = playerRB.position;
         /*increase speed by acceleration */
         speed +=  acceleration;
         speed = Mathf.Clamp(speed, -maxReverse, maxSpeed);
@@ -655,7 +653,6 @@ public class Player : MonoBehaviour
         //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
         speed *= decayRate;
         miscForces *= forceDecayRate;
-        restoringForces *= restoringForceDecayRate;
 
         //Calculate the position, as god intended
         playerRB.MovePosition(playerRB.position + calculatedVelocity);
@@ -677,7 +674,7 @@ public class Player : MonoBehaviour
     /* Gets the players velocity, with all forces factored in. */
     private Vector2 GetCurrentVelocityWithOtherForces(){
         Vector2 vel = GetCurrentVelocity();
-        return vel + miscForces + restoringForces;
+        return vel + miscForces;
     }
 
     private void OnCollisionEnter2D(Collision2D other){
@@ -696,7 +693,7 @@ public class Player : MonoBehaviour
         Vector2 normSum = new Vector2();
         RaycastHit2D hit;
 
-        if(other.collider.tag == "PlayerDiamondCollider"){
+        if(other.collider.tag == "PlayerDiamondCollider" && other.otherCollider.tag == "PlayerDiamondCollider"){
             Player otherPlayer = other.collider.GetComponentInParent<Player>();
             
             foreach(ContactPoint2D point in other.contacts){

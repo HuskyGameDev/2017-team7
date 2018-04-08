@@ -34,7 +34,12 @@ public class Players : MonoBehaviour {
     public int minCamZoom4;
 
     /* New physics stuff!*/
-    
+    public float wallBounciness;
+    public float playerBounciness;
+    /*Decay rate for velocity. vel = decay*vel */
+    public float decayRate;
+    /* Decay rate for misc forces */
+    public float forceDecayRate;
 
     private void Start()
     {
