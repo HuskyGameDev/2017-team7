@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     /*Decay rate for velocity. vel = decay*vel */
     private float decayRate = 0.97f;
     /* Decay rate for misc forces */
-    private float forceDecayRate = 0.75f;
+    private float forceDecayRate = 0.97f;
     /*SHOULD ALWAYS BE 0 (or very small) */
     private float restoringForceDecayRate = 0.0f;
     private float turnIncr;
@@ -99,10 +99,14 @@ public class Player : MonoBehaviour
     /* Might not be necessary, but I'm going to keep track of the last non-colliding positon, just in case*/
     private Vector2 lastKnownGoodPosition;
     /*The bounciness for walls coefficient. Changes how powerful bounces between walls and players are. */
-    private float wallBounciness = 1.0f;
-    private float playerBounciness = 0.25f;
+    private float wallBounciness = 1f;
+    private float playerBounciness = 0.15f;
     /*Last velocity */
     private Vector2 lastVelocity;
+    /* Last rotation */
+    private float lastRotation;
+
+    private float lastRotationIncr;
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -441,8 +445,6 @@ public class Player : MonoBehaviour
         if (state == STATES.MOVE_B || state == STATES.ACCEL) animspeed = -animspeed;
         animator.SetFloat("Speed", animspeed);
         charAnimator.SetFloat("Speed", animspeed);
-
-       // players.EndFixedUpdate();
     }
 
     public void stopLastIncapCoroutine()
@@ -641,7 +643,8 @@ public class Player : MonoBehaviour
     /* NEW PHYSICS STUFF */
     private void DoPhysics(float acceleration, float turnIncrement){
         Vector2 calculatedVelocity;
-
+        lastRotation = playerRB.rotation;
+        lastRotationIncr = turnIncrement;
         lastSpeed = speed;
         /*increase speed by acceleration */
         speed +=  acceleration;
@@ -695,14 +698,17 @@ public class Player : MonoBehaviour
 
         if(other.collider.tag == "PlayerDiamondCollider"){
             Player otherPlayer = other.collider.GetComponentInParent<Player>();
-
+            
             foreach(ContactPoint2D point in other.contacts){
                 normSum += point.normal;
                 averagePoint += point.point;
             }            
             averagePoint /= other.contacts.Length;
+            hit = Physics2D.Raycast(averagePoint + maxSpeed*2*normSum.normalized, -normSum.normalized, maxSpeed*3);
+
+            playerRB.position = playerRB.position + (3f * Mathf.Abs(Vector2.Dot(hit.normal.normalized, mySpeed)) * hit.normal.normalized)/2;
             /* TODO scale this by some number or something */
-            miscForces += playerBounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized;
+            miscForces += (playerBounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized)/2;
         }else{
             /* TODO make it so that we KNOW we are colliding with a wall
                 Also, again, could use some scaling 
@@ -720,11 +726,15 @@ public class Player : MonoBehaviour
               weeks. 
             */
             hit = Physics2D.Raycast(averagePoint + maxSpeed*2*normSum.normalized, -normSum.normalized, maxSpeed*3);
-            Debug.DrawLine(averagePoint + maxSpeed*2*normSum.normalized, averagePoint + maxSpeed*2*normSum.normalized + maxSpeed*3*-normSum.normalized, Color.black, 10, false);
+            /*Debug.DrawLine(averagePoint + maxSpeed*2*normSum.normalized, averagePoint + maxSpeed*2*normSum.normalized + maxSpeed*3*-normSum.normalized, Color.black, 10, false);
             //Debug.DrawLine(hit.point, hit.point + 50*hit.normal, Color.black, 10, false);
             Debug.Log("Drawing point at " + hit.point + " With normal " + hit.normal);
-            transform.position = playerRB.position + (-3f * Vector2.Dot(hit.normal.normalized, mySpeed) * hit.normal.normalized);
-            //miscForces += wallBounciness* hit.normal * Vector2.Dot(hit.normal, mySpeed);
+            */
+
+            //playerRB.position = playerRB.position + (-3f * Vector2.Dot(hit.normal.normalized, mySpeed) * hit.normal.normalized);
+            playerRB.position = playerRB.position + (3f * Mathf.Abs(Vector2.Dot(hit.normal.normalized, mySpeed)) * hit.normal.normalized);
+            //playerRB.rotation = playerRB.rotation - lastRotationIncr;
+            miscForces += wallBounciness* hit.normal * Mathf.Abs(Vector2.Dot(hit.normal, mySpeed));
             //Debug.Log("");
             /*Penalty for hitting a wall? */
             speed *= Mathf.Pow(decayRate, 10);
