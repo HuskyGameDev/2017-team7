@@ -98,8 +98,9 @@ public class Player : MonoBehaviour
      private Vector2 restoringForces;
     /* Might not be necessary, but I'm going to keep track of the last non-colliding positon, just in case*/
     private Vector2 lastKnownGoodPosition;
-    /*The bounciness coefficient. Changes how powerful bounces between walls and players are. */
-    private float bounciness = 0.45f;
+    /*The bounciness for walls coefficient. Changes how powerful bounces between walls and players are. */
+    private float wallBounciness = 1.0f;
+    private float playerBounciness = 0.25f;
     /*Last velocity */
     private Vector2 lastVelocity;
     private void initValues()
@@ -677,23 +678,23 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        Debug.Log("Collision Entered");
+        //Debug.Log("Collision Entered");
         HandleCollision(other);
     }
 
     private void OnCollisionStay2D(Collision2D other){
-        Debug.Log("Still in the collider");
+        //Debug.Log("Still in the collider");
         HandleCollision(other);
     }
 
     private void HandleCollision(Collision2D other){
+        Vector2 mySpeed = GetLastVelocity();
+        Vector2 averagePoint = new Vector2();
+        Vector2 normSum = new Vector2();
+        RaycastHit2D hit;
+
         if(other.collider.tag == "PlayerDiamondCollider"){
             Player otherPlayer = other.collider.GetComponentInParent<Player>();
-            Vector2 mySpeed = GetLastVelocity();
-            /*
-            Vector2 averagePoint = new Vector2();
-            Vector2 normSum = new Vector2();
-            RaycastHit2D hit;
 
             foreach(ContactPoint2D point in other.contacts){
                 normSum += point.normal;
@@ -701,16 +702,11 @@ public class Player : MonoBehaviour
             }            
             averagePoint /= other.contacts.Length;
             /* TODO scale this by some number or something */
-            miscForces += bounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized;
+            miscForces += playerBounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized;
         }else{
             /* TODO make it so that we KNOW we are colliding with a wall
                 Also, again, could use some scaling 
             */
-            Vector2 mySpeed = GetLastVelocity();
-            Vector2 averagePoint = new Vector2();
-            Vector2 normSum = new Vector2();
-            RaycastHit2D hit;
-
             foreach(ContactPoint2D point in other.contacts){
                 normSum += point.normal;
                 averagePoint += point.point;
@@ -723,12 +719,13 @@ public class Player : MonoBehaviour
               without writing a collision solver, which would probably take
               weeks. 
             */
-
-            hit = Physics2D.Raycast(averagePoint + normSum.normalized, -normSum.normalized, 2, 0, 0);
-            
-            playerRB.position = playerRB.position + (-1.05f * Vector2.Dot(hit.normal, mySpeed) * hit.normal);
-            miscForces += bounciness*normSum.normalized;
-
+            hit = Physics2D.Raycast(averagePoint + maxSpeed*2*normSum.normalized, -normSum.normalized, maxSpeed*3);
+            Debug.DrawLine(averagePoint + maxSpeed*2*normSum.normalized, averagePoint + maxSpeed*2*normSum.normalized + maxSpeed*3*-normSum.normalized, Color.black, 10, false);
+            //Debug.DrawLine(hit.point, hit.point + 50*hit.normal, Color.black, 10, false);
+            Debug.Log("Drawing point at " + hit.point + " With normal " + hit.normal);
+            transform.position = playerRB.position + (-3f * Vector2.Dot(hit.normal.normalized, mySpeed) * hit.normal.normalized);
+            //miscForces += wallBounciness* hit.normal * Vector2.Dot(hit.normal, mySpeed);
+            //Debug.Log("");
             /*Penalty for hitting a wall? */
             speed *= Mathf.Pow(decayRate, 10);
         
