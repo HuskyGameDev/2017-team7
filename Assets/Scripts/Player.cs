@@ -350,7 +350,7 @@ public class Player : MonoBehaviour
                 setNewVelRotation(ref newVel);
                 
                 //setting player speed to slightly smaller ratio of current velocity
-                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.99f;
+                if (ctrls.GetSpeed() == 0) newVel *= playerRB.velocity.magnitude * 0.985f;
                 else
                 {
                     accel = newVel * acceleration * ctrls.GetSpeed();
