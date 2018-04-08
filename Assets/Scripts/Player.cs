@@ -184,10 +184,10 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
         speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
         speedList[(int) BOOSTS.PAD] = 325;
-        speedList[(int) BOOSTS.PAD_BACK] = 120;
-        speedList[(int) BOOSTS.DRAFT] = 175;
-        speedList[(int) BOOSTS.DRIFT] = 250;
-        speedList[(int) BOOSTS.POWERUP] = 200;
+        speedList[(int) BOOSTS.PAD_BACK] = 160;
+        speedList[(int) BOOSTS.DRAFT] = 260;
+        speedList[(int) BOOSTS.DRIFT] = 260;
+        speedList[(int) BOOSTS.POWERUP] = 280;
 
 
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
@@ -420,7 +420,7 @@ public class Player : MonoBehaviour
                 setRotationDrifting();
 
                 //set new velocity             
-                newVel = newVel * playerRB.velocity.magnitude * 0.99f;
+                newVel = newVel * playerRB.velocity.magnitude * 0.995f;
 
                 if ((!ctrls.GetA() && driftTime > minDriftTime) || driftTime > maxDriftTime)
                 {
