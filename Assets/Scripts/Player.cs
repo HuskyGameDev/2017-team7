@@ -197,11 +197,11 @@ public class Player : MonoBehaviour
 
         speedList[(int) BOOSTS.STANDARD] = maxSpeed;
         speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
-        speedList[(int) BOOSTS.PAD] = 1.75f;
+        speedList[(int) BOOSTS.PAD] = 2.6f;
         speedList[(int) BOOSTS.PAD_BACK] = 1f;
-        speedList[(int) BOOSTS.DRAFT] = 1.66f;
-        speedList[(int) BOOSTS.DRIFT] = 1.66f;
-        speedList[(int) BOOSTS.POWERUP] = 1.75f;
+        speedList[(int) BOOSTS.DRAFT] = 1.8f;
+        speedList[(int) BOOSTS.DRIFT] = 2f;
+        speedList[(int) BOOSTS.POWERUP] = 1.8f;
 
 
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
@@ -226,6 +226,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        float updateDecayRate = decayRate;
         float accel = 0;
         float turningAccel = 0;
         //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
@@ -362,7 +363,7 @@ public class Player : MonoBehaviour
                 }
                 break;
             case STATES.DRIFT:
-                
+                updateDecayRate = 0.995f;
                 driftTime++;
                 turningAccel = GetTurningIncrementDrifting();
                 if ((!ctrls.GetA() && driftTime > 80) || driftTime > 300)
@@ -453,7 +454,7 @@ public class Player : MonoBehaviour
             DoPowerups();
         }
 
-        DoPhysics(accel, turningAccel);
+        DoPhysics(accel, turningAccel, updateDecayRate);
         
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
         charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
@@ -663,7 +664,7 @@ public class Player : MonoBehaviour
     }
 
     /* NEW PHYSICS STUFF */
-    private void DoPhysics(float acceleration, float turnIncrement){
+    private void DoPhysics(float acceleration, float turnIncrement, float physicsDecayRate){
         Vector2 calculatedVelocity;
         lastRotation = playerRB.rotation;
         lastRotationIncr = turnIncrement;
@@ -676,7 +677,7 @@ public class Player : MonoBehaviour
         lastVelocity = calculatedVelocity = GetCurrentVelocityWithOtherForces();
         //Decay velocity. This decay should be proportional to the velocity.
         //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
-        speed *= decayRate;
+        speed *= physicsDecayRate;
         miscForces *= forceDecayRate;
 
         //Calculate the position, as god intended
