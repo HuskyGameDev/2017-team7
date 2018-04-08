@@ -5054,7 +5054,7 @@ MonoBehaviour:
   turningSpeed: 0.65
   acceleration: 0.0475
   maxSpeed: 1.5
-  maxReverse: 60
+  maxReverse: 0.75
   wallMaterial: {fileID: 6200000, guid: bc351694c8360524a802a1748e5be0b8, type: 2}
   playerMaterial: {fileID: 6200000, guid: 8fb25603c3953354e85dafb38c0490ef, type: 2}
   terrainSpeed: 1

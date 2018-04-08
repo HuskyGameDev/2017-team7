@@ -1139,12 +1139,12 @@ Prefab:
         type: 2}
       propertyPath: EelObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 973101765}
+      objectReference: {fileID: 0}
     - target: {fileID: 114369401434258778, guid: 3c1ecd3108dfd0541af258e179265aa3,
         type: 2}
       propertyPath: EelObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 973101764}
+      objectReference: {fileID: 0}
     - target: {fileID: 114369401434258778, guid: 3c1ecd3108dfd0541af258e179265aa3,
         type: 2}
       propertyPath: EelObjects.Array.data[3]
@@ -10649,7 +10649,7 @@ Prefab:
         type: 2}
       propertyPath: eggSplats.Array.data[1]
       value: 
-      objectReference: {fileID: 1493412997}
+      objectReference: {fileID: 0}
     - target: {fileID: 114372268673547432, guid: a3b4654e61b3f6a47826cf50f1293e62,
         type: 2}
       propertyPath: eggSplats.Array.data[2]
@@ -10659,7 +10659,7 @@ Prefab:
         type: 2}
       propertyPath: eggSplats.Array.data[3]
       value: 
-      objectReference: {fileID: 1544373813}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3b4654e61b3f6a47826cf50f1293e62, type: 2}
   m_IsPrefabParent: 0
@@ -11114,16 +11114,6 @@ MonoBehaviour:
 --- !u!1 &973101763 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1315833870849432, guid: be171fb7b00d6104aa59ab235f0fb666,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816462431}
---- !u!1 &973101764 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1952334907989396, guid: be171fb7b00d6104aa59ab235f0fb666,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816462431}
---- !u!1 &973101765 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1784717997813560, guid: be171fb7b00d6104aa59ab235f0fb666,
     type: 2}
   m_PrefabInternal: {fileID: 1816462431}
 --- !u!1 &1002143907
@@ -16780,12 +16770,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &1493412997 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114058171469172768, guid: be171fb7b00d6104aa59ab235f0fb666,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816462431}
-  m_Script: {fileID: 11500000, guid: 9bb3f7cb6897c774389c7b03af835e2e, type: 3}
 --- !u!1 &1495022688
 GameObject:
   m_ObjectHideFlags: 0
@@ -17188,12 +17172,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!114 &1544373813 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114134229816360584, guid: be171fb7b00d6104aa59ab235f0fb666,
-    type: 2}
-  m_PrefabInternal: {fileID: 1816462431}
-  m_Script: {fileID: 11500000, guid: 9bb3f7cb6897c774389c7b03af835e2e, type: 3}
 --- !u!1 &1554697545
 GameObject:
   m_ObjectHideFlags: 0
