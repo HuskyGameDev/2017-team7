@@ -20509,6 +20509,70 @@ Prefab:
       propertyPath: lapDisplayMaster
       value: 
       objectReference: {fileID: 1219396633}
+    - target: {fileID: 82433573016218954, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: MinDistance
+      value: 1.4090767
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154144945485298, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50372460126456156, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50976257667370220, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50618326075558282, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50780095341341752, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50780095341341752, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50618326075558282, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50976257667370220, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50372460126456156, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: maxReverse
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: acceleration
+      value: 0.0457
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
   m_IsPrefabParent: 0

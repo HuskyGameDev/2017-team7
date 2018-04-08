@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     private float decayRate = 0.97f;
     /* Decay rate for misc forces */
     private float forceDecayRate = 0.75f;
+    /*SHOULD ALWAYS BE 0 (or very small) */
+    private float restoringForceDecayRate = 0.0f;
     private float turnIncr;
     private float turningSpeed;
     private float maxTS;
@@ -90,9 +92,16 @@ public class Player : MonoBehaviour
     private float speed = 0;
     /*This vector will contain data about other accelerations; E.G. Bouncing off walls and players will set this vector*/
     private Vector2 miscForces;
+    /*Restoring force vector; Used for pushing out players in colliders. The difference between this
+    and misc forces is this one is only applied ONCE. Decay is instant. miscForces decays slowly.
+     */
+     private Vector2 restoringForces;
     /* Might not be necessary, but I'm going to keep track of the last non-colliding positon, just in case*/
     private Vector2 lastKnownGoodPosition;
-
+    /*The bounciness coefficient. Changes how powerful bounces between walls and players are. */
+    private float bounciness = 0.45f;
+    /*Last velocity */
+    private Vector2 lastVelocity;
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -169,7 +178,8 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
         playerRB = GetComponent<Rigidbody2D>();
         ctrls = Inputs.GetController(playerNumber);
-        playerRB.freezeRotation = true;
+        //playerRB.freezeRotation = true;
+        playerRB.isKinematic = true;
         col = GetComponentInChildren<CapsuleCollider2D>();
         draftingHitbox = GetComponent<BoxCollider2D>();
 
@@ -194,6 +204,8 @@ public class Player : MonoBehaviour
 
         boxes = gameObject.GetComponentsInChildren<BoxCollider2D>();
         caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();
+
+        lastVelocity = new Vector2();
     }
 
     // Update is called once per frame
@@ -249,7 +261,7 @@ public class Player : MonoBehaviour
                 }
                 if (ctrls.GetA())
                 {
-                    driftDir = playerRB.rotation;
+                    driftDir = transform.eulerAngles.z;
                     state = STATES.DRIFT;
                    
                 }
@@ -386,7 +398,7 @@ public class Player : MonoBehaviour
                     StopCoroutine(lastBoostFCoroutine);
                     lastBoostFCoroutine = null;
                     maxSpeed = speedList[(int)BOOSTS.STANDARD];
-                    driftDir = playerRB.rotation;
+                    driftDir = transform.eulerAngles.z;
                     state = STATES.DRIFT;
                 }
 
@@ -421,13 +433,15 @@ public class Player : MonoBehaviour
         }
 
         DoPhysics(accel, turningAccel);
-
+        
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
         charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
         float animspeed = speed;
         if (state == STATES.MOVE_B || state == STATES.ACCEL) animspeed = -animspeed;
         animator.SetFloat("Speed", animspeed);
         charAnimator.SetFloat("Speed", animspeed);
+
+       // players.EndFixedUpdate();
     }
 
     public void stopLastIncapCoroutine()
@@ -442,19 +456,19 @@ public class Player : MonoBehaviour
             drafting = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "PlayerWallCollider")
-        // if (collision.gameObject.tag == "Player")
         {
             drafting = false;
-        }
+        } 
     }
 
     
     public float GetSpeedPercent()
     {
-        return playerRB.velocity.magnitude / speedList[(int)BOOSTS.STANDARD];
+        return GetCurrentVelocity().magnitude / speedList[(int)BOOSTS.STANDARD];
     }
 
 
@@ -625,37 +639,99 @@ public class Player : MonoBehaviour
 
     /* NEW PHYSICS STUFF */
     private void DoPhysics(float acceleration, float turnIncrement){
-        /* TODO calculate the worldspace coodinates for these rotations!*/
-        Vector3 calculatedVelocity = new Vector3(Mathf.Cos(Mathf.Deg2Rad*(transform.eulerAngles.z + turnIncrement + 90)), 
-                                                 Mathf.Sin(Mathf.Deg2Rad*(transform.eulerAngles.z + turnIncrement + 90)), 0f);
-        //if(turnIncrement != 0) Debug.Log("TurnIncrement = " + turnIncrement);
+        Vector2 calculatedVelocity;
+
         lastSpeed = speed;
         /*increase speed by acceleration */
         speed +=  acceleration;
         speed = Mathf.Clamp(speed, -maxReverse, maxSpeed);
-        //Debug.Log("Speed: " + speed);
-        calculatedVelocity *= speed;
-        //We add acceleration to velocity, cap it to the max speed, and then calculate the next position
-        calculatedVelocity += (Vector3)miscForces;
+
+        lastVelocity = calculatedVelocity = GetCurrentVelocityWithOtherForces();
         //Decay velocity. This decay should be proportional to the velocity.
         //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
         speed *= decayRate;
         miscForces *= forceDecayRate;
+        restoringForces *= restoringForceDecayRate;
+
         //Calculate the position, as god intended
-        transform.position += calculatedVelocity;
-        transform.Rotate(0, 0, turnIncrement);
+        playerRB.MovePosition(playerRB.position + calculatedVelocity);
+        playerRB.MoveRotation(playerRB.rotation + turnIncrement);        
+    }
+    /* Returns the speed with misc */
+    private float GetSpeedWithOtherForces(){
+        return GetCurrentVelocityWithOtherForces().magnitude;
+    }
+    /* Gets the current velocity due to only this player, without external forces*/
+    private Vector2 GetCurrentVelocity(){
+        return new Vector2(speed * Mathf.Cos(Mathf.Deg2Rad*(playerRB.rotation + 90)), 
+                           speed * Mathf.Sin(Mathf.Deg2Rad*(playerRB.rotation + 90)));
     }
 
-    void OnCollisionEnter2D(Collision2D other){
+    private Vector2 GetLastVelocity(){
+        return lastVelocity;
+    }
+    /* Gets the players velocity, with all forces factored in. */
+    private Vector2 GetCurrentVelocityWithOtherForces(){
+        Vector2 vel = GetCurrentVelocity();
+        return vel + miscForces + restoringForces;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other){
+        Debug.Log("Collision Entered");
+        HandleCollision(other);
+    }
+
+    private void OnCollisionStay2D(Collision2D other){
+        Debug.Log("Still in the collider");
+        HandleCollision(other);
+    }
+
+    private void HandleCollision(Collision2D other){
         if(other.collider.tag == "PlayerDiamondCollider"){
             Player otherPlayer = other.collider.GetComponentInParent<Player>();
+            Vector2 mySpeed = GetLastVelocity();
+            /*
+            Vector2 averagePoint = new Vector2();
+            Vector2 normSum = new Vector2();
+            RaycastHit2D hit;
+
+            foreach(ContactPoint2D point in other.contacts){
+                normSum += point.normal;
+                averagePoint += point.point;
+            }            
+            averagePoint /= other.contacts.Length;
             /* TODO scale this by some number or something */
-            miscForces += (Vector2)(transform.position - otherPlayer.transform.position);
+            miscForces += bounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized;
         }else{
             /* TODO make it so that we KNOW we are colliding with a wall
                 Also, again, could use some scaling 
             */
-            miscForces += (Vector2)(other.contacts[0].normal);
+            Vector2 mySpeed = GetLastVelocity();
+            Vector2 averagePoint = new Vector2();
+            Vector2 normSum = new Vector2();
+            RaycastHit2D hit;
+
+            foreach(ContactPoint2D point in other.contacts){
+                normSum += point.normal;
+                averagePoint += point.point;
+            }
+            averagePoint /= other.contacts.Length;
+
+            /*This is actually disgusting 
+              We need a surface normal, so we will compute it
+              by just raycasting a thing. This is really the best we can do
+              without writing a collision solver, which would probably take
+              weeks. 
+            */
+
+            hit = Physics2D.Raycast(averagePoint + normSum.normalized, -normSum.normalized, 2, 0, 0);
+            
+            playerRB.position = playerRB.position + (-1.05f * Vector2.Dot(hit.normal, mySpeed) * hit.normal);
+            miscForces += bounciness*normSum.normalized;
+
+            /*Penalty for hitting a wall? */
+            speed *= Mathf.Pow(decayRate, 10);
+        
         }
     }
 }
