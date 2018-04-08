@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
+	293921080	Play_MM_Music			\MainMenu\Play_MM_Music	
 	1042987450	Play_Select			\UISounds\Play_Select	
 	1943693866	Play_Toggle			\UISounds\Play_Toggle	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	524106578	joystick toggle	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\joystick toggle_1C9C67B2.wem		\Actor-Mixer Hierarchy\UISounds\joystick toggle		341564
 	813472014	Menu Select Sound	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Menu Select Sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\UISounds\Menu Select Sound		341564
+	934615810	Mello Barn Theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Mello Barn Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\MainMenu\Mello Barn Theme		21168176
 
