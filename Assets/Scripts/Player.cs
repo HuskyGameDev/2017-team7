@@ -230,6 +230,7 @@ public class Player : MonoBehaviour
         float updateDecayRate = decayRate;
         float accel = 0;
         float turningAccel = 0;
+        bool keepDirection = false;
         //Debug.Log("Idle " + playerNumber + " " + ctrls.GetSpeed());
         switch (state)
         {
@@ -356,6 +357,7 @@ public class Player : MonoBehaviour
 
                 break;
             case STATES.OILED:
+                keepDirection = true;
                 turningAccel = GetTurningIncrementDrifting();
 
                 if (speed < speedList[(int)BOOSTS.STANDARD] / 3)
@@ -367,7 +369,7 @@ public class Player : MonoBehaviour
                 updateDecayRate = 0.995f;
                 driftTime++;
                 turningAccel = GetTurningIncrementDrifting();
-
+                keepDirection = true;
                 if (terrainSpeed < 1)
                 {
                     lostDrift = true;
@@ -453,7 +455,7 @@ public class Player : MonoBehaviour
             DoPowerups();
         }
 
-        DoPhysics(accel, turningAccel, updateDecayRate);
+        DoPhysics(accel, turningAccel, updateDecayRate, keepDirection);
         
         animator.SetFloat("TurnVal", -ctrls.GetTurn());
         charAnimator.SetFloat("TurnVal", -ctrls.GetTurn());
@@ -487,7 +489,7 @@ public class Player : MonoBehaviour
     
     public float GetSpeedPercent()
     {
-        return GetCurrentVelocity().magnitude / speedList[(int)BOOSTS.STANDARD];
+        return GetVelocity(speed, playerRB.rotation).magnitude / speedList[(int)BOOSTS.STANDARD];
     }
 
 
@@ -669,7 +671,7 @@ public class Player : MonoBehaviour
     }
 
     /* NEW PHYSICS STUFF */
-    private void DoPhysics(float acceleration, float turnIncrement, float physicsDecayRate){
+    private void DoPhysics(float acceleration, float turnIncrement, float physicsDecayRate, bool keepDirection){
         Vector2 calculatedVelocity;
         lastRotation = playerRB.rotation;
         lastRotationIncr = turnIncrement;
@@ -678,8 +680,11 @@ public class Player : MonoBehaviour
         /*increase speed by acceleration */
         speed +=  acceleration;
         speed = Mathf.Clamp(speed, -maxReverse, maxSpeed);
-
-        lastVelocity = calculatedVelocity = GetCurrentVelocityWithOtherForces();
+        if(keepDirection){
+            lastVelocity = calculatedVelocity = GetVelocityInDirection(GetLastVelocity());
+        }else{
+            lastVelocity = calculatedVelocity = GetVelocityWithOtherForces(speed, playerRB.rotation + turnIncrement);
+        }
         //Decay velocity. This decay should be proportional to the velocity.
         //In real physics, we would be propotional to the square of velocity. Here we'll try a linear relationship.
         speed *= physicsDecayRate;
@@ -689,30 +694,38 @@ public class Player : MonoBehaviour
         playerRB.MovePosition(playerRB.position + calculatedVelocity);
         playerRB.MoveRotation(playerRB.rotation + turnIncrement);        
     }
-    /* Returns the speed with misc */
-    private float GetSpeedWithOtherForces(){
-        return GetCurrentVelocityWithOtherForces().magnitude;
+    /* Returns the speed with misc forces*/
+    private float GetSpeedWithOtherForces(float speed, float rot){
+        return GetVelocityWithOtherForces(speed, rot).magnitude;
     }
     /* Gets the current velocity due to only this player, without external forces*/
-    private Vector2 GetCurrentVelocity(){
+    private Vector2 GetVelocity(float speed, float rot){
         if (!ignoreTerrain)
         {
-            return new Vector2(speed * terrainSpeed * Mathf.Cos(Mathf.Deg2Rad * (playerRB.rotation + 90)),
-                               speed * terrainSpeed * Mathf.Sin(Mathf.Deg2Rad * (playerRB.rotation + 90)));
+            return new Vector2(speed * terrainSpeed * Mathf.Cos(Mathf.Deg2Rad * (rot + 90)),
+                               speed * terrainSpeed * Mathf.Sin(Mathf.Deg2Rad * (rot + 90)));
         }
         else
         {
-            return new Vector2(speed * Mathf.Cos(Mathf.Deg2Rad * (playerRB.rotation + 90)),
-                           speed * Mathf.Sin(Mathf.Deg2Rad * (playerRB.rotation + 90)));
+            return new Vector2(speed * Mathf.Cos(Mathf.Deg2Rad * (rot + 90)),
+                           speed * Mathf.Sin(Mathf.Deg2Rad * (rot + 90)));
         }
     }
 
     private Vector2 GetLastVelocity(){
         return lastVelocity;
     }
+    /* Gets the velocity, but in the specified direction instead of based on rotation changes*/
+    private Vector2 GetVelocityInDirection(Vector2 dir){
+        if(!ignoreTerrain){
+            return dir.normalized * speed * terrainSpeed;
+        }else{
+            return dir.normalized * speed;
+        }
+    }
     /* Gets the players velocity, with all forces factored in. */
-    private Vector2 GetCurrentVelocityWithOtherForces(){
-        Vector2 vel = GetCurrentVelocity();
+    private Vector2 GetVelocityWithOtherForces(float speed, float rot){
+        Vector2 vel = GetVelocity(speed, rot);
         return vel + miscForces;
     }
 
