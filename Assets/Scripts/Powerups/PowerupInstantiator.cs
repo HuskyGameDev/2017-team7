@@ -13,6 +13,14 @@ public enum PowerupType {
 	SPEEDBOOST
 };
 
+public enum PowerupDirection
+{
+    UP = 0,
+    RIGHT = 1,
+    DOWN = 2,
+    LEFT = 3
+}
+
 public class PowerupInstantiator : MonoBehaviour {
 	public Powerup GetPowerup(PowerupType type, Player owner){
 		Powerup p;
