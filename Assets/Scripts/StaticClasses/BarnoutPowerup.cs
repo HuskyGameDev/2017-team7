@@ -14,4 +14,8 @@ public class BarnoutPowerup {
     {
         return _powerup;
     }
+    public uint GetUses()
+    {
+        return _amount;
+    }
 }
