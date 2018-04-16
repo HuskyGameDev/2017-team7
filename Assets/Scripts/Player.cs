@@ -758,12 +758,8 @@ public class Player : MonoBehaviour
             hit = Physics2D.Raycast(averagePoint + maxSpeed*2*normSum.normalized, -normSum.normalized, maxSpeed*3);
 
             playerRB.position = playerRB.position + (3f * Mathf.Abs(Vector2.Dot(hit.normal.normalized, mySpeed)) * hit.normal.normalized)/2;
-            /* TODO scale this by some number or something */
             miscForces += (playerBounciness*(Vector2)(transform.position - otherPlayer.transform.position).normalized)/2;
         }else{
-            /* TODO make it so that we KNOW we are colliding with a wall
-                Also, again, could use some scaling 
-            */
             foreach(ContactPoint2D point in other.contacts){
                 normSum += point.normal;
                 averagePoint += point.point;
@@ -777,17 +773,10 @@ public class Player : MonoBehaviour
               weeks. 
             */
             hit = Physics2D.Raycast(averagePoint + maxSpeed*2*normSum.normalized, -normSum.normalized, maxSpeed*3);
-            /*Debug.DrawLine(averagePoint + maxSpeed*2*normSum.normalized, averagePoint + maxSpeed*2*normSum.normalized + maxSpeed*3*-normSum.normalized, Color.black, 10, false);
-            //Debug.DrawLine(hit.point, hit.point + 50*hit.normal, Color.black, 10, false);
-            Debug.Log("Drawing point at " + hit.point + " With normal " + hit.normal);
-            */
 
-            //playerRB.position = playerRB.position + (-3f * Vector2.Dot(hit.normal.normalized, mySpeed) * hit.normal.normalized);
             playerRB.position = playerRB.position + (3f * Mathf.Abs(Vector2.Dot(hit.normal.normalized, mySpeed)) * hit.normal.normalized);
-            //playerRB.rotation = playerRB.rotation - lastRotationIncr;
             miscForces += wallBounciness* hit.normal * Mathf.Abs(Vector2.Dot(hit.normal, mySpeed));
-            //Debug.Log("");
-            /*Penalty for hitting a wall? */
+            /*TODO make this a variable in players */
             speed *= Mathf.Pow(decayRate, 10);
         
         }
