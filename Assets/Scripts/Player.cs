@@ -208,10 +208,12 @@ public class Player : MonoBehaviour
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(PowerupType.CHICKEN, this);
-        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(PowerupType.PUFFERFISH, this);
-        powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(PowerupType.SQUID, this);
-        powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(PowerupType.FROG, this);
+
+        BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
+        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.UP), this);
+        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.DOWN), this);
+        powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.LEFT), this);
+        powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.RIGHT), this);
 
         boxes = gameObject.GetComponentsInChildren<BoxCollider2D>();
         caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();

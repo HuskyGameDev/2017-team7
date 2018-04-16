@@ -8,7 +8,7 @@ public class ChickenPowerup : Powerup {
 	private ChickenObject newChicken;
 
     void Start () {
-		uses = 3;
+		//uses = 3;
 		currentCooldown = 0;
 	}
 	

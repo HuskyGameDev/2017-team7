@@ -10,4 +10,12 @@ public class BarnoutPowerup {
         _powerup = powerup;
         _amount = amount;
     }
+    public PowerupType GetPowerup()
+    {
+        return _powerup;
+    }
+    public uint GetUses()
+    {
+        return _amount;
+    }
 }

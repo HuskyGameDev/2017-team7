@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DoggoScene : MonoBehaviour {
 
     public Text dialogue;
+    public SpriteRenderer skip;
 
     List<DoggoPanel> instructions;
     List<DoggoPanel> skips;
@@ -56,6 +57,7 @@ public class DoggoScene : MonoBehaviour {
         if (firstPlayerController.GetY() && !skipped)
         {
             skipped = true;
+            skip.gameObject.SetActive(false);
             //grab one of the skip panels and set animator
             StopCoroutine(panelTimer);
             SetAnimator(skips[Random.Range(0, skips.Count)]);
@@ -100,6 +102,7 @@ public class DoggoScene : MonoBehaviour {
 
     private void ToFirstMinigame()
     {
+        MinigamePool.Instance.ResetPool();
         //TODO: write code to enter first minigame
         Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Powerup : MonoBehaviour {
 	
-	public int uses;
+	public uint uses;
 	public int cooldownTicks;
 	protected int currentCooldown = 0;
 	protected Player owner = null;

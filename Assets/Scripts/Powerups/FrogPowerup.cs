@@ -9,7 +9,7 @@ public class FrogPowerup : Powerup {
 
 	// Use this for initialization
 	void Start () {
-        uses = 10;
+        //uses = 10;
         currentCooldown = 0;
     }
 

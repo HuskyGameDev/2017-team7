@@ -99,7 +99,8 @@ public class CharSelectController : MonoBehaviour {
             string[] maps = { "MainScene", "MainScene2" };
             if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
             EndData.Instantiate();
-            Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
+            //Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
+            Barnout.ChangeScene("MinigameStart");
         }
     }
 

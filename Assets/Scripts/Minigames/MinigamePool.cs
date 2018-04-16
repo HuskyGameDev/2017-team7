@@ -9,7 +9,7 @@ public class MinigamePool {
 	public static MinigamePool Instance {
 		get {
 			if(instance == null){
-				return new MinigamePool();
+                instance = new MinigamePool();
 			}
 			return instance;
 		}

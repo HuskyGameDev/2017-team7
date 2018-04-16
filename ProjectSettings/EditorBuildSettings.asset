@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MinigameTransition.unity
     guid: e4ac27a6b842d03499ab6dc75a48104a
+  - enabled: 1
+    path: Assets/_Scenes/Maps/FieldMap.unity
+    guid: 36ca771d72c39bf49ae7634d5dc60d7b

@@ -10,7 +10,7 @@ public class PufferPowerup : Powerup {
     // Use this for initialization
     void Start()
     {
-        uses = 3;
+        //uses = 3;
         currentCooldown = 0;
     }
     
