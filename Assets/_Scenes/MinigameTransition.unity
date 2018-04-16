@@ -239,6 +239,7 @@ MonoBehaviour:
   buttonLeft: {fileID: 2019173718}
   buttonRight: {fileID: 1545741066}
   buttonUp: {fileID: 376164795}
+  powerupImageMap: {fileID: 311625366}
 --- !u!1 &172206594
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,7 +373,7 @@ MonoBehaviour:
   - type: 5
     image: {fileID: 21300000, guid: 47d71a0ad9f7dbf4fa23c09f1426c254, type: 3}
   - type: 6
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 641f9518fc584f647a2363e92f41e31c, type: 3}
 --- !u!4 &311625367
 Transform:
   m_ObjectHideFlags: 0
@@ -386,6 +387,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &316887880 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212680521808562080, guid: 33b669b7e9084e8449f097d07b6b5db8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1143006475}
 --- !u!1 &376164792
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +550,11 @@ Prefab:
       propertyPath: m_Name
       value: x2
       objectReference: {fileID: 0}
+    - target: {fileID: 114505681932715874, guid: 33b669b7e9084e8449f097d07b6b5db8,
+        type: 2}
+      propertyPath: powerupImage
+      value: 
+      objectReference: {fileID: 1755764526}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33b669b7e9084e8449f097d07b6b5db8, type: 2}
   m_IsPrefabParent: 0
@@ -834,12 +845,22 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: dc86002debde90240975d8fdb119f198,
         type: 3}
+    - target: {fileID: 114505681932715874, guid: 33b669b7e9084e8449f097d07b6b5db8,
+        type: 2}
+      propertyPath: powerupImage
+      value: 
+      objectReference: {fileID: 1091230267}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33b669b7e9084e8449f097d07b6b5db8, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &965363199 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4199360038126466, guid: 33b669b7e9084e8449f097d07b6b5db8,
+    type: 2}
+  m_PrefabInternal: {fileID: 965363198}
+--- !u!212 &1091230267 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212680521808562080, guid: 33b669b7e9084e8449f097d07b6b5db8,
     type: 2}
   m_PrefabInternal: {fileID: 965363198}
 --- !u!1 &1114457574
@@ -1023,6 +1044,11 @@ Prefab:
       propertyPath: m_Name
       value: powerup3x
       objectReference: {fileID: 0}
+    - target: {fileID: 114505681932715874, guid: 33b669b7e9084e8449f097d07b6b5db8,
+        type: 2}
+      propertyPath: powerupImage
+      value: 
+      objectReference: {fileID: 316887880}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33b669b7e9084e8449f097d07b6b5db8, type: 2}
   m_IsPrefabParent: 0
@@ -1074,6 +1100,7 @@ MonoBehaviour:
   powerup2x_l: {fileID: 714624980}
   powerup2x_r: {fileID: 1839644361}
   powerup1x: {fileID: 26733625}
+  powerupImageMap: {fileID: 311625366}
 --- !u!114 &1373036389 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114505681932715874, guid: 33b669b7e9084e8449f097d07b6b5db8,
@@ -1429,6 +1456,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4649015992900928, guid: d78d372e6474ec043ad44c6e06585940,
     type: 2}
   m_PrefabInternal: {fileID: 1717965102}
+--- !u!212 &1755764526 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212680521808562080, guid: 33b669b7e9084e8449f097d07b6b5db8,
+    type: 2}
+  m_PrefabInternal: {fileID: 663140607}
 --- !u!1 &1766555364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1611,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: b728838330716fc4b87a5a23730eb787,
         type: 3}
+    - target: {fileID: 114505681932715874, guid: 33b669b7e9084e8449f097d07b6b5db8,
+        type: 2}
+      propertyPath: powerupImage
+      value: 
+      objectReference: {fileID: 2139315423}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33b669b7e9084e8449f097d07b6b5db8, type: 2}
   m_IsPrefabParent: 0
@@ -1937,3 +1974,8 @@ Transform:
   m_PrefabParentObject: {fileID: 4649015992900928, guid: d78d372e6474ec043ad44c6e06585940,
     type: 2}
   m_PrefabInternal: {fileID: 2118127367}
+--- !u!212 &2139315423 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212680521808562080, guid: 33b669b7e9084e8449f097d07b6b5db8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1879971730}
