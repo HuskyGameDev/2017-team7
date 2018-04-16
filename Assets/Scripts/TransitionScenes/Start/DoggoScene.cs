@@ -100,6 +100,7 @@ public class DoggoScene : MonoBehaviour {
 
     private void ToFirstMinigame()
     {
+        MinigamePool.Instance.ResetPool();
         //TODO: write code to enter first minigame
         Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName);
     }

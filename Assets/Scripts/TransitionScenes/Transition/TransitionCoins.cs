@@ -7,7 +7,7 @@ public class TransitionCoins : MonoBehaviour {
     public Sprite[] charImages;
     public Sprite[] playerCoinImages;
 
-    public void Start()
+    public void Init()
     {
         foreach(MinigameData.Standing s in MinigameData.standings)
         {

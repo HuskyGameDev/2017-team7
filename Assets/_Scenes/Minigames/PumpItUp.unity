@@ -666,7 +666,7 @@ MonoBehaviour:
   - {fileID: 2049249951}
   - {fileID: 474971574}
   - {fileID: 1526659147}
-  pumpsNeeded: 120
+  pumpsNeeded: 2
   timeGiven: 60
 --- !u!1001 &1314734328
 Prefab:

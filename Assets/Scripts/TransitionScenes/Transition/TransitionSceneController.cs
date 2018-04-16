@@ -5,26 +5,38 @@ using UnityEngine;
 
 public class TransitionSceneController : MonoBehaviour {
 
+    public TransitionSticks sticks;
+    public TransitionCoins coins;
+    public TransitionButtons buttons;
+
     private enum STATES { CHOOSING_POWERUP, CHOOSING_SLOT, WAITING }
     private STATES state = STATES.WAITING;
     Animator animator;
 
-    private int currPlayer;
     private int currPlace = 0;
 
-    Controller currController;
-    List<MinigameData.Standing> standings;
-    MinigameData.Standing currStanding;
+    private Controller currController;
+    private MinigameData.Standing[] standings;
+    private MinigameData.Standing currStanding;
+    private BarnoutPlayer currPlayer;
+
+    private BarnoutPowerup tempPowerup;
 
     public void Start()
     {
-        standings = new List<MinigameData.Standing>(MinigameData.standings);
+        Debug.Log("Transition scene start");
+        standings = MinigameData.standings;
         animator = GetComponent<Animator>();
         animator.SetInteger("NumPlayers", PlayerData.instance.numPlayers);
         //Get 4 random powerups
-        System.Random random = new System.Random();
-        List<PowerupType> values = new List<PowerupType>((PowerupType[])Enum.GetValues(typeof(PowerupType)));
+
+        //PlayerData.instance.barnoutPlayers[0].SetPowerup((int)PowerupDirection.DOWN, new BarnoutPowerup(PowerupType.CHICKEN, 3));
+        //PlayerData.instance.barnoutPlayers[1].SetPowerup((int)PowerupDirection.LEFT, new BarnoutPowerup(PowerupType.CHICKEN, 3));
+
+        coins.Init();
+        sticks.Init();
         NextPlayer();
+        Debug.Log("End Transition scene start");
     }
 
     public void FixedUpdate()
@@ -32,63 +44,39 @@ public class TransitionSceneController : MonoBehaviour {
         switch (state)
         {
             case STATES.CHOOSING_POWERUP:
-                //right
-                if (currController.GetLsXaxis() < -0.5)
-                {
-                    ChoosePowerup(PowerupDirection.RIGHT);
-                }
-                //left
-                else if (currController.GetLsXaxis() > 0.5)
-                {
-                    ChoosePowerup(PowerupDirection.LEFT);
-                }
-                //down
-                else if (currController.GetLsYaxis() < -0.5)
-                {
-                    ChoosePowerup(PowerupDirection.DOWN);
-                }
-                //up
-                else if (currController.GetLsYaxis() > 0.5)
-                {
-                    ChoosePowerup(PowerupDirection.UP);
-                }
+                if (currController.GetLsXaxis() < -0.5) { ChoosePowerup(PowerupDirection.LEFT); }
+                else if (currController.GetLsXaxis() > 0.5) { ChoosePowerup(PowerupDirection.RIGHT); }
+                else if (currController.GetLsYaxis() < -0.5) { ChoosePowerup(PowerupDirection.DOWN); }
+                else if (currController.GetLsYaxis() > 0.5) { ChoosePowerup(PowerupDirection.UP); }
                 break;
             case STATES.CHOOSING_SLOT:
-                //right
-                if (currController.GetDPadRight())
-                {
-                    ChooseSlot(PowerupDirection.RIGHT);
-                }
-                //left
-                else if (currController.GetDPadLeft())
-                {
-                    ChooseSlot(PowerupDirection.LEFT);
-                }
-                //down
-                else if (currController.GetDPadDown())
-                {
-                    ChooseSlot(PowerupDirection.DOWN);
-                }
-                //up
-                else if (currController.GetDPadUp())
-                {
-                    ChooseSlot(PowerupDirection.UP);
-                }
-
+                if (currController.GetDPadRight()) { ChooseSlot(PowerupDirection.RIGHT); }
+                else if (currController.GetDPadLeft()) { ChooseSlot(PowerupDirection.LEFT); }
+                else if (currController.GetDPadDown()) { ChooseSlot(PowerupDirection.DOWN); }
+                else if (currController.GetDPadUp()) { ChooseSlot(PowerupDirection.UP); }
                 break;
         }
     }
 
     private void ChoosePowerup(PowerupDirection direction)
     {
-        state = STATES.CHOOSING_SLOT;
-        animator.SetTrigger("ToChooseSlot");
+        if (!sticks.IsTaken(direction))
+        {
+            tempPowerup = sticks.SetTaken(direction, coins.playerCoinImages[currStanding.playerNumber - 1]);
+            state = STATES.CHOOSING_SLOT;
+            animator.SetTrigger("ToChooseSlot");
+        }
     }
 
     private void ChooseSlot(PowerupDirection direction)
     {
-        state = STATES.WAITING;
-        animator.SetTrigger("DoneChooseSlot");
+        if (currPlayer.GetPowerup((int) direction) == null)
+        {
+            state = STATES.WAITING;
+            animator.SetTrigger("DoneChooseSlot");
+            buttons.SetTaken(direction, tempPowerup.GetPowerup());
+            PlayerData.instance.barnoutPlayers[currStanding.playerNumber - 1].SetPowerup((int)direction, tempPowerup);
+        }   
     }
 
     public void ToChoosing()
@@ -105,9 +93,24 @@ public class TransitionSceneController : MonoBehaviour {
             if (s.standing == currPlace)
             {
                 currStanding = s;
+                currPlayer = PlayerData.instance.barnoutPlayers[s.playerNumber - 1];
+                buttons.InitPowerups(currPlayer);
             }
         }
+        Debug.Log("Currplace: " + currPlace);
     }
 
-
+    public void NextScene()
+    {
+        try
+        {
+            Barnout.ChangeScene(MinigamePool.Instance.ChooseMinigame().sceneName);
+        }
+        catch(ArgumentOutOfRangeException e)
+        {
+            Barnout.ChangeScene("FieldMap");
+        }
+            
+        
+    }
 }

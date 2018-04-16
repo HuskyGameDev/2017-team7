@@ -46,4 +46,9 @@ public class MinigameIntro : MonoBehaviour {
         animator.SetTrigger("ToOutro");
     }
 
+    public void GoToNextScene()
+    {
+        Barnout.ChangeScene("MinigameTransition");
+    }
+
 }
