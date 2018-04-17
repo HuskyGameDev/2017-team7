@@ -78,6 +78,8 @@ public class Player : MonoBehaviour
     private bool finished = false;
     private int ghostLayer = 13;
 
+    public bool allowPowerups = false;
+
     private Coroutine lastIncapCoroutine = null;
     private Coroutine lastBoostFCoroutine = null;
     private Coroutine lastBoostBCoroutine = null;
@@ -219,6 +221,8 @@ public class Player : MonoBehaviour
 
         boxes = gameObject.GetComponentsInChildren<BoxCollider2D>();
         caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();
+
+        StartCoroutine(allowPowerupsInXSeconds(5.0f));
 
         lastVelocity = new Vector2();
     }
@@ -457,7 +461,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if (state != STATES.COUNTDOWN || !finished)
+        if ((state != STATES.COUNTDOWN || !finished) && allowPowerups)
         {
             DoPowerups();
         }
@@ -575,6 +579,12 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         setGhosted(false);
+    }
+
+    IEnumerator allowPowerupsInXSeconds(float time)
+    {
+        yield return new WaitForSeconds(time);
+        allowPowerups = true;
     }
 
     public void DoPowerups(){
