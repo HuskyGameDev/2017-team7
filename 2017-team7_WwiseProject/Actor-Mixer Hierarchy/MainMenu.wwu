@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="MainMenu" ID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Mello Barn Theme" ID="{C8CB7ACA-A139-409E-9694-F3C0D240A379}" ShortID="1039699077">
+				<Sound Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" ShortID="299061778">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
@@ -13,13 +13,32 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Mello Barn Theme" ID="{A1EB7F47-D06C-4E63-9105-0874DAC6F958}" ShortID="934615810">
+						<AudioFileSource Name="Mello Barn Theme" ID="{509DB271-74BF-4939-9455-DB80DB363D7F}" ShortID="589333409">
 							<Language>SFX</Language>
 							<AudioFile>Mello Barn Theme.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Mello Barn Theme" ID="{A1EB7F47-D06C-4E63-9105-0874DAC6F958}" Platform="Linked"/>
+						<ActiveSource Name="Mello Barn Theme" ID="{509DB271-74BF-4939-9455-DB80DB363D7F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" ShortID="992431973">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Mello Barn Theme w_drums" ID="{BA8C0786-2348-42D8-924A-BA38910C2DD1}" ShortID="503813177">
+							<Language>SFX</Language>
+							<AudioFile>Mello Barn Theme w_drums.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Mello Barn Theme w_drums" ID="{BA8C0786-2348-42D8-924A-BA38910C2DD1}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E4354748-C60E-4915-BF3E-FCDD151583B0}'
-    m_lastTimePsrt1: -448397247
-    m_lastTimePart2: -1999269001
+    m_lastTimePsrt1: -2108263528
+    m_lastTimePart2: -1999264606
     List:
     - Name: Play_Barn
       Path: Default Work Unit\Play_Barn
@@ -46,6 +46,24 @@ MonoBehaviour:
         ObjectType: 3
       ID: 293921080
       Guid: d2623f488d98d64f837f51fb318ce49b
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+  - PhysicalPath: Events\TransitionSounds.wwu
+    ParentPhysicalPath: 
+    Guid: '{F6FD7226-7979-4923-9D41-92054F7E488E}'
+    m_lastTimePsrt1: -2107853255
+    m_lastTimePart2: -1999264606
+    List:
+    - Name: Play_Chugging
+      Path: TransitionSounds\Play_Chugging
+      PathAndIcons:
+      - ElementName: TransitionSounds
+        ObjectType: 12
+      - ElementName: Play_Chugging
+        ObjectType: 3
+      ID: 1299736286
+      Guid: 37e2cb32fb8f1646a82940a4a3fe3283
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
@@ -104,8 +122,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -1329129348
-    m_lastTimePart2: -1999265040
+    m_lastTimePsrt1: -2107973200
+    m_lastTimePart2: -1999264606
     List:
     - Name: Main_Menu
       Path: Default Work Unit\Main_Menu
@@ -125,6 +143,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -222937841
       Guid: 74e0dc75e00cb34e82dab6503963bc06
+    - Name: TransitionSounds
+      Path: Default Work Unit\TransitionSounds
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TransitionSounds
+        ObjectType: 7
+      ID: -1809838356
+      Guid: deda65f83270354fa4975a2ef7f34223
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -149,7 +176,8 @@ MonoBehaviour:
   ExpandedItems:
   - /2017-team7_WwiseProject
   - /2017-team7_WwiseProject/Events
-  - /2017-team7_WwiseProject/Events/MainMenu
+  - /2017-team7_WwiseProject/SoundBanks
+  - /2017-team7_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

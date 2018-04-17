@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F6FD7226-7979-4923-9D41-92054F7E488E}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="TransitionSounds" ID="{F6FD7226-7979-4923-9D41-92054F7E488E}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Chugging" ID="{32CBE237-8FFB-4616-A829-40A4A3FE3283}">
+					<ChildrenList>
+						<Action Name="" ID="{03E9BC48-A2F8-42D9-B8C8-533991FB97F2}" ShortID="913761935">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chugging theme" ID="{C6E50EC2-0CB3-40AF-8E86-2D0EC21DED7B}" WorkUnitID="{12810241-3D64-4E99-A149-9AE3F11C9889}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

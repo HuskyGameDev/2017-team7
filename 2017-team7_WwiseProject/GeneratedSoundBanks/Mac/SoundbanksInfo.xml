@@ -21,22 +21,42 @@
 			<ShortName>Main_Menu</ShortName>
 			<Path>Main_Menu.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1660446393" Name="Change_To_Drums" ObjectPath="\Events\MainMenu\Change_To_Drums" MaxAttenuation="0.000000"/>
+				<Event Id="578258159" Name="Change_To_Normal" ObjectPath="\Events\MainMenu\Change_To_Normal" MaxAttenuation="0.000000"/>
 				<Event Id="293921080" Name="Play_MM_Music" ObjectPath="\Events\MainMenu\Play_MM_Music"/>
 				<Event Id="1042987450" Name="Play_Select" ObjectPath="\Events\UISounds\Play_Select"/>
 				<Event Id="1943693866" Name="Play_Toggle" ObjectPath="\Events\UISounds\Play_Toggle"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="503813177" Language="SFX">
+					<ShortName>Mello Barn Theme w_drums.wav</ShortName>
+					<Path>SFX\Mello Barn Theme w_drums_1C9C67B2.wem</Path>
+				</File>
 				<File Id="524106578" Language="SFX">
 					<ShortName>joystick toggle.wav</ShortName>
 					<Path>SFX\joystick toggle_1C9C67B2.wem</Path>
+				</File>
+				<File Id="589333409" Language="SFX">
+					<ShortName>Mello Barn Theme.wav</ShortName>
+					<Path>SFX\Mello Barn Theme_1C9C67B2.wem</Path>
 				</File>
 				<File Id="813472014" Language="SFX">
 					<ShortName>Menu Select Sound.wav</ShortName>
 					<Path>SFX\Menu Select Sound_1C9C67B2.wem</Path>
 				</File>
-				<File Id="934615810" Language="SFX">
-					<ShortName>Mello Barn Theme.wav</ShortName>
-					<Path>SFX\Mello Barn Theme_1C9C67B2.wem</Path>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2485128940" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\TransitionSounds</ObjectPath>
+			<ShortName>TransitionSounds</ShortName>
+			<Path>TransitionSounds.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1299736286" Name="Play_Chugging" ObjectPath="\Events\TransitionSounds\Play_Chugging"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="649858037" Language="SFX">
+					<ShortName>Chugging theme.wav</ShortName>
+					<Path>SFX\Chugging theme_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

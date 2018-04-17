@@ -11,7 +11,75 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mello Barn Theme" ID="{C8CB7ACA-A139-409E-9694-F3C0D240A379}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+									<ObjectRef Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{09AAFF11-4041-4A40-B5C5-F587B2D42BF7}" ShortID="259703273">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4E5C14F5-0D26-4A8A-B9AA-4967A1C3480F}" ShortID="380276502">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Change_To_Drums" ID="{4CC0F497-B7AA-4998-8A82-0CA6CBD580AC}">
+					<ChildrenList>
+						<Action Name="" ID="{59B9F809-0203-45E0-A658-752777247E32}" ShortID="62642925">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1CA7E403-0C8A-42AF-B3F1-8B4D2E4ADBC8}" ShortID="1026669643">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Change_To_Normal" ID="{4BF3D17B-6AB6-4320-AFBC-E5FE2E8D589A}">
+					<ChildrenList>
+						<Action Name="" ID="{7051ABF4-36AD-434B-BC28-380B6D4E50A5}" ShortID="204670631">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C6E9C271-1741-4282-8D8F-8E0EF79D6D80}" ShortID="586797648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

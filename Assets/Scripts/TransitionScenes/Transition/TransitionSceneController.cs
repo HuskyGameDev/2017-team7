@@ -8,6 +8,7 @@ public class TransitionSceneController : MonoBehaviour {
     public TransitionSticks sticks;
     public TransitionCoins coins;
     public TransitionButtons buttons;
+    public MT_AudioMaster audioMaster;
 
     private enum STATES { CHOOSING_POWERUP, CHOOSING_SLOT, WAITING }
     private STATES state = STATES.WAITING;
@@ -24,6 +25,8 @@ public class TransitionSceneController : MonoBehaviour {
 
     public void Start()
     {
+        audioMaster.PlayMusic();
+
         Debug.Log("Transition scene start");
         standings = MinigameData.standings;
         animator = GetComponent<Animator>();

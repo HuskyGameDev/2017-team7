@@ -12,10 +12,13 @@ public class EndSceneController : MonoBehaviour {
     public Sprite[] loserCoins;
     public Sprite[] playerCoins;
 
+    public ES_AudioMaster audioMaster; 
+
 	// Use this for initialization
 	void Start ()
     {
         done = false;
+        audioMaster.PlayMusic();
 	}
 	
 	// Update is called once per frame

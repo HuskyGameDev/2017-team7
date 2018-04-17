@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" SchemaVersion="85">
+	<AudioObjects>
+		<WorkUnit Name="MinigameSounds" ID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" PersistMode="Standalone"/>
+	</AudioObjects>
+</WwiseDocument>

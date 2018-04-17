@@ -23,6 +23,7 @@ public class MainMenuHandler : MonoBehaviour {
     {
         audioMaster.PlayMusic();
         buttons[currButton].ToHover();
+        StartCoroutine(SwitchToDrums());
     }
 
     // Update is called once per frame
@@ -79,4 +80,17 @@ public class MainMenuHandler : MonoBehaviour {
         
     }
 
+
+    IEnumerator SwitchToDrums()
+    {
+        yield return new WaitForSecondsRealtime(5.16f);
+        audioMaster.ChangeToDrums();
+        StartCoroutine(SwitchToNormal());
+    }
+    IEnumerator SwitchToNormal()
+    {
+        yield return new WaitForSecondsRealtime(5.16f);
+        audioMaster.ChangeToNormal();
+        StartCoroutine(SwitchToDrums());
+    }
 }

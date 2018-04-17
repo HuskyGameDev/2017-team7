@@ -26,11 +26,22 @@
 				</SoundBank>
 				<SoundBank Name="Main_Menu" ID="{44500695-4FB7-4FF4-8B62-7BE966068241}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Mello Barn Theme" ID="{C8CB7ACA-A139-409E-9694-F3C0D240A379}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu Select Sound" ID="{71BE54D8-2869-412E-8F0A-83C4C38FD3A6}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="joystick toggle" ID="{BC3BD712-CE18-41D9-9B55-4631C0436BA4}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Select" ID="{1DAAFD75-26BC-46C4-851B-50B70CF5B65B}" WorkUnitID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Change_To_Drums" ID="{4CC0F497-B7AA-4998-8A82-0CA6CBD580AC}" WorkUnitID="{5D365F5F-2777-44B3-BBDC-3DA868785231}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Toggle" ID="{71C8BCB6-6218-4E4F-8C24-175E4C16990D}" WorkUnitID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_MM_Music" ID="{483F62D2-988D-4FD6-837F-51FB318CE49B}" WorkUnitID="{5D365F5F-2777-44B3-BBDC-3DA868785231}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="TransitionSounds" ID="{F865DADE-7032-4F35-A497-5A2EF7F34223}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Chugging theme" ID="{C6E50EC2-0CB3-40AF-8E86-2D0EC21DED7B}" WorkUnitID="{12810241-3D64-4E99-A149-9AE3F11C9889}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Chugging" ID="{32CBE237-8FFB-4616-A829-40A4A3FE3283}" WorkUnitID="{F6FD7226-7979-4923-9D41-92054F7E488E}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
