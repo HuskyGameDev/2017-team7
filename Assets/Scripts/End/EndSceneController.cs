@@ -29,16 +29,13 @@ public class EndSceneController : MonoBehaviour {
             done = true;
             foreach (EndScenePlayer p in players)
             {
-                Debug.Log(p.GetState());
                 if (p.GetState() == EndScenePlayerState.SELECTING)
                 {
                     done = false;
                     break;
                 }
             }
-
-            Debug.Log(done);
-
+            
             if (done)
             {
                 bool rematch = true;
