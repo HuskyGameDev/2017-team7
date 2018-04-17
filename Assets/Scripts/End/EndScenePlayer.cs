@@ -25,17 +25,26 @@ public class EndScenePlayer : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        
         playerNumber = EndData.instance.completionOrder[place - 1];
+        if (playerNumber == 0)
+        {
+            state = EndScenePlayerState.INACTIVE;
+            gameObject.SetActive(false);
+            return;
+        }
         BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
         if (p.IsActive())
         {
             state = EndScenePlayerState.SELECTING;
             controller = Inputs.GetController(playerNumber);
+            Debug.Log("Player " + playerNumber + " is active!");
         }
         else
         {
             state = EndScenePlayerState.INACTIVE;
             gameObject.SetActive(false);
+            return;
         }
 
         if (place == 1)
@@ -58,10 +67,12 @@ public class EndScenePlayer : MonoBehaviour {
             if (controller.GetA())
             {
                 state = EndScenePlayerState.CONTINUE;
+                Debug.Log("Onto continue player " + playerNumber);
             }
             if (controller.GetY())
             {
                 state = EndScenePlayerState.REMATCH;
+                Debug.Log("Onto rematch player " + playerNumber);
             }
         }
 	}

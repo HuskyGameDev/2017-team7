@@ -26,6 +26,7 @@ public class EndSceneController : MonoBehaviour {
             done = true;
             foreach (EndScenePlayer p in players)
             {
+                Debug.Log(p.GetState());
                 if (p.GetState() == EndScenePlayerState.SELECTING)
                 {
                     done = false;
@@ -33,6 +34,7 @@ public class EndSceneController : MonoBehaviour {
                 }
             }
 
+            Debug.Log(done);
 
             if (done)
             {
@@ -47,11 +49,11 @@ public class EndSceneController : MonoBehaviour {
                 }
                 if (rematch)
                 {
-                    StartCoroutine(BackToMainMenu());
+                    StartCoroutine(StartRematch());
                 }
                 else
                 {
-                    StartCoroutine(StartRematch());
+                    StartCoroutine(BackToMainMenu());
                 }
             }
         }

@@ -53,7 +53,7 @@ public class MainMenuHandler : MonoBehaviour {
         }
 
         Cursor.lockState = CursorLockMode.None;
-        if (state.ThumbSticks.Left.Y < 0 && axisBuffer)
+        if (state.ThumbSticks.Left.Y < -0.5 && axisBuffer)
         {
             buttons[currButton].ToUnselected();
             currButton++;
@@ -62,7 +62,7 @@ public class MainMenuHandler : MonoBehaviour {
             axisBuffer = false;
             audioMaster.PlayToggle();
         }
-        else if (state.ThumbSticks.Left.Y > 0 && axisBuffer)
+        else if (state.ThumbSticks.Left.Y > 0.5 && axisBuffer)
         {
             buttons[currButton].ToUnselected();
             currButton--;
