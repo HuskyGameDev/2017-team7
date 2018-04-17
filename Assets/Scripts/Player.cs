@@ -33,8 +33,9 @@ public class Player : MonoBehaviour
     private float maxSpeed;
     private float maxReverse;
 
-    private float[] speedList = new float [7];
-    public enum BOOSTS { STANDARD, STANDARD_BACK, PAD, PAD_BACK, DRAFT, DRIFT, POWERUP };
+    
+    public enum BOOSTS { STANDARD, STANDARD_BACK, PAD, PAD_BACK, DRAFT, DRIFT, POWERUP, EAGLE };
+    private float[] speedList = new float[Enum.GetNames(typeof(BOOSTS)).Length];
     private BOOSTS boost = BOOSTS.STANDARD;
     private float boostTime;
 
@@ -200,9 +201,10 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.STANDARD_BACK] = maxReverse;
         speedList[(int) BOOSTS.PAD] = 2.6f;
         speedList[(int) BOOSTS.PAD_BACK] = 1f;
-        speedList[(int) BOOSTS.DRAFT] = 1.8f;
-        speedList[(int) BOOSTS.DRIFT] = 2f;
-        speedList[(int) BOOSTS.POWERUP] = 1.8f;
+        speedList[(int) BOOSTS.DRAFT] = 2.1f;
+        speedList[(int) BOOSTS.DRIFT] = 2.2f;
+        speedList[(int) BOOSTS.POWERUP] = 2.1f;
+        speedList[(int)BOOSTS.EAGLE] = 2f;
 
 
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
@@ -394,18 +396,21 @@ public class Player : MonoBehaviour
                 break;
             case STATES.DRAFT:
 
-                draftTime++;
-                if (draftTime > 125) drafting = false;
-
                 accel = acceleration * ctrls.GetSpeed();
                 turningAccel = GetTurnIncrement();
-
-                if (!drafting && draftTime > 0)
+                draftTime++;
+                if (!drafting)
                 {
+                    draftTime = 0;
+                    state = STATES.MOVE_F;
+                }
+                else if (draftTime > 125)
+                {
+                    drafting = false;
                     StartBoost(BOOSTS.DRAFT, 2 * draftTime * Time.fixedDeltaTime);
                     draftTime = 0;
                 }
-                if (ctrls.GetSpeed() <= 0)
+                else if (ctrls.GetSpeed() <= 0)
                 {
                     draftTime = 0;
                     state = STATES.DECEL;
@@ -445,7 +450,7 @@ public class Player : MonoBehaviour
             case STATES.FLYING:
 
                 //set new velocity             
-                accel =  speedList[(int)BOOSTS.STANDARD] * 1.5f;
+                accel = 100000;
                 turningAccel = GetTurnIncrement();
 
                 break;
@@ -592,6 +597,7 @@ public class Player : MonoBehaviour
     {
         if (b == true)
         {
+            maxSpeed = speedList[(int)BOOSTS.EAGLE];
             state = STATES.FLYING;
             gameObject.layer = EaglePowerup.flyingLayer;
             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "RisenPlayer";      // Makes flyer render above other players
@@ -599,6 +605,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            maxSpeed = speedList[(int)BOOSTS.STANDARD];
             state = STATES.MOVE_F;
             gameObject.layer = 0;                                                          // Return to default layer
             gameObject.GetComponent<SpriteRenderer>().sortingLayerName = "Player";         // Returns to initial order

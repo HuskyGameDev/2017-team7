@@ -22,7 +22,7 @@ public class PlayerData
             new BarnoutPlayer(true, 0, 1),
             new BarnoutPlayer(true, 1, 2),
             new BarnoutPlayer(false, 3, 3),
-            new BarnoutPlayer(false, 2, 4)
+            new BarnoutPlayer(true, 2, 4)
         }) {}
 
     public BarnoutPlayer GetFirstActivePlayer()

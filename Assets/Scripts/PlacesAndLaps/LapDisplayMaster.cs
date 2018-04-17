@@ -25,9 +25,11 @@ public class LapDisplayMaster : MonoBehaviour {
 	}
 
 	public int GetPlayerPosition(int playerNumber){
-		if(positions == null) return 4;
-		for(int i = 0;i < players.players.Length; i++){
-			if(players.players[i].playerNumber == playerNumber){
+        Player[] playerArray = (Player[])players.players.Clone();
+        playerArray = playerArray.Where(x => x.isActiveAndEnabled).ToArray<Player>();
+        if (positions == null) return 4;
+		for(int i = 0;i < playerArray.Length; i++){
+			if(playerArray[i].playerNumber == playerNumber){
 				return positions[i];
 			}
 		}

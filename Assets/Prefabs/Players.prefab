@@ -1845,8 +1845,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1196112686506598}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: -111, z: -16}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -304, y: -121, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4154144945485298}
@@ -2297,7 +2297,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 100
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294966751
@@ -2333,7 +2333,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 100
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294966751
@@ -2369,7 +2369,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 100
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294966751
@@ -2405,7 +2405,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 100
-  m_Depth: 0
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294966751
@@ -2657,7 +2657,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1063385, y: 12.0716095}
+  m_Offset: {x: 0.1063385, y: 22.26026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2668,7 +2668,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6687927, y: 5.1000767}
+  m_Size: {x: 4.917595, y: 25.47738}
   m_EdgeRadius: 0
 --- !u!61 &61093119801210304
 BoxCollider2D:
@@ -2782,7 +2782,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1063385, y: 12.0716095}
+  m_Offset: {x: 0.1063385, y: 22.26026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2793,7 +2793,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6687927, y: 5.1000767}
+  m_Size: {x: 4.917595, y: 25.47738}
   m_EdgeRadius: 0
 --- !u!61 &61519130111545610
 BoxCollider2D:
@@ -2807,7 +2807,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1063385, y: 12.0716095}
+  m_Offset: {x: 0.1063385, y: 22.26026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2818,7 +2818,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6687927, y: 5.1000767}
+  m_Size: {x: 4.917595, y: 25.47738}
   m_EdgeRadius: 0
 --- !u!61 &61553710574126644
 BoxCollider2D:
@@ -2857,7 +2857,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1063385, y: 12.0716095}
+  m_Offset: {x: 0.1063385, y: 22.26026}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2868,7 +2868,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6687927, y: 5.1000767}
+  m_Size: {x: 4.917595, y: 25.477375}
   m_EdgeRadius: 0
 --- !u!61 &61637684462875654
 BoxCollider2D:
@@ -4209,7 +4209,7 @@ MonoBehaviour:
   playerNumber: 3
   engineSound: {fileID: 82299262124368054}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  lostDrift: 0
+  ignoreTerrain: 0
 --- !u!114 &114263290400072614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4352,7 +4352,7 @@ MonoBehaviour:
   playerNumber: 1
   engineSound: {fileID: 82433573016218954}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  lostDrift: 0
+  ignoreTerrain: 0
 --- !u!114 &114307947053974528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5088,7 +5088,7 @@ MonoBehaviour:
   minCamZoom4: 60
   wallBounciness: 1
   playerBounciness: 0.15
-  decayRate: 0.97
+  decayRate: 0.99
   forceDecayRate: 0.97
 --- !u!114 &114647803046113416
 MonoBehaviour:
@@ -5193,7 +5193,7 @@ MonoBehaviour:
   playerNumber: 4
   engineSound: {fileID: 82439675260753226}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  lostDrift: 0
+  ignoreTerrain: 0
 --- !u!114 &114704589007068566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5513,7 +5513,7 @@ MonoBehaviour:
   playerNumber: 2
   engineSound: {fileID: 82248970844044974}
   loopingEngine: {fileID: 8300000, guid: a759ad81a06e9bd418bdbb9595e3594c, type: 3}
-  lostDrift: 0
+  ignoreTerrain: 0
 --- !u!114 &114910810369050148
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7709,7 +7709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.0300293, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224841920483078032
