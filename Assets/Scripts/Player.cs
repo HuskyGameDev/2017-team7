@@ -573,14 +573,16 @@ public class Player : MonoBehaviour
     }
 
     public void DoPowerups(){
-        if(powerups[(int)POWERUP_DIRECTION.UP] != null && ctrls.GetDPadUp()){
-            powerups[(int)POWERUP_DIRECTION.UP].UsePowerup();
-        }else if(powerups[(int)POWERUP_DIRECTION.RIGHT] != null && ctrls.GetDPadRight()){
-            powerups[(int)POWERUP_DIRECTION.RIGHT].UsePowerup();
-        }else if(powerups[(int)POWERUP_DIRECTION.DOWN] != null && ctrls.GetDPadDown()){
-            powerups[(int)POWERUP_DIRECTION.DOWN].UsePowerup();
-        }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
-            powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
+        if(!finished) {
+            if(powerups[(int)POWERUP_DIRECTION.UP] != null && ctrls.GetDPadUp()){
+                powerups[(int)POWERUP_DIRECTION.UP].UsePowerup();
+            }else if(powerups[(int)POWERUP_DIRECTION.RIGHT] != null && ctrls.GetDPadRight()){
+                powerups[(int)POWERUP_DIRECTION.RIGHT].UsePowerup();
+            }else if(powerups[(int)POWERUP_DIRECTION.DOWN] != null && ctrls.GetDPadDown()){
+                powerups[(int)POWERUP_DIRECTION.DOWN].UsePowerup();
+            }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
+                powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
+            }
         }
     }
 
