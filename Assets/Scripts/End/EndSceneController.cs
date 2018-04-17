@@ -75,6 +75,7 @@ public class EndSceneController : MonoBehaviour {
             barnoutPlayers.Add(new BarnoutPlayer(p.IsActive(), p.GetCharacter(), p.GetPlayerNum()));
         }
         PlayerData.Instantiate(barnoutPlayers.ToArray());
+        EndData.Instantiate();
         Barnout.ChangeScene("MinigameStart");
         //TODO do rematch code
     }
