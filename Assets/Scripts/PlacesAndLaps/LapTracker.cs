@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class LapTracker : MonoBehaviour
 {
     public int maxLaps;
@@ -62,6 +62,10 @@ public class LapTracker : MonoBehaviour
                 playersFinished++;
                 if (playersFinished == PlayerData.instance.numPlayers - 1)
                 {
+                    //Grab the fist player who is active and not finished. This is the player in last place.
+                    Player lastToFinish = PlayerData.instance.players.First( x => !x.IsFinished() && x.isActiveAndEnabled);
+                    EndData.instance.completionOrder[playersFinished] = lastToFinish.playerNumber;
+                    
                     EndData.instance.raceDone = true;
                     PlayerData.instance.players[EndData.instance.completionOrder[0]-1].SetTransparency(false);
                     EndData.instance.EndTransition();

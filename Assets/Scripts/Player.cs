@@ -681,6 +681,11 @@ public class Player : MonoBehaviour
         setGhosted(true);
     }
 
+    public bool IsFinished()
+    {
+        return finished;
+    }
+
     /* NEW PHYSICS STUFF */
     private void DoPhysics(float acceleration, float turnIncrement, float physicsDecayRate, bool keepDirection){
         Vector2 calculatedVelocity;
