@@ -4,6 +4,7 @@ using UnityEngine;
 
 // Test for a potential future dodgeball like gametype/minigame.
 // Players start 27 X difference, 22 Y difference
+// P1 85X 30Y
 
 public class JoshTest : Minigame {
 
@@ -16,6 +17,7 @@ public class JoshTest : Minigame {
 
     protected override void InitMinigame()
     {
+        playerCars.gameObject.SetActive(true);
         timer = StartCoroutine(BeginTimer());
         foreach (JoshTestPlayer p in players)
         {
@@ -29,7 +31,7 @@ public class JoshTest : Minigame {
         {
             if (p.state == Player.STATES.INCAPACITATED)
             {
-                // ((JoshTestPlayer)players[p.playerNumber - 1]) is BAD!!!!! NOT RIGHT P{LAYR
+                // ((JoshTestPlayer)players[p.playerNumber - 1]) is BAD!!!!! NOT RIGHT PLAYER
                 ((JoshTestPlayer)players[p.playerNumber - 1]).Lives--;
                 if (((JoshTestPlayer)players[p.playerNumber - 1]).Lives <= 0)
                 {

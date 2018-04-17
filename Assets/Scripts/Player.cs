@@ -213,16 +213,26 @@ public class Player : MonoBehaviour
         powerups = new Powerup[(int)POWERUP_DIRECTION.SIZE];
         //instantiate a powerup
 
-        BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
-        powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.UP), this);
-        powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.DOWN), this);
-        powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.LEFT), this);
-        powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.RIGHT), this);
+        if (players.playerType == PlayerType.NORMAL)
+        {
+            BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
+            powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.UP), this);
+            powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.DOWN), this);
+            powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.LEFT), this);
+            powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.RIGHT), this);
+            StartCoroutine(allowPowerupsInXSeconds(5.0f));
+        }
+        else if (players.playerType == PlayerType.DODGEBALL)
+        {
+            powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(new BarnoutPowerup(PowerupType.FROG, uint.MaxValue), this);
+            powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(new BarnoutPowerup(PowerupType.FROG, uint.MaxValue), this);
+            powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(new BarnoutPowerup(PowerupType.FROG, uint.MaxValue), this);
+            powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(new BarnoutPowerup(PowerupType.FROG, uint.MaxValue), this);
+            allowPowerups = true;
+        }
 
         boxes = gameObject.GetComponentsInChildren<BoxCollider2D>();
         caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();
-
-        StartCoroutine(allowPowerupsInXSeconds(5.0f));
 
         lastVelocity = new Vector2();
     }

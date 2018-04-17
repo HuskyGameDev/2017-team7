@@ -6585,11 +6585,6 @@ Prefab:
       propertyPath: lapDisplayMaster
       value: 
       objectReference: {fileID: 1115302857}
-    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
-        type: 2}
-      propertyPath: maxSpeed
-      value: 160
-      objectReference: {fileID: 0}
     - target: {fileID: 61901987425577502, guid: be171fb7b00d6104aa59ab235f0fb666,
         type: 2}
       propertyPath: m_Offset.y
@@ -6620,7 +6615,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1196112686506598, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1883638648413364, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
       propertyPath: m_IsActive
@@ -6742,6 +6737,68 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1667894160481706, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257860854470206, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766738370900732, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269061605300118, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556215654869598, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030980298629428, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: wallBounciness
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114631910059217500, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: playerType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4764571479213692, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61435466841116426, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
@@ -6752,36 +6809,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 558279558}
   m_Script: {fileID: 11500000, guid: e56d7e5add6e8f242ad87de1bcc240cf, type: 3}
---- !u!1 &558279560 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1883846947778892, guid: be171fb7b00d6104aa59ab235f0fb666,
-    type: 2}
-  m_PrefabInternal: {fileID: 558279558}
---- !u!61 &558279561
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 558279560}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0000027418137, y: -0.100521654}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1087048, y: 0.78294164}
-  m_EdgeRadius: 0
 --- !u!1 &558950207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8634,6 +8661,11 @@ Prefab:
     - target: {fileID: 1275635568938282, guid: b2bc73c43c6f2a54dae5f126420eb2db, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752403958436912, guid: b2bc73c43c6f2a54dae5f126420eb2db,
+        type: 2}
+      propertyPath: skipIntro
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2bc73c43c6f2a54dae5f126420eb2db, type: 2}
@@ -11018,7 +11050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uses: 3
-  cooldownTicks: 300
+  cooldownTicks: 100
   frog: {fileID: 374892189}
 --- !u!114 &984179890
 MonoBehaviour:
@@ -12242,6 +12274,15 @@ Prefab:
     - target: {fileID: 1559227851747098, guid: 9447eb67f4e57c941adba1734500e1f0, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1370864771242636, guid: 9447eb67f4e57c941adba1734500e1f0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114783952601838470, guid: 9447eb67f4e57c941adba1734500e1f0,
+        type: 2}
+      propertyPath: disableCountdown
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9447eb67f4e57c941adba1734500e1f0, type: 2}

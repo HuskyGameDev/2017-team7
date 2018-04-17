@@ -11,6 +11,8 @@ public class Players : MonoBehaviour {
     public float maxSpeed;
     public float maxReverse;
 
+    public PlayerType playerType = PlayerType.NORMAL;
+
     public PhysicsMaterial2D wallMaterial, playerMaterial;
 
     public float terrainSpeed = 1;
@@ -75,3 +77,6 @@ public class Players : MonoBehaviour {
         PlayerData.instance.players = players;
     }
 }
+
+
+public enum PlayerType { NORMAL, DODGEBALL }
