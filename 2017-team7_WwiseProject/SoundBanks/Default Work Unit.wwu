@@ -29,6 +29,7 @@
 						<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Menu Select Sound" ID="{71BE54D8-2869-412E-8F0A-83C4C38FD3A6}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="joystick toggle" ID="{BC3BD712-CE18-41D9-9B55-4631C0436BA4}" WorkUnitID="{24E5B59C-201F-4C04-85D3-21498F6B67B8}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Change_To_Normal" ID="{4BF3D17B-6AB6-4320-AFBC-E5FE2E8D589A}" WorkUnitID="{5D365F5F-2777-44B3-BBDC-3DA868785231}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Select" ID="{1DAAFD75-26BC-46C4-851B-50B70CF5B65B}" WorkUnitID="{B3A2C264-7A3C-4F64-B0D2-EF24710F07CA}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Change_To_Drums" ID="{4CC0F497-B7AA-4998-8A82-0CA6CBD580AC}" WorkUnitID="{5D365F5F-2777-44B3-BBDC-3DA868785231}" Filter="7" Origin="Manual"/>

@@ -34,9 +34,33 @@ MonoBehaviour:
   - PhysicalPath: Events\MainMenu.wwu
     ParentPhysicalPath: 
     Guid: '{5D365F5F-2777-44B3-BBDC-3DA868785231}'
-    m_lastTimePsrt1: -1329169376
-    m_lastTimePart2: -1999265040
+    m_lastTimePsrt1: -336224171
+    m_lastTimePart2: -1999264597
     List:
+    - Name: Change_To_Drums
+      Path: MainMenu\Change_To_Drums
+      PathAndIcons:
+      - ElementName: MainMenu
+        ObjectType: 12
+      - ElementName: Change_To_Drums
+        ObjectType: 3
+      ID: 1660446393
+      Guid: 97f4c04caab798498a820ca6cbd580ac
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Change_To_Normal
+      Path: MainMenu\Change_To_Normal
+      PathAndIcons:
+      - ElementName: MainMenu
+        ObjectType: 12
+      - ElementName: Change_To_Normal
+        ObjectType: 3
+      ID: 578258159
+      Guid: 7bd1f34bb66a2043afbce5fe2e8d589a
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
     - Name: Play_MM_Music
       Path: MainMenu\Play_MM_Music
       PathAndIcons:
@@ -122,8 +146,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -2107973200
-    m_lastTimePart2: -1999264606
+    m_lastTimePsrt1: -1148653955
+    m_lastTimePart2: -1999264599
     List:
     - Name: Main_Menu
       Path: Default Work Unit\Main_Menu
