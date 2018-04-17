@@ -34,7 +34,6 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
         {
             if (controller.GetLsYaxis() > 0.75)
             {
-                Debug.Log("Going Up");
                 up = true;
                 animator.SetBool("Up", up);
             }

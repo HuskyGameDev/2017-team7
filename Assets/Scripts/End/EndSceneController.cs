@@ -41,7 +41,7 @@ public class EndSceneController : MonoBehaviour {
                 bool rematch = true;
                 foreach (EndScenePlayer p in players)
                 {
-                    if (p.GetState() != EndScenePlayerState.REMATCH)
+                    if (p.GetState() != EndScenePlayerState.REMATCH && p.GetState() != EndScenePlayerState.INACTIVE)
                     {
                         rematch = false;
                         break;
