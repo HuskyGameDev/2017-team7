@@ -1082,9 +1082,10 @@ MonoBehaviour:
   - {fileID: 1408401229}
   - {fileID: 494842623}
   - {fileID: 298810599}
-  timeGiven: 30
-  lives: 1
+  timeGiven: 120
+  lives: 3
   playerCars: {fileID: 558279559}
+  playersOut: 0
 --- !u!1 &113855819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1588,46 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &162694066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 162694067}
+  - component: {fileID: 162694068}
+  m_Layer: 0
+  m_Name: Dodgeball_AudioMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &162694067
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162694066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.89492, y: -88.477264, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162694068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162694066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc64f067e4e6804db20b7a2cd277ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &163850057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,6 +3323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 4
+  minigameObject: {fileID: 105960315}
 --- !u!4 &298810600
 Transform:
   m_ObjectHideFlags: 0
@@ -6062,6 +6104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 3
+  minigameObject: {fileID: 105960315}
 --- !u!4 &494842624
 Transform:
   m_ObjectHideFlags: 0
@@ -6799,6 +6842,26 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114303942921147682, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: jp
+      value: 
+      objectReference: {fileID: 1382689491}
+    - target: {fileID: 114905387889981836, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: jp
+      value: 
+      objectReference: {fileID: 1408401229}
+    - target: {fileID: 114263108550587386, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: jp
+      value: 
+      objectReference: {fileID: 494842623}
+    - target: {fileID: 114695383174537808, guid: be171fb7b00d6104aa59ab235f0fb666,
+        type: 2}
+      propertyPath: jp
+      value: 
+      objectReference: {fileID: 298810599}
     m_RemovedComponents:
     - {fileID: 61435466841116426, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: be171fb7b00d6104aa59ab235f0fb666, type: 2}
@@ -9432,6 +9495,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114770906769010270, guid: 0de61fd54bb5b8245a816d6280289cf2,
+        type: 2}
+      propertyPath: audioMaster
+      value: 
+      objectReference: {fileID: 162694068}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0de61fd54bb5b8245a816d6280289cf2, type: 2}
   m_IsPrefabParent: 0
@@ -10388,6 +10456,54 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &955192801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 955192803}
+  - component: {fileID: 955192802}
+  m_Layer: 0
+  m_Name: MinigameSoundbank
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &955192802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955192801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc7611e4d2c89814c8a68cae5846d1e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: d4f096e457699a40a0a04b4bbd092e0e
+  bankName: MinigameSounds
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+--- !u!4 &955192803
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 955192801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 111.89492, y: -88.477264, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &961158209
 GameObject:
   m_ObjectHideFlags: 0
@@ -15665,6 +15781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  minigameObject: {fileID: 105960315}
 --- !u!4 &1382689492
 Transform:
   m_ObjectHideFlags: 0
@@ -16158,6 +16275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  minigameObject: {fileID: 105960315}
 --- !u!4 &1408401230
 Transform:
   m_ObjectHideFlags: 0

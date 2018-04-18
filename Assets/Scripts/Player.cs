@@ -110,6 +110,8 @@ public class Player : MonoBehaviour
     private bool lostDrift = false;
     public bool ignoreTerrain = false;
 
+    public JoshTestPlayer jp; //This is only used in dodgeball minigame
+
     private void initValues()
     {
         turnIncr = players.turnIncr;
@@ -563,6 +565,11 @@ public class Player : MonoBehaviour
         maxSpeed = speedList[(int)BOOSTS.STANDARD];
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
         setGhosted(true);
+
+        if (players.playerType == PlayerType.DODGEBALL)
+        {
+            jp.playerHit();
+        }
 
         //Stop any boost coroutines
         if (lastBoostFCoroutine != null)

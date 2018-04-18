@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class JoshTestPlayer : MinigamePlayer {
 
+    public JoshTest minigameObject;
+
     public int Lives { get; set; }
 
     protected override void ToReady()
@@ -20,7 +22,7 @@ public class JoshTestPlayer : MinigamePlayer {
 
     protected override void Tick()
     {
-        
+
     }
 
     protected override void OnGameDone()
@@ -31,5 +33,14 @@ public class JoshTestPlayer : MinigamePlayer {
     public void SetScore(int s)
     {
         score = s;
+    }
+
+    public void playerHit()
+    {
+        this.Lives--;
+        if (this.Lives <= 0)
+        {
+            this.SetScore(++(minigameObject.playersOut));
+        }
     }
 }

@@ -31,11 +31,29 @@ MonoBehaviour:
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
+  - PhysicalPath: Events\EndScene.wwu
+    ParentPhysicalPath: 
+    Guid: '{D48B7CCF-3086-4A2D-AF76-B1297E66621B}'
+    m_lastTimePsrt1: -561262122
+    m_lastTimePart2: -1999264571
+    List:
+    - Name: Play_End_Chugging
+      Path: EndScene\Play_End_Chugging
+      PathAndIcons:
+      - ElementName: EndScene
+        ObjectType: 12
+      - ElementName: Play_End_Chugging
+        ObjectType: 3
+      ID: -1018285900
+      Guid: 6c90de0eb029d641bd2a57b4bb509ce6
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
   - PhysicalPath: Events\MainMenu.wwu
     ParentPhysicalPath: 
     Guid: '{5D365F5F-2777-44B3-BBDC-3DA868785231}'
-    m_lastTimePsrt1: -336224171
-    m_lastTimePart2: -1999264597
+    m_lastTimePsrt1: -2107049157
+    m_lastTimePart2: -1999264595
     List:
     - Name: Change_To_Drums
       Path: MainMenu\Change_To_Drums
@@ -76,8 +94,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MinigameSounds.wwu
     ParentPhysicalPath: 
     Guid: '{AD81FC84-617F-4FAC-A09D-4321F7305ABB}'
-    m_lastTimePsrt1: -1588610282
-    m_lastTimePart2: -1999264576
+    m_lastTimePsrt1: -561252115
+    m_lastTimePart2: -1999264571
     List:
     - Name: Play_Music
       Path: MinigameSounds\Play_Music
@@ -130,8 +148,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TransitionSounds.wwu
     ParentPhysicalPath: 
     Guid: '{F6FD7226-7979-4923-9D41-92054F7E488E}'
-    m_lastTimePsrt1: -2107853255
-    m_lastTimePart2: -1999264606
+    m_lastTimePsrt1: -2106994117
+    m_lastTimePart2: -1999264595
     List:
     - Name: Play_Chugging
       Path: TransitionSounds\Play_Chugging
@@ -200,8 +218,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: 625884176
-    m_lastTimePart2: -1999264575
+    m_lastTimePsrt1: -547567664
+    m_lastTimePart2: -1999264571
     List:
     - Name: EndScene
       Path: Default Work Unit\EndScene
