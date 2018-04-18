@@ -82,12 +82,12 @@ public class PlayerPanel : MonoBehaviour {
                     charSelectController.RemoveOn(selChar, playerNum);
                 }
 
-                if (gp_state.ThumbSticks.Left.Y < -0.3 && prev_gp_state.ThumbSticks.Left.Y >= -0.3) //down
+                if (gp_state.ThumbSticks.Left.Y < -0.5 && prev_gp_state.ThumbSticks.Left.Y >= -0.5) //down
                 {
                     CharPanel nextChar = charSelectController.NextChar(selChar);
                     ApplyCharacter(nextChar);
                 }
-                else if (gp_state.ThumbSticks.Left.Y > 0.3 && prev_gp_state.ThumbSticks.Left.Y <= 0.3) //up
+                else if (gp_state.ThumbSticks.Left.Y > 0.5 && prev_gp_state.ThumbSticks.Left.Y <= 0.5) //up
                 {
                     CharPanel prevChar = charSelectController.PrevChar(selChar);
                     ApplyCharacter(prevChar);
