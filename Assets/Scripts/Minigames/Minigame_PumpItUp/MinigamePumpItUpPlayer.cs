@@ -7,6 +7,14 @@ public class MinigamePumpItUpPlayer : MinigamePlayer {
     bool up = false;
     Animator animator;
 
+    public SpriteRenderer arms;
+    public MinigamePumpItUp minigame;
+
+    private void Start()
+    {
+        if (isActive) arms.sprite = minigame.armImages[PlayerData.instance.barnoutPlayers[playerNum - 1].GetCharacter()];
+    }
+
     protected override void ToReady()
     {
         animator = GetComponent<Animator>();

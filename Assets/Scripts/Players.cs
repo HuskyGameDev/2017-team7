@@ -26,6 +26,7 @@ public class Players : MonoBehaviour {
 
     public Player[] players;
     public RuntimeAnimatorController[] playerControllers;
+    public RuntimeAnimatorController[] playerCharControllers;
     public RuntimeAnimatorController[] cameraControllers2p;
     public RuntimeAnimatorController[] cameraControllers4p;
 
@@ -57,6 +58,7 @@ public class Players : MonoBehaviour {
             {
                 Player p = players[i];
                 p.animator.runtimeAnimatorController = playerControllers[barnoutPlayer.GetCharacter()];
+                p.charAnimator.runtimeAnimatorController = playerCharControllers[barnoutPlayer.GetCharacter()];
                 if (playerCount > 2)
                 {
                     p.overheadCamera.SetAnimator(cameraControllers4p[i]);

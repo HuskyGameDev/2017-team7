@@ -20,7 +20,7 @@ public class PlayerData
     PlayerData() 
         : this( new BarnoutPlayer[] { 
             new BarnoutPlayer(true, 0, 1),
-            new BarnoutPlayer(true, 3, 2),
+            new BarnoutPlayer(true, 2, 2),
             new BarnoutPlayer(false, 3, 3),
             new BarnoutPlayer(false, 2, 4)
         }) {}

@@ -10,6 +10,8 @@ public class MinigamePumpItUp : Minigame {
     Coroutine timer;
     bool begun = false;
 
+    public Sprite[] armImages;
+
     protected override void InitMinigame()
     {
         timer = StartCoroutine(BeginTimer());
