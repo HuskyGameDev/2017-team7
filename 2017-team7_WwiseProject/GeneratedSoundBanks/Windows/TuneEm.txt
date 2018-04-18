@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3202566893	Play_Wrench			\MinigameSounds\Play_Wrench	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	307488636	Wrench 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Wrench 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\Wrench\Wrench 1		157644
+	649620614	Wrench 2	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Wrench 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\Wrench\Wrench 2		63144
+

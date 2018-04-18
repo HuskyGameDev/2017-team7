@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="85">
-	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\2017-team7_WwiseProject.tleichte.wsettings" DateLow="1523224145" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\2017-team7_WwiseProject.tleichte.wsettings" DateLow="1524002411" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\2017-team7_WwiseProject.wproj" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1519595753" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\MainMenu.wwu" DateLow="1523224144" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\MainMenu.wwu" DateLow="1524000281" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\MinigameSounds.wwu" DateLow="1523997057" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\TransitionSounds.wwu" DateLow="1523997140" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Actor-Mixer Hierarchy\UISounds.wwu" DateLow="1522005421" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
@@ -13,8 +15,9 @@
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Effects\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Effects\Factory Effects.wwu" DateLow="1518988331" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\Default Work Unit.wwu" DateLow="1522006563" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\MainMenu.wwu" DateLow="1523224144" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\Default Work Unit.wwu" DateLow="1523997222" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\MainMenu.wwu" DateLow="1524001264" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\TransitionSounds.wwu" DateLow="1523997222" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Events\UISounds.wwu" DateLow="1522005621" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
@@ -24,7 +27,7 @@
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Presets\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Queries\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Queries\Factory Queries.wwu" DateLow="1518988331" DateHigh="0"/>
-	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1523224144" DateHigh="0"/>
+	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="1524002411" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\States\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>
 	<ValidationCacheItem File="C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\Switches\Default Work Unit.wwu" DateLow="1518988331" DateHigh="0"/>

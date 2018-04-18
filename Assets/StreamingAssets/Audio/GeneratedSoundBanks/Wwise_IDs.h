@@ -17,17 +17,25 @@ namespace AK
         static const AkUniqueID CHANGE_TO_NORMAL = 578258159U;
         static const AkUniqueID PLAY_BARN = 1577305889U;
         static const AkUniqueID PLAY_CHUGGING = 1299736286U;
+        static const AkUniqueID PLAY_END_CHUGGING = 3276681396U;
         static const AkUniqueID PLAY_MM_MUSIC = 293921080U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_SELECT = 1042987450U;
         static const AkUniqueID PLAY_TOGGLE = 1943693866U;
+        static const AkUniqueID PLAY_WHISTLE = 2693257580U;
+        static const AkUniqueID PLAY_WRENCH = 3202566893U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
     } // namespace EVENTS
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
+        static const AkUniqueID ENDSCENE = 3129425356U;
         static const AkUniqueID MAIN_MENU = 2005704188U;
+        static const AkUniqueID MINIGAMESOUNDS = 2168209706U;
         static const AkUniqueID NEW_SOUNDBANK = 4072029455U;
         static const AkUniqueID TRANSITIONSOUNDS = 2485128940U;
+        static const AkUniqueID TUNEEM = 3059145497U;
     } // namespace BANKS
 
     namespace BUSSES

@@ -8,6 +8,8 @@ public class TuneEmPlayer : MinigamePlayer {
 
     public TuneEmBG bg;
 
+    public TuneEm_AudioMaster audioMaster;
+
     bool failed = false;
     bool pressed = false;
 
@@ -30,10 +32,18 @@ public class TuneEmPlayer : MinigamePlayer {
 	// Update is called once per frame
 	protected override void Tick ()
     {
+        if (!aBuffer)
+        {
+            if (!controller.GetA())
+            {
+                aBuffer = true;
+            }
+        }
         if (!pressed && !failed)
         {
-            if (controller.GetA())
+            if (controller.GetA() && aBuffer)
             {
+                aBuffer = false;
                 //Debug.Log("Pressed A");
                 pressed = true;
                 if (minigame.InBounds())
@@ -57,6 +67,7 @@ public class TuneEmPlayer : MinigamePlayer {
 
     void Success()
     {
+        audioMaster.PlayWrench();
         animator.SetTrigger("Crank");
         bg.Increment();
         score++;

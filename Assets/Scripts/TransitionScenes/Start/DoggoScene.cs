@@ -8,6 +8,8 @@ public class DoggoScene : MonoBehaviour {
     public Text dialogue;
     public SpriteRenderer skip;
 
+    public MS_AudioMaster audioMaster;
+
     List<DoggoPanel> instructions;
     List<DoggoPanel> skips;
 
@@ -49,6 +51,7 @@ public class DoggoScene : MonoBehaviour {
         firstPlayerController = Inputs.GetController(PlayerData.instance.GetFirstActivePlayer().GetPlayerNum());
 
         SetAnimator(instructions[0]);
+        audioMaster.PlayMusic();
     }
 	
 	// Update is called once per frame

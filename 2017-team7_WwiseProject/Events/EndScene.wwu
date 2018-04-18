@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{D48B7CCF-3086-4A2D-AF76-B1297E66621B}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="EndScene" ID="{D48B7CCF-3086-4A2D-AF76-B1297E66621B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_End_Chugging" ID="{0EDE906C-29B0-41D6-BD2A-57B4BB509CE6}">
+					<ChildrenList>
+						<Action Name="" ID="{A1364E2A-9FCB-49CC-A051-499B41C96304}" ShortID="906408171">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chugging Faster" ID="{4213CC20-9FF6-4094-80FC-478224D1C13F}" WorkUnitID="{F5A85F93-15E2-4B1D-B824-2029A78AE350}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -3,30 +3,36 @@
 	<Platform GUID="{53738676-780A-44BC-AAF0-A5652BEC36B7}">
 		<Banks>
 			<Language ID="393239870">
+				<File Name="EndScene" Hash="3248555951" Timestamp="1524011139"/>
 				<File Name="Init" Hash="3720209211" Timestamp="1519595637"/>
-				<File Name="Main_Menu" Hash="2822975092" Timestamp="1524001277"/>
-				<File Name="New_SoundBank" Hash="3961382826" Timestamp="1522005120"/>
-				<File Name="TransitionSounds" Hash="1911108852" Timestamp="1523997229"/>
+				<File Name="Main_Menu" Hash="1987521023" Timestamp="1524011075"/>
+				<File Name="MinigameSounds" Hash="2142093954" Timestamp="1524011075"/>
+				<File Name="New_SoundBank" Hash="4280893624" Timestamp="1524010222"/>
+				<File Name="TransitionSounds" Hash="2233767963" Timestamp="1524011075"/>
+				<File Name="TuneEm" Hash="3370494268" Timestamp="1524011075"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3867179315" Timestamp="1524001277"/>
+				<File Name="" Hash="181718033" Timestamp="1524011139"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{8827CC79-ADEF-45AD-99CC-CEFC4A5DCED0}">
 		<Banks>
 			<Language ID="393239870">
+				<File Name="EndScene" Hash="3248555951" Timestamp="1524011140"/>
 				<File Name="Init" Hash="1851028624" Timestamp="1519595638"/>
-				<File Name="Main_Menu" Hash="2822975092" Timestamp="1524001277"/>
-				<File Name="New_SoundBank" Hash="3961382826" Timestamp="1522005121"/>
-				<File Name="TransitionSounds" Hash="1911108852" Timestamp="1523997229"/>
+				<File Name="Main_Menu" Hash="1987521023" Timestamp="1524011075"/>
+				<File Name="MinigameSounds" Hash="2142093954" Timestamp="1524011076"/>
+				<File Name="New_SoundBank" Hash="4280893624" Timestamp="1524010223"/>
+				<File Name="TransitionSounds" Hash="2233767963" Timestamp="1524011075"/>
+				<File Name="TuneEm" Hash="3370494268" Timestamp="1524011076"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1812760761" Timestamp="1524001277"/>
+				<File Name="" Hash="1183656991" Timestamp="1524011140"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

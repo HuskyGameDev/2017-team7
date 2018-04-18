@@ -1082,7 +1082,7 @@ MonoBehaviour:
   - {fileID: 1408401229}
   - {fileID: 494842623}
   - {fileID: 298810599}
-  timeGiven: 16
+  timeGiven: 30
   lives: 1
   playerCars: {fileID: 558279559}
 --- !u!1 &113855819

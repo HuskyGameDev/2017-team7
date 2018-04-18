@@ -6,8 +6,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	1943693866	Play_Toggle			\UISounds\Play_Toggle	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	503813177	Mello Barn Theme w_drums	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Mello Barn Theme w_drums_1C9C67B2.wem		\Actor-Mixer Hierarchy\MainMenu\Mello Barn Theme w_drums		19051376
+	503813177	Mello Barn Theme w_drums	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Mello Barn Theme w_drums_F17FB28C.wem		\Actor-Mixer Hierarchy\MainMenu\Mello Barn Theme w_drums		19051376
 	524106578	joystick toggle	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\joystick toggle_1C9C67B2.wem		\Actor-Mixer Hierarchy\UISounds\joystick toggle		341564
-	589333409	Mello Barn Theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Mello Barn Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\MainMenu\Mello Barn Theme		19051376
+	589333409	Mello Barn Theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Mello Barn Theme_F17FB28C.wem		\Actor-Mixer Hierarchy\MainMenu\Mello Barn Theme		19051376
 	813472014	Menu Select Sound	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Menu Select Sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\UISounds\Menu Select Sound		341564
 

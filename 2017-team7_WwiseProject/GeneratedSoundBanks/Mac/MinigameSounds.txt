@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2693257580	Play_Whistle			\MinigameSounds\Play_Whistle	
+	2837384057	Stop_Music			\MinigameSounds\Stop_Music	
+	2932040671	Play_Music			\MinigameSounds\Play_Music	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	291478874	Minigame Music	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Farmula 1 Music Loop 1_F17FB28C.wem		\Actor-Mixer Hierarchy\MinigameSounds\Minigame Music		9031872
+	968879911	Whistle	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Whistle_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\Whistle		334376
+

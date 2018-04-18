@@ -5,6 +5,6 @@ using UnityEngine;
 public class MT_AudioMaster : AudioMaster {
     public void PlayMusic()
     {
-        PlaySound("Play_Chugging");
+        DoEvent("Play_Chugging");
     }
 }

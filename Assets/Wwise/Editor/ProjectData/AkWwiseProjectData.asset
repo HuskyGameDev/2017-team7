@@ -73,6 +73,60 @@ MonoBehaviour:
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
+  - PhysicalPath: Events\MinigameSounds.wwu
+    ParentPhysicalPath: 
+    Guid: '{AD81FC84-617F-4FAC-A09D-4321F7305ABB}'
+    m_lastTimePsrt1: -1588610282
+    m_lastTimePart2: -1999264576
+    List:
+    - Name: Play_Music
+      Path: MinigameSounds\Play_Music
+      PathAndIcons:
+      - ElementName: MinigameSounds
+        ObjectType: 12
+      - ElementName: Play_Music
+        ObjectType: 3
+      ID: -1362926625
+      Guid: c7cde58fd7a42340aef4afbadbe3d721
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Whistle
+      Path: MinigameSounds\Play_Whistle
+      PathAndIcons:
+      - ElementName: MinigameSounds
+        ObjectType: 12
+      - ElementName: Play_Whistle
+        ObjectType: 3
+      ID: -1601709716
+      Guid: 722c41ee1b3bd34d9c26eee70cf4ff56
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Wrench
+      Path: MinigameSounds\Play_Wrench
+      PathAndIcons:
+      - ElementName: MinigameSounds
+        ObjectType: 12
+      - ElementName: Play_Wrench
+        ObjectType: 3
+      ID: -1092400403
+      Guid: bdf0391eefcf014abcc0a8767fd1f209
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Stop_Music
+      Path: MinigameSounds\Stop_Music
+      PathAndIcons:
+      - ElementName: MinigameSounds
+        ObjectType: 12
+      - ElementName: Stop_Music
+        ObjectType: 3
+      ID: -1457583239
+      Guid: 3e880b3b9520454b8f5e693699a981ad
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
   - PhysicalPath: Events\TransitionSounds.wwu
     ParentPhysicalPath: 
     Guid: '{F6FD7226-7979-4923-9D41-92054F7E488E}'
@@ -146,9 +200,18 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -1148653955
-    m_lastTimePart2: -1999264599
+    m_lastTimePsrt1: 625884176
+    m_lastTimePart2: -1999264575
     List:
+    - Name: EndScene
+      Path: Default Work Unit\EndScene
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: EndScene
+        ObjectType: 7
+      ID: -1165541940
+      Guid: f314d87da42b3c4db69c1030f9d05ae4
     - Name: Main_Menu
       Path: Default Work Unit\Main_Menu
       PathAndIcons:
@@ -158,6 +221,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: 2005704188
       Guid: 95065044b74ff44f8b627be966068241
+    - Name: MinigameSounds
+      Path: Default Work Unit\MinigameSounds
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: MinigameSounds
+        ObjectType: 7
+      ID: -2126757590
+      Guid: d4f096e457699a40a0a04b4bbd092e0e
     - Name: New_SoundBank
       Path: Default Work Unit\New_SoundBank
       PathAndIcons:
@@ -176,6 +248,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1809838356
       Guid: deda65f83270354fa4975a2ef7f34223
+    - Name: TuneEm
+      Path: Default Work Unit\TuneEm
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: TuneEm
+        ObjectType: 7
+      ID: -1235821799
+      Guid: 0dee5709d927824e8e819f2bd3cc5b2e
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 

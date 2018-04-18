@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MinigameIntro : MonoBehaviour {
 
+    public Minigame_AudioMaster audioMaster;
+
     Minigame minigame;
 
     Animator animator;
@@ -17,6 +19,7 @@ public class MinigameIntro : MonoBehaviour {
     bool AnimDone = false;
 	public void FinishAnim()
     {
+        audioMaster.PlayMusic();
         AnimDone = true;
     }
     public void StartReady()
@@ -44,6 +47,7 @@ public class MinigameIntro : MonoBehaviour {
     public void StartOutro()
     {
         animator.SetTrigger("ToOutro");
+        audioMaster.EndMusic();
     }
 
     public void GoToNextScene()

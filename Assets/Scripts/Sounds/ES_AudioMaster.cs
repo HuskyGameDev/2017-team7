@@ -5,7 +5,7 @@ using UnityEngine;
 public class ES_AudioMaster : AudioMaster {
     public void PlayMusic()
     {
-        PlaySound("Play_Chugging");
+        DoEvent("Play_Chugging");
     }
 
 }

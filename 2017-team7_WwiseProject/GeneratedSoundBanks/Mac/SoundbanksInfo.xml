@@ -30,7 +30,7 @@
 			<IncludedMemoryFiles>
 				<File Id="503813177" Language="SFX">
 					<ShortName>Mello Barn Theme w_drums.wav</ShortName>
-					<Path>SFX\Mello Barn Theme w_drums_1C9C67B2.wem</Path>
+					<Path>SFX\Mello Barn Theme w_drums_F17FB28C.wem</Path>
 				</File>
 				<File Id="524106578" Language="SFX">
 					<ShortName>joystick toggle.wav</ShortName>
@@ -38,11 +38,31 @@
 				</File>
 				<File Id="589333409" Language="SFX">
 					<ShortName>Mello Barn Theme.wav</ShortName>
-					<Path>SFX\Mello Barn Theme_1C9C67B2.wem</Path>
+					<Path>SFX\Mello Barn Theme_F17FB28C.wem</Path>
 				</File>
 				<File Id="813472014" Language="SFX">
 					<ShortName>Menu Select Sound.wav</ShortName>
 					<Path>SFX\Menu Select Sound_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="2168209706" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\MinigameSounds</ObjectPath>
+			<ShortName>MinigameSounds</ShortName>
+			<Path>MinigameSounds.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\MinigameSounds\Play_Music"/>
+				<Event Id="2693257580" Name="Play_Whistle" ObjectPath="\Events\MinigameSounds\Play_Whistle"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\MinigameSounds\Stop_Music" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="291478874" Language="SFX">
+					<ShortName>Farmula 1 Music Loop 1.wav</ShortName>
+					<Path>SFX\Farmula 1 Music Loop 1_F17FB28C.wem</Path>
+				</File>
+				<File Id="968879911" Language="SFX">
+					<ShortName>Whistle.wav</ShortName>
+					<Path>SFX\Whistle_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -56,7 +76,39 @@
 			<IncludedMemoryFiles>
 				<File Id="649858037" Language="SFX">
 					<ShortName>Chugging theme.wav</ShortName>
-					<Path>SFX\Chugging theme_1C9C67B2.wem</Path>
+					<Path>SFX\Chugging theme_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3059145497" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\TuneEm</ObjectPath>
+			<ShortName>TuneEm</ShortName>
+			<Path>TuneEm.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3202566893" Name="Play_Wrench" ObjectPath="\Events\MinigameSounds\Play_Wrench"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="307488636" Language="SFX">
+					<ShortName>Wrench 1.wav</ShortName>
+					<Path>SFX\Wrench 1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="649620614" Language="SFX">
+					<ShortName>Wrench 2.wav</ShortName>
+					<Path>SFX\Wrench 2_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3129425356" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\EndScene</ObjectPath>
+			<ShortName>EndScene</ShortName>
+			<Path>EndScene.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3276681396" Name="Play_End_Chugging" ObjectPath="\Events\EndScene\Play_End_Chugging"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="742654637" Language="SFX">
+					<ShortName>Chugging Faster.wav</ShortName>
+					<Path>SFX\Chugging Faster_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

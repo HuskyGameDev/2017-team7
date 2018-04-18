@@ -47,6 +47,33 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="MinigameSounds" ID="{E496F0D4-6957-409A-A0A0-4B4BBD092E0E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Music" ID="{8FE5CDC7-A4D7-4023-AEF4-AFBADBE3D721}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Minigame Music" ID="{51793CBF-C1C6-4838-A9C5-E92A9E3D082E}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_Music" ID="{3B0B883E-2095-4B45-8F5E-693699A981AD}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Whistle" ID="{EE412C72-3B1B-4DD3-9C26-EEE70CF4FF56}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Whistle" ID="{DAD1FE86-AB1C-4E75-9059-F8FAFF293FE4}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="TuneEm" ID="{0957EE0D-27D9-4E82-8E81-9F2BD3CC5B2E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Wrench" ID="{23772C61-B45B-41EA-9BE9-CF29063E94EA}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Wrench" ID="{1E39F0BD-CFEF-4A01-BCC0-A8767FD1F209}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="EndScene" ID="{7DD814F3-2BA4-4D3C-B69C-1030F9D05AE4}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Chugging Faster" ID="{4213CC20-9FF6-4094-80FC-478224D1C13F}" WorkUnitID="{F5A85F93-15E2-4B1D-B824-2029A78AE350}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_End_Chugging" ID="{0EDE906C-29B0-41D6-BD2A-57B4BB509CE6}" WorkUnitID="{D48B7CCF-3086-4A2D-AF76-B1297E66621B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

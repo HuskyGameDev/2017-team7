@@ -5,24 +5,24 @@ using UnityEngine;
 public class MM_AudioMaster : AudioMaster {
     public void PlayToggle()
     {
-        PlaySound("Play_Toggle");
+        DoEvent("Play_Toggle");
     }
     public void PlaySelect()
     {
-        PlaySound("Play_Select");
+        DoEvent("Play_Select");
     }
 
     public void PlayMusic()
     {
-        PlaySound("Play_MM_Music");
+        DoEvent("Play_MM_Music");
     }
 
     public void ChangeToDrums()
     {
-        PlaySound("Change_To_Drums");
+        DoEvent("Change_To_Drums");
     }
     public void ChangeToNormal()
     {
-        PlaySound("Change_To_Normal");
+        DoEvent("Change_To_Normal");
     }
 }

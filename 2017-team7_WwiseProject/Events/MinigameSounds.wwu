@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="MinigameSounds" ID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Music" ID="{8FE5CDC7-A4D7-4023-AEF4-AFBADBE3D721}">
+					<ChildrenList>
+						<Action Name="" ID="{45857873-580E-4895-9FAF-6CBBD008710C}" ShortID="313725953">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Minigame Music" ID="{51793CBF-C1C6-4838-A9C5-E92A9E3D082E}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wrench" ID="{1E39F0BD-CFEF-4A01-BCC0-A8767FD1F209}">
+					<ChildrenList>
+						<Action Name="" ID="{8046EB91-C69F-47E0-A3E6-F9637105A3B6}" ShortID="993890113">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wrench" ID="{23772C61-B45B-41EA-9BE9-CF29063E94EA}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Music" ID="{3B0B883E-2095-4B45-8F5E-693699A981AD}">
+					<ChildrenList>
+						<Action Name="" ID="{1983A038-951A-4105-BD7A-4B04487B7C2F}" ShortID="564308602">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Minigame Music" ID="{51793CBF-C1C6-4838-A9C5-E92A9E3D082E}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Whistle" ID="{EE412C72-3B1B-4DD3-9C26-EEE70CF4FF56}">
+					<ChildrenList>
+						<Action Name="" ID="{77BAD70D-7A6E-488C-A837-874BFB4C06F1}" ShortID="1008764763">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whistle" ID="{DAD1FE86-AB1C-4E75-9059-F8FAFF293FE4}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

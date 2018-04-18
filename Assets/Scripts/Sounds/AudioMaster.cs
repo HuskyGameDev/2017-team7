@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioMaster : MonoBehaviour {
-    protected void PlaySound(string soundName)
+    protected void DoEvent(string eventName)
     {
-        AkSoundEngine.PostEvent(soundName, gameObject);
+        AkSoundEngine.PostEvent(eventName, gameObject);
     }
 }

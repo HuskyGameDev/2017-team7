@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	1299736286	Play_Chugging			\TransitionSounds\Play_Chugging	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	649858037	Chugging theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Chugging theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\TransitionSounds\Chugging theme		17124816
+	649858037	Chugging theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Chugging theme_F17FB28C.wem		\Actor-Mixer Hierarchy\TransitionSounds\Chugging theme		17124816
 

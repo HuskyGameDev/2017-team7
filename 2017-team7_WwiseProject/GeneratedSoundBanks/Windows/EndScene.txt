@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3276681396	Play_End_Chugging			\EndScene\Play_End_Chugging	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	742654637	Chugging Faster	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Chugging Faster_F17FB28C.wem		\Actor-Mixer Hierarchy\EndScene\Chugging Faster		16043260
+

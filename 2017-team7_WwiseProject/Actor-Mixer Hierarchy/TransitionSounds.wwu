@@ -4,6 +4,9 @@
 		<WorkUnit Name="TransitionSounds" ID="{12810241-3D64-4E99-A149-9AE3F11C9889}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Chugging theme" ID="{C6E50EC2-0CB3-40AF-8E86-2D0EC21DED7B}" ShortID="850239628">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>

@@ -4,6 +4,9 @@
 		<WorkUnit Name="MainMenu" ID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Mello Barn Theme" ID="{6C437FB0-0147-48F5-B297-4F1D43A208BD}" ShortID="299061778">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
@@ -23,6 +26,9 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" ShortID="992431973">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
