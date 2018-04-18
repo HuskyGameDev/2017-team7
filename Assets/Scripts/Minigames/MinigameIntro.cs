@@ -19,7 +19,9 @@ public class MinigameIntro : MonoBehaviour {
     bool AnimDone = false;
 	public void FinishAnim()
     {
-        audioMaster.PlayMusic();
+        if(audioMaster != null){
+            audioMaster.PlayMusic();
+        }
         AnimDone = true;
     }
     public void StartReady()
