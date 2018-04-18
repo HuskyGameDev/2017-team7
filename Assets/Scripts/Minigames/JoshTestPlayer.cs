@@ -17,7 +17,7 @@ public class JoshTestPlayer : MinigamePlayer {
 
     protected override void Init()
     {
-        score = 4;
+        score = 5;
     }
 
     protected override void Tick()
@@ -40,7 +40,7 @@ public class JoshTestPlayer : MinigamePlayer {
         this.Lives--;
         if (this.Lives <= 0)
         {
-            this.SetScore(++(minigameObject.playersOut));
+            this.SetScore((minigameObject.playersOut)++);
         }
     }
 }
