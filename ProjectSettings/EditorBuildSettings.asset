@@ -14,15 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/EndScene.unity
     guid: 41af36cbef290c74baad989308b6236d
-  - enabled: 0
-    path: Assets/_Scenes/MainScene.unity
-    guid: 9661b3bce46fbbf459a7b1ad4c323854
-  - enabled: 0
-    path: Assets/_Scenes/MainScene2.unity
-    guid: fb8a9ccb2834ad443b497081c0a5d1e6
-  - enabled: 0
-    path: 
-    guid: bc16fc569dddd7645b5f3830a614d0c3
   - enabled: 1
     path: Assets/_Scenes/Minigames/PumpItUp.unity
     guid: 7e869cdf8f55edc41b35bd4a975ccabd
