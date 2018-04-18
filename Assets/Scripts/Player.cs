@@ -473,7 +473,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if ((state != STATES.COUNTDOWN || !finished) && allowPowerups)
+        if ((state != STATES.COUNTDOWN || !finished) && allowPowerups && state != STATES.INCAPACITATED)
         {
             DoPowerups();
         }
