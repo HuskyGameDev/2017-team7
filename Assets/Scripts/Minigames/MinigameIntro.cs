@@ -21,6 +21,8 @@ public class MinigameIntro : MonoBehaviour {
     {
         if(audioMaster != null){
             audioMaster.PlayMusic();
+        }else{
+            Debug.LogError("No audio master on MinigameIntro, continuing without music!");
         }
         AnimDone = true;
     }
@@ -49,7 +51,9 @@ public class MinigameIntro : MonoBehaviour {
     public void StartOutro()
     {
         animator.SetTrigger("ToOutro");
-        audioMaster.EndMusic();
+        if(audioMaster != null){
+            audioMaster.EndMusic();
+        }
     }
 
     public void GoToNextScene()
