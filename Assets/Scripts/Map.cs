@@ -10,7 +10,11 @@ public class Map : MonoBehaviour {
 
     public Canvas PauseCanvas;
 
+    public Game_AudioMaster audioMaster;
+
     public bool disableCountdown;
+
+
 
 	PlayerIndex pausePlayerIndex;
     GamePadState pausePlayerState;
@@ -19,6 +23,7 @@ public class Map : MonoBehaviour {
 	bool countdown = true;
 	float time;
 	int count = -1;
+    bool raceDone = false;
 
 	GamePadState[] testStates = new GamePadState[4];
 
@@ -75,7 +80,18 @@ public class Map : MonoBehaviour {
 		
 	}
 
-	public bool isPaused() {
+
+    private void FixedUpdate()
+    {
+        if (EndData.instance.raceDone)
+        {
+            raceDone = true;
+            audioMaster.EndRaceMusic();
+        }
+    }
+
+
+    public bool isPaused() {
 		return paused;
 	}
 

@@ -14,6 +14,12 @@ public class Game_AudioMaster : AudioMaster {
         DoEvent("Play_Go");
         StartCoroutine(DelayGameMusic());
     }
+    public void EndRaceMusic()
+    {
+        //TODO: create end race music event
+        //DoEvent("Play_Go")
+        //DoEvent("Play_Whistle")
+    }
     IEnumerator DelayGameMusic()
     {
         yield return new WaitForSecondsRealtime(0.2f);
