@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Game_AudioMaster : AudioMaster {
 
-	public void PlayBeep()
+    public void PlayBeep()
     {
         Debug.Log("PLAY BEEP");
         DoEvent("Play_Beep");
@@ -12,18 +12,11 @@ public class Game_AudioMaster : AudioMaster {
     public void PlayRaceStart()
     {
         DoEvent("Play_Go");
-        DoEvent("Play_Game_Music");
+        StartCoroutine(DelayGameMusic());
     }
-
-    private void Start()
+    IEnumerator DelayGameMusic()
     {
-        StartCoroutine(TestSound());
-    }
-
-    IEnumerator TestSound()
-    {
-        yield return new WaitForSecondsRealtime(2.0f);
-        Debug.Log("TESTSOUND");
+        yield return new WaitForSecondsRealtime(0.2f);
         DoEvent("Play_Game_Music");
     }
 }

@@ -16,14 +16,14 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E4354748-C60E-4915-BF3E-FCDD151583B0}'
-    m_lastTimePsrt1: -365376517
-    m_lastTimePart2: -1999264549
+    m_lastTimePsrt1: -876765330
+    m_lastTimePart2: -1999264541
     List: []
   - PhysicalPath: Events\EndScene.wwu
     ParentPhysicalPath: 
     Guid: '{D48B7CCF-3086-4A2D-AF76-B1297E66621B}'
-    m_lastTimePsrt1: -561262122
-    m_lastTimePart2: -1999264571
+    m_lastTimePsrt1: -876750191
+    m_lastTimePart2: -1999264541
     List:
     - Name: Play_End_Chugging
       Path: EndScene\Play_End_Chugging
@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\InGame.wwu
     ParentPhysicalPath: 
     Guid: '{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}'
-    m_lastTimePsrt1: 1895354197
-    m_lastTimePart2: -1999264550
+    m_lastTimePsrt1: -876745316
+    m_lastTimePart2: -1999264541
     List:
     - Name: Play_Beep
       Path: InGame\Play_Beep
@@ -51,7 +51,19 @@ MonoBehaviour:
       - ElementName: Play_Beep
         ObjectType: 3
       ID: 2063165418
-      Guid: 502e54083d5c4e4d94058f3be1458e30
+      Guid: da60ac201c4a1e4f8a4d488b9c23683a
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Game_Music
+      Path: InGame\Play_Game_Music
+      PathAndIcons:
+      - ElementName: InGame
+        ObjectType: 12
+      - ElementName: Play_Game_Music
+        ObjectType: 3
+      ID: -153929808
+      Guid: 5f1cba35a8611e4fbf5250d52915e834
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
@@ -63,27 +75,15 @@ MonoBehaviour:
       - ElementName: Play_Go
         ObjectType: 3
       ID: -2015333204
-      Guid: 9e8f35336eb43445870bf3009f7806a5
-      minDuration: 0
-      maxDuration: 0
-      maxAttenuation: 0
-    - Name: Play_Race_Music
-      Path: InGame\Play_Race_Music
-      PathAndIcons:
-      - ElementName: InGame
-        ObjectType: 12
-      - ElementName: Play_Race_Music
-        ObjectType: 3
-      ID: 1377419981
-      Guid: 46ab172effd8a44a86d6b3f87315563f
+      Guid: b7bf7e99726b1d4a8857eadf3d78960e
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
   - PhysicalPath: Events\MainMenu.wwu
     ParentPhysicalPath: 
     Guid: '{5D365F5F-2777-44B3-BBDC-3DA868785231}'
-    m_lastTimePsrt1: -2107049157
-    m_lastTimePart2: -1999264595
+    m_lastTimePsrt1: 2022173780
+    m_lastTimePart2: -1999264588
     List:
     - Name: Change_To_Drums
       Path: MainMenu\Change_To_Drums
@@ -124,8 +124,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MinigameSounds.wwu
     ParentPhysicalPath: 
     Guid: '{AD81FC84-617F-4FAC-A09D-4321F7305ABB}'
-    m_lastTimePsrt1: 797868106
-    m_lastTimePart2: -1999264563
+    m_lastTimePsrt1: -876735299
+    m_lastTimePart2: -1999264541
     List:
     - Name: Play_Music
       Path: MinigameSounds\Play_Music
@@ -190,8 +190,8 @@ MonoBehaviour:
   - PhysicalPath: Events\TransitionSounds.wwu
     ParentPhysicalPath: 
     Guid: '{F6FD7226-7979-4923-9D41-92054F7E488E}'
-    m_lastTimePsrt1: -2106994117
-    m_lastTimePart2: -1999264595
+    m_lastTimePsrt1: 2022243820
+    m_lastTimePart2: -1999264588
     List:
     - Name: Play_Chugging
       Path: TransitionSounds\Play_Chugging
@@ -260,8 +260,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -365091340
-    m_lastTimePart2: -1999264549
+    m_lastTimePsrt1: -859704057
+    m_lastTimePart2: -1999264541
     List:
     - Name: EndScene
       Path: Default Work Unit\EndScene
@@ -299,6 +299,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -2126757590
       Guid: d4f096e457699a40a0a04b4bbd092e0e
+    - Name: RacingSounds
+      Path: Default Work Unit\RacingSounds
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RacingSounds
+        ObjectType: 7
+      ID: 1735100679
+      Guid: 1ed0f903fa6e3c40973ad591946d9d3b
     - Name: TransitionSounds
       Path: Default Work Unit\TransitionSounds
       PathAndIcons:
