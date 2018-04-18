@@ -566,10 +566,7 @@ public class Player : MonoBehaviour
         maxReverse = speedList[(int)BOOSTS.STANDARD_BACK];
         setGhosted(true);
 
-        if (players.playerType == PlayerType.DODGEBALL)
-        {
-            jp.playerHit();
-        }
+        
 
         //Stop any boost coroutines
         if (lastBoostFCoroutine != null)
@@ -579,10 +576,24 @@ public class Player : MonoBehaviour
 
         ignoreTerrain = false;
 
-        //overwrite the old incap coroutine if one exists
-        if (lastIncapCoroutine != null)
-            StopCoroutine(lastIncapCoroutine);
-        lastIncapCoroutine = StartCoroutine(endIncapacitated(itime));
+        if (players.playerType == PlayerType.NORMAL)
+        {
+            //overwrite the old incap coroutine if one exists
+            if (lastIncapCoroutine != null)
+                StopCoroutine(lastIncapCoroutine);
+            lastIncapCoroutine = StartCoroutine(endIncapacitated(itime));
+        }
+        if (players.playerType == PlayerType.DODGEBALL)
+        {
+            jp.playerHit();
+            if (jp.Lives > 0)
+            {
+                //overwrite the old incap coroutine if one exists
+                if (lastIncapCoroutine != null)
+                    StopCoroutine(lastIncapCoroutine);
+                lastIncapCoroutine = StartCoroutine(endIncapacitated(itime));
+            }
+        }      
     }
 
     IEnumerator endIncapacitated(float time)
@@ -614,6 +625,12 @@ public class Player : MonoBehaviour
                 powerups[(int)POWERUP_DIRECTION.DOWN].UsePowerup();
             }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
                 powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
+            }else if (players.playerType == PlayerType.DODGEBALL)
+            {
+                if (ctrls.GetLB() || ctrls.GetRB())
+                {
+                    powerups[(int)POWERUP_DIRECTION.UP].UsePowerup();
+                }
             }
         }
     }

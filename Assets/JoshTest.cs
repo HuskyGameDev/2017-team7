@@ -13,7 +13,7 @@ public class JoshTest : Minigame {
     private Coroutine timer;
     public int lives;
     public Players playerCars;
-    public int playersOut = 0;
+    public int playersOut;
 
     protected override void InitMinigame()
     {
@@ -27,19 +27,6 @@ public class JoshTest : Minigame {
 
     public override void Tick()
     {
-        /*foreach (Player p in playerCars.players)
-        {
-            if (p.state == Player.STATES.INCAPACITATED)
-            {
-                // ((JoshTestPlayer)players[p.playerNumber - 1]) is BAD!!!!! NOT RIGHT PLAYER
-                ((JoshTestPlayer)players[p.playerNumber - 1]).Lives--;
-                if (((JoshTestPlayer)players[p.playerNumber - 1]).Lives <= 0)
-                {
-                    ((JoshTestPlayer)players[p.playerNumber - 1]).SetScore(++playersOut);
-                }
-            }
-        }*/
-
         if (playersOut == PlayerData.instance.numPlayers)
         {
             done = true;
