@@ -4,17 +4,19 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="EndScene" Hash="3248555951" Timestamp="1524011139"/>
+				<File Name="InGame" Hash="3085486389" Timestamp="1524023938"/>
 				<File Name="Init" Hash="3720209211" Timestamp="1519595637"/>
 				<File Name="Main_Menu" Hash="1987521023" Timestamp="1524011075"/>
 				<File Name="MinigameSounds" Hash="2142093954" Timestamp="1524011075"/>
 				<File Name="New_SoundBank" Hash="4280893624" Timestamp="1524010222"/>
+				<File Name="RacingSounds" Hash="3583175136" Timestamp="1524023790"/>
 				<File Name="TransitionSounds" Hash="2233767963" Timestamp="1524011075"/>
-				<File Name="TuneEm" Hash="3370494268" Timestamp="1524011075"/>
+				<File Name="TuneEm" Hash="662302491" Timestamp="1524015912"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="181718033" Timestamp="1524011139"/>
+				<File Name="" Hash="3955107962" Timestamp="1524023938"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -22,17 +24,19 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="EndScene" Hash="3248555951" Timestamp="1524011140"/>
+				<File Name="InGame" Hash="3085486389" Timestamp="1524023938"/>
 				<File Name="Init" Hash="1851028624" Timestamp="1519595638"/>
 				<File Name="Main_Menu" Hash="1987521023" Timestamp="1524011075"/>
 				<File Name="MinigameSounds" Hash="2142093954" Timestamp="1524011076"/>
 				<File Name="New_SoundBank" Hash="4280893624" Timestamp="1524010223"/>
+				<File Name="RacingSounds" Hash="3583175136" Timestamp="1524023790"/>
 				<File Name="TransitionSounds" Hash="2233767963" Timestamp="1524011075"/>
-				<File Name="TuneEm" Hash="3370494268" Timestamp="1524011076"/>
+				<File Name="TuneEm" Hash="662302491" Timestamp="1524015912"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1183656991" Timestamp="1524011140"/>
+				<File Name="" Hash="1572024160" Timestamp="1524023938"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

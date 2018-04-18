@@ -6,12 +6,7 @@ using XInputDotNetPure;
 
 public class Map : MonoBehaviour {
 
-	public AudioSource Snd_Beep;
-	public AudioSource Snd_Go;
-	public AudioSource Msc_Banjo;
-
-    public Image[] eggs;
-    public Image chicken_go;
+    public Canvas CountdownCanvas;
 
     public Canvas PauseCanvas;
 
@@ -29,17 +24,16 @@ public class Map : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        foreach (Image e in eggs) { e.gameObject.SetActive(false); }
-        chicken_go.gameObject.SetActive(false);
-        time = Time.unscaledTime;
-		//Debug.Log(time);
+        if (disableCountdown) StartRace();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (!countdown) {
-			if (!paused) {
+		if (!countdown)
+        {
+			if (!paused)
+            {
 			for (int i = 0; i < 4; i++) {
 
 				PlayerIndex testPlayerIndex = (PlayerIndex) i;
@@ -81,33 +75,6 @@ public class Map : MonoBehaviour {
 		
 	}
 
-	void FixedUpdate() {
-		if (countdown) {
-            if (disableCountdown)
-            {
-                StartRace();
-            }
-		    else if (Time.unscaledTime - time >= 1)
-		    {
-			    time = Time.unscaledTime;
-			    count++;
-			    if (count == 3) {
-                    eggs[2].gameObject.SetActive(false);
-                    StartRace();
-			    }
-			    else {
-                    foreach(Image e in eggs) { e.gameObject.SetActive(false); }
-                    eggs[count].gameObject.SetActive(true);
-				    Snd_Beep.Play();
-			    }
-		    }
-		}
-        else
-        {
-            //if (Time.unscaledTime - time > 1.5) chicken_go.gameObject.SetActive(false);
-        }
-	}
-
 	public bool isPaused() {
 		return paused;
 	}
@@ -116,15 +83,10 @@ public class Map : MonoBehaviour {
 		return countdown;
 	}
 
-    private void StartRace()
+    public void StartRace()
     {
-        chicken_go.gameObject.SetActive(true);
-        Snd_Go.Play();
-        Msc_Banjo.PlayDelayed(0.3F);
         countdown = false;
-        time = Time.unscaledTime;
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision) {
 

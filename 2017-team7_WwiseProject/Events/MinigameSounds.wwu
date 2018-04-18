@@ -59,6 +59,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Wrench_Fail" ID="{31AC6EB7-25BD-42BB-B8CE-D854A4DE1B1C}">
+					<ChildrenList>
+						<Action Name="" ID="{0ACF9FD2-9903-4308-9CB2-3E14C496D963}" ShortID="329531190">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="WrenchDrop" ID="{A2240C65-D2C3-4786-930E-5F00B34E8B4C}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

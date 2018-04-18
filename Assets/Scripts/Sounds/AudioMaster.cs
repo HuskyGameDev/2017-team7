@@ -7,4 +7,8 @@ public class AudioMaster : MonoBehaviour {
     {
         AkSoundEngine.PostEvent(eventName, gameObject);
     }
+    private void FixedUpdate()
+    {
+        AkSoundEngine.RenderAudio();
+    }
 }

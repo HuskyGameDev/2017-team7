@@ -1,7 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
+	2726250804	Play_Wrench_Fail			\MinigameSounds\Play_Wrench_Fail	
 	3202566893	Play_Wrench			\MinigameSounds\Play_Wrench	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	307488636	Wrench 1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Wrench 1_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\Wrench\Wrench 1		157644
 	649620614	Wrench 2	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Wrench 2_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\Wrench\Wrench 2		63144
+	685709173	Wrenchdrop2	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Wrenchdrop2_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\WrenchDrop\Wrenchdrop2		181184
+	761015922	Wrenchdrop1	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Wrenchdrop1_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\WrenchDrop\Wrenchdrop1		181184
+	1004591075	Wrenchdrop3	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Mac\SFX\Wrenchdrop3_1C9C67B2.wem		\Actor-Mixer Hierarchy\MinigameSounds\WrenchDrop\Wrenchdrop3		181188
 

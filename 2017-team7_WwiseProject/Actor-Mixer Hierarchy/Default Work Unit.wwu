@@ -3,25 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Barn Track Theme" ID="{D6BBCF7C-5EAF-4FCE-920B-10F6BB6F13E8}" ShortID="286444590">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Barn Track Theme" ID="{74D35654-36DC-4106-A203-199AA9DB5AF0}" ShortID="712917818">
-							<Language>SFX</Language>
-							<AudioFile>Barn Track Theme.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Barn Track Theme" ID="{74D35654-36DC-4106-A203-199AA9DB5AF0}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Boost Sound" ID="{FA48DE2D-D7A7-412B-9BC4-0EF832C1DFED}" ShortID="419759878">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -229,44 +210,6 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Sheep Bleat 1" ID="{61133510-7CBB-4FFB-9EC8-1F9B578EFF99}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="single beep" ID="{A2380A4C-80FF-4768-A389-35768686BA45}" ShortID="93539697">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="single beep" ID="{EB0A2437-88DC-408B-95AB-58F9C19016F4}" ShortID="528168672">
-							<Language>SFX</Language>
-							<AudioFile>single beep.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="single beep" ID="{EB0A2437-88DC-408B-95AB-58F9C19016F4}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="single go" ID="{7ECE86D1-1418-40CF-99ED-3B7A4F842893}" ShortID="717585685">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="single go" ID="{423D1D08-1C47-4F1B-A273-EDF7360F2FC0}" ShortID="226991367">
-							<Language>SFX</Language>
-							<AudioFile>single go.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="single go" ID="{423D1D08-1C47-4F1B-A273-EDF7360F2FC0}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

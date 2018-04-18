@@ -3,27 +3,6 @@
 	<SoundBanks>
 		<WorkUnit Name="Default Work Unit" ID="{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="New_SoundBank" ID="{75DCE074-0CE0-4EB3-82DA-B6503963BC06}">
-					<ObjectInclusionList>
-						<ObjectRef Name="Ready Set Go" ID="{9257C5DC-8ABF-4007-B599-9D089962F0CF}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="single go" ID="{7ECE86D1-1418-40CF-99ED-3B7A4F842893}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Pig Oink 1" ID="{74788AA8-877D-4106-B803-00FB9E88D8B9}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Boost Sound" ID="{FA48DE2D-D7A7-412B-9BC4-0EF832C1DFED}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Play_Barn" ID="{C1A20691-7DA5-4164-982B-5A2BFCD079E0}" WorkUnitID="{E4354748-C60E-4915-BF3E-FCDD151583B0}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Farmula 1 Music Loop 1" ID="{0047957A-6956-4200-AC29-A23F11014CBC}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Drift Sound" ID="{31E24EEF-95AB-4220-8932-3102405C3151}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Kart Take Off" ID="{AE93390A-BF62-43B9-8358-B93447A75973}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Looping engine" ID="{8C42AAE9-9A57-4570-97C2-954760875E31}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="single beep" ID="{A2380A4C-80FF-4768-A389-35768686BA45}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Sheep Bleat 1" ID="{24316EBF-7E22-492B-AE3D-8E878546F921}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Cow Moo 1" ID="{7C5B82EB-874A-4C7F-9950-84843A0B2617}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Ready Set Go (Rooster)" ID="{CEDEEA8F-1ED5-4EEB-9B66-34F0A450146E}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Horse Whinny 1" ID="{E7E5C238-3721-4F04-8466-079D42CA0C3A}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Barn Track Theme" ID="{D6BBCF7C-5EAF-4FCE-920B-10F6BB6F13E8}" WorkUnitID="{E76615D9-E718-4AED-99C5-F0F953D18F7E}" Filter="7" Origin="Manual"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
 				<SoundBank Name="Main_Menu" ID="{44500695-4FB7-4FF4-8B62-7BE966068241}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Mello Barn Theme w_drums" ID="{D830C133-BFA1-4058-B6F4-B29B1B26A502}" WorkUnitID="{721CEEA6-A764-48EB-9D0E-DA6AE35414C4}" Filter="7" Origin="Manual"/>
@@ -61,6 +40,8 @@
 				<SoundBank Name="TuneEm" ID="{0957EE0D-27D9-4E82-8E81-9F2BD3CC5B2E}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Wrench" ID="{23772C61-B45B-41EA-9BE9-CF29063E94EA}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Wrench_Fail" ID="{31AC6EB7-25BD-42BB-B8CE-D854A4DE1B1C}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="WrenchDrop" ID="{A2240C65-D2C3-4786-930E-5F00B34E8B4C}" WorkUnitID="{7A59E409-DBE2-4342-9BDF-661A80039E71}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Wrench" ID="{1E39F0BD-CFEF-4A01-BCC0-A8767FD1F209}" WorkUnitID="{AD81FC84-617F-4FAC-A09D-4321F7305ABB}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -70,6 +51,30 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Chugging Faster" ID="{4213CC20-9FF6-4094-80FC-478224D1C13F}" WorkUnitID="{F5A85F93-15E2-4B1D-B824-2029A78AE350}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_End_Chugging" ID="{0EDE906C-29B0-41D6-BD2A-57B4BB509CE6}" WorkUnitID="{D48B7CCF-3086-4A2D-AF76-B1297E66621B}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="InGame" ID="{9089C2E4-646E-4407-A89E-1F3DA08B5016}">
+					<ObjectInclusionList>
+						<ObjectRef Name="single beep" ID="{BDE5210C-4044-44DE-A21D-EA0A74622E2E}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Go" ID="{997EBFB7-6B72-4A1D-8857-EADF3D78960E}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="single go" ID="{0A80F1AE-0293-4DEE-AFF4-7F647568AD8A}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Barn Track Theme" ID="{AC872D82-C5CD-4E6C-BB30-B5D3FC6D1C2C}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Beep" ID="{20AC60DA-4A1C-4F1E-8A4D-488B9C23683A}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Game_Music" ID="{35BA1C5F-61A8-4F1E-BF52-50D52915E834}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="RacingSounds" ID="{03F9D01E-6EFA-403C-973A-D591946D9D3B}">
+					<ObjectInclusionList>
+						<ObjectRef Name="single beep" ID="{BDE5210C-4044-44DE-A21D-EA0A74622E2E}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Go" ID="{997EBFB7-6B72-4A1D-8857-EADF3D78960E}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="single go" ID="{0A80F1AE-0293-4DEE-AFF4-7F647568AD8A}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Barn Track Theme" ID="{AC872D82-C5CD-4E6C-BB30-B5D3FC6D1C2C}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Beep" ID="{20AC60DA-4A1C-4F1E-8A4D-488B9C23683A}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Game_Music" ID="{35BA1C5F-61A8-4F1E-BF52-50D52915E834}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

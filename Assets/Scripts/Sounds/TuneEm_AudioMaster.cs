@@ -7,4 +7,9 @@ public class TuneEm_AudioMaster : Minigame_AudioMaster {
     {
         DoEvent("Play_Wrench");
     }
+
+    public void PlayWrenchFail()
+    {
+        DoEvent("Play_Wrench_Fail");
+    }
 }

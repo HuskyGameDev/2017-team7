@@ -11,10 +11,58 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="984691642" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\InGame</ObjectPath>
+			<ShortName>InGame</ShortName>
+			<Path>InGame.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2063165418" Name="Play_Beep" ObjectPath="\Events\InGame\Play_Beep"/>
+				<Event Id="4141037488" Name="Play_Game_Music" ObjectPath="\Events\InGame\Play_Game_Music"/>
+				<Event Id="2279634092" Name="Play_Go" ObjectPath="\Events\InGame\Play_Go"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="36140014" Language="SFX">
+					<ShortName>Barn Track Theme.wav</ShortName>
+					<Path>SFX\Barn Track Theme_F17FB28C.wem</Path>
+				</File>
+				<File Id="907460728" Language="SFX">
+					<ShortName>single beep.wav</ShortName>
+					<Path>SFX\single beep_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1012856014" Language="SFX">
+					<ShortName>single go.wav</ShortName>
+					<Path>SFX\single go_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="1735100679" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\RacingSounds</ObjectPath>
+			<ShortName>RacingSounds</ShortName>
+			<Path>RacingSounds.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2063165418" Name="Play_Beep" ObjectPath="\Events\InGame\Play_Beep"/>
+				<Event Id="4141037488" Name="Play_Game_Music" ObjectPath="\Events\InGame\Play_Game_Music"/>
+				<Event Id="2279634092" Name="Play_Go" ObjectPath="\Events\InGame\Play_Go"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="36140014" Language="SFX">
+					<ShortName>Barn Track Theme.wav</ShortName>
+					<Path>SFX\Barn Track Theme_F17FB28C.wem</Path>
+				</File>
+				<File Id="907460728" Language="SFX">
+					<ShortName>single beep.wav</ShortName>
+					<Path>SFX\single beep_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1012856014" Language="SFX">
+					<ShortName>single go.wav</ShortName>
+					<Path>SFX\single go_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="2005704188" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_Menu</ObjectPath>
@@ -86,6 +134,7 @@
 			<Path>TuneEm.bnk</Path>
 			<IncludedEvents>
 				<Event Id="3202566893" Name="Play_Wrench" ObjectPath="\Events\MinigameSounds\Play_Wrench"/>
+				<Event Id="2726250804" Name="Play_Wrench_Fail" ObjectPath="\Events\MinigameSounds\Play_Wrench_Fail"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="307488636" Language="SFX">
@@ -95,6 +144,18 @@
 				<File Id="649620614" Language="SFX">
 					<ShortName>Wrench 2.wav</ShortName>
 					<Path>SFX\Wrench 2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="685709173" Language="SFX">
+					<ShortName>Wrenchdrop2.wav</ShortName>
+					<Path>SFX\Wrenchdrop2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="761015922" Language="SFX">
+					<ShortName>Wrenchdrop1.wav</ShortName>
+					<Path>SFX\Wrenchdrop1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1004591075" Language="SFX">
+					<ShortName>Wrenchdrop3.wav</ShortName>
+					<Path>SFX\Wrenchdrop3_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -109,72 +170,6 @@
 				<File Id="742654637" Language="SFX">
 					<ShortName>Chugging Faster.wav</ShortName>
 					<Path>SFX\Chugging Faster_F17FB28C.wem</Path>
-				</File>
-			</IncludedMemoryFiles>
-		</SoundBank>
-		<SoundBank Id="4072029455" Language="SFX">
-			<ObjectPath>\SoundBanks\Default Work Unit\New_SoundBank</ObjectPath>
-			<ShortName>New_SoundBank</ShortName>
-			<Path>New_SoundBank.bnk</Path>
-			<IncludedEvents>
-				<Event Id="1577305889" Name="Play_Barn" ObjectPath="\Events\Default Work Unit\Play_Barn"/>
-			</IncludedEvents>
-			<IncludedMemoryFiles>
-				<File Id="30078443" Language="SFX">
-					<ShortName>Sheep Bleat 1.wav</ShortName>
-					<Path>SFX\Sheep Bleat 1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="117450992" Language="SFX">
-					<ShortName>Drift Sound.wav</ShortName>
-					<Path>SFX\Drift Sound_1C9C67B2.wem</Path>
-				</File>
-				<File Id="209911356" Language="SFX">
-					<ShortName>Ready Set Go.wav</ShortName>
-					<Path>SFX\Ready Set Go_1C9C67B2.wem</Path>
-				</File>
-				<File Id="226991367" Language="SFX">
-					<ShortName>single go.wav</ShortName>
-					<Path>SFX\single go_1C9C67B2.wem</Path>
-				</File>
-				<File Id="255870224" Language="SFX">
-					<ShortName>Boost Sound.wav</ShortName>
-					<Path>SFX\Boost Sound_1C9C67B2.wem</Path>
-				</File>
-				<File Id="312854248" Language="SFX">
-					<ShortName>Horse Whinny 1.wav</ShortName>
-					<Path>SFX\Horse Whinny 1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="528168672" Language="SFX">
-					<ShortName>single beep.wav</ShortName>
-					<Path>SFX\single beep_1C9C67B2.wem</Path>
-				</File>
-				<File Id="627774607" Language="SFX">
-					<ShortName>Ready Set Go (Rooster).wav</ShortName>
-					<Path>SFX\Ready Set Go (Rooster)_1C9C67B2.wem</Path>
-				</File>
-				<File Id="712917818" Language="SFX">
-					<ShortName>Barn Track Theme.wav</ShortName>
-					<Path>SFX\Barn Track Theme_1C9C67B2.wem</Path>
-				</File>
-				<File Id="753950387" Language="SFX">
-					<ShortName>Pig Oink 1.wav</ShortName>
-					<Path>SFX\Pig Oink 1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="858512381" Language="SFX">
-					<ShortName>Kart Take Off.wav</ShortName>
-					<Path>SFX\Kart Take Off_1C9C67B2.wem</Path>
-				</File>
-				<File Id="955100116" Language="SFX">
-					<ShortName>Looping engine.wav</ShortName>
-					<Path>SFX\Looping engine_1C9C67B2.wem</Path>
-				</File>
-				<File Id="973345197" Language="SFX">
-					<ShortName>Farmula 1 Music Loop 1.wav</ShortName>
-					<Path>SFX\Farmula 1 Music Loop 1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1064298560" Language="SFX">
-					<ShortName>Cow Moo 1.wav</ShortName>
-					<Path>SFX\Cow Moo 1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

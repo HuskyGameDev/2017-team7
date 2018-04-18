@@ -16,21 +16,9 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E4354748-C60E-4915-BF3E-FCDD151583B0}'
-    m_lastTimePsrt1: -2108263528
-    m_lastTimePart2: -1999264606
-    List:
-    - Name: Play_Barn
-      Path: Default Work Unit\Play_Barn
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Play_Barn
-        ObjectType: 3
-      ID: 1577305889
-      Guid: 9106a2c1a57d6441982b5a2bfcd079e0
-      minDuration: 0
-      maxDuration: 0
-      maxAttenuation: 0
+    m_lastTimePsrt1: -365376517
+    m_lastTimePart2: -1999264549
+    List: []
   - PhysicalPath: Events\EndScene.wwu
     ParentPhysicalPath: 
     Guid: '{D48B7CCF-3086-4A2D-AF76-B1297E66621B}'
@@ -46,6 +34,48 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1018285900
       Guid: 6c90de0eb029d641bd2a57b4bb509ce6
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+  - PhysicalPath: Events\InGame.wwu
+    ParentPhysicalPath: 
+    Guid: '{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}'
+    m_lastTimePsrt1: 1895354197
+    m_lastTimePart2: -1999264550
+    List:
+    - Name: Play_Beep
+      Path: InGame\Play_Beep
+      PathAndIcons:
+      - ElementName: InGame
+        ObjectType: 12
+      - ElementName: Play_Beep
+        ObjectType: 3
+      ID: 2063165418
+      Guid: 502e54083d5c4e4d94058f3be1458e30
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Go
+      Path: InGame\Play_Go
+      PathAndIcons:
+      - ElementName: InGame
+        ObjectType: 12
+      - ElementName: Play_Go
+        ObjectType: 3
+      ID: -2015333204
+      Guid: 9e8f35336eb43445870bf3009f7806a5
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Race_Music
+      Path: InGame\Play_Race_Music
+      PathAndIcons:
+      - ElementName: InGame
+        ObjectType: 12
+      - ElementName: Play_Race_Music
+        ObjectType: 3
+      ID: 1377419981
+      Guid: 46ab172effd8a44a86d6b3f87315563f
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
@@ -94,8 +124,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MinigameSounds.wwu
     ParentPhysicalPath: 
     Guid: '{AD81FC84-617F-4FAC-A09D-4321F7305ABB}'
-    m_lastTimePsrt1: -561252115
-    m_lastTimePart2: -1999264571
+    m_lastTimePsrt1: 797868106
+    m_lastTimePart2: -1999264563
     List:
     - Name: Play_Music
       Path: MinigameSounds\Play_Music
@@ -130,6 +160,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1092400403
       Guid: bdf0391eefcf014abcc0a8767fd1f209
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: Play_Wrench_Fail
+      Path: MinigameSounds\Play_Wrench_Fail
+      PathAndIcons:
+      - ElementName: MinigameSounds
+        ObjectType: 12
+      - ElementName: Play_Wrench_Fail
+        ObjectType: 3
+      ID: -1568716492
+      Guid: b76eac31bd25bb42b8ced854a4de1b1c
       minDuration: 0
       maxDuration: 0
       maxAttenuation: 0
@@ -218,8 +260,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -547567664
-    m_lastTimePart2: -1999264571
+    m_lastTimePsrt1: -365091340
+    m_lastTimePart2: -1999264549
     List:
     - Name: EndScene
       Path: Default Work Unit\EndScene
@@ -230,6 +272,15 @@ MonoBehaviour:
         ObjectType: 7
       ID: -1165541940
       Guid: f314d87da42b3c4db69c1030f9d05ae4
+    - Name: InGame
+      Path: Default Work Unit\InGame
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: InGame
+        ObjectType: 7
+      ID: 984691642
+      Guid: e4c289906e640744a89e1f3da08b5016
     - Name: Main_Menu
       Path: Default Work Unit\Main_Menu
       PathAndIcons:
@@ -248,15 +299,6 @@ MonoBehaviour:
         ObjectType: 7
       ID: -2126757590
       Guid: d4f096e457699a40a0a04b4bbd092e0e
-    - Name: New_SoundBank
-      Path: Default Work Unit\New_SoundBank
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: New_SoundBank
-        ObjectType: 7
-      ID: -222937841
-      Guid: 74e0dc75e00cb34e82dab6503963bc06
     - Name: TransitionSounds
       Path: Default Work Unit\TransitionSounds
       PathAndIcons:
@@ -298,7 +340,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /2017-team7_WwiseProject
-  - /2017-team7_WwiseProject/Events
   - /2017-team7_WwiseProject/SoundBanks
   - /2017-team7_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0

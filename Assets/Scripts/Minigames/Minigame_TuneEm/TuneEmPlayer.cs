@@ -102,4 +102,9 @@ public class TuneEmPlayer : MinigamePlayer {
     {
         return failed;
     }
+
+    public void WrenchFail()
+    {
+        audioMaster.PlayWrenchFail();
+    }
 }
