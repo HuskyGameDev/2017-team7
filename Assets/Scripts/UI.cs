@@ -12,6 +12,7 @@ public class UI : MonoBehaviour {
     public GameObject horizontalDivider;
 
     Animator animator;
+    bool done = false;
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
@@ -29,9 +30,18 @@ public class UI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (EndData.instance.raceDone)
+        if (EndData.instance.raceDone && !done)
         {
+            done = true;
             raceFinished = true;
+            animator.SetInteger("NumPlayers", numPlayers);
+            if (numPlayers > 2) animator.SetInteger("Winner", EndData.instance.completionOrder[0]);
+            else
+            {
+                int first = EndData.instance.completionOrder[0];
+                int second = EndData.instance.completionOrder[1];
+                animator.SetInteger("Winner", (first < second) ? 1 : 2);
+            }
             animator.SetTrigger("Done");
         }
     }

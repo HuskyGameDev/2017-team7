@@ -30,6 +30,9 @@ public class Players : MonoBehaviour {
     public RuntimeAnimatorController[] cameraControllers2p;
     public RuntimeAnimatorController[] cameraControllers4p;
 
+    public PowerupImageMap powerupImageMap;
+    public Sprite[] amountImages;
+
     public LapDisplayMaster lapDisplayMaster;
 
     private int playerCount;

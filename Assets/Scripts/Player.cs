@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class Player : MonoBehaviour
     public Rigidbody2D playerRB;
 
     public Coroutine boostingCoR;
+
+
+    public Image[] powerupImages;
+    public Image[] powerupAmounts;
+
 
     private Controller ctrls;
     private float turnIncr;
@@ -218,10 +224,10 @@ public class Player : MonoBehaviour
         if (players.playerType == PlayerType.NORMAL)
         {
             BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
-            powerups[(int)POWERUP_DIRECTION.UP] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.UP), this);
-            powerups[(int)POWERUP_DIRECTION.DOWN] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.DOWN), this);
-            powerups[(int)POWERUP_DIRECTION.LEFT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.LEFT), this);
-            powerups[(int)POWERUP_DIRECTION.RIGHT] = powerupInstatiatior.GetPowerup(p.GetPowerup((int)PowerupDirection.RIGHT), this);
+            InitPowerup(POWERUP_DIRECTION.UP, p);
+            InitPowerup(POWERUP_DIRECTION.DOWN, p);
+            InitPowerup(POWERUP_DIRECTION.LEFT, p);
+            InitPowerup(POWERUP_DIRECTION.RIGHT, p);
             StartCoroutine(allowPowerupsInXSeconds(5.0f));
         }
         else if (players.playerType == PlayerType.DODGEBALL)
@@ -237,6 +243,25 @@ public class Player : MonoBehaviour
         caps = gameObject.GetComponentsInChildren<CapsuleCollider2D>();
 
         lastVelocity = new Vector2();
+    }
+
+    private void InitPowerup(POWERUP_DIRECTION direction, BarnoutPlayer p)
+    {
+        int index = (int)direction;
+        BarnoutPowerup bPowerup = p.GetPowerup(index);
+        Powerup powerup = powerupInstatiatior.GetPowerup(bPowerup, this);
+        if (bPowerup != null)
+        {
+            powerupImages[index].sprite = players.powerupImageMap.GetImage(bPowerup.GetPowerup());
+            powerupAmounts[index].sprite = players.amountImages[powerup.uses];
+        }
+        else
+        {
+            powerupImages[index].sprite = players.powerupImageMap.GetImage(PowerupType.SPEEDBOOST);
+            powerupAmounts[index].sprite = players.amountImages[0];
+        }
+        
+        powerups[index] = powerup;
     }
 
     // Update is called once per frame
@@ -618,13 +643,13 @@ public class Player : MonoBehaviour
     public void DoPowerups(){
         if(!finished) {
             if(powerups[(int)POWERUP_DIRECTION.UP] != null && ctrls.GetDPadUp()){
-                powerups[(int)POWERUP_DIRECTION.UP].UsePowerup();
+                UsePowerup(POWERUP_DIRECTION.UP);
             }else if(powerups[(int)POWERUP_DIRECTION.RIGHT] != null && ctrls.GetDPadRight()){
-                powerups[(int)POWERUP_DIRECTION.RIGHT].UsePowerup();
+                UsePowerup(POWERUP_DIRECTION.RIGHT);
             }else if(powerups[(int)POWERUP_DIRECTION.DOWN] != null && ctrls.GetDPadDown()){
-                powerups[(int)POWERUP_DIRECTION.DOWN].UsePowerup();
+                UsePowerup(POWERUP_DIRECTION.DOWN);
             }else if(powerups[(int)POWERUP_DIRECTION.LEFT] != null && ctrls.GetDPadLeft()){
-                powerups[(int)POWERUP_DIRECTION.LEFT].UsePowerup();
+                UsePowerup(POWERUP_DIRECTION.LEFT);
             }else if (players.playerType == PlayerType.DODGEBALL)
             {
                 if (ctrls.GetLB() || ctrls.GetRB())
@@ -635,6 +660,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void UsePowerup(POWERUP_DIRECTION direction)
+    {
+        int index = (int)direction;
+        powerups[index].UsePowerup();
+        powerupAmounts[index].sprite = players.amountImages[powerups[index].uses];
+    }
 
     // Set boolean to show that Eagle powerup is in use
     public void SetPlayerStateFlying(bool b)
