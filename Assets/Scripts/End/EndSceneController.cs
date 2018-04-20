@@ -14,6 +14,8 @@ public class EndSceneController : MonoBehaviour {
 
     public ES_AudioMaster audioMaster; 
 
+    private string chamberOfSecrets = "JoshDev2";
+
 	// Use this for initialization
 	void Start ()
     {
@@ -74,9 +76,13 @@ public class EndSceneController : MonoBehaviour {
         {
             barnoutPlayers.Add(new BarnoutPlayer(p.IsActive(), p.GetCharacter(), p.GetPlayerNum()));
         }
-        PlayerData.Instantiate(barnoutPlayers.ToArray());
-        EndData.Instantiate();
-        Barnout.ChangeScene("MinigameStart");
+        if(!EndData.instance.fromSecret){
+            PlayerData.Instantiate(barnoutPlayers.ToArray());
+            EndData.Instantiate();
+            Barnout.ChangeScene("MinigameStart");
+        }else{
+            Barnout.ChangeScene(chamberOfSecrets);
+        }
         //TODO do rematch code
     }
 

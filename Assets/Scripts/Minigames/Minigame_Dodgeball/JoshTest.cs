@@ -6,7 +6,7 @@ using UnityEngine;
 // Players start 27 X difference, 22 Y difference
 // P1 85X 30Y
 
-public class JoshTest : Minigame {
+public class JoshTest : OneOffMinigame {
 
     public float timeGiven;
     private bool done = false;

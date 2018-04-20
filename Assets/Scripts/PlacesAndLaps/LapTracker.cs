@@ -237,7 +237,6 @@ public class LapTracker : MonoBehaviour
 
     private void TransitionToEnd()
     {
-        //TODO figure out how to pass info to next scene
         Time.timeScale = 1;
         Barnout.ChangeScene("EndScene");
     }

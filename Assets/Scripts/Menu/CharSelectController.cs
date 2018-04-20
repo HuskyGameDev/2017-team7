@@ -13,6 +13,7 @@ public class CharSelectController : MonoBehaviour {
      
     //private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
 
+    private string SuperSecretMinigameOMGSceneName = "JoshDev2";
 
     private bool CanSelect(int charNum)
     {
@@ -100,12 +101,22 @@ public class CharSelectController : MonoBehaviour {
             if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
             EndData.Instantiate();
             //Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
-            Barnout.ChangeScene("MinigameStart");
+            if(ShouldActivateSuperSecretMode(barnoutPlayers)){
+                Barnout.ChangeScene(SuperSecretMinigameOMGSceneName);
+            }else{
+                Barnout.ChangeScene("MinigameStart");
+            }
         }
     }
 
     public Sprite GetPlayerCoin(int playerNum)
     {
         return PlayerCoins[playerNum - 1];
+    }
+
+    private bool ShouldActivateSuperSecretMode(BarnoutPlayer[] barnoutPlayers){
+        BarnoutPlayer firstPlayer = barnoutPlayers.First( x => x.IsActive());
+        return  Barnout.ButtonHeld(players[firstPlayer.GetPlayerNum() - 1].gp_state.Buttons.RightShoulder) &&
+                Barnout.ButtonHeld(players[firstPlayer.GetPlayerNum() - 1].gp_state.Buttons.LeftShoulder);
     }
 }

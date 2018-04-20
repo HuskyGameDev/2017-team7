@@ -21,8 +21,8 @@ public class PlayerPanel : MonoBehaviour {
     private Animator animator;
 
     PlayerIndex playerIndex;
-    GamePadState gp_state;
-    GamePadState prev_gp_state;
+    public GamePadState gp_state;
+    public GamePadState prev_gp_state;
 
 
 	void Start () {

@@ -15,6 +15,7 @@ public class EndData {
     {
         zoomSpeed = 0.017f;
         raceDone = false;
+        fromSecret = false;
         //completionOrder = ;
     }
 
@@ -22,6 +23,8 @@ public class EndData {
 	public int[] completionOrder;
     private float zoomSpeed;
     public bool raceDone;
+
+    public bool fromSecret;
 
     public void EndTransition()
     {
