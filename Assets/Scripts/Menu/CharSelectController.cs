@@ -10,10 +10,19 @@ public class CharSelectController : MonoBehaviour {
     public CharPanel[] chars;
 
     public Sprite[] PlayerCoins;
-     
-    //private string[] CharNames = { "Beefcake", "Fat Stacks", "Sheepish", "Vainglory" };
 
-    private string SuperSecretMinigameOMGSceneName = "JoshDev2";
+    private MenuHandler menuHandler;
+    private void Start()
+    {
+        menuHandler = FindObjectOfType<MenuHandler>();
+    }
+
+    public void BackToMainMenu()
+    {
+        menuHandler.ToMainMenu();
+    }
+
+    private string SuperSecretMinigameOMGSceneName = "JoshDev2"; //lmao
 
     private bool CanSelect(int charNum)
     {
@@ -95,12 +104,9 @@ public class CharSelectController : MonoBehaviour {
             }
 
             PlayerData.Instantiate((BarnoutPlayer[])barnoutPlayers.Clone());
-            //PlayerData.charIcons = (Sprite[])images.Clone();
-            //PlayerData.charTopDowns = (Sprite[])playerTopDowns.Clone();
             string[] maps = { "MainScene", "MainScene2" };
             if (MenuAudio.Instance) MenuAudio.Instance.StopMusic();
             EndData.Instantiate();
-            //Barnout.ChangeScene(maps[Random.Range(0, maps.Length)]);
             if(ShouldActivateSuperSecretMode(barnoutPlayers)){
                 Barnout.ChangeScene(SuperSecretMinigameOMGSceneName);
             }else{

@@ -11,6 +11,7 @@ TagManager:
   - Oil
   - VertHandle
   - PlayerWallCollider
+  - PlayerDiamondCollider
   layers:
   - Default
   - TransparentFX
@@ -71,6 +72,9 @@ TagManager:
     locked: 0
   - name: RisenPlayer
     uniqueID: 2293115701
+    locked: 0
+  - name: Powerups
+    uniqueID: 2254943739
     locked: 0
   - name: Player UI
     uniqueID: 2416607647

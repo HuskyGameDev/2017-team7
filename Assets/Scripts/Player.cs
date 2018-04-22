@@ -223,7 +223,20 @@ public class Player : MonoBehaviour
 
         if (players.playerType == PlayerType.NORMAL)
         {
-            BarnoutPlayer p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
+            BarnoutPlayer p;
+            if (players.UseDefaultPowerups)
+            {
+                BarnoutPlayer temp = PlayerData.instance.barnoutPlayers[playerNumber - 1];
+                p = new BarnoutPlayer(true, temp.GetCharacter(), playerNumber);
+                p.SetPowerup((int)POWERUP_DIRECTION.UP, new BarnoutPowerup(PowerupType.FROG, 3));
+                p.SetPowerup((int)POWERUP_DIRECTION.DOWN, new BarnoutPowerup(PowerupType.SQUID, 3));
+                p.SetPowerup((int)POWERUP_DIRECTION.LEFT, new BarnoutPowerup(PowerupType.EEL, 3));
+                p.SetPowerup((int)POWERUP_DIRECTION.RIGHT, new BarnoutPowerup(PowerupType.CHICKEN, 3));
+            }
+            else
+            {
+                p = PlayerData.instance.barnoutPlayers[playerNumber - 1];
+            }
             InitPowerup(POWERUP_DIRECTION.UP, p);
             InitPowerup(POWERUP_DIRECTION.DOWN, p);
             InitPowerup(POWERUP_DIRECTION.LEFT, p);

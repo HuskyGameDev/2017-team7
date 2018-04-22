@@ -71,7 +71,7 @@ public class PlayerPanel : MonoBehaviour {
                 }
                 else if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
-                    Barnout.ChangeScene("MainMenu");
+                    charSelectController.BackToMainMenu();
                 }
                 break;
             case STATES.SELECTING:

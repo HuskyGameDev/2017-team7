@@ -21,9 +21,10 @@ public class MainMenuHandler : MonoBehaviour {
 
     private void Start()
     {
-        audioMaster.PlayMusic();
+        audioMaster = FindObjectOfType<MM_AudioMaster>();
+        //audioMaster.PlayMusic();
         buttons[currButton].ToHover();
-        StartCoroutine(SwitchToDrums());
+        //StartCoroutine(SwitchToDrums());
     }
 
     // Update is called once per frame

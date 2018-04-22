@@ -14,16 +14,14 @@ public class EggSplat : MonoBehaviour {
 		
 	}
 
-    IEnumerator endSplat(float time)
+    void endSplat()
     {
-        yield return new WaitForSeconds(time);
         gameObject.SetActive(false);
     }
 
     public void enableSplat(float time)
     {
         gameObject.SetActive(true);
-        StopAllCoroutines();
-        StartCoroutine(endSplat(time));
+        GetComponent<Animator>().SetTrigger("Splat");
     }
 }

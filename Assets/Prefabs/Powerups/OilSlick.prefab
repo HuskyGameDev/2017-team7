@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4620494503146174}
   - component: {fileID: 212923554979302972}
-  - component: {fileID: 60880676661145116}
   - component: {fileID: 114647461018226654}
+  - component: {fileID: 61528402946753276}
   m_Layer: 0
   m_Name: OilSlick
   m_TagString: Oil
@@ -36,14 +36,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1362542920435562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -707, y: 290, z: 0}
-  m_LocalScale: {x: 162.81845, y: 80.453186, z: 1}
+  m_LocalPosition: {x: -1049.3, y: 421.4, z: 0}
+  m_LocalScale: {x: 6.0708985, y: 6.0708985, z: 6.0708985}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60880676661145116
-PolygonCollider2D:
+--- !u!61 &61528402946753276
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -58,28 +58,15 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 5, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.03720703, y: 0.087322384}
-      - {x: -0.027382812, y: 0.08850586}
-      - {x: -0.05987793, y: 0.06913513}
-      - {x: -0.089738764, y: 0.027924804}
-      - {x: -0.090217285, y: -0.012027588}
-      - {x: -0.08404541, y: -0.04477905}
-      - {x: -0.055637207, y: -0.07439575}
-      - {x: -0.024770508, y: -0.08725708}
-      - {x: 0.016186522, y: -0.09207397}
-      - {x: 0.061040036, y: -0.07194641}
-      - {x: 0.08142578, y: -0.045949705}
-      - {x: 0.09125488, y: -0.009309692}
-      - {x: 0.09021972, y: 0.028516235}
-      - {x: 0.06704834, y: 0.061257932}
+  serializedVersion: 2
+  m_Size: {x: 4.319377, y: 2.5916262}
+  m_EdgeRadius: 0
 --- !u!114 &114647461018226654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,6 +91,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -119,16 +107,17 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 400779165
-  m_SortingLayer: 1
+  m_SortingLayerID: -1214254819
+  m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 91a3058a44dc68241b2f6662e1e39a44, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -10,6 +10,8 @@ public class PufferObject : MonoBehaviour {
 
     Collider2D[] hitColliders;
 
+    bool collided = false;
+
     // Use this for initialization
     void Start () {
         StartCoroutine(clearOwner(2));        
@@ -22,24 +24,29 @@ public class PufferObject : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "PlayerWallCollider" && collision.gameObject.GetComponentInParent<Player>() != owner)
+        if (!collided)
         {
-            collisions++;
-
-            hitColliders = Physics2D.OverlapCircleAll(this.transform.position, 30);
-            for (int i = 0; i < hitColliders.Length; i++)
+            if (collision.tag == "PlayerWallCollider" && collision.gameObject.GetComponentInParent<Player>() != owner)
             {
-                if (hitColliders[i].tag == "PlayerWallCollider")
+                collisions++;
+
+                hitColliders = Physics2D.OverlapCircleAll(this.transform.position, 45f);
+                for (int i = 0; i < hitColliders.Length; i++)
                 {
-                    if (hitColliders[i].gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
+                    Debug.Log(hitColliders[i]);
+                    if (hitColliders[i].tag == "PlayerWallCollider")
                     {
-                        hitColliders[i].gameObject.GetComponentInParent<Player>().StartIncap(2f);
+                        if (hitColliders[i].gameObject.GetComponentInParent<Player>().state != Player.STATES.FLYING)
+                        {
+                            hitColliders[i].gameObject.GetComponentInParent<Player>().StartIncap(2f);
+                        }
                     }
                 }
+                if (collisions >= 1)
+                    GetComponent<Animator>().SetTrigger("BlowUp");
             }
-            if (collisions >= 1)
-                Destroy(gameObject);
         }
+        
     }
 
     IEnumerator clearOwner(float time)
@@ -47,4 +54,10 @@ public class PufferObject : MonoBehaviour {
         yield return new WaitForSeconds(time);
         owner = null;
     }
+
+    void CallDestroy()
+    {
+        Destroy(gameObject);
+    }
+
 }

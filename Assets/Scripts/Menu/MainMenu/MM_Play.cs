@@ -4,8 +4,19 @@ using UnityEngine;
 
 public class MM_Play : MenuButton {
 
+
+
+    public MenuHandler menuHandler;
+
+
+    private void Start()
+    {
+        menuHandler = FindObjectOfType<MenuHandler>();
+    }
+
     public override void ActivateButton()
     {
-        Barnout.ChangeScene("CharacterSelectScene");
+        menuHandler.ToCharSelect();
+        //Barnout.ChangeScene("CharacterSelectScene");
     }
 }

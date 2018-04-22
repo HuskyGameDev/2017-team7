@@ -5,6 +5,8 @@ using System.Linq;
 
 public class Players : MonoBehaviour {
 
+    public bool UseDefaultPowerups;
+
     public float turnIncr;
     public float turningSpeed;
     public float acceleration;
