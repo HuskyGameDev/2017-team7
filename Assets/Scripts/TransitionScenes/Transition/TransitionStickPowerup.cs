@@ -24,8 +24,6 @@ public class TransitionStickPowerup : MonoBehaviour {
 
     public void SetPowerup(BarnoutPowerup powerup, PowerupImageMap imageMap)
     {
-        Debug.Log(powerupImage);
-        Debug.Log(powerup);
         _powerup = powerup;
         powerupImage.sprite = imageMap.GetImage(powerup.GetPowerup());
     }

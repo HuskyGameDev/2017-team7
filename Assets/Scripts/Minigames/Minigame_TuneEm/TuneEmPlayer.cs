@@ -32,6 +32,7 @@ public class TuneEmPlayer : MinigamePlayer {
 	// Update is called once per frame
 	protected override void Tick ()
     {
+        if (!failed) score += 0.1f;
         if (!aBuffer)
         {
             if (!controller.GetA())

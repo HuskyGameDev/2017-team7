@@ -32,12 +32,15 @@ public class TuneEm : Minigame {
 
     public override void Tick()
     {
-        linePos += step;
-        if (linePos >= 1)
+        if (!done)
         {
-            ElimUnpressed();
-            ResetRound();
-            CheckIfDone();
+            linePos += step;
+            if (linePos >= 1)
+            {
+                ElimUnpressed();
+                ResetRound();
+                CheckIfDone();
+            }
         }
     }
 
@@ -75,12 +78,13 @@ public class TuneEm : Minigame {
 
     void CheckIfDone()
     {
-        bool check = true;
+        int numLeft = 0;
         foreach(TuneEmPlayer p in players)
         {
-            if (p.IsActive() && !p.HasFailed()) check = false;
+            if (p.IsActive() && !p.HasFailed()) numLeft++;
         }
-        done = check;
+
+        done = numLeft <= 1;
     }
 
     public float GetCloseScore()

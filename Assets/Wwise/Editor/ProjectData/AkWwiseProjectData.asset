@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\InGame.wwu
     ParentPhysicalPath: 
     Guid: '{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}'
-    m_lastTimePsrt1: -589679313
-    m_lastTimePart2: -1999263614
+    m_lastTimePsrt1: 937924931
+    m_lastTimePart2: -1999263609
     List:
     - Name: Play_Beep
       Path: InGame\Play_Beep
@@ -260,8 +260,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -859704057
-    m_lastTimePart2: -1999264541
+    m_lastTimePsrt1: 938024848
+    m_lastTimePart2: -1999263609
     List:
     - Name: EndScene
       Path: Default Work Unit\EndScene
