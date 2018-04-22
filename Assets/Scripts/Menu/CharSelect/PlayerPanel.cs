@@ -20,12 +20,15 @@ public class PlayerPanel : MonoBehaviour {
 
     private Animator animator;
 
+    private MM_AudioMaster audioMaster;
+
     PlayerIndex playerIndex;
     public GamePadState gp_state;
     public GamePadState prev_gp_state;
 
 
 	void Start () {
+        audioMaster = FindObjectOfType<MM_AudioMaster>();
         animator = GetComponent<Animator>();
         state = STATES.DISCONNECTED;
         playerIndex = (PlayerIndex)(playerNum - 1);
@@ -63,6 +66,7 @@ public class PlayerPanel : MonoBehaviour {
 
                 if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start))
                 {
+                    audioMaster.PlaySelect();
                     animator.SetTrigger("Joined");
                     state = STATES.SELECTING;
                     CharPanel nextChar = charSelectController.NextChar(selChar - 1);
@@ -71,12 +75,14 @@ public class PlayerPanel : MonoBehaviour {
                 }
                 else if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
+                    audioMaster.PlaySelect();
                     charSelectController.BackToMainMenu();
                 }
                 break;
             case STATES.SELECTING:
                 if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
+                    audioMaster.PlaySelect();
                     animator.SetTrigger("UnJoined");
                     state = STATES.UNJOINED;
                     charSelectController.RemoveOn(selChar, playerNum);
@@ -84,11 +90,13 @@ public class PlayerPanel : MonoBehaviour {
 
                 if (gp_state.ThumbSticks.Left.Y < -0.5 && prev_gp_state.ThumbSticks.Left.Y >= -0.5) //down
                 {
+                    audioMaster.PlayToggle();
                     CharPanel nextChar = charSelectController.NextChar(selChar);
                     ApplyCharacter(nextChar);
                 }
                 else if (gp_state.ThumbSticks.Left.Y > 0.5 && prev_gp_state.ThumbSticks.Left.Y <= 0.5) //up
                 {
+                    audioMaster.PlayToggle();
                     CharPanel prevChar = charSelectController.PrevChar(selChar);
                     ApplyCharacter(prevChar);
                     //TODO: go to one character up
@@ -109,6 +117,7 @@ public class PlayerPanel : MonoBehaviour {
 
                 if (Barnout.ButtonPressed(gp_state.Buttons.B, prev_gp_state.Buttons.B))
                 {
+                    
                     animator.SetTrigger("CancelReady");
                     state = STATES.SELECTING;
                     charSelectController.DeSelectChar(selChar);
@@ -116,6 +125,7 @@ public class PlayerPanel : MonoBehaviour {
 
                 if (Barnout.ButtonPressed(gp_state.Buttons.Start, prev_gp_state.Buttons.Start))
                 {
+                    audioMaster.PlaySelect();
                     charSelectController.StartGame();
                 }
 
