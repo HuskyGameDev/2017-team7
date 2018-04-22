@@ -94,7 +94,7 @@ public class Player : MonoBehaviour
     private Component[] caps;
     /*Speed for the last update */
     private float lastSpeed = 0;
-    /* Current speed */    
+    /* Current speed */
     private float speed = 0;
     /*This vector will contain data about other accelerations; E.G. Bouncing off walls and players will set this vector*/
     private Vector2 miscForces;
@@ -214,7 +214,7 @@ public class Player : MonoBehaviour
         speedList[(int) BOOSTS.DRAFT] = 2.1f;
         speedList[(int) BOOSTS.DRIFT] = 2.2f;
         speedList[(int) BOOSTS.POWERUP] = 2.1f;
-        speedList[(int)BOOSTS.EAGLE] = 2f;
+        speedList[(int) BOOSTS.EAGLE] = 2f;
 
 
         //Debug.Log(PlayerData.playerChars[playerNumber - 1] < 0);
