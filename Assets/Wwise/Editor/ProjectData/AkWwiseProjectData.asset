@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E4354748-C60E-4915-BF3E-FCDD151583B0}'
-    m_lastTimePsrt1: -876765330
-    m_lastTimePart2: -1999264541
+    m_lastTimePsrt1: -1604056181
+    m_lastTimePart2: -1999263617
     List: []
   - PhysicalPath: Events\EndScene.wwu
     ParentPhysicalPath: 
@@ -40,8 +40,8 @@ MonoBehaviour:
   - PhysicalPath: Events\InGame.wwu
     ParentPhysicalPath: 
     Guid: '{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}'
-    m_lastTimePsrt1: -876745316
-    m_lastTimePart2: -1999264541
+    m_lastTimePsrt1: -1604056181
+    m_lastTimePart2: -1999263617
     List:
     - Name: Play_Beep
       Path: InGame\Play_Beep
@@ -124,8 +124,8 @@ MonoBehaviour:
   - PhysicalPath: Events\MinigameSounds.wwu
     ParentPhysicalPath: 
     Guid: '{AD81FC84-617F-4FAC-A09D-4321F7305ABB}'
-    m_lastTimePsrt1: -876735299
-    m_lastTimePart2: -1999264541
+    m_lastTimePsrt1: -1604046167
+    m_lastTimePart2: -1999263617
     List:
     - Name: Play_Music
       Path: MinigameSounds\Play_Music
@@ -260,8 +260,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{786DB3BB-E867-4E93-BD2F-6D4CA5F06C43}'
-    m_lastTimePsrt1: -859704057
-    m_lastTimePart2: -1999264541
+    m_lastTimePsrt1: -1598586638
+    m_lastTimePart2: -1999263617
     List:
     - Name: EndScene
       Path: Default Work Unit\EndScene

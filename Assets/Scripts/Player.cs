@@ -495,10 +495,7 @@ public class Player : MonoBehaviour
                 break;
 
             case STATES.INCAPACITATED:
-                //TODO: THIS COROUTINE IS CREATED EVERY GAME TICK!!!
-                //Play a player getting electrocuted sound and/or animation.               
-                //TODO right now, decay happens at a uniform rate. We could change the velocity decay rate here,
-                //then change it back when we leave this state.
+
                 break;
 
             case STATES.FLYING:
@@ -765,6 +762,11 @@ public class Player : MonoBehaviour
 
     public void SetFinished()
     {
+        if (lastIncapCoroutine != null)
+        {
+            StopCoroutine(lastIncapCoroutine);
+            state = STATES.IDLE;
+        }
         finished = true;
         setGhosted(true);
     }
