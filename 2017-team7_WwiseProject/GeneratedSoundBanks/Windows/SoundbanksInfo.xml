@@ -29,6 +29,10 @@
 					<ShortName>single beep.wav</ShortName>
 					<Path>SFX\single beep_1C9C67B2.wem</Path>
 				</File>
+				<File Id="988784028" Language="SFX">
+					<ShortName>Ready Set Go Final BEEP.wav</ShortName>
+					<Path>SFX\Ready Set Go Final BEEP_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1012856014" Language="SFX">
 					<ShortName>single go.wav</ShortName>
 					<Path>SFX\single go_1C9C67B2.wem</Path>
@@ -57,6 +61,10 @@
 				<File Id="907460728" Language="SFX">
 					<ShortName>single beep.wav</ShortName>
 					<Path>SFX\single beep_1C9C67B2.wem</Path>
+				</File>
+				<File Id="988784028" Language="SFX">
+					<ShortName>Ready Set Go Final BEEP.wav</ShortName>
+					<Path>SFX\Ready Set Go Final BEEP_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1012856014" Language="SFX">
 					<ShortName>single go.wav</ShortName>

@@ -8,6 +8,7 @@
 						<Action Name="" ID="{7B179CE9-5732-4CA7-B455-03099007044D}" ShortID="198597728">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.05"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -25,7 +26,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="single go" ID="{0A80F1AE-0293-4DEE-AFF4-7F647568AD8A}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}"/>
+									<ObjectRef Name="Ready Set Go Final BEEP" ID="{C7F66CD3-17D0-4EDD-AECB-1FE97A4B6743}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

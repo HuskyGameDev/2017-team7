@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{1DC0ACAB-0DFA-4977-9081-5F4924143C25}" SchemaVersion="85">
 	<Modulators>
-		<WorkUnit Name="Default Work Unit" ID="{1DC0ACAB-0DFA-4977-9081-5F4924143C25}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{1DC0ACAB-0DFA-4977-9081-5F4924143C25}" PersistMode="Standalone">
+			<ChildrenList>
+				<ModulatorEnvelope Name="BarnEnvelope" ID="{7D740B82-92B0-471F-ADBF-F3C37D8D44EE}" ShortID="412459797">
+					<PropertyList>
+						<Property Name="EnvelopeStopPlayback" Type="bool" Value="False"/>
+					</PropertyList>
+				</ModulatorEnvelope>
+			</ChildrenList>
+		</WorkUnit>
 	</Modulators>
 </WwiseDocument>

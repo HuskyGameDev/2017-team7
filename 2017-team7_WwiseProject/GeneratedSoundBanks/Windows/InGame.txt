@@ -3,8 +3,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	2279634092	Play_Go			\InGame\Play_Go	
 	4141037488	Play_Game_Music			\InGame\Play_Game_Music	
 
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	412459797	BarnEnvelope			\Default Work Unit\BarnEnvelope	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	36140014	Barn Track Theme	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Barn Track Theme_F17FB28C.wem		\Actor-Mixer Hierarchy\InGame\Barn Track Theme		21168144
 	907460728	single beep	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\single beep_1C9C67B2.wem		\Actor-Mixer Hierarchy\InGame\single beep		705744
+	988784028	Ready Set Go Final BEEP	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\Ready Set Go Final BEEP_1C9C67B2.wem		\Actor-Mixer Hierarchy\InGame\Ready Set Go Final BEEP		1058544
 	1012856014	single go	C:\Users\tleichte\Documents\2017-team7\2017-team7_WwiseProject\.cache\Windows\SFX\single go_1C9C67B2.wem		\Actor-Mixer Hierarchy\InGame\single go		1058544
 

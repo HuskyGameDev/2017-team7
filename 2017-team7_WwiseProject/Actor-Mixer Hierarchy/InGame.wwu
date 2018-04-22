@@ -6,6 +6,37 @@
 				<Sound Name="Barn Track Theme" ID="{AC872D82-C5CD-4E6C-BB30-B5D3FC6D1C2C}" ShortID="1053471562">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{C2A78067-8B61-4297-9060-FDCEAC88AEDF}" ShortID="364297850">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="BarnEnvelope" ID="{7D740B82-92B0-471F-ADBF-F3C37D8D44EE}" WorkUnitID="{1DC0ACAB-0DFA-4977-9081-5F4924143C25}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{D7B6BA47-B2FB-4736-B720-701ADD240215}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-13.46138</YPos>
+												<Flags>21</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>53</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -61,6 +92,25 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="single beep" ID="{A07EEDD8-830B-4DAA-BCC3-B1C2BAF99A9F}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ready Set Go Final BEEP" ID="{C7F66CD3-17D0-4EDD-AECB-1FE97A4B6743}" ShortID="604339935">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{7F88DCBF-9B62-4203-8F0F-12B63E7F50C1}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{1364BA4F-6132-4833-A48C-A7411437B55C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ready Set Go Final BEEP" ID="{1C99BFF1-54B3-4FF5-A46C-767225879A84}" ShortID="988784028">
+							<Language>SFX</Language>
+							<AudioFile>Ready Set Go Final BEEP.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ready Set Go Final BEEP" ID="{1C99BFF1-54B3-4FF5-A46C-767225879A84}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

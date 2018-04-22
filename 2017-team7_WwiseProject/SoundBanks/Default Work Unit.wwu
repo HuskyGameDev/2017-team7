@@ -61,6 +61,7 @@
 						<ObjectRef Name="Play_Go" ID="{997EBFB7-6B72-4A1D-8857-EADF3D78960E}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="single go" ID="{0A80F1AE-0293-4DEE-AFF4-7F647568AD8A}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Barn Track Theme" ID="{AC872D82-C5CD-4E6C-BB30-B5D3FC6D1C2C}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ready Set Go Final BEEP" ID="{C7F66CD3-17D0-4EDD-AECB-1FE97A4B6743}" WorkUnitID="{046B4BB3-F6D7-41E2-B556-1E299D3F615C}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Beep" ID="{20AC60DA-4A1C-4F1E-8A4D-488B9C23683A}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Game_Music" ID="{35BA1C5F-61A8-4F1E-BF52-50D52915E834}" WorkUnitID="{FF8FFDF7-FC43-4881-A8A4-E3B057423A89}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
